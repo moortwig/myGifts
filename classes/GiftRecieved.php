@@ -1,0 +1,16 @@
+<?php
+
+
+class GiftRecieved() {
+	// spiffy code here
+
+
+	// some methods here
+	//////////////////////////////////////////////////
+	// ADD A NEW GIFT RECIEVED //////////////////////
+
+
+}
+
+
+?>
