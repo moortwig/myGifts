@@ -3,7 +3,10 @@
 
 class Recipient() {
 	// spiffy code here
-
+	$id;
+	$name;
+	$info;
+	$userId;
 
 	// some methods here
 

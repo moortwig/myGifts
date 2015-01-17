@@ -1,8 +1,12 @@
 <?php
 
-class GiftReceived() {
+class GiftGiven() {
 	// spiffy code here
-
+	$id;
+	$giftId;
+	$recipientId;
+	$occasion;
+	$added;
 
 	// some methods here
 
