@@ -1,10 +1,11 @@
 <?php
 
+// include settings for your database
 require_once("../config/db-config.php");
 
 
 class Database() {
-	// some spiffy code here
+	// properties for the class
 	protected $db_conn;
 	public $db_host = $dbHost;
 	public $db_user = $dbUsername;

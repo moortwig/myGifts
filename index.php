@@ -1,5 +1,6 @@
 <?php
 
+// include the files that keeps track on all necessary files
 require_once("app.php");
 
 ?>
