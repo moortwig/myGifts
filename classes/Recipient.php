@@ -3,10 +3,10 @@
 
 class Recipient {
 	// spiffy code here
-	$id;
-	$name;
-	$info;
-	$userId;
+	public $id;
+	public $name;
+	public $info;
+	public $userId;
 
 	// some methods here
 

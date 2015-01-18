@@ -2,11 +2,11 @@
 
 class GiftGiven {
 	// spiffy code here
-	$id;
-	$giftId;
-	$recipientId;
-	$occasion;
-	$added;
+	public $id;
+	public $giftId;
+	public $recipientId;
+	public $occasion;
+	public $added;
 
 	// some methods here
 

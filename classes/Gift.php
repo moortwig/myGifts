@@ -3,9 +3,9 @@
 
 class Gift {
 	// spiffy properties here
-	$id;
-	$name;
-	$description;
+	public $id;
+	public $name;
+	public $description;
 
 
 	// some methods here
