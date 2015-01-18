@@ -1,6 +1,6 @@
 <?php
 
-class GiftGiven() {
+class GiftGiven {
 	// spiffy code here
 	$id;
 	$giftId;

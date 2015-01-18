@@ -1,7 +1,7 @@
 <?php
 
 
-class Recipient() {
+class Recipient {
 	// spiffy code here
 	$id;
 	$name;

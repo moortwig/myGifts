@@ -4,7 +4,7 @@
 require_once("../config/db-config.php");
 
 
-class Database() {
+class Database {
 	// properties for the class
 	protected $db_conn;
 	public $db_host = $dbHost;

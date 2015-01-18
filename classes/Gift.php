@@ -1,7 +1,7 @@
 <?php
 
 
-class Gift() {
+class Gift {
 	// spiffy properties here
 	$id;
 	$name;
@@ -10,7 +10,7 @@ class Gift() {
 
 	// some methods here
 	//////////////////////////////////////////////////
-	// GET GIFTS ////////////////////////////////////
+	// GET GIFT ////////////////////////////////////
 	// get gift() {
 
 	// }

@@ -1,7 +1,7 @@
 <?php
 
 
-class Session() {
+class Session {
 	// spiffy code here
 
 

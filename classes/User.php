@@ -1,7 +1,7 @@
 <?php
 
 
-class User() {
+class User {
 	// spiffy code here
 	$id;
 	$username;
