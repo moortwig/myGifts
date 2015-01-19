@@ -23,11 +23,17 @@ require_once('app.php');
 <!-- MAIN BODY -->
 <?php 
 
-$user = new User();
-echo $user->email;
+// ($id, $username, $password, $email, $joined)
+$morticia = new User(5, 'Morticia', 'morticia', 'morticia@dj.dj', 2015-01-19);
+echo $morticia->email;
+
 
 ?>
-
+<br />
+<br />
+<br />
+<br />
+<br />
 <!-- SIGN UP -->
 <div id="form">
     <form class="form-horizontal" method="post" action="signup.php" role="form">
@@ -36,8 +42,8 @@ echo $user->email;
         <label for="Password">Password:</label>
         <input type="password" name="pwd" id="password" class="form-control" placeholder="Password" /><br />
         <!-- TODO JavaScript regex password check below: -->
-        <label for="Passwordcheck">Retype password:</label>
-        <input type="password" name="pwdCheck" id="" class="form-control" placeholder="Retype password" /><br />
+        <!-- <label for="Passwordcheck">Retype password:</label>
+        <input type="password" name="pwdCheck" id="" class="form-control" placeholder="Retype password" /><br />-->
         <label for="E-mail">E-mail:</label>
         <input type="email" name="uemail" id="email" class="form-control" placeholder="E-mail" /><br />
 

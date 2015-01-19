@@ -1,7 +1,7 @@
 <?php
 // include everything the site needs to function
 
-$path = $_SERVER['DOCUMENT_ROOT'];
+// $path = $_SERVER['DOCUMENT_ROOT'];
 
 
 

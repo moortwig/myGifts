@@ -11,7 +11,7 @@ class Database {
 	private $db_host = 'localhost';// $dbHost;
 	private $db_user = 'root'; // $dbUsername;
 	private $db_pass = 'root'; // $dbPassword;
-	private $db_name =  'my_gifts'; // $dbName;
+	private $db_name = 'my_gifts'; // $dbName;
 
 	function connect() {
 	// TODO vad innebär try och catch? Varför använder jag det?
