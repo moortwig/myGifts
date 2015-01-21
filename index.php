@@ -24,13 +24,21 @@ require_once('app.php');
 <?php 
 
 // ($id, $username, $password, $email, $joined)
-$morticia = new User(5, 'Morticia', 'morticia', 'morticia@dj.dj', 2015-01-19);
-echo $morticia->email;
-
-
+// $morticia = new User(5, 'Morticia', 'morticia', 'morticia@dj.dj', 2015-01-19);
+// echo $morticia->email;
 ?>
 <br />
 <br />
+<?php
+
+$wednesday = new User();
+$wednesday->setUsername("wednesday");
+var_dump($wednesday->getUsername());
+
+
+?>
+
+
 <br />
 <br />
 <br />

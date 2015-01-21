@@ -2,75 +2,63 @@
 require_once ('D:\xampp\htdocs\myGifts\www\model\userModel.php');
 
 class User {
-	function __construct($id, $username, $password, $email, $joined) {
-		$this->id 		= $id;
-		$this->username = $username;
-		$this->password = $password;
-		$this->email 	= $email;
-		$this->joined 	= $joined;
-	}
-	// dummy code here
-	/*public $id = '1';
-	public $username = 'root';
-	public $password = 'root';
-	public $email = 'yada@blah.jp';
-	public $joined = '2015-01-18';*/
+	// properties 
+	public $id;
+	public $username;
+	public $password;
+	public $email;
+	public $joined;
 
-	// some methods here
+
 	//////////////////////////////////////////////////
 	// GETTERS //////////////////////////////////////
 	public function getId() {
-		return $this->id();
+		return $this->id;
 	}
 
 	public function getUsername() {
-		return $this->username();
+		return $this->username;
 	}
 
 	public function getPassword() {
-		return $this->password();
+		return $this->password;
 	}
 
 	public function getEmail() {
-		return $this->email();
+		return $this->email;
 	}
 
 	public function getJoined() {
-		return $this->joined();
+		return $this->joined;
 	}
 
 
 	//////////////////////////////////////////////////
 	// SETTERS //////////////////////////////////////
-	public function setId() {
-		// some code
-		return $this->id();
+	public function setId($id) {
+		$this->id = $id;
+		return $this->id;
 	}
 
-	public function setUsername() {
-		// some code
-		return $this->username();
+	public function setUsername($username) {
+		$this->username = $username;
+		return $this->username;
 	}
 
-	public function setPassword() {
-		// some code
-		return $this->password();
+	public function setPassword($password) {
+		$this->password = $password;
+		return $this->password;
 	}
 
-	public function setEmail() {
-		// some code
-		return $this->email();
+	public function setEmail($email) {
+		$this->email = $email;
+		return $this->email;
 	}
 
-	public function setJoined() {
-		// some code
-		return $this->joined();
+	public function setJoined($joined) {
+		$this->joined = $joined;
+		return $this->joined;
 	}
-
-
-	//////////////////////////////////////////////////
-	// GET USER /////////////////////////////////////
-
 }
 
 
