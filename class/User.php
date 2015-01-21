@@ -18,12 +18,54 @@ class User {
 
 	// some methods here
 	//////////////////////////////////////////////////
-	// REGISTER NEW USER ////////////////////////////
+	// GETTERS //////////////////////////////////////
+	public function getId() {
+		return $this->id();
+	}
+
+	public function getUsername() {
+		return $this->username();
+	}
+
+	public function getPassword() {
+		return $this->password();
+	}
+
+	public function getEmail() {
+		return $this->email();
+	}
+
+	public function getJoined() {
+		return $this->joined();
+	}
 
 
+	//////////////////////////////////////////////////
+	// SETTERS //////////////////////////////////////
+	public function setId() {
+		// some code
+		return $this->id();
+	}
 
+	public function setUsername() {
+		// some code
+		return $this->username();
+	}
 
+	public function setPassword() {
+		// some code
+		return $this->password();
+	}
 
+	public function setEmail() {
+		// some code
+		return $this->email();
+	}
+
+	public function setJoined() {
+		// some code
+		return $this->joined();
+	}
 
 
 	//////////////////////////////////////////////////
