@@ -1,5 +1,5 @@
 <?php
-require_once ('D:\xampp\htdocs\myGifts\www\classes\Database.php');
+require_once ('D:\xampp\htdocs\myGifts\www\class\Database.php');
 
 
 // TODO:

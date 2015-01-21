@@ -6,13 +6,13 @@
 
 
 // this file (app.php) is then included in header.php
-// CLASSES
-require_once('classes/Database.php');
-require_once('classes/Gift.php');
-require_once('classes/GiftGiven.php');
-require_once('classes/Recipient.php');
-require_once('classes/Session.php');
-require_once('classes/User.php');
+// CONTROLLERS
+// require_once('controller/DatabaseController.php');
+// require_once('controller/GiftController.php');
+// require_once('controller/GiftGivenController.php');
+// require_once('controller/RecipientController.php');
+// require_once('controller/SessionController.php');
+require_once('controller/UserController.php');
 
 
 
