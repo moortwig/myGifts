@@ -31,9 +31,12 @@ require_once('app.php');
 <br />
 <?php
 
-$wednesday = new User();
-$wednesday->setUsername("wednesday");
-var_dump($wednesday->getUsername());
+// Morticia is a new user
+$morticia = new User();
+// because I haven't a form yet, and no db connection, let's store data in the variable for now:
+$morticia->setUsername("Morticia");
+
+var_dump($morticia->getUsername()); // string(8) "Morticia"
 
 
 ?>

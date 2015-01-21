@@ -12,6 +12,7 @@ class User {
 
 	//////////////////////////////////////////////////
 	// GETTERS //////////////////////////////////////
+	// these methods will help me get data!
 	public function getId() {
 		return $this->id;
 	}
@@ -35,6 +36,7 @@ class User {
 
 	//////////////////////////////////////////////////
 	// SETTERS //////////////////////////////////////
+	// these methods will help me set data!
 	public function setId($id) {
 		$this->id = $id;
 		return $this->id;
