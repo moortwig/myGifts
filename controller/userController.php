@@ -7,4 +7,12 @@ function addUser(User $user) {
 	// ...
 }
 
+function loginUser(User $user) {
+	// ...
+}
+
+function logoutUser(User $user) {
+	// ...
+}
+
 ?>
