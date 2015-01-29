@@ -21,26 +21,6 @@ require_once('app.php');
 <body>
 
 <!-- MAIN BODY -->
-<?php 
-
-// ($id, $username, $password, $email, $joined)
-// $morticia = new User(5, 'Morticia', 'morticia', 'morticia@dj.dj', 2015-01-19);
-// echo $morticia->email;
-?>
-<br />
-<br />
-<?php
-
-// Morticia is a new user
-$morticia = new User();
-// because I haven't a form yet, and no db connection, let's store data in the variable for now:
-$morticia->setUsername("Morticia");
-
-var_dump($morticia->getUsername()); // string(8) "Morticia"
-
-
-?>
-
 
 <br />
 <br />

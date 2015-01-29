@@ -12,7 +12,7 @@
 // require_once('controller/GiftGivenController.php');
 // require_once('controller/RecipientController.php');
 // require_once('controller/SessionController.php');
-require_once('controller/UserController.php');
+require_once('class/User.php');
 
 
 
