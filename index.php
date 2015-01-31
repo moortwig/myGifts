@@ -21,23 +21,40 @@ require_once('app.php');
 <body>
 
 <!-- MAIN BODY -->
+<?php
 
+// ($id, $username, $password, $email, $joined)
+// $morticia = new User(5, 'Morticia', 'morticia', 'morticia@dj.dj', 2015-01-19);
+// echo $morticia->email;
+?>
+<br />
+<br />
+<?php
+
+// Morticia is a new user
+$morticia = new User();
+// because I haven't a form yet, and no db connection, let's store data in the variable for now:
+$morticia->setUsername("Morticia");
+
+var_dump($morticia->getUsername()); // string(8) "Morticia"
+
+?>
 <br />
 <br />
 <br />
 <!-- SIGN UP -->
 <div id="form"> <!-- Maybe need to call action="userController.php" -->
-    <form class="form-horizontal" method="post" action="app.php" role="form">
+    <form class="form-horizontal" method="post" action="signup.php" role="form">
         <label for="Username">Username:</label>
-        <input type="text" name="uname" name="username" class="form-control" placeholder="Username" /><br />
+        <input type="text" name="username" class="form-control" placeholder="Username" /><br />
         <label for="Password">Password:</label>
-        <input type="password" name="pwd" name="password" class="form-control" placeholder="Password" /><br />
+        <input type="password" name="password" class="form-control" placeholder="Password" /><br />
         <!-- TODO JavaScript regex password check below: -->
         <!-- <label for="Passwordcheck">Retype password:</label>
         <input type="password" name="pwdCheck" name="" class="form-control" placeholder="Retype password" /><br />-->
         <label for="E-mail">E-mail:</label>
-        <input type="email" name="uemail" name="email" class="form-control" placeholder="E-mail" /><br />
-
+        <input type="email" name="email" class="form-control" placeholder="E-mail" /><br />
+        <input type="hidden" name="joined" /><br />
         <!-- buttons: -->
         <!-- TODO jQuery on click clear form
         <input type="submit" class="button" name="clear" value="CLEAR" /> -->

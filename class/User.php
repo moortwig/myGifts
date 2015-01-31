@@ -1,5 +1,5 @@
 <?php
-require_once ('D:\xampp\htdocs\myGifts\www\model\userModel.php');
+require_once ('D:\xampp\htdocs\myGifts\www\class\Database.php');
 
 class User {
 	// properties 
@@ -8,29 +8,35 @@ class User {
 	public $password;
 	public $email;
 	public $joined;
+	public $link; // becomes a link to the db through the construct
 
+	function __construct(){
+        $database = new Database();
+        $this->link = $database->connect();
+        return $this->link;
+    }
 
 	//////////////////////////////////////////////////
 	// GETTERS //////////////////////////////////////
 	// these methods will help me get data!
 	public function getId() {
-		return $this->id;
+		return $this->id;	// $id
 	}
 
 	public function getUsername() {
-		return $this->username;
+		return $this->username;	// $username
 	}
 
 	public function getPassword() {
-		return $this->password;
+		return $this->password;	// $password
 	}
 
 	public function getEmail() {
-		return $this->email;
+		return $this->email;	// $email
 	}
 
 	public function getJoined() {
-		return $this->joined;
+		return $this->joined;	// $joined
 	}
 
 
