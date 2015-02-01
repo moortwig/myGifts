@@ -54,7 +54,6 @@ var_dump($morticia->getUsername()); // string(8) "Morticia"
         <input type="password" name="pwdCheck" name="" class="form-control" placeholder="Retype password" /><br />-->
         <label for="E-mail">E-mail:</label>
         <input type="email" name="email" class="form-control" placeholder="E-mail" /><br />
-        <input type="hidden" name="joined" /><br />
         <!-- buttons: -->
         <!-- TODO jQuery on click clear form
         <input type="submit" class="button" name="clear" value="CLEAR" /> -->
