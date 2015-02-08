@@ -8,13 +8,7 @@ class User {
 	public $password;
 	public $email;
 	public $joined;
-	public $link; // becomes a link to the db through the construct
 
-	function __construct(){
-        $database = new Database();
-        $this->link = $database->connect();
-        return $this->link;
-    }
 
 	//////////////////////////////////////////////////
 	// GETTERS //////////////////////////////////////

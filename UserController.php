@@ -1,10 +1,21 @@
 <?php
-
+// OBS!!!!!!!!!! CURRENTLY THIS FILE IS NOT IN USE
 require_once ('D:\xampp\htdocs\myGifts\www\class\User.php');
 
 if(isset($_POST["signup"])) {
 
-	// create a User object
+	$user = new User();
+	// TODO encrypt password
+	// nu behöver vi hämta data från formuläret 'signup'
+	$username = $user->setUsername($_POST['username']);
+	$password = $user->setPassword($_POST['password']);
+	$email = $user->setEmail($_POST['email']);
+
+	$query = $user->link->prepare('INSERT INTO users (username, password, email) VALUES (?,?,?)');
+	$values = array($username, $password, $email);
+	$query->execute($values);
+
+	/*// create a User object
 	$user = new User();
 	// TODO make this prettier
 
@@ -16,7 +27,7 @@ if(isset($_POST["signup"])) {
     // prepare(), execute() and rowCount() are all PDO methods
 	$query = $user->link->prepare('INSERT INTO users (username, password, email) VALUES (?,?,?)'); // prepare the query
 	$values = array($username, $password, $email); // store the input data in an array
-	$query->execute($values); // execute the query with the data, here inserting them into the database
+	$query->execute($values); // execute the query with the data, here inserting them into the database*/
 	// below 2 lines are not necessary to store in database KEEP HERE FOR NOW
 	// $rows = $query->rowCount();
 	// return $rows;
