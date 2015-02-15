@@ -9,15 +9,23 @@ class Session {
 	// ... eller ngt sådant ...
 	}
 
-	public function startSession($session) {
+	public function startLoginSession() {
 		// startar en session och kan användas för att skapa en inloggning t ex
-		$username = $_POST['user'];	// fältnamn user
-		$password = $_POST['pass'];	// fältnamn pass
+		$user = new User();
 
-		$user = new User(); //
-		$database = new Database();
+		$username = $_POST['user'];	// field name user
+		$password = $_POST['pass'];	// field name pass
+
+		// query to check user and pass
+		$check = $user->checkUserForLogin($username, $password);
+
+		if ($check === true) {			
 			$_SESSION['username'] = $username;
+			echo "Perfect match! You may log in!";
+		} else {
+			echo "Nope, you did something very wrong there. Please try again after you've been redirected back!";
 		}
+	}
 
 	public function destroySession($session) {
 		// ta bort session, t ex logga ut

@@ -2,7 +2,6 @@
 
 // include the files that keeps track on all necessary files
 require_once('app.php');
-session_start();
 
 ?>
 
@@ -26,6 +25,7 @@ session_start();
         // Display this section if a user is logged in
         // TODO adjust this for the new structure!
         $user = new User();
+        $session = new Session();
         // TODO check if getSession($user) == something ???
         if(isset($_SESSION['username'])) { ?>
             <div class="logged-in">

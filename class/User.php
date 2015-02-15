@@ -65,6 +65,25 @@ class User {
 		// hämtar ALLT från databasen, inkl password(?) om en användare
 	}
 
+	public function checkUserForLogin($username, $password) {		
+		$database = new Database();
+
+		$query = $database->connect()->query("SELECT * FROM users WHERE username = '$username' AND password = '$password'");
+		// execute the query
+		$query->execute();
+		// fetch results
+		$results = $query->fetchAll();
+		// count the number of rows fetched, so we can use it in the if statement
+		$count = count($results);
+
+		if ($count !== 1) {
+			return false;
+		} else {
+			// else return false
+			return true;
+		}	
+	}
+
 	//////////////////////////////////////////////////////
 	public function editUser($user) {
 		// redigerar den inloggade användarens uppgifter

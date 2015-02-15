@@ -1,4 +1,5 @@
 <?php
+session_start();
 // include everything the site needs to function
 
 // $path = $_SERVER['DOCUMENT_ROOT'];
@@ -22,14 +23,18 @@ if(isset($_POST['signup'])) {
 	$user->newUser();
 	header('Refresh: 3; url=index.php');
 	// TODO login user
+
 	// $session->startSession($login);
 	// TODO close the connection
 }
 
 // LOGIN
 // logins the user from the login form
+// TODO !!!
 if (isset($_POST['login'])) {
-	$user = new User();
+	$session = new Session();
+	$session->startLoginSession();
+	header('Refresh: 3; url=index.php');
 }
 
 
