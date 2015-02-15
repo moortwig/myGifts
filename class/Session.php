@@ -19,9 +19,12 @@ class Session {
 
 		// query to check user and pass
 		$check = $user->checkUserForLogin($username, $password);
+		// query to get the user ID 
+		$userId = $user->getUserId($username);
 
 		if ($check === true) {			
 			$_SESSION['username'] = $username;
+			$_SESSION['userId'] = $userId;
 			echo "Perfect match! You've been logged in! Please wait ...";
 		} else {
 			echo "Nope, you did something very wrong there. Please try again after you've been redirected back!";

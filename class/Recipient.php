@@ -35,11 +35,11 @@ class Recipient {
 
 	//////////////////////////////////////////////////////
 	// QUERY SAVE RECIPIENT TO DB ///////////////////////
-	private function saveRecipient($name, $information) {
+	private function saveRecipient($name, $information, $userId) {
 		$database = new Database();
 
-		$query = $database->connect()->prepare('INSERT INTO recipients (name, information) VALUES (?,?)');
-		$values = array($name, $information);
+		$query = $database->connect()->prepare('INSERT INTO recipients (name, information, user_id) VALUES (?,?,?)');
+		$values = array($name, $information, $userId);
 		$query->execute($values);
 	}
 
@@ -49,16 +49,17 @@ class Recipient {
 	// sparar recipient till databas
 		$name = $_POST['name'];
 		$information = $_POST['information'];
-		
+		$userId = $_SESSION['userId'];
+
 		
 		$check = $this->checkNameExists($name);
 
 		if ($check === true) {
 			echo "This recipient already exists! Did you mean to add someone else? You will be redirected shortly.";
 		} else {
-			echo "Welcome, " . $username . "! You have successfully signed up, and will shortly be redirected to the start page.";
+			echo $name . " has been added! Please wait ...";
 			// session works, but it would be nice if we could do it differently, I suppose We do have a session class >.< ...			
-			return $this->saveRecipient($name, $information);
+			return $this->saveRecipient($name, $information, $userId);
 		}		
 	}
 

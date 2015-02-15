@@ -67,6 +67,16 @@ class User {
 		// hämtar ALLT från databasen, inkl password(?) om en användare
 	}
 
+	public function getUserId($username) {
+		// hämtar id från databasen för användare
+		$database = new Database();
+
+		$query = $database->connect()->query("SELECT id FROM users WHERE username = '$username'");
+		// execute the query
+		$query->execute();
+
+	}
+
 	public function checkUserForLogin($username, $password) {		
 		$database = new Database();
 

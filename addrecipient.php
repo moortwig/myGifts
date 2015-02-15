@@ -17,7 +17,9 @@ require_once('header.php');
                 <label for="Information">Information:</label><br />
                 <textarea name="information" class="form-control"></textarea>
                 <!-- TODO Maybe a better way to pass on the session user ID? -->
-                <input name="user_id" type="hidden" value="<?php $_SESSION['userId'] ?>" />
+                <!-- YES! THERE IS!!! Besides, the row below isn't even working ...
+                Read THIS: http://www.clfsrpm.net/csrf/ -->
+                <input name="userId" type="hidden" value=<?php echo "'". $_SESSION['userId'] . "'" ?> />
                 <br />
                 <!-- buttons: -->
                 <!-- TODO jQuery on click clear form
