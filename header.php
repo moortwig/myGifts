@@ -22,10 +22,6 @@ require_once('app.php');
 <div class="nav">
     <?php 
         // Display this section if a user is logged in
-        // TODO adjust this for the new structure!
-        $user = new User();
-        $session = new Session();
-        // TODO check if getSession($user) == something ???
         if(isset($_SESSION['username'])) { ?>
             <div class="logged-in">
                 <p>Hello <?php echo $_SESSION['username']; ?>!</p>
