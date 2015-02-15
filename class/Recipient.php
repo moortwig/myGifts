@@ -9,6 +9,25 @@ class Recipient {
 	public $userId;
 
 	// some methods here
+	public function newRecipient() {
+	// sparar recipient till databas
+	}
+
+	public function getRecipient($recipient, $user) {
+		// hämtar ALLT från databasen om en mottagare för den inloggade användaren
+	}
+
+	public function editRecipient($recipient) {
+		// redigera info om mottagaren
+	}
+
+	public function deleteRecipient($recipient) {
+		// tar bort mottagaren ur databasen
+	}
+
+	public function getAllRecipients($recipient, $user) {
+		// hämtar alla mottagare för den inloggade användaren
+	}
 
 
 	//////////////////////////////////////////////////

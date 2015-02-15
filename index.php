@@ -24,17 +24,22 @@ session_start();
 <div class="nav">
     <?php 
         // Display this section if a user is logged in
+        // TODO adjust this for the new structure!
+        $user = new User();
+        // TODO check if getSession($user) == something ???
         if(isset($_SESSION['username'])) { ?>
             <div class="logged-in">
                 <p>Hello <?php echo $_SESSION['username']; ?>!</p>
-                <form method="post" action="controller/UserController.php" role="form">
+                <form method="post" action="app.php" role="form">
                     <input type="submit" class="" name="logout" value="Log out" />
                 </form>
             </div>
         <?php } else {
-        // Display this session if noone has logged in yet! ?>
+        // Display this section if noone has logged in yet! ?>
     <div class="log-in">
-        <form method="post" action="controller/UserController.php" role="form">
+        <h2>Log in</h2>
+        <!--    TODO adjust this for the new structure! -->
+        <form method="post" action="app.php" role="form">
             <label for="user">Username:</label>
             <input type="text" name="user" placeholder="Username" />
             <label for="pass">Password:</label>
@@ -51,8 +56,10 @@ session_start();
     <br />
     <br />
     <!-- SIGN UP -->
-    <div id="form"> <!-- Maybe need to call action="userController.php" -->
-        <form class="form-horizontal" method="post" action="controller/userController.php" role="form">
+    <h2>Sign up</h2>
+    <div id="form">
+        <!--    TODO adjust this for the new structure!  -->
+        <form class="form-horizontal" method="post" action="app.php" role="form">
             <label for="Username">Username:</label>
             <input type="text" name="username" class="form-control" placeholder="Username" /><br />
             <label for="Password">Password:</label>
