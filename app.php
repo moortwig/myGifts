@@ -22,9 +22,6 @@ if(isset($_POST['signup'])) {
 	$user = new User();
 	$user->newUser();
 	header('Refresh: 3; url=index.php');
-	// TODO login user
-
-	// $session->startSession($login);
 	// TODO close the connection
 }
 

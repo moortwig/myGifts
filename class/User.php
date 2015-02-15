@@ -56,6 +56,8 @@ class User {
 			echo "The username already exists! You will be redirected shortly.";
 		} else {
 			echo "Welcome, " . $username . "! You have successfully signed up, and will shortly be redirected to the start page.";
+			// session works, but it would be nice if we could do it differently, I suppose We do have a session class >.< ...
+			$_SESSION['username'] = $username;
 			return $this->saveUser($username, $password, $email);
 		}		
 	}
