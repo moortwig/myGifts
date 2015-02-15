@@ -30,13 +30,20 @@ if(isset($_POST['signup'])) {
 
 // LOGIN
 // logins the user from the login form
-// TODO !!!
 if (isset($_POST['login'])) {
 	$session = new Session();
 	$session->startLoginSession();
 	header('Refresh: 3; url=index.php');
 }
 
+// LOGOUT
+// Logouts the user from clicking logout button
+if (isset($_POST['logout'])) {
+	// destroy sessions
+	session_destroy();
+	echo "You're now being logged out, and will shortly return to the start page.";
+	header('Refresh: 3; url=index.php');
+}
 
 
 

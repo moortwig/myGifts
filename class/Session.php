@@ -7,6 +7,7 @@ class Session {
 	public function getSession($session) {
 	// getter som används för att kolla om session finns
 	// ... eller ngt sådant ...
+		// return $this->session;	// $session
 	}
 
 	public function startLoginSession() {
@@ -21,29 +22,11 @@ class Session {
 
 		if ($check === true) {			
 			$_SESSION['username'] = $username;
-			echo "Perfect match! You may log in!";
+			echo "Perfect match! You've been logged in! Please wait ...";
 		} else {
 			echo "Nope, you did something very wrong there. Please try again after you've been redirected back!";
 		}
 	}
-
-	public function destroySession($session) {
-		// ta bort session, t ex logga ut
-		session_destroy();
-		echo "You're now being logged out, and will shortly return to the start page.";
-		header('Refresh: 3; url=index.php');
-	}
-
-
-	// some methods here
-	//////////////////////////////////////////////////
-	// LOGIN A USER /////////////////////////////////
-	// get data from the input fields
-
-
-
-	//////////////////////////////////////////////////
-	// LOGOUT A USER ////////////////////////////////
 }
 
 
