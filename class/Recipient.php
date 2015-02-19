@@ -5,10 +5,13 @@ class Recipient {
 	// spiffy code here
 	public $id;
 	public $name;
-	public $info;
+	public $information;
 	public $userId;
 
 	// some methods here
+	public function getName() {
+		return $this->name;
+	}
 
 
 	//////////////////////////////////////////////////////
@@ -49,7 +52,7 @@ class Recipient {
 	private function updateRecipient($name, $information, $recipientId) {
 		$database = new Database();
 
-		$query = $database->connect()->prepare('UPDATE recipients SET name = ?,  information = ? WHERE id = ?)';
+		$query = $database->connect()->prepare('UPDATE recipients SET name = ?,  information = ? WHERE id = ?');
 		$values = array($name, $information, $recipientId);
 		$query->execute($values);
 	}
@@ -63,7 +66,6 @@ class Recipient {
 		$information = $_POST['information'];
 		$userId = $_POST['userId']; // TODO belongs to dummy data field, remove after sorting out CSRF
 		// $userId = $_SESSION['userId'];
-
 		
 		$check = $this->checkNameExists($name);
 
@@ -71,7 +73,7 @@ class Recipient {
 			echo "This recipient already exists! Did you mean to add someone else? You will be redirected shortly.";
 		} else {
 			echo $name . " has been added! Please wait ...";
-			// session works, but it would be nice if we could do it differently, I suppose We do have a session class >.< ...			
+
 			return $this->saveRecipient($name, $information, $userId);
 		}		
 	}

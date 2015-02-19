@@ -15,14 +15,20 @@ require_once('header.php');
         	$recipients = $recipient->getAllRecipients($userId); ?>
 
         	<?php 
-        	foreach ($recipients as $key => $recipient) {
-                echo "<div class='data-row'>";
-                    echo "<div class='data-field'>" . utf8_encode($recipient['name']) . "</div>";
-                    echo "<div class='data-field'>" . utf8_encode($recipient['information']) . "</div>";
-                    echo "<input type='submit' class='' name='editRecipient' value='Edit' />";
-                echo "</div>";
-        	}
-        	?>
+        	foreach ($recipients as $key => $r) {
+                echo "<div class='data-row'>"; 
+                    echo "<div class='data-field'>";
+                        echo utf8_encode($r['name']);
+                    echo "</div>";
+                    echo "<div class='data-field'>";
+                        echo utf8_encode($r['information']);
+                    echo "</div>";
+                    echo "<div class='data-edit'>";
+                        echo "<a href='editrecipient.php?id=" . $r['id'] . "'>Edit</a>";
+                    echo "</div>";
+                echo "</div>"; ?>
+                
+        	<?php } ?>
             
         </div><!-- .recipients -->
 

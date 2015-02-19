@@ -12,7 +12,10 @@ require_once('header.php');
         	<h2>Edit Recipient</h2> 
         	<?php
         	/* TODO:
-
+        	- $_GET thingy?? 
+			- Get a specific recipient
+			- Make a form
+			
 
 			*/
         	$recipient = new Recipient();
