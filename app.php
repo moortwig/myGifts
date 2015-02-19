@@ -46,10 +46,16 @@ if (isset($_POST['logout'])) {
 if(isset($_POST['addRecipient'])) {
 	$recipient = new Recipient();
 	$recipient->newRecipient();
-	// header('Refresh: 3; url=index.php');
+	header('Refresh: 3; url=index.php');
 	// TODO close the connection
 }
 
+// EDIT RECIPIENT 	
+if(isset($_POST['editRecipient'])) {
+	// TODO test this
+	$recipient = new Recipient();
+	$recipient->editRecipient($recipientId, $userId);
+}
 
 
 

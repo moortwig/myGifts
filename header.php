@@ -21,10 +21,12 @@ require_once('app.php');
 
 <div class="nav">
     <?php 
-        // Display this section if a user is logged in
+        
         if(isset($_SESSION['username'])) { ?>
+            <!-- Display this section if a user is logged in -->
             <div class="logged-in">
                 <p>Hello <?php echo $_SESSION['username']; ?>!</p>
+                <a href="profile.php">Profile</a>
                 <form method="post" action="app.php" role="form">
                     <input type="submit" class="" name="logout" value="Log out" />
                 </form>
