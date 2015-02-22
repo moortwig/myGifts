@@ -1,4 +1,5 @@
 <footer>
+	<hr />
 	<ul>
 		
 		<li>mail: <a href="mailto:info@moortwig.se">mygifts@moortwig.se</a></li>
