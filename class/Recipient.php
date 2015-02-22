@@ -9,9 +9,17 @@ class Recipient {
 	public $userId;
 
 	// some methods here
-	public function getName() {
+	/*public function getName($recipientId) {
+		$this->getRecipient($recipientId)['name'];
+		var_dump($this->getRecipient($recipientId)['name']);
+		die('remove');
 		return $this->name;
 	}
+
+	public function getInformation() {
+		$this->getRecipient();
+		return $this->name;
+	}*/
 
 
 	//////////////////////////////////////////////////////
@@ -37,7 +45,7 @@ class Recipient {
 	}
 
 	//////////////////////////////////////////////////////
-	// QUERY SAVE RECIPIENT TO DB ///////////////////////
+	// QUERY TO SAVE RECIPIENT TO DB ////////////////////
 	private function insertRecipient($name, $information, $userId) {
 		$database = new Database();
 
@@ -47,7 +55,7 @@ class Recipient {
 	}
 
 	//////////////////////////////////////////////////////
-	// QUERY EDIT RECIPIENT TO DB ///////////////////////
+	// QUERY TO EDIT RECIPIENT TO DB ////////////////////
 	// TODO test this
 	private function updateRecipient($name, $information, $recipientId) {
 		$database = new Database();
@@ -82,24 +90,19 @@ class Recipient {
 	//////////////////////////////////////////////////////
 	// GET ONE RECIPIENT FOR USER ///////////////////////
 	// hämtar ALLT från databasen om en mottagare för den inloggade användaren
-	public function getRecipient($recipientId, $userId) {
+	public function getRecipient($recipientId) {
 		$database = new Database();
 
-		$query = $database->connect()->query("SELECT * FROM recipients WHERE id = '$recipientId' AND user_id = '$userId'");
+		$query = $database->connect()->query("SELECT * FROM recipients WHERE id = '$recipientId'");
 		// execute the query
 		$query->execute();
 		// fetch results
 		$result = $query->fetch();
-		/*// count the number of rows fetched, so we can use it in the if statement
-		$count = count($results);
 
-		// if rows === 1, return true
-		if ($count !== 1) {
-			return false;
-		} else {
-			// else return false
-			return true;
-		}	*/
+		$name = $result['name'];
+		$information = $result['information'];
+		// var_dump($result['name']);
+		// die('remove');
 		return $result;
 	}
 
@@ -107,12 +110,11 @@ class Recipient {
 	//////////////////////////////////////////////////////
 	// EDIT RECIPIENT FOR USER //////////////////////////
 	// TODO bygg färdigt denna! Knappt börjat ... Se också över argumenten
-	public function editRecipient($recipientId, $userId) {
+	public function editRecipient() {
 		// redigera info om mottagaren
 		$recipientId = $_POST['recipientId'];
 		$name = $_POST['name'];
 		$information = $_POST['information'];
-		$userId = $_POST['userId']; // TODO belongs to dummy data field, remove after sorting out CSRF
 		// $userId = $_SESSION['userId'];
 
 		return $this->updateRecipient($name, $information, $recipientId);	

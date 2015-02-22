@@ -54,7 +54,7 @@ if(isset($_POST['addRecipient'])) {
 if(isset($_POST['editRecipient'])) {
 	// TODO test this
 	$recipient = new Recipient();
-	$recipient->editRecipient($recipientId, $userId);
+	$recipient->editRecipient();
 }
 
 
