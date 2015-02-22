@@ -12,24 +12,21 @@ require_once('header.php');
         	<?php
         	$recipient = new Recipient();
         	$userId = 5; // dummy data TODO change this to the session user
-        	$recipients = $recipient->getAllRecipients($userId); ?>
-
-            
-            	<?php            
-            	foreach ($recipients as $key => $r) {
-                    echo "<div class='data-row'>"; 
-                        echo "<div class='data-field'>";
-                            echo utf8_encode($r['name']);
-                        echo "</div>";
-                        echo "<div class='data-field'>";
-                            echo utf8_encode($r['information']);
-                        echo "</div>";
-                        echo "<div class='data-edit'>";
-                            echo "<a href='editrecipient.php?id=" . $r['id'] . "'>Edit</a> ";   
-                        echo "</div>";
-                    echo "</div>"; ?>
-                    
-            	<?php } ?>
+        	$recipients = $recipient->getAllRecipients($userId);
+           
+        	foreach ($recipients as $key => $r) {
+                echo "<div class='data-row'>"; 
+                    echo "<div class='data-field'>";
+                        echo utf8_encode($r['name']);
+                    echo "</div>";
+                    echo "<div class='data-field'>";
+                        echo utf8_encode($r['information']);
+                    echo "</div>";
+                    echo "<div class='data-edit'>";
+                        echo "<a href='editrecipient.php?id=" . $r['id'] . "'>Edit</a> ";   
+                    echo "</div>";
+                echo "</div>"; ?>                
+        	<?php } ?>
             
         </div><!-- .recipients -->
 
