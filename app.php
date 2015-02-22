@@ -52,9 +52,17 @@ if(isset($_POST['addRecipient'])) {
 
 // EDIT RECIPIENT 	
 if(isset($_POST['editRecipient'])) {
-	// TODO test this
 	$recipient = new Recipient();
 	$recipient->editRecipient();
+	header('location: profile.php');
+}
+
+// DELETE RECIPIENT 	
+if(isset($_POST['deleteRecipient'])) {
+	// TODO test this
+	$recipient = new Recipient();
+	$recipient->deleteRecipient();
+	header('location: profile.php');
 }
 
 

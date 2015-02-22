@@ -42,7 +42,8 @@ require_once('header.php');
 
 		                <!-- TODO JavaScript check that all fields are filled in: -->
 		                <!-- TODO jQuery on key down "Enter" -> Submit -->
-		                <input type="submit" class="" name="editRecipient" value="Submit" />
+		                <input type="submit" name="deleteRecipient" value="Delete" />
+		                <input type="submit" class="" name="editRecipient" value="Save" />
 		            </form>
 	        	</div><!-- #editRecipientForm -->
         	<?php } else {	     
