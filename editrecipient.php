@@ -11,21 +11,18 @@ require_once('header.php');
 		<div class="recipients">
         	<h2>Edit Recipient</h2> 
         	<?php
-        	/* TODO:
-        	- $_GET thingy!!!
-			- Get a specific recipient
-			- Make a form
-			
 
-			*/
         	$recipient = new Recipient();
         	$recipientId = $_GET["id"]; // picks up the id from the URL
 
         	$name = $recipient->getRecipient($recipientId)['name'];
-        	// var_dump($name);
-        	// die('remove');
-        	$information = $recipient->getRecipient($recipientId)['information']; 
+        	$information = $recipient->getRecipient($recipientId)['information'];
+
+        	if ($name || $information == NULL) {
+        		header('url=404.php');
+        	}
         	?>
+
         	<div id="editRecipientForm">
 	            <!--    TODO adjust this for the new structure!  -->
 	            <form class="form-horizontal" method="post" action="app.php" role="form">
@@ -60,3 +57,10 @@ require_once('header.php');
         <p>Access to this content is forbidden. Log in, or sign up and you shall recieve access.</p>
     <?php } ?>
 </div> <!-- .main -->
+
+<!-- FOOTER -->
+<?php 
+
+require_once('footer.php');
+
+?>

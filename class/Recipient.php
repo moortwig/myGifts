@@ -8,19 +8,6 @@ class Recipient {
 	public $information;
 	public $userId;
 
-	// some methods here
-	/*public function getName($recipientId) {
-		$this->getRecipient($recipientId)['name'];
-		var_dump($this->getRecipient($recipientId)['name']);
-		die('remove');
-		return $this->name;
-	}
-
-	public function getInformation() {
-		$this->getRecipient();
-		return $this->name;
-	}*/
-
 
 	//////////////////////////////////////////////////////
 	// QUERY TO COMPARE USERNAMES ///////////////////////
@@ -56,7 +43,6 @@ class Recipient {
 
 	//////////////////////////////////////////////////////
 	// QUERY TO EDIT RECIPIENT TO DB ////////////////////
-	// TODO test this
 	private function updateRecipient($name, $information, $recipientId) {
 		$database = new Database();
 
@@ -97,9 +83,6 @@ class Recipient {
 		$query->execute();
 		// fetch results
 		$result = $query->fetch();
-
-		$name = $result['name'];
-		$information = $result['information'];
 
 		return $result;
 	}
