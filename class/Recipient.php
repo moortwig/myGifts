@@ -89,7 +89,6 @@ class Recipient {
 
 	//////////////////////////////////////////////////////
 	// GET ONE RECIPIENT FOR USER ///////////////////////
-	// hämtar ALLT från databasen om en mottagare för den inloggade användaren
 	public function getRecipient($recipientId) {
 		$database = new Database();
 
@@ -101,21 +100,18 @@ class Recipient {
 
 		$name = $result['name'];
 		$information = $result['information'];
-		// var_dump($result['name']);
-		// die('remove');
+
 		return $result;
 	}
 
 
 	//////////////////////////////////////////////////////
 	// EDIT RECIPIENT FOR USER //////////////////////////
-	// TODO bygg färdigt denna! Knappt börjat ... Se också över argumenten
 	public function editRecipient() {
 		// redigera info om mottagaren
 		$recipientId = $_POST['recipientId'];
 		$name = $_POST['name'];
 		$information = $_POST['information'];
-		// $userId = $_SESSION['userId'];
 
 		return $this->updateRecipient($name, $information, $recipientId);	
 	}
@@ -131,7 +127,6 @@ class Recipient {
 	//////////////////////////////////////////////////////
 	// GET ALL RECIPIENTS FOR USER //////////////////////
 	public function getAllRecipients($userId) {
-		// hämtar alla mottagare för den inloggade användaren
 		$database = new Database();
 
 		$query = $database->connect()->query("SELECT * FROM recipients WHERE user_id = '$userId'");
@@ -139,16 +134,7 @@ class Recipient {
 		$query->execute();
 		// fetch results
 		$results = $query->fetchAll();
-		/*// count the number of rows fetched, so we can use it in the if statement
-		$count = count($results);
 
-		// if rows === 1, return true
-		if ($count !== 1) {
-			return false;
-		} else {
-			// else return false
-			return true;
-		}	*/
 		return $results;
 	}
 
