@@ -61,7 +61,7 @@ if(isset($_POST['editRecipient'])) {
 if(isset($_POST['deleteRecipient'])) {
 	// TODO test this
 	$recipient = new Recipient();
-	$recipient->deleteRecipient();
+	$recipient->deleteRecipient($recipientId);
 	header('location: profile.php');
 }
 

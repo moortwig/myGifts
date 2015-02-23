@@ -102,8 +102,12 @@ class Recipient {
 
 	//////////////////////////////////////////////////////
 	// DELETE RECIPIENT FOR USER ////////////////////////
-	public function deleteRecipient($recipient) {
-		// TODO
+	public function deleteRecipient($recipientId) {
+		$recipientId = $_POST['recipientId'];
+		$database = new Database();
+
+		$query = $database->connect()->prepare("DELETE FROM recipients WHERE id = ?");
+		$query->execute(array($recipientId));
 	}
 
 
