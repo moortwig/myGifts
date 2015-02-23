@@ -24,9 +24,9 @@ require_once('header.php');
 		            <!--    TODO adjust this for the new structure!  -->
 		            <form class="form-horizontal" method="post" action="app.php" role="form">
 		                <label for="name">Name:</label>
-		                <input type="text" name="name" class="form-control" value="<?php echo utf8_encode($name); ?>" /><br />
+		                <input type="text" name="name" class="form-control" value="<?php echo $name; ?>" /><br />
 		                <label for="Information">Information:</label><br />
-		                <textarea name="information" class="form-control"><?php echo utf8_encode($information); ?></textarea>
+		                <textarea name="information" class="form-control"><?php echo $information; ?></textarea>
 		                <!-- TODO Maybe a better way to pass on the session user ID? -->
 		                <!-- YES! THERE IS!!! Besides, the row below isn't even working ...
 		                Read THIS: http://www.clfsrpm.net/csrf/ -->

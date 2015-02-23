@@ -68,13 +68,13 @@ class Recipient {
 		} else {
 			echo $name . " has been added! Please wait ...";
 
-			return $this->saveRecipient($name, $information, $userId);
+			return $this->insertRecipient($name, $information, $userId);
 		}		
 	}
 
 
 	//////////////////////////////////////////////////////
-	// GET ONE RECIPIENT FOR USER ///////////////////////
+	// QUERY TO GET ONE RECIPIENT FOR USER //////////////
 	public function getRecipient($recipientId) {
 		$database = new Database();
 
@@ -103,12 +103,12 @@ class Recipient {
 	//////////////////////////////////////////////////////
 	// DELETE RECIPIENT FOR USER ////////////////////////
 	public function deleteRecipient($recipient) {
-		// tar bort mottagaren ur databasen
+		// TODO
 	}
 
 
 	//////////////////////////////////////////////////////
-	// GET ALL RECIPIENTS FOR USER //////////////////////
+	// QUERY TO GET ALL RECIPIENTS FOR USER /////////////
 	public function getAllRecipients($userId) {
 		$database = new Database();
 

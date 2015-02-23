@@ -17,10 +17,10 @@ require_once('header.php');
         	foreach ($recipients as $key => $r) {
                 echo "<div class='data-row'>"; 
                     echo "<div class='data-field'>";
-                        echo utf8_encode($r['name']);
+                        echo $r['name'];
                     echo "</div>";
                     echo "<div class='data-field'>";
-                        echo utf8_encode($r['information']);
+                        echo $r['information'];
                     echo "</div>";
                     echo "<div class='data-edit'>";
                         echo "<a href='editrecipient.php?id=" . $r['id'] . "'>Edit</a> ";   
