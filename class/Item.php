@@ -15,8 +15,10 @@ class Item {
 	// sparar recipient till databas
 		$name = $_POST['name'];
 		$description = $_POST['description'];
-// Olivolja, balsamvinäger, tapenade, crostini
-		return $this->insertItem($name, $description);
+		$userId = $_POST['userId']; // TODO belongs to dummy data field, remove after sorting out CSRF
+		// $userId = $_SESSION['userId'];
+
+		return $this->insertItem($name, $description, $userId);
 	}
 
 	/*public function getItem($item, $user, $recipient) {
@@ -44,12 +46,26 @@ class Item {
 
 	//////////////////////////////////////////////////////
 	// QUERY TO SAVE ITEM TO DB /////////////////////////
-	private function insertItem($name, $description) {
+	private function insertItem($name, $description, $userId) {
 		$database = new Database();
 
-		$query = $database->connect()->prepare('INSERT INTO items (name, description) VALUES (?,?)');
+		$query = $database->connect()->prepare('INSERT INTO items (name, description, user_id) VALUES (?,?,?)');
 		$values = array($name, $description);
 		$query->execute($values);
+	}
+
+	//////////////////////////////////////////////////////
+	// QUERY TO GET ALL ITEMS FOR USER //////////////////
+	public function getAllRecipients($userId) {
+		$database = new Database();
+
+		$query = $database->connect()->query("SELECT * FROM recipients WHERE user_id = '$userId'");
+		// execute the query
+		$query->execute();
+		// fetch results
+		$results = $query->fetchAll();
+
+		return $results;
 	}
 }
 
