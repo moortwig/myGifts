@@ -9,8 +9,15 @@ class Item {
 
 
 	// some methods here
+	//////////////////////////////////////////////////////
+	// ADD A NEW ITEM ///////////////////////////////////
 	public function newItem() {
-	// sparar ett föremål till databasen
+	// sparar recipient till databas
+		$name = $_POST['name'];
+		$information = $_POST['description'];
+
+		return $this->insertItem($name, $information);
+		}		
 	}
 
 	public function getItem($item, $user(?), $recipient) {
@@ -24,20 +31,27 @@ class Item {
 	public function getAllItems($user) {
 		// hämtar alla föremål som hör till den inloggade användaren
 	}
+
+	public function deleteItem($id) {
+		// tar bort ett föremål
+	}
+
+
+
+
 	//////////////////////////////////////////////////
-	// GET GIFT ////////////////////////////////////
-	// get gift() {
+	// ----- QUERIES --------------------------------
+	////////////////////////////////////////////////
 
-	// }
+	//////////////////////////////////////////////////////
+	// QUERY TO SAVE RECIPIENT TO DB ////////////////////
+	private function insertItem($name, $description) {
+		$database = new Database();
 
-
-
-
-	//////////////////////////////////////////////////
-	// ADD A NEW GIFT  //////////////////////////////
-	// set gift() {
-
-	// }
+		$query = $database->connect()->prepare('INSERT INTO recipients (name, information) VALUES (?,?)');
+		$values = array($name, $information);
+		$query->execute($values);
+	}
 }
 
 
