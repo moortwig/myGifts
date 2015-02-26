@@ -9,7 +9,7 @@ session_start();
 // CLASSES
 // require_once('class/Database.php');
 // require_once('class/Gift.php');
-// require_once('class/Item.php');
+require_once('class/Item.php');
 require_once('class/Recipient.php');
 require_once('class/Session.php');
 require_once('class/User.php');
@@ -42,10 +42,13 @@ if (isset($_POST['logout'])) {
 	header('Refresh: 3; url=index.php');
 }
 
+
+///////////////////////////////////////////////////
 // ADD RECIPIENT
 if(isset($_POST['addRecipient'])) {
 	$recipient = new Recipient();
 	$recipient->newRecipient();
+	echo "The recipient has been saved!";
 	header('Refresh: 3; url=index.php');
 	// TODO close the connection
 }
@@ -65,6 +68,16 @@ if(isset($_POST['deleteRecipient'])) {
 	header('location: profile.php');
 }
 
+
+///////////////////////////////////////////////////
+// ADD ITEM
+if(isset($_POST['addItem'])) {
+	$item = new Item();
+	$item->newItem();
+	echo "The item has been saved!";
+	header('Refresh: 3; url=index.php');
+	// TODO close the connection
+}
 
 
 

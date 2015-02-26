@@ -14,13 +14,12 @@ class Item {
 	public function newItem() {
 	// sparar recipient till databas
 		$name = $_POST['name'];
-		$information = $_POST['description'];
-
-		return $this->insertItem($name, $information);
-		}		
+		$description = $_POST['description'];
+// Olivolja, balsamvinäger, tapenade, crostini
+		return $this->insertItem($name, $description);
 	}
 
-	public function getItem($item, $user(?), $recipient) {
+	/*public function getItem($item, $user, $recipient) {
 		// hämtar ett föremål från databasen som hör till den inloggade användaren och/eller en specifik mottagare
 	}
 
@@ -35,7 +34,7 @@ class Item {
 	public function deleteItem($id) {
 		// tar bort ett föremål
 	}
-
+*/
 
 
 
@@ -44,12 +43,12 @@ class Item {
 	////////////////////////////////////////////////
 
 	//////////////////////////////////////////////////////
-	// QUERY TO SAVE RECIPIENT TO DB ////////////////////
+	// QUERY TO SAVE ITEM TO DB /////////////////////////
 	private function insertItem($name, $description) {
 		$database = new Database();
 
-		$query = $database->connect()->prepare('INSERT INTO recipients (name, information) VALUES (?,?)');
-		$values = array($name, $information);
+		$query = $database->connect()->prepare('INSERT INTO items (name, description) VALUES (?,?)');
+		$values = array($name, $description);
 		$query->execute($values);
 	}
 }

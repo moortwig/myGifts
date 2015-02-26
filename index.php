@@ -16,7 +16,7 @@ require_once('header.php');
         // Display this section if a user is logged in ?>
         <div class="user-menu">
             <a href="addrecipient.php"><h3>Add recipient</h3></a>
-            <h3>Add item</h3>
+            <a href="additem.php"><h3>Add item</h3></a>
             <h3>Add gift</h3>
         </div>
     <?php } else {
