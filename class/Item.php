@@ -51,7 +51,7 @@ class Item {
 		$database = new Database();
 
 		$query = $database->connect()->prepare('INSERT INTO items (name, description, user_id) VALUES (?,?,?)');
-		$values = array($name, $description);
+		$values = array($name, $description, $userId);
 		$query->execute($values);
 	}
 
