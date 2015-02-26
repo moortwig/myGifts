@@ -22,22 +22,17 @@ class Item {
 		return $this->insertItem($name, $description, $userId);
 	}
 
-	/*public function getItem($item, $user, $recipient) {
-		// hämtar ett föremål från databasen som hör till den inloggade användaren och/eller en specifik mottagare
+	//////////////////////////////////////////////////////
+	// EDIT ITEM FOR USER ///////////////////////////////
+	public function editItem() {
+		// redigera info om mottagaren
+		$itemId = $_POST['itemId'];
+		$name = $_POST['name'];
+		$description = $_POST['description'];
+
+		return $this->updateItem($name, $description, $itemId);	
 	}
 
-	public function editItem($item) {
-		// redigerar ett föremål i databasen
-	}
-
-	public function getAllItems($user) {
-		// hämtar alla föremål som hör till den inloggade användaren
-	}
-
-	public function deleteItem($id) {
-		// tar bort ett föremål
-	}
-*/
 
 
 
@@ -57,16 +52,40 @@ class Item {
 
 	//////////////////////////////////////////////////////
 	// QUERY TO GET ALL ITEMS FOR USER //////////////////
-	public function getAllRecipients($userId) {
+	public function getAllItems($userId) {
 		$database = new Database();
 
-		$query = $database->connect()->query("SELECT * FROM recipients WHERE user_id = '$userId'");
+		$query = $database->connect()->query("SELECT * FROM items WHERE user_id = '$userId'");
 		// execute the query
 		$query->execute();
 		// fetch results
 		$results = $query->fetchAll();
 
 		return $results;
+	}
+
+	//////////////////////////////////////////////////////
+	// QUERY TO GET ONE ITEM FOR USER ///////////////////
+	public function getItem($userId) {
+		$database = new Database();
+
+		$query = $database->connect()->query("SELECT * FROM items WHERE id = '$userId'");
+		// execute the query
+		$query->execute();
+		// fetch results
+		$result = $query->fetch();
+
+		return $result;
+	}
+
+	//////////////////////////////////////////////////////
+	// QUERY TO EDIT RECIPIENT TO DB ////////////////////
+	private function updateItem($name, $description, $itemId) {
+		$database = new Database();
+
+		$query = $database->connect()->prepare('UPDATE items SET name = ?,  description = ? WHERE id = ?');
+		$values = array($name, $description, $itemId);
+		$query->execute($values);
 	}
 }
 

@@ -26,9 +26,31 @@ require_once('header.php');
                         echo "<a href='editrecipient.php?id=" . $r['id'] . "'>Edit</a> ";   
                     echo "</div>";
                 echo "</div>"; ?>                
-        	<?php } ?>
-            
+        	<?php } ?>            
         </div><!-- .recipients -->
+
+        <div class="items">
+            <h2>Items</h2> 
+            <?php
+            $item = new Item();
+            $userId = 5; // dummy data TODO change this to the session user
+            $items = $item->getAllItems($userId);
+           
+            foreach ($items as $key => $i) {
+                echo "<div class='data-row'>"; 
+                    echo "<div class='data-field'>";
+                        echo $i['name'];
+                    echo "</div>";
+                    echo "<div class='data-field'>";
+                        echo $i['description'];
+                    echo "</div>";
+                    echo "<div class='data-edit'>";
+                        echo "<a href='edititem.php?id=" . $i['id'] . "'>Edit</a> ";   
+                    echo "</div>";
+                echo "</div>"; ?>                
+            <?php } ?>
+            
+        </div><!-- .items -->
 
     <?php } else { ?>
         <h2>Hold!</h2>

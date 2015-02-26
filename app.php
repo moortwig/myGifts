@@ -79,6 +79,15 @@ if(isset($_POST['addItem'])) {
 	// TODO close the connection
 }
 
+// EDIT ITEM 	
+if(isset($_POST['editItem'])) {
+	$item = new Item();
+	$item->editItem();
+	header('location: profile.php');
+}
+
+
+
 
 
 
