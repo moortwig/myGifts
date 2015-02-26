@@ -6,6 +6,7 @@ class Item {
 	public $id;
 	public $name;
 	public $description;
+	public $userId;
 
 
 	// some methods here
