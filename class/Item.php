@@ -13,7 +13,6 @@ class Item {
 	//////////////////////////////////////////////////////
 	// ADD A NEW ITEM ///////////////////////////////////
 	public function newItem() {
-	// sparar recipient till databas
 		$name = $_POST['name'];
 		$description = $_POST['description'];
 		$userId = $_POST['userId']; // TODO belongs to dummy data field, remove after sorting out CSRF
@@ -25,7 +24,6 @@ class Item {
 	//////////////////////////////////////////////////////
 	// EDIT ITEM FOR USER ///////////////////////////////
 	public function editItem() {
-		// redigera info om mottagaren
 		$itemId = $_POST['itemId'];
 		$name = $_POST['name'];
 		$description = $_POST['description'];
