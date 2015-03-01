@@ -35,7 +35,7 @@ class User {
 
 	//////////////////////////////////////////////////////
 	// QUERY SAVE USER TO DB ////////////////////////////
-	private function saveUser($username, $password, $email) {
+	private function insertUser($username, $password, $email) {
 		$database = new Database();
 
 		$query = $database->connect()->prepare('INSERT INTO users (username, password, email) VALUES (?,?,?)');
@@ -58,7 +58,7 @@ class User {
 			echo "Welcome, " . $username . "! You have successfully signed up, and will shortly be redirected to the start page.";
 			// session works, but it would be nice if we could do it differently, I suppose We do have a session class >.< ...
 			$_SESSION['username'] = $username;
-			return $this->saveUser($username, $password, $email);
+			return $this->insertUser($username, $password, $email);
 		}		
 	}
 
