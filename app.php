@@ -85,6 +85,15 @@ if(isset($_POST['editItem'])) {
 	header('location: profile.php');
 }
 
+///////////////////////////////////////////////////
+// ADD GIFT
+if(isset($_POST['addGift'])) {
+	$gift = new Gift();
+	$gift->newGift();
+	echo "The gift has been saved!";
+	header('Refresh: 3; url=index.php');
+	// TODO close the connection
+}
 
 
 

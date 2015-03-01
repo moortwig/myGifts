@@ -44,6 +44,23 @@ class Gift {
 	// set giftReceived() {
 
 	// }
+
+
+	//////////////////////////////////////////////////
+	// ----- QUERIES --------------------------------
+	////////////////////////////////////////////////
+
+
+
+	//////////////////////////////////////////////////////
+	// QUERY SAVE GIFT TO DB ////////////////////////////
+	private function insertGift($itemId, $recipientId, $occasion) {
+		$database = new Database();
+
+		$query = $database->connect()->prepare('INSERT INTO gifts (item_id, recipient_id, occasion) VALUES (?,?,?)');
+		$values = array($itemId, $recipientId, $occasion);
+		$query->execute($values);
+	}
 }
 
 
