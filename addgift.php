@@ -38,14 +38,16 @@ require_once('header.php');
 				</select><br />
 
                 <label for="Recipient">Recipient:</label>
-                <select name="recipientId">
-	                <?php
-	                foreach ($recipients as $recipient => $r) { ?>
-						<option value="<?php echo $r['id']; ?>">
-	                    	<?php echo $r['name']; ?>
-	                	</option>
-					<?php } ?>
-				</select><br />
+                <?php
+                // TODO Make this a multi selector!!
+                // TODO even better would be to make an input text field and to filter the input text, as if with Angular
+                foreach ($recipients as $recipient => $r) { ?>
+	                <ul>
+	                <li><input type="checkbox" name="recipientId" value="<?php echo $r['id']; ?>">
+	                	<?php echo $r['name']; ?>
+	                </input></li>
+	                </ul>
+				<?php } ?><br />
                 <label for="Occasion">Occasion:</label>
                 <input type="text" name="occasion" class="form-control" placeholder="Occasion" /><br />
                 <!-- buttons: -->

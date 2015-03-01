@@ -16,6 +16,11 @@ class Gift {
 		// $userId = $_SESSION['userId'];
 		$recipientId = $_POST['recipientId'];
 
+		// TODO foreach loop here
+		var_dump($recipientId);
+		die('remove');
+
+
 		return $this->insertGift($userId, $itemId, $recipientId, $userId);
 	}
 
