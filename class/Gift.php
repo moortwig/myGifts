@@ -8,17 +8,18 @@ class Gift {
 	public $occasion;
 	public $added;
 
-	// some methods here
+	//////////////////////////////////////////////////
+	// ADD A NEW GIFT ///////////////////////////////
 	public function newGift() {
-		$name = $_POST['name'];
-		$description = $_POST['description'];
+		$itemId = $_POST['itemId'];
 		$userId = $_POST['userId']; // TODO belongs to dummy data field, remove after sorting out CSRF
 		// $userId = $_SESSION['userId'];
+		$recipientId = $_POST['recipientId'];
 
-		return $this->insertGift($name, $description, $userId);
+		return $this->insertGift($userId, $itemId, $recipientId, $userId);
 	}
 
-	public function getGift($gift, $user(?), $recipient) {
+	public function getGift($gift, $user, $recipient) {
 		// hämtar en gåva från databasen som hör till den inloggade användaren och/eller en specifik mottagare
 	}
 
@@ -31,17 +32,8 @@ class Gift {
 	}
 
 	//////////////////////////////////////////////////
-	// GET RECEIVED GIFTS ///////////////////////////
+	// GET GIFTS ////////////////////////////////////
 	// get giftReceived() {
-
-	// }
-
-
-
-
-	//////////////////////////////////////////////////
-	// ADD A NEW GIFT RECEIVED //////////////////////
-	// set giftReceived() {
 
 	// }
 
@@ -50,15 +42,13 @@ class Gift {
 	// ----- QUERIES --------------------------------
 	////////////////////////////////////////////////
 
-
-
-	//////////////////////////////////////////////////////
-	// QUERY SAVE GIFT TO DB ////////////////////////////
-	private function insertGift($itemId, $recipientId, $occasion) {
+	//////////////////////////////////////////////////
+	// QUERY SAVE GIFT TO DB ////////////////////////
+	private function insertGift($userId, $itemId, $recipientId, $occasion) {
 		$database = new Database();
 
-		$query = $database->connect()->prepare('INSERT INTO gifts (item_id, recipient_id, occasion) VALUES (?,?,?)');
-		$values = array($itemId, $recipientId, $occasion);
+		$query = $database->connect()->prepare('INSERT INTO gifts (user_id, item_id, recipient_id, occasion) VALUES (?,?,?,?)');
+		$values = array($userId, $itemId, $recipientId, $occasion);
 		$query->execute($values);
 	}
 }

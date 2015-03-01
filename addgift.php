@@ -9,25 +9,55 @@ require_once('header.php');
     if(isset($_SESSION['username'])) { ?>
 
         <h2>Add Gift</h2>
+        <?php
+		$userId = 5; // TODO change this to a safe get user id
+		$item = new Item();
+		$items = $item->getAllItems($userId);
+
+		$recipient = new Recipient();
+		$recipients = $recipient->getAllRecipients($userId);
+		// $itemId = $items['id'];
+		// foreach ($items as $item => $i) {
+		// 	echo $i['name'];
+		// }
+		/*var_dump($item);*/
+		// die(' remove');
+		?>
 
 		<div class="add-gift">
             <h2>Sign up</h2>
             <form class="form-horizontal" method="post" action="app.php" role="form">
                 <label for="Item">Item:</label>
-                <input type="text" name="item" class="form-control" placeholder="Item" /><br />
+                <select name="itemId">
+	                <?php
+	                foreach ($items as $item => $i) { ?>
+						<option value="<?php echo $i['id']; ?>">
+	                    	<?php echo $i['name']; ?>
+	                	</option>
+					<?php } ?>
+				</select><br />
+
                 <label for="Recipient">Recipient:</label>
-                <input type="text" name="recipient" class="form-control" placeholder="Recipient" /><br />
-                <!-- TODO JavaScript regex password check below: -->
-                <!-- <label for="Passwordcheck">Retype password:</label>
-                <input type="password" name="pwdCheck" name="" class="form-control" placeholder="Retype password" /><br />-->
+                <select name="recipientId">
+	                <?php
+	                foreach ($recipients as $recipient => $r) { ?>
+						<option value="<?php echo $r['id']; ?>">
+	                    	<?php echo $r['name']; ?>
+	                	</option>
+					<?php } ?>
+				</select><br />
                 <label for="Occasion">Occasion:</label>
                 <input type="text" name="occasion" class="form-control" placeholder="Occasion" /><br />
                 <!-- buttons: -->
-                <!-- TODO jQuery on click clear form
-                <input type="submit" class="button" name="clear" value="CLEAR" /> -->
-
                 <!-- TODO JavaScript check that all fields are filled in: -->
                 <!-- TODO jQuery on key down "Enter" -> Submit -->
+
+                <!-- TODO Maybe a better way to pass on the session user ID? -->
+                <!-- YES! THERE IS!!! Besides, the row below isn't even working ...
+                Read THIS: http://www.clfsrpm.net/csrf/ -->
+                <!-- <input name="userId" type="hidden" value=<?php /*echo "'". $_SESSION['userId'] . "'" */?> /> -->
+                <!-- TODO remove this field with dummy data -->
+                <input name="userId" type="hidden" value="5" />
                 <input type="submit" class="" name="addGift" value="Submit" />
             </form>
         </div><!-- .add-gift -->
