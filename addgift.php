@@ -10,11 +10,11 @@ require_once('header.php');
 
         <h2>Add Gift</h2>
 
-		<div class="signup">
+		<div class="add-gift">
             <h2>Sign up</h2>
             <form class="form-horizontal" method="post" action="app.php" role="form">
-                <label for="Username">Username:</label>
-                <input type="text" name="username" class="form-control" placeholder="Username" /><br />
+                <label for="Item">Item:</label>
+                <input type="text" name="username" class="form-control" placeholder="Item" /><br />
                 <label for="Password">Password:</label>
                 <input type="password" name="password" class="form-control" placeholder="Password" /><br />
                 <!-- TODO JavaScript regex password check below: -->
@@ -30,4 +30,17 @@ require_once('header.php');
                 <!-- TODO jQuery on key down "Enter" -> Submit -->
                 <input type="submit" class="" name="signup" value="Submit" />
             </form>
-        </div><!-- .signup -->
+        </div><!-- .add-gift -->
+        <?php } else { ?>
+        <h2>Hold!</h2>
+        <p>Access to this content is forbidden. Log in, or sign up and you shall recieve access.</p>
+    <?php } ?>
+</div><!-- .main -->
+
+
+<!-- FOOTER -->
+<?php 
+
+require_once('footer.php');
+
+?>
