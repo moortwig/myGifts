@@ -68,7 +68,6 @@ class User {
 	}
 
 	public function getUserId($username) {
-		// hämtar id från databasen för användare
 		$database = new Database();
 
 		$query = $database->connect()->query("SELECT id FROM users WHERE username = '$username'");
