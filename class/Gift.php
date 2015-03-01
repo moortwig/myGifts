@@ -3,14 +3,19 @@
 class Gift {
 	// spiffy code here
 	public $id;
-	public $giftId;
+	public $itemId;
 	public $recipientId;
 	public $occasion;
 	public $added;
 
 	// some methods here
 	public function newGift() {
-		// sparar en gåva till databasen
+		$name = $_POST['name'];
+		$description = $_POST['description'];
+		$userId = $_POST['userId']; // TODO belongs to dummy data field, remove after sorting out CSRF
+		// $userId = $_SESSION['userId'];
+
+		return $this->insertGift($name, $description, $userId);
 	}
 
 	public function getGift($gift, $user(?), $recipient) {

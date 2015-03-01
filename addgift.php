@@ -3,25 +3,14 @@
 require_once('header.php');
 
 ?>
-
-<!-- MAIN BODY -->
 <div class="main">
-   
-    <br />
-    <br />
-    <!-- SIGN UP -->
     <?php
-    
-    if(isset($_SESSION['username'])) { 
-        // Display this section if a user is logged in ?>
-        <div class="user-menu">
-            <a href="addrecipient.php"><h3>Add recipient</h3></a>
-            <a href="additem.php"><h3>Add item</h3></a>
-            <a href="addgift.php"><h3>Add gift</h3></a>
-        </div>
-    <?php } else {
-    // Display this section if noone has logged in yet! ?>        
-        <div class="signup">
+    // Display this section if a user is logged in
+    if(isset($_SESSION['username'])) { ?>
+
+        <h2>Add Gift</h2>
+
+		<div class="signup">
             <h2>Sign up</h2>
             <form class="form-horizontal" method="post" action="app.php" role="form">
                 <label for="Username">Username:</label>
@@ -42,14 +31,3 @@ require_once('header.php');
                 <input type="submit" class="" name="signup" value="Submit" />
             </form>
         </div><!-- .signup -->
-    <?php } ?>
-
-</div><!-- .main -->
-
-
-<!-- FOOTER -->
-<?php 
-
-require_once('footer.php');
-
-?>

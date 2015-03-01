@@ -7,8 +7,7 @@ session_start();
 // this file (app.php) is then included in header.php
 
 // CLASSES
-// require_once('class/Database.php');
-// require_once('class/Gift.php');
+require_once('class/Gift.php');
 require_once('class/Item.php');
 require_once('class/Recipient.php');
 require_once('class/Session.php');

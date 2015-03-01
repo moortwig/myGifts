@@ -9,7 +9,7 @@ require_once('header.php');
     if(isset($_SESSION['username'])) { ?>
 
         <h2>Add item</h2>
-        <div class="add-item-form">
+        <div class="add-item">
             <!--    TODO adjust this for the new structure!  -->
             <form class="form-horizontal" method="post" action="app.php" role="form">
                 <label for="name">Name:</label>
@@ -31,7 +31,7 @@ require_once('header.php');
                 <!-- TODO jQuery on key down "Enter" -> Submit -->
                 <input type="submit" class="" name="addItem" value="Submit" />
             </form>
-        </div><!-- .add-item-form -->
+        </div><!-- .add-item -->
     <?php } else { ?>
         <h2>Hold!</h2>
         <p>Access to this content is forbidden. Log in, or sign up and you shall recieve access.</p>
