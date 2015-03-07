@@ -39,11 +39,10 @@ require_once('header.php');
 
                 <label for="Recipient">Recipient:</label>
                 <?php
-                // TODO Make this a multi selector!!
                 // TODO even better would be to make an input text field and to filter the input text, as if with Angular
                 foreach ($recipients as $recipient => $r) { ?>
 	                <ul>
-	                <li><input type="checkbox" name="recipientId" value="<?php echo $r['id']; ?>">
+	                <li><input type="checkbox" name="recipientId[]" value="<?php echo $r['id']; ?>">
 	                	<?php echo $r['name']; ?>
 	                </input></li>
 	                </ul>

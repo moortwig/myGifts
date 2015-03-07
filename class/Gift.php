@@ -1,5 +1,7 @@
 <?php
 
+require_once('class/Recipient.php');
+
 class Gift {
 	// spiffy code here
 	public $id;
@@ -11,18 +13,19 @@ class Gift {
 	//////////////////////////////////////////////////
 	// ADD A NEW GIFT ///////////////////////////////
 	public function newGift() {
+		// there can be several recipientId, so I need to insert into the database as many rows as there are recipientId.
+		// foreach recipientId, insert into gifts ... Should do it.
+		$recipient = new Recipient();
+
 		$itemId = $_POST['itemId'];
 		$userId = $_POST['userId']; // TODO belongs to dummy data field, remove after sorting out CSRF
-		// $userId = $_SESSION['userId'];
-		$recipientId = $_POST['recipientId'];
+		// $userId = $_SESSION['userId'];		
+		$recipientIdArray = $_POST['recipientId'];
+		$occasion = $_POST['occasion'];
 
-		// TODO foreach loop here
-		var_dump($recipientId);
-		die('remove');
-
-
-		return $this->insertGift($userId, $itemId, $recipientId, $userId);
+		return $this->insertGift($userId, $itemId, $recipientIdArray, $occasion);
 	}
+
 
 	public function getGift($gift, $user, $recipient) {
 		// hämtar en gåva från databasen som hör till den inloggade användaren och/eller en specifik mottagare
@@ -49,12 +52,14 @@ class Gift {
 
 	//////////////////////////////////////////////////
 	// QUERY SAVE GIFT TO DB ////////////////////////
-	private function insertGift($userId, $itemId, $recipientId, $occasion) {
+	private function insertGift($userId, $itemId, $recipientIdArray, $occasion) {
 		$database = new Database();
-
-		$query = $database->connect()->prepare('INSERT INTO gifts (user_id, item_id, recipient_id, occasion) VALUES (?,?,?,?)');
-		$values = array($userId, $itemId, $recipientId, $occasion);
-		$query->execute($values);
+		
+		foreach ($recipientIdArray as $recipientId) {		
+			$query = $database->connect()->prepare('INSERT INTO gifts (user_id, item_id, recipient_id, occasion) VALUES (?,?,?,?)');
+			$values = array($userId, $itemId, $recipientId, $occasion);
+			$query->execute($values);
+		}
 	}
 }
 
