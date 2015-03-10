@@ -35,7 +35,6 @@ if (isset($_POST['login'])) {
 // LOGOUT
 // Logouts the user from clicking logout button
 if (isset($_POST['logout'])) {
-	// destroy sessions
 	session_destroy();
 	echo "You're now being logged out, and will shortly return to the start page.";
 	header('Refresh: 3; url=index.php');

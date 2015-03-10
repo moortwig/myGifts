@@ -66,8 +66,6 @@ class Recipient {
 		if ($check === true) {
 			echo "This recipient already exists! Did you mean to add someone else? You will be redirected shortly.";
 		} else {
-			echo $name . " has been added! Please wait ...";
-
 			return $this->insertRecipient($name, $information, $userId);
 		}		
 	}
