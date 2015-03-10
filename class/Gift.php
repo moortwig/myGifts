@@ -61,6 +61,17 @@ class Gift {
 			$query->execute($values);
 		}
 	}
+
+	//////////////////////////////////////////////////
+	// QUERY GIFTS ON RECIPIENT /////////////////////
+	// TODO 
+	// query gifts
+	// join recipients.id on gifts.recipient_id
+	// join items.id on gifts.item_id
+	private function getGiftsOnRecipient($recipientId, $itemId) {
+		// awesome code here
+	}
+
 }
 
 
