@@ -15,9 +15,18 @@ require_once('header.php');
         	$recipients = $recipient->getAllRecipients($userId);
            
         	foreach ($recipients as $key => $r) {
+                $gift = new Gift();
+                $recipientId = $r['id'];
+                $gifts = $gift->queryGiftsOnRecipient($recipientId);
+                // foreach ($gifts as $gift => $g) {
+                //     var_dump($g['id']);
+                //     die('remove');
+                // }
+                
                 echo "<div class='data-row'>"; 
                     echo "<div class='data-field'>";
-                        echo $r['name'];
+                        echo "<a href='recipient.php?id=" . $r['id'] . "'>" . $r['name'] . "</a> ";
+                        // echo $r['name'];
                     echo "</div>";
                     echo "<div class='data-field'>";
                         echo $r['information'];

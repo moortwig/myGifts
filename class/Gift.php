@@ -1,6 +1,6 @@
 <?php
 
-require_once('class/Recipient.php');
+// require_once('class/Recipient.php');
 
 class Gift {
 	// spiffy code here
@@ -15,7 +15,7 @@ class Gift {
 	public function newGift() {
 		// there can be several recipientId, so I need to insert into the database as many rows as there are recipientId.
 		// foreach recipientId, insert into gifts ... Should do it.
-		$recipient = new Recipient();
+		// $recipient = new Recipient();
 
 		$itemId = $_POST['itemId'];
 		$userId = $_POST['userId']; // TODO belongs to dummy data field, remove after sorting out CSRF
@@ -35,8 +35,11 @@ class Gift {
 		// redigerar en gåva i databasen
 	}
 
-	public function getAllGifts($user, $recipient) {
-		// hämtar alla gåvor från databasen som hör till den inloggade användaren och en specifik mottagare
+	public function getAllGifts($recipientId) {
+		// hämtar alla gåvor från databasen som hör till en specifik mottagare
+		
+
+		// queryGiftsOnRecipient($recipientId);
 	}
 
 	//////////////////////////////////////////////////
@@ -68,8 +71,16 @@ class Gift {
 	// query gifts
 	// join recipients.id on gifts.recipient_id
 	// join items.id on gifts.item_id
-	private function getGiftsOnRecipient($recipientId, $itemId) {
-		// awesome code here
+	public function queryGiftsOnRecipient($recipientId) {
+		$database = new Database();
+
+		$query = $database->connect()->query("SELECT * FROM gifts WHERE recipient_id = '$recipientId'");
+		// execute the query
+		$query->execute();
+		// fetch results
+		$result = $query->fetch();
+
+		return $result;
 	}
 
 }
