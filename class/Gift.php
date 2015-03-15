@@ -29,6 +29,7 @@ class Gift {
 
 	public function getGift($gift, $user, $recipient) {
 		// hämtar en gåva från databasen som hör till den inloggade användaren och/eller en specifik mottagare
+
 	}
 
 	public function editGift($gift) {
@@ -78,7 +79,7 @@ class Gift {
 		// execute the query
 		$query->execute();
 		// fetch results
-		$result = $query->fetch();
+		$result = $query->fetchAll();
 
 		return $result;
 	}
