@@ -59,9 +59,6 @@ class Gift {
 
 			// make a big array of the separated arrays
 			$giftsArray[$gift] = $g;
-			// $giftOccasion = $g['occasion'];
-			// var_dump($giftOccasion);
-			// die('remove');			
 		}
 
 		return $giftsArray;

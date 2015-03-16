@@ -18,7 +18,9 @@ require_once('header.php');
 
 		$gift = new Gift();
 
-		$giftsArray = $gift->getAllGiftsAsMultiArray($recipientId, $userId); ?>
+		$giftsArray = $gift->getAllGiftsAsMultiArray($recipientId, $userId);
+		var_dump($giftsArray);
+		die('remove'); ?>
 
 		<!-- STUFF HERE -->
 		<div class="recipient">
@@ -29,14 +31,17 @@ require_once('header.php');
 				 ?>
 				<h3>Gift History</h3>
 				<?php
-				// TODO:
-				// Display Item name, Item description, Gift occasion, Gift added
+				// TODO: Working error message if the array is empty
 				
-				foreach ($giftsArray as $singleGift => $single) {
-					echo $single['item_id']['name'] . ", ";
-					echo $single['item_id']['description'] . ", ";
-					echo $single['occasion'] . ", ";
-					echo $single['added'] . "<br />";
+				if (!$giftsArray) {
+					echo "There's no gift history to display yet!";
+				} else {
+					foreach ($giftsArray as $singleGift => $single) {
+						echo $single['item_id']['name'] . ", ";
+						echo $single['item_id']['description'] . ", ";
+						echo $single['occasion'] . ", ";
+						echo $single['added'] . "<br />";
+					}
 				} ?>
 
         	</div><!-- .gift-history -->
