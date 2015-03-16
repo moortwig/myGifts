@@ -11,7 +11,7 @@ class Recipient {
 
 	//////////////////////////////////////////////////////
 	// QUERY TO COMPARE USERNAMES ///////////////////////
-	public function checkNameExists($name) {
+/*	public function checkNameExists($name) {
 		$database = new Database();
 
 		$query = $database->connect()->query("SELECT * FROM recipients WHERE name = '$name'");
@@ -29,7 +29,7 @@ class Recipient {
 			// else return false
 			return true;
 		}		
-	}
+	}*/
 
 	//////////////////////////////////////////////////////
 	// QUERY TO SAVE RECIPIENT TO DB ////////////////////
@@ -61,13 +61,14 @@ class Recipient {
 		$userId = $_POST['userId']; // TODO belongs to dummy data field, remove after sorting out CSRF
 		// $userId = $_SESSION['userId'];
 		
-		$check = $this->checkNameExists($name);
+		/*$check = $this->checkNameExists($name);
 
 		if ($check === true) {
 			echo "This recipient already exists! Did you mean to add someone else? You will be redirected shortly.";
 		} else {
 			return $this->insertRecipient($name, $information, $userId);
-		}		
+		}*/
+		return $this->insertRecipient($name, $information, $userId);
 	}
 
 

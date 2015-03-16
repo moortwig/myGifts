@@ -10,18 +10,24 @@ require_once('header.php');
     if(isset($_SESSION['username'])) { 
 		$recipient = new Recipient();
 		$recipientId = $_GET["id"]; // picks up the id from the URL
+
 		$gift = new Gift();
-		$gifts = $gift->queryGiftsOnRecipient($recipientId);
-		var_dump($gifts);
-		die('remove');?>
+		// $gifts = $gift->queryGiftsOnRecipient($recipientId);
+		$recipient = $recipient->getRecipient($recipientId);
+		$recipientName = $recipient['name'];
+		$recipientInformation = $recipient['information'];
+		// var_dump($recipient['name']);
+		// die('remove'); ?>
 
 		<!-- STUFF HERE -->
 		<div class="recipient">
 			<div class="gift-history">
-				<!-- TODO: display recipient name below inside h2 and h3: -->
-				<h2>Profile For X</h2>
+				<h2>Profile For <?php echo $recipientName; ?></h2>
+				<?php echo "<a href='editrecipient.php?id=" . $recipientId . "'><div class='button'>Edit</div></a> "; ?>
 				<!-- TODO Move detailed info from profile.php on the recipient, to here -->
-				<h3>Gift History for X</h3>
+				<?php echo $recipientInformation;
+				 ?>
+				<h3>Gift History</h3>
 				<?php
 				// TODO:
 				// Display Item name, Item description, Gift occasion, Gift added
