@@ -5,17 +5,21 @@ require_once('header.php');
 ?>
 <div class="main">
     <?php
-    // queryGiftsOnRecipient($recipientId)
     // Display this section if a user is logged in
     if(isset($_SESSION['username'])) { 
+    	$userId = 5; // DUMMY DATA, CHANGE THIS ...
 		$recipient = new Recipient();
-		$recipientId = $_GET["id"]; // picks up the id from the URL
 
-		$gift = new Gift();
-		// $gifts = $gift->queryGiftsOnRecipient($recipientId);
+		// TODO snygga till det här >.< Flytta till backend-fil istället?
+		$recipientId = $_GET["id"]; // picks up the id from the URL
 		$recipient = $recipient->getRecipient($recipientId);
 		$recipientName = $recipient['name'];
 		$recipientInformation = $recipient['information'];
+
+		$giftsArray = $gift->getAllGiftsAsMultiArray($recipientId, $userId);
+		
+
+
 		// var_dump($recipient['name']);
 		// die('remove'); ?>
 
@@ -24,14 +28,20 @@ require_once('header.php');
 			<div class="gift-history">
 				<h2>Profile For <?php echo $recipientName; ?></h2>
 				<?php echo "<a href='editrecipient.php?id=" . $recipientId . "'><div class='button'>Edit</div></a> "; ?>
-				<!-- TODO Move detailed info from profile.php on the recipient, to here -->
 				<?php echo $recipientInformation;
 				 ?>
 				<h3>Gift History</h3>
 				<?php
 				// TODO:
 				// Display Item name, Item description, Gift occasion, Gift added
-	        	?>
+				
+				foreach ($giftsArray as $singleGift => $single) {
+					echo $single['item_id']['name'] . ", ";
+					echo $single['item_id']['description'] . ", ";
+					echo $single['occasion'] . ", ";
+					echo $single['added'] . "<br />";
+				} ?>
+
         	</div><!-- .gift-history -->
         </div><!-- .recipient -->
 

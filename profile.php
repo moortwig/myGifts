@@ -15,9 +15,7 @@ require_once('header.php');
         	$recipients = $recipient->getAllRecipients($userId);
            
         	foreach ($recipients as $key => $r) {
-                $gift = new Gift();
                 $recipientId = $r['id'];
-                $gifts = $gift->queryGiftsOnRecipient($recipientId);
                                 
                 echo "<div class='data-row'>"; 
                     echo "<div class='data-field'>";

@@ -1,6 +1,6 @@
 <?php
 
-// require_once('class/Recipient.php');
+require_once('class/Item.php');
 
 class Gift {
 	// spiffy code here
@@ -27,20 +27,44 @@ class Gift {
 	}
 
 
-	public function getGift($gift, $user, $recipient) {
-		// hämtar en gåva från databasen som hör till den inloggade användaren och/eller en specifik mottagare
-
-	}
-
 	public function editGift($gift) {
 		// redigerar en gåva i databasen
 	}
 
 	public function getAllGifts($recipientId) {
 		// hämtar alla gåvor från databasen som hör till en specifik mottagare
-		
+		$result = $this->queryGiftsOnRecipient($recipientId);
 
-		// queryGiftsOnRecipient($recipientId);
+		return $result;
+	}
+
+	public function getAllGiftsAsMultiArray($recipientId, $userId) {
+		$gifts = $this->getAllGifts($recipientId);
+
+		$item = new Item();
+		$items = $item->getAllItems($userId);
+
+		foreach ($gifts as $gift => $g) {
+
+			// ITEMS
+			foreach ($items as $item => $i) {
+				$itemId = $i['id']; // get the id
+
+				// check if data matches
+				if ($g['item_id'] == $itemId) {
+					// sneak that query into the separated arrays
+      				$g['item_id'] = $i;
+				}
+			}
+
+			// make a big array of the separated arrays
+			$giftsArray[$gift] = $g;
+			// $giftOccasion = $g['occasion'];
+			// var_dump($giftOccasion);
+			// die('remove');			
+		}
+
+		return $giftsArray;
 	}
 
 	//////////////////////////////////////////////////
