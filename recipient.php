@@ -10,7 +10,6 @@ require_once('header.php');
     	$userId = 5; // DUMMY DATA, CHANGE THIS ...
 		$recipient = new Recipient();
 
-		// TODO snygga till det här >.< Flytta till backend-fil istället?
 		$recipientId = $_GET["id"]; // picks up the id from the URL
 		$recipient = $recipient->getRecipient($recipientId);
 		$recipientName = $recipient['name'];
@@ -23,14 +22,15 @@ require_once('header.php');
 		<!-- STUFF HERE -->
 		<div class="recipient">
 			<div class="gift-history">
+			
 				<h2>Profile For <?php echo $recipientName; ?></h2>
 				<?php echo "<a href='editrecipient.php?id=" . $recipientId . "'><div class='button'>Edit</div></a> "; ?>
 				<?php echo $recipientInformation;
 				 ?>
+
 				<h3>Gift History</h3>
-				<?php
-				// TODO: Working error message if the array is empty
-				
+
+				<?php				
 				if (!$giftsArray) {
 					echo "There's no gift history to display yet!";
 				} else {
