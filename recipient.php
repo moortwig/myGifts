@@ -18,9 +18,7 @@ require_once('header.php');
 
 		$gift = new Gift();
 
-		$giftsArray = $gift->getAllGiftsAsMultiArray($recipientId, $userId);
-		var_dump($giftsArray);
-		die('remove'); ?>
+		$giftsArray = $gift->getAllGiftsAsMultiArray($recipientId, $userId); ?>
 
 		<!-- STUFF HERE -->
 		<div class="recipient">

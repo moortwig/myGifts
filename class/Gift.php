@@ -41,27 +41,29 @@ class Gift {
 	public function getAllGiftsAsMultiArray($recipientId, $userId) {
 		$gifts = $this->getAllGifts($recipientId);
 
-		$item = new Item();
-		$items = $item->getAllItems($userId);
+		// Build a multi array IF $gifts contains any data
+		if ($gifts) {
+			$item = new Item();
+			$items = $item->getAllItems($userId);
 
-		foreach ($gifts as $gift => $g) {
+			foreach ($gifts as $gift => $g) {
 
-			// ITEMS
-			foreach ($items as $item => $i) {
-				$itemId = $i['id']; // get the id
+				// ITEMS
+				foreach ($items as $item => $i) {
+					$itemId = $i['id']; // get the id
 
-				// check if data matches
-				if ($g['item_id'] == $itemId) {
-					// sneak that query into the separated arrays
-      				$g['item_id'] = $i;
+					// check if data matches
+					if ($g['item_id'] == $itemId) {
+						// sneak that query into the separated arrays
+	      				$g['item_id'] = $i;
+					}
 				}
+
+				// make a big array of the separated arrays
+				$giftsArray[$gift] = $g;
 			}
-
-			// make a big array of the separated arrays
-			$giftsArray[$gift] = $g;
-		}
-
 		return $giftsArray;
+		}
 	}
 
 	//////////////////////////////////////////////////
