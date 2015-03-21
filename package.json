@@ -19,5 +19,8 @@
   "bugs": {
     "url": "https://github.com/moortwig/myGifts/issues"
   },
-  "homepage": "https://github.com/moortwig/myGifts"
+  "homepage": "https://github.com/moortwig/myGifts",
+  "devDependencies": {
+    "grunt": "^0.4.5"
+  }
 }
