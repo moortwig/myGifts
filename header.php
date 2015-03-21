@@ -13,8 +13,11 @@ require_once('app.php');
 
     <meta name="viewport" content="width=device-width, initial-scale=1" />
 
+    <!-- BOOTSTRAP -->
+    <link rel="stylesheet" type="text/css"  href="resources/css/bootstrap.min.css">
+
     <!-- CSS -->
-    <!-- <link rel="stylesheet" type="text/css"  href="css/style.css"> -->
+    <!-- <link rel="stylesheet" type="text/css"  href="resources/css/style.css"> -->
 
 </head>
 <body>
