@@ -22,7 +22,7 @@ require_once('app.php');
 </head>
 <body>
 
-<div class="nav">
+<nav class="navbar navbar-default navbar-fixed-top">
     <?php 
         
         if(isset($_SESSION['username'])) { ?>
@@ -34,7 +34,7 @@ require_once('app.php');
                 <form method="post" action="app.php" role="form">
                     <input type="submit" class="" name="logout" value="Log out" />
                 </form>
-            </div>
+            </div><!-- .logged-in -->
         <?php } else {
         // Display this section if noone has logged in yet! ?>
     <div class="log-in">
@@ -47,6 +47,6 @@ require_once('app.php');
             <input type="password" name="pass" placeholder="Password" />
             <input type="submit" class="" name="login" value="Log in" /><br />
         </form>
-    </div>
+    </div><!-- .log-in -->
     <?php } ?>
-</div><!-- .nav -->
+</nav>
