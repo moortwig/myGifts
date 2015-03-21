@@ -1,0 +1,23 @@
+{
+  "name": "www",
+  "version": "1.0.0",
+  "description": "Web application",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/moortwig/myGifts.git"
+  },
+  "keywords": [
+    "oop",
+    "php"
+  ],
+  "author": "moortwig",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/moortwig/myGifts/issues"
+  },
+  "homepage": "https://github.com/moortwig/myGifts"
+}
