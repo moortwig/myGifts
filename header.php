@@ -34,14 +34,10 @@ require_once('app.php');
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="#">myGifts</a>
+                <a class="navbar-brand" href="index.php">myGifts</a>
             </div><!-- .navbar-header -->
 
             <div class="navbar-collapse collapse">
-                <ul class="nav navbar-nav">
-                    <li><a href="index.php">Home</a></li>
-                    <li><a href="profile.php">Profile</a></li>
-                </ul>
                 <ul class="nav-pills-md nav-pills ">
                     <li><a href="addrecipient.php" class="btn btn-info btn-lg">Add recipient</a></li>
                     <li><a href="additem.php" class="btn btn-info btn-lg">Add item</a></li>
@@ -50,7 +46,7 @@ require_once('app.php');
                 <form class="navbar-form navbar-right" method="post" action="app.php" role="form">
                     <input type="submit" class="btn btn-danger" name="logout" value="Log out" />
                 </form>
-                <span class="navbar-right navbar-brand">Logged in: <?php echo $_SESSION['username']; ?></span>
+                <span class="navbar-right navbar-brand">Logged in: <a href="profile.php"><?php echo $_SESSION['username']; ?></a></span>
             </div><!-- .navbar-collapse -->
         </div><!-- .container -->
     </nav>
