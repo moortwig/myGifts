@@ -24,6 +24,11 @@ label,
 a {
   color: #67655d;
 }
+hr {
+  margin-top: 1px;
+  margin-bottom: 1px;
+  border-color: #bbb6ac;
+}
 .navbar {
   background-color: #337180;
 }
@@ -41,4 +46,7 @@ a {
 }
 .navbar-default .navbar-toggle {
   border-color: #aa9a66;
+}
+.panel-body {
+  background-color: #f4f1eb;
 }

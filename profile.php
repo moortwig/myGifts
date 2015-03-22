@@ -30,12 +30,14 @@ require_once('header.php');
                             echo "<a href='editrecipient.php?id=" . $r['id'] . "'><span class='glyphicon glyphicon-pencil'></span></a> ";
                             // echo "<a class='btn btn-default btn-xs' href='editrecipient.php?id=" . $r['id'] . "'>Edit</a> ";
                         // echo "</div>";
-                    echo "</div>"; ?>                
-            	<?php } ?>   
+                    echo "<hr />";
+                    echo "</div>"; ?>      
+            	<?php } ?>
             </div><!-- .panel -->
         </div><!-- .panel -->
 
-        <div class="items">
+        <div class="panel panel-default">
+            <div class="panel-body">
             <h2>Items</h2> 
             <?php
             $item = new Item();
@@ -44,19 +46,20 @@ require_once('header.php');
            
             foreach ($items as $key => $i) {
                 echo "<div class='data-row'>"; 
-                    echo "<div class='data-field'>";
-                        echo $i['name'];
-                    echo "</div>";
-                    echo "<div class='data-field'>";
-                        echo $i['description'];
-                    echo "</div>";
-                    echo "<div class='data-edit'>";
-                        echo "<a href='edititem.php?id=" . $i['id'] . "'>Edit</a> ";   
-                    echo "</div>";
+                    // echo "<div class='data-field'>";
+                        echo $i['name'] . " - " . $i['description'] . " ";
+                    // echo "</div>";
+                    // echo "<div class='data-field'>";
+                    //     echo $i['description'];
+                    // echo "</div>";
+                    // echo "<div class='data-edit'>";
+                        echo "<a href='edititem.php?id=" . $i['id'] . "'><span class='glyphicon glyphicon-pencil'></span></a> ";   
+                    // echo "</div>";
+                    echo "<hr />";
                 echo "</div>"; ?>                
-            <?php } ?>
-            
-        </div><!-- .items -->
+            <?php } ?>            
+            </div><!-- .panel -->
+        </div><!-- .panel -->
 
     <?php } else { ?>
         <h2>Hold!</h2>
