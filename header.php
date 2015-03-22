@@ -17,12 +17,12 @@ require_once('app.php');
     <link rel="stylesheet" type="text/css"  href="resources/css/bootstrap.min.css">
 
     <!-- CSS -->
-    <!-- <link rel="stylesheet" type="text/css"  href="resources/css/style.css"> -->
+    <link rel="stylesheet" type="text/css"  href="resources/css/style.css">
 
 </head>
 <body>
 
-<nav class="navbar navbar-default navbar-fixed-top">
+<nav class="navbar navbar-fixed-top navtext">
     <?php 
         
         if(isset($_SESSION['username'])) { ?>

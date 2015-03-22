@@ -1,0 +1,14 @@
+body {
+  padding-top: 70px;
+  background-color: #eae4d7;
+}
+p,
+h1,
+h2,
+h3,
+label {
+  color: #67655d;
+}
+nav {
+  background-color: #337180;
+}
