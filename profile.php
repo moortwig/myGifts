@@ -27,7 +27,8 @@ require_once('header.php');
                             echo $r['information'];
                         echo "</div>";*/
                         // echo "<div class='data-edit'>";
-                            echo "<a class='btn btn-default btn-xs' href='editrecipient.php?id=" . $r['id'] . "'>Edit</a> ";   
+                            echo "<a href='editrecipient.php?id=" . $r['id'] . "'><span class='glyphicon glyphicon-pencil'></span></a> ";
+                            // echo "<a class='btn btn-default btn-xs' href='editrecipient.php?id=" . $r['id'] . "'>Edit</a> ";
                         // echo "</div>";
                     echo "</div>"; ?>                
             	<?php } ?>   
