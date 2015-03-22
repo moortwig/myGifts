@@ -22,7 +22,7 @@ require_once('app.php');
 </head>
 <body>
 
-<nav class="navbar navbar-fixed-top navtext">
+<nav class="navbar navbar-fixed-top">
     <?php 
         
         if(isset($_SESSION['username'])) { ?>
