@@ -42,6 +42,11 @@ require_once('app.php');
                     <li><a href="index.php">Home</a></li>
                     <li><a href="profile.php">Profile</a></li>
                 </ul>
+                <ul class="nav-pills-md nav-pills ">
+                    <li><a href="addrecipient.php" class="btn btn-info btn-lg">Add recipient</a></li>
+                    <li><a href="additem.php" class="btn btn-info btn-lg">Add item</a></li>
+                    <li><a href="addgift.php" class="btn btn-info btn-lg">Add gift</a></li>
+                </ul>
                 <form class="navbar-form navbar-right" method="post" action="app.php" role="form">
                     <input type="submit" class="btn btn-danger" name="logout" value="Log out" />
                 </form>

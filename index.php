@@ -14,11 +14,11 @@ require_once('header.php');
         if(isset($_SESSION['username'])) {
             // Display this section if a user is logged in ?>
             <div class="container-small-centered"><!-- nav-stacked -->
-                <ul class="nav-pills-md nav-pills ">
+                <!-- <ul class="nav-pills-md nav-pills ">
                     <li><a href="addrecipient.php" class="btn btn-info btn-lg">Add recipient</a></li>
                     <li><a href="additem.php" class="btn btn-info btn-lg">Add item</a></li>
                     <li><a href="addgift.php" class="btn btn-info btn-lg">Add gift</a></li>
-                </ul>
+                </ul> -->
             </div>
         </div><!-- .container -->
 
