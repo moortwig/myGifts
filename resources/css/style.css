@@ -16,6 +16,8 @@ nav p,
 nav h1,
 nav h2,
 nav h3,
-nav label {
+nav label,
+nav span,
+nav a {
   color: #aa9a66;
 }

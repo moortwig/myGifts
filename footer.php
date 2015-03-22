@@ -12,6 +12,9 @@
 <script src="http://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
 <script src="//code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
 <script src="js/main.js"></script> -->
+<script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
+<script src="http://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+<script src="resources/js/bootstrap.min.js"></script>
 
 </body>
 </html>

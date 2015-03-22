@@ -23,30 +23,40 @@ require_once('app.php');
 <body>
 
 <nav class="navbar navbar-fixed-top">
-    <?php 
-        
-        if(isset($_SESSION['username'])) { ?>
+    <div class="container">
+        <?php if(isset($_SESSION['username'])) { ?>
             <!-- Display this section if a user is logged in -->
-            <div class="logged-in">
-                <p>Hello <?php echo $_SESSION['username']; ?>!</p>
-                <a href="index.php">Home</a>
-                <a href="profile.php">Profile</a>
-                <form method="post" action="app.php" role="form">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="#">myGifts</a>
+            </div><!-- .navbar-header -->
+            
+            <div class="navbar-collapse collapse">
+                <ul class="nav navbar-nav">
+                <li><a href="index.php">Home</a></li>
+                <li><a href="profile.php">Profile</a></li>
+                </ul>
+                <form class="navbar-form navbar-right" method="post" action="app.php" role="form">
                     <input type="submit" class="" name="logout" value="Log out" />
                 </form>
-            </div><!-- .logged-in -->
-        <?php } else {
-        // Display this section if noone has logged in yet! ?>
-    <div class="log-in">
-        <h2>Log in</h2>
-        <!--    TODO adjust this for the new structure! -->
-        <form method="post" action="app.php" role="form">
-            <label for="user">Username:</label>
-            <input type="text" name="user" placeholder="Username" />
-            <label for="pass">Password:</label>
-            <input type="password" name="pass" placeholder="Password" />
-            <input type="submit" class="" name="login" value="Log in" /><br />
-        </form>
-    </div><!-- .log-in -->
-    <?php } ?>
+                <span class="navbar-right navbar-brand">Logged in: <?php echo $_SESSION['username']; ?></span>
+            <?php } else {
+                // Display this section if noone has logged in yet! ?>
+                <form class="navbar-form navbar-right" method="post" action="app.php" role="form">
+                    <div class="form-group">
+                        <input type="text" name="user" placeholder="Username" class="form-control" />
+                    </div>
+                    <div class="form-group">
+                        <input type="password" name="pass" placeholder="Password" class="form-control" />
+                    </div>
+                    <input type="submit" class="" name="login" value="Log in"  class="btn btn-success"/>
+                </form>
+            </div><!-- .navbar-collapse -->
+        <?php } ?>
+    </div><!-- .container -->
 </nav>
