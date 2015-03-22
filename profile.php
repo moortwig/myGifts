@@ -7,30 +7,32 @@ require_once('header.php');
     <?php
     // Display this section if a user is logged in
     if(isset($_SESSION['username'])) { ?>
-		<div class="recipients">
-        	<h2>Recipients</h2> 
-        	<?php
-        	$recipient = new Recipient();
-        	$userId = 5; // dummy data TODO change this to the session user
-        	$recipients = $recipient->getAllRecipients($userId);
-           
-        	foreach ($recipients as $key => $r) {
-                $recipientId = $r['id'];
-                                
-                echo "<div class='data-row'>"; 
-                    echo "<div class='data-field'>";
-                        echo "<a href='recipient.php?id=" . $r['id'] . "'>" . $r['name'] . "</a> ";
-                        // echo $r['name'];
-                    echo "</div>";
-                    echo "<div class='data-field'>";
-                        echo $r['information'];
-                    echo "</div>";
-                    echo "<div class='data-edit'>";
-                        echo "<a href='editrecipient.php?id=" . $r['id'] . "'>Edit</a> ";   
-                    echo "</div>";
-                echo "</div>"; ?>                
-        	<?php } ?>            
-        </div><!-- .recipients -->
+		<div class="panel panel-default">
+            <div class="panel-body">
+            	<h2>Recipients</h2> 
+            	<?php
+            	$recipient = new Recipient();
+            	$userId = 5; // dummy data TODO change this to the session user
+            	$recipients = $recipient->getAllRecipients($userId);
+               
+            	foreach ($recipients as $key => $r) {
+                    $recipientId = $r['id'];
+                                    
+                    echo "<div class='data-row'>"; 
+                        // echo "<div class='data-field'>";
+                            echo "<a href='recipient.php?id=" . $r['id'] . "'>" . $r['name'] . "</a> ";
+                            // echo $r['name'];
+                        // echo "</div>";
+                        /*echo "<div class='data-field'>";
+                            echo $r['information'];
+                        echo "</div>";*/
+                        // echo "<div class='data-edit'>";
+                            echo "<a class='btn btn-default btn-xs' href='editrecipient.php?id=" . $r['id'] . "'>Edit</a> ";   
+                        // echo "</div>";
+                    echo "</div>"; ?>                
+            	<?php } ?>   
+            </div><!-- .panel -->
+        </div><!-- .panel -->
 
         <div class="items">
             <h2>Items</h2> 
