@@ -2,7 +2,7 @@
 	<hr />
 	<ul>
 		
-		<li><a href="mailto:info@moortwig.se">info@moortwig.se</a></li>
+		<li><a href="mailto:your@mail.address">your@mail.address</a></li>
 		<li><a href="https://github.com/moortwig/myGifts">myGifts on GitHub</a></li>
 		
 	</ul>
