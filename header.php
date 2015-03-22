@@ -27,7 +27,6 @@ require_once('app.php');
     <!-- Display navigation bar if a user is logged in -->
     <nav class="navbar navbar-fixed-top">
         <div class="container">
-
             <div class="navbar-header">
                 <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
                     <span class="sr-only">Toggle navigation</span>
@@ -44,12 +43,9 @@ require_once('app.php');
                     <li><a href="profile.php">Profile</a></li>
                 </ul>
                 <form class="navbar-form navbar-right" method="post" action="app.php" role="form">
-                    <input type="submit" class="" name="logout" value="Log out" />
+                    <input type="submit" class="btn btn-danger" name="logout" value="Log out" />
                 </form>
                 <span class="navbar-right navbar-brand">Logged in: <?php echo $_SESSION['username']; ?></span>
-
-            
-                
             </div><!-- .navbar-collapse -->
         </div><!-- .container -->
     </nav>

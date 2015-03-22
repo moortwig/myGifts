@@ -11,17 +11,19 @@ require_once('header.php');
     <br />
     <!-- SIGN UP -->
     <?php ?>
-    <div class="signup">
-            <h2>Sign up</h2>
-            <form class="form-horizontal" method="post" action="app.php" role="form">
-                <label for="Username">Username:</label>
-                <input type="text" name="username" class="form-control" placeholder="Username" /><br />
-                <label for="Password">Password:</label>
-                <input type="password" name="password" class="form-control" placeholder="Password" /><br />
+        <div class="container">
+            <form class="form-signin" method="post" action="app.php" role="form">
+                <h2 class="form-signin-heading">Sign up</h2>
+
+                <label for="inputUsername" class="sr-only">>Username:</label>
+                <input type="text" name="username" class="form-control" placeholder="Username" />
+
+                <label for="inputPassword" class="sr-only">Password:</label>
+                <input type="password" name="password" class="form-control" placeholder="Password" />
                 <!-- TODO JavaScript regex password check below: -->
                 <!-- <label for="Passwordcheck">Retype password:</label>
                 <input type="password" name="pwdCheck" name="" class="form-control" placeholder="Retype password" /><br />-->
-                <label for="E-mail">E-mail:</label>
+                <label for="inputEmail" class="sr-only">E-mail:</label>
                 <input type="email" name="email" class="form-control" placeholder="E-mail" /><br />
                 <!-- buttons: -->
                 <!-- TODO jQuery on click clear form
@@ -29,9 +31,10 @@ require_once('header.php');
 
                 <!-- TODO JavaScript check that all fields are filled in: -->
                 <!-- TODO jQuery on key down "Enter" -> Submit -->
-                <input type="submit" class="" name="signup" value="Submit" />
+                <button type="submit" class="btn btn-lg btn-primary btn-block" name="signup">SUBMIT</button>
+                <h4 class="form-signin-heading"><a href="index.php">Back to start</a></h4>
             </form>
-        </div><!-- .signup -->
+        </div><!-- .container -->
     <?php  ?>
 
 </div><!-- .main -->

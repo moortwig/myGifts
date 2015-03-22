@@ -1,3 +1,17 @@
+@media only screen and (max-width: 750px) {
+  .container-small-centered {
+    max-width: 330px;
+    padding: 15px;
+    margin: 0 auto;
+  }
+  .nav-stacked {
+    background-color: black;
+    width: 100%;
+  }
+  .nav-stacked li {
+    display: block;
+  }
+}
 body {
   padding-top: 70px;
   background-color: #eae4d7;
@@ -20,4 +34,8 @@ nav label,
 nav span,
 nav a {
   color: #aa9a66;
+}
+.nav-pills-md {
+  list-style-type: none;
+  display: inline-block;
 }
