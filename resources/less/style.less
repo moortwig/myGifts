@@ -7,21 +7,26 @@ body {
 	background-color: @body-bg;
 }
 
-p, h1, h2, h3, label {
+p, h1, h2, h3, label, a {
 	color: @text-color;
 }
-
-nav {
+ 
+.navbar {
 	background-color: @nav-bg;
 
 	p, h1, h2, h3, label, span, a {
 		color: @nav-text-color;
 	}
 }
-
-.nav-pills-md {
-	list-style-type: none;
-	display: inline-block;
+.navbar-default .navbar-brand 
+ {
+	color: @nav-text-color;
 }
+
+.navbar-default .navbar-toggle {
+	border-color: @nav-text-color;
+}
+
+
 
 	

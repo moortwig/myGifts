@@ -3,7 +3,7 @@
 require_once('header.php');
 
 ?>
-<div class="main">
+<div class="main container">
     <?php
     // Display this section if a user is logged in
     if(isset($_SESSION['username'])) { ?>

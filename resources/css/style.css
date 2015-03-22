@@ -1,9 +1,9 @@
 @media only screen and (max-width: 750px) {
-  .container-small-centered {
-    max-width: 330px;
-    padding: 15px;
-    margin: 0 auto;
-  }
+  /*.container-small-centered {
+		max-width: 330px;
+		padding: 15px;
+		margin: 0 auto;
+	}*/
   .nav-stacked {
     background-color: black;
     width: 100%;
@@ -20,22 +20,25 @@ p,
 h1,
 h2,
 h3,
-label {
+label,
+a {
   color: #67655d;
 }
-nav {
+.navbar {
   background-color: #337180;
 }
-nav p,
-nav h1,
-nav h2,
-nav h3,
-nav label,
-nav span,
-nav a {
+.navbar p,
+.navbar h1,
+.navbar h2,
+.navbar h3,
+.navbar label,
+.navbar span,
+.navbar a {
   color: #aa9a66;
 }
-.nav-pills-md {
-  list-style-type: none;
-  display: inline-block;
+.navbar-default .navbar-brand {
+  color: #aa9a66;
+}
+.navbar-default .navbar-toggle {
+  border-color: #aa9a66;
 }

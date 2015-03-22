@@ -25,10 +25,10 @@ require_once('app.php');
 
 <?php if(isset($_SESSION['username'])) { ?>
     <!-- Display navigation bar if a user is logged in -->
-    <nav class="navbar navbar-fixed-top">
-        <div class="container">
+    <nav class="navbar navbar-fixed-top navbar-default">
+        <div class="container-fluid">
             <div class="navbar-header">
-                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-coll" aria-expanded="false" aria-controls="navbar">
                     <span class="sr-only">Toggle navigation</span>
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
@@ -37,16 +37,16 @@ require_once('app.php');
                 <a class="navbar-brand" href="index.php">myGifts</a>
             </div><!-- .navbar-header -->
 
-            <div class="navbar-collapse collapse">
-                <ul class="nav-pills-md nav-pills ">
-                    <li><a href="addrecipient.php" class="btn btn-info btn-lg">Add recipient</a></li>
-                    <li><a href="additem.php" class="btn btn-info btn-lg">Add item</a></li>
-                    <li><a href="addgift.php" class="btn btn-info btn-lg">Add gift</a></li>
+            <div class="collapse navbar-collapse" id="navbar-coll">
+                <ul class="nav navbar-nav">
+                    <li><a href="addrecipient.php" class="btn">Add recipient</a></li>
+                    <li><a href="additem.php" class="btn">Add item</a></li>
+                    <li><a href="addgift.php" class="btn">Add gift</a></li>
                 </ul>
                 <form class="navbar-form navbar-right" method="post" action="app.php" role="form">
                     <input type="submit" class="btn btn-danger" name="logout" value="Log out" />
                 </form>
-                <span class="navbar-right navbar-brand">Logged in: <a href="profile.php"><?php echo $_SESSION['username']; ?></a></span>
+                <p class="navbar-right navbar-text">Logged in: <a href="profile.php"><?php echo $_SESSION['username']; ?></a></p>
             </div><!-- .navbar-collapse -->
         </div><!-- .container -->
     </nav>

@@ -13,13 +13,9 @@ require_once('header.php');
         
         if(isset($_SESSION['username'])) {
             // Display this section if a user is logged in ?>
-            <div class="container-small-centered"><!-- nav-stacked -->
-                <!-- <ul class="nav-pills-md nav-pills ">
-                    <li><a href="addrecipient.php" class="btn btn-info btn-lg">Add recipient</a></li>
-                    <li><a href="additem.php" class="btn btn-info btn-lg">Add item</a></li>
-                    <li><a href="addgift.php" class="btn btn-info btn-lg">Add gift</a></li>
-                </ul> -->
-            </div>
+            <p>
+                Ennui Truffaut messenger bag umami, tousled sustainable brunch. Vegan +1 listicle ugh. Blue Bottle shabby chic cray Carles, tote bag fixie +1. Banh mi pug Pinterest lomo, tilde keytar meggings four dollar toast twee locavore plaid literally Vice Truffaut readymade. Whatever Etsy fashion axe asymmetrical cred, shabby chic lumbersexual disrupt kogi cray sartorial artisan YOLO readymade. Pour-over Truffaut you probably haven't heard of them, semiotics gentrify narwhal Godard cronut selvage. Vegan street art +1 hashtag drinking vinegar, wayfarers small batch shabby chic post-ironic swag.
+            </p>
         </div><!-- .container -->
 
     <?php } else {
