@@ -14,7 +14,8 @@ require_once('app.php');
     <meta name="viewport" content="width=device-width, initial-scale=1" />
 
     <!-- BOOTSTRAP -->
-    <link rel="stylesheet" type="text/css"  href="resources/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css"  href="resources/css/vendor/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css"  href="resources/css/vendor/signin.css">
 
     <!-- CSS -->
     <link rel="stylesheet" type="text/css"  href="resources/css/style.css">
@@ -48,16 +49,7 @@ require_once('app.php');
                 <span class="navbar-right navbar-brand">Logged in: <?php echo $_SESSION['username']; ?></span>
 
             
-                <!-- // Display this section if noone has logged in yet! ?> -->
-                <form class="navbar-form navbar-right" method="post" action="app.php" role="form">
-                    <div class="form-group">
-                        <input type="text" name="user" placeholder="Username" class="form-control" />
-                    </div>
-                    <div class="form-group">
-                        <input type="password" name="pass" placeholder="Password" class="form-control" />
-                    </div>
-                    <input type="submit" class="" name="login" value="Log in"  class="btn btn-success"/>
-                </form>
+                
             </div><!-- .navbar-collapse -->
         </div><!-- .container -->
     </nav>
