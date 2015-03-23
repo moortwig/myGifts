@@ -37,7 +37,7 @@ require_once('header.php');
             <div class="col-md-4">
                 <div class="panel panel-default">
                     <div class="panel-body">
-                        <h2>Overview <small>List over saved recipients</small></h2> 
+                        <h2>Overview <small>So far you've added these people:</small></h2> 
                         <?php
                         $recipient = new Recipient();
                         $userId = 5; // dummy data TODO change this to the session user

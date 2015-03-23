@@ -3,12 +3,12 @@
 require_once('header.php');
 
 ?>
-<div class="main">
+<div class="main container">
     <?php
     // Display this section if a user is logged in
     if(isset($_SESSION['username'])) { ?>
         <div class="row">
-            <div class="col-md-4 col-md-offset-4">
+            <div class="col-md-4 col-md-offset-2">
                 <form class="form-horizontal" method="post" action="app.php" role="form">
                     <h2>Add item</h2>
                     <label for="name">Name:</label>
@@ -33,10 +33,10 @@ require_once('header.php');
                 <br />
             </div><!-- .col-md-4 col-md-offset-4 -->
 
-            <div class="col-md-8"> 
+            <div class="col-md-6"> 
                 <div class="panel panel-default">
                     <div class="panel-body">
-                        <h2>Items</h2> 
+                        <h2>Overview <small>So far you've added these items:</small></h2> 
                         <?php
                         $item = new Item();
                         $userId = 5; // dummy data TODO change this to the session user
