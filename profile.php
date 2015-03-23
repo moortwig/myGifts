@@ -38,7 +38,8 @@ require_once('header.php');
                     </div><!-- .panel -->
                 </div><!-- .panel -->
             </div><!-- .col-md-4 -->
-                <div class="col-md-8"> 
+
+            <div class="col-md-8"> 
                 <div class="panel panel-default">
                     <div class="panel-body">
                         <h2>Items</h2> 
@@ -63,7 +64,7 @@ require_once('header.php');
                         <?php } ?>            
                     </div><!-- .panel-body -->
                 </div><!-- .panel -->
-            </div><!-- .col-md-4 -->
+            </div><!-- .col-md-8 -->
         </div><!-- .row -->
     <?php } else { ?>
         <h2>Hold!</h2>
