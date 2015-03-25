@@ -11,9 +11,9 @@ require_once('header.php');
             <div class="col-md-4 col-md-offset-2">
                 <form class="form-horizontal" method="post" action="app.php" role="form">
                     <h2>Add recipient</h2>
-                    <label for="name">Name:</label>
+                    <label for="inputName">Name:</label>
                     <input type="text" name="name" class="form-control" placeholder="Name" /><br />
-                    <label for="Information">Information:</label><br />
+                    <label for="inputInformation">Information:</label><br />
                     <textarea name="information" class="form-control"></textarea>
                     <!-- TODO Maybe a better way to pass on the session user ID? -->
                     <!-- YES! THERE IS!!! Besides, the row below isn't even working ...
