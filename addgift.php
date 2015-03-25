@@ -6,39 +6,31 @@ require_once('header.php');
 <div class="main container">
     <?php
     // Display this section if a user is logged in
-    if(isset($_SESSION['username'])) { ?>
-        <?php
+    if(isset($_SESSION['username'])) {
 		$userId = 5; // TODO change this to a safe get user id
 		$item = new Item();
 		$items = $item->getAllItems($userId);
 
 		$recipient = new Recipient();
 		$recipients = $recipient->getAllRecipients($userId);
-		// $itemId = $items['id'];
-		// foreach ($items as $item => $i) {
-		// 	echo $i['name'];
-		// }
-		/*var_dump($item);*/
-		// die(' remove');
 		?>
+        <h2>Add Gift</h2>
         <div class="row">
-            <h2>Add Gift</h2>
-            <div class="col-md-4">
-                <form class="form-horizontal" method="post" action="app.php" role="form">
+            <form class="form-horizontal" method="post" action="app.php" role="form">
+                <div class="col-md-4 form-group">
                     <h3>1: Choose recipient(s)</h3>
                     <label for="Recipient">Recipient:</label>
                     <?php
                     // TODO even better would be to make an input text field and to filter the input text, as if with Angular
                     foreach ($recipients as $recipient => $r) { ?>
-                        <ul>
+                        <ul class="list-unstyled">
                         <li><input type="checkbox" name="recipientId[]" value="<?php echo $r['id']; ?>">
                             <?php echo $r['name']; ?>
                         </input></li>
                         </ul>
                     <?php } ?><br />
-                    
-                </div>
-                <div class="col-md-4">
+                </div>                
+                <div class="col-md-4 form-group">
                     <h3>2: Choose item</h3>
                     <label for="Item">Item:</label>
                     <select name="itemId">
@@ -50,7 +42,7 @@ require_once('header.php');
                         <?php } ?>
                     </select><br />
                 </div>
-                <div class="col-md-4">
+                <div class="col-md-4 form-group">
                     <h3>3: Write down the occasion</h3>
                     <label for="Occasion">Occasion:</label>
                     <input type="text" name="occasion" class="form-control" placeholder="Occasion" /><br />
@@ -64,7 +56,7 @@ require_once('header.php');
                     <!-- <input name="userId" type="hidden" value=<?php /*echo "'". $_SESSION['userId'] . "'" */?> /> -->
                     <!-- TODO remove this field with dummy data -->
                     <input name="userId" type="hidden" value="5" />
-                    <input type="submit" class="" name="addGift" value="Submit" />
+                    <button type="submit" class="btn btn-lg btn-primary btn-block" name="addGift">Submit</button>
                 </form>
             </div><!-- .add-gift -->
         <?php } else { ?>
