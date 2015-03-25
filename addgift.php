@@ -40,7 +40,9 @@ require_once('header.php');
                                 <?php echo $i['name']; ?>
                             </option>
                         <?php } ?>
-                    </select><br />
+                    </select>
+                    <p class="help-block">Don't have what you need?</p>
+                    <a class="btn btn-sm btn-primary" href="additem.php">Add new item</a>
                 </div>
                 <div class="col-md-4 form-group">
                     <h3>3: Write down the occasion</h3>
@@ -56,7 +58,7 @@ require_once('header.php');
                     <!-- <input name="userId" type="hidden" value=<?php /*echo "'". $_SESSION['userId'] . "'" */?> /> -->
                     <!-- TODO remove this field with dummy data -->
                     <input name="userId" type="hidden" value="5" />
-                    <button type="submit" class="btn btn-lg btn-primary btn-block" name="addGift">Submit</button>
+                    <button type="submit" class="btn btn-lg btn-success btn-block" name="addGift">I'm all done!</button>
                 </form>
             </div><!-- .add-gift -->
         <?php } else { ?>
