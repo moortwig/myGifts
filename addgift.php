@@ -25,7 +25,6 @@ require_once('header.php');
 		?>
 
 		<div class="add-gift">
-            <h2>Sign up</h2>
             <form class="form-horizontal" method="post" action="app.php" role="form">
                 <label for="Item">Item:</label>
                 <select name="itemId">
