@@ -16,8 +16,9 @@ require_once('header.php');
 		?>
         <h2>Add Gift</h2>
         <div class="row">
+        <div class="col-md-4 form-group">
             <form class="form-horizontal" method="post" action="app.php" role="form">
-                <div class="col-md-4 form-group">
+                
                     <h3>1: Choose recipient(s)</h3>
                     <label for="Recipient">Recipient:</label>
                     <?php
@@ -58,7 +59,7 @@ require_once('header.php');
                     <!-- <input name="userId" type="hidden" value=<?php /*echo "'". $_SESSION['userId'] . "'" */?> /> -->
                     <!-- TODO remove this field with dummy data -->
                     <input name="userId" type="hidden" value="5" />
-                    <button type="submit" class="btn btn-lg btn-success btn-block" name="addGift">I'm all done!</button>
+                    <button type="submit" class="btn btn-lg btn-success" name="addGift">I'm all done!</button>
                 </form>
             </div><!-- .add-gift -->
         <?php } else { ?>

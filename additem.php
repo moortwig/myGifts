@@ -28,7 +28,7 @@ require_once('header.php');
 
                     <!-- TODO JavaScript check that all fields are filled in: -->
                     <!-- TODO jQuery on key down "Enter" -> Submit -->
-                    <button type="submit" class="btn btn-lg btn-success btn-block" name="addItem">Submit</button>
+                    <button type="submit" class="btn btn-lg btn-success" name="addItem">Submit</button>
                 </form>
                 <br />
             </div><!-- .col-md-4 col-md-offset-4 -->
