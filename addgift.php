@@ -16,9 +16,8 @@ require_once('header.php');
 		?>
         <h2>Add Gift</h2>
         <div class="row">
-        <div class="col-md-4 form-group">
-            <form class="form-horizontal" method="post" action="app.php" role="form">
-                
+            <div class="col-md-4 form-group">
+                <form class="form-horizontal" method="post" action="app.php" role="form">                
                     <h3>1: Choose recipient(s)</h3>
                     <label for="Recipient">Recipient:</label>
                     <?php
