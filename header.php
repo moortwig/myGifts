@@ -44,7 +44,7 @@ require_once('app.php');
                     <li><a href="addgift.php" class="btn">Add gift</a></li>
                 </ul>
                 <form class="navbar-form navbar-right" method="post" action="app.php" role="form">
-                    <input type="submit" class="btn btn-danger" name="logout" value="Log out" />
+                    <button type="submit" class="btn btn-danger" name="logout">Log out</button>
                 </form>
                 <p class="navbar-right navbar-text">Logged in: <a href="profile.php"><?php echo $_SESSION['username']; ?></a></p>
             </div><!-- .navbar-collapse -->

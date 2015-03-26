@@ -3,7 +3,7 @@
 require_once('header.php');
 
 ?>
-<div class="main">
+<div class="main container">
     <?php
     // Display this section if a user is logged in
     // TODO EDIT FORM 
@@ -42,10 +42,10 @@ require_once('header.php');
 
 		                <!-- TODO JavaScript check that all fields are filled in: -->
 		                <!-- TODO jQuery on key down "Enter" -> Submit -->
-		                <input type="submit" name="deleteRecipient" value="Delete" />
-		                <input type="submit" class="" name="editRecipient" value="Save" />	
+		                <button type="submit" class="btn btn-danger" name="deleteRecipient">Delete</button>
+		                <button type="submit" class="btn btn-success" name="editRecipient">Save</button>
+		            	<a href="profile.php" class="btn btn-warning">Cancel</a>
 		            </form>
-		            <a href="profile.php"><button class="">Cancel</button></a>
 	        	</div><!-- #editRecipientForm -->
         	<?php } else {	     
         		// if data is null, redirect to an error page   	
