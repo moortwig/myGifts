@@ -69,3 +69,10 @@ require_once('header.php');
         <p>Access to this content is forbidden. Log in, or sign up and you shall recieve access.</p>
     <?php } ?>
 </div> <!-- .main -->
+
+<!-- FOOTER -->
+<?php 
+
+require_once('footer.php');
+
+?>
