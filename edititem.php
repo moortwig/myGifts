@@ -42,10 +42,10 @@ require_once('header.php');
 
 		                <!-- TODO JavaScript check that all fields are filled in: -->
 		                <!-- TODO jQuery on key down "Enter" -> Submit -->
-		                <input type="submit" name="deleteItem" value="Delete" />
-		                <input type="submit" class="" name="editItem" value="Save" />	
+		                <button type="submit" class="btn btn-danger" name="deleteItem">Delete</button>
+		            <a href="profile.php" class="btn btn-warning">Cancel</a>
+		                <button type="submit" class="btn btn-success" name="editItem">Save</button>
 		            </form>
-		            <a href="profile.php"><button class="">Cancel</button></a>
 	        	</div><!-- .edit-item-form -->
         	<?php } else {	     
         		// if data is null, redirect to an error page   	
