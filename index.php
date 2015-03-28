@@ -20,20 +20,25 @@ require_once('header.php');
 
     <?php } else {
 
-    // Display this section if user has not logged in ?>
-    <div class="container">
-        <form class="form-signin" method="post" action="app.php" role="form">
-            <h2 class="form-signin-heading">Please log in</h2>
-            <label for="inputUsername" class="sr-only">Username</label>
-            <input type="text" name="user" placeholder="Username" class="form-control" />
-            <label for="inputPassword" class="sr-only">Password</label>
-            <input type="password" name="pass" placeholder="Password" class="form-control" />
-            <button type="submit" name="login" class="btn btn-lg btn-primary btn-block">LOG IN</button>
-            <br />
-            <h4 class="form-signin-heading">Not registered yet?</h4><a href="signup.php" class="btn btn-lg btn-success btn-block">SIGN UP NOW</a>
-        </form>
+        // Display this section if user has not logged in ?>    
+        <div class="row">
+            <form class="form-horizontal" method="post" action="app.php" role="form">
+                <div class="container centered-content">
+                    <div class="col-xs-12 col-md-3 col-md-offset-3">
+                        <h2 class="form-signin-heading">Please log in</h2>
+                        <label for="inputUsername" class="sr-only">Username</label>
+                        <input type="text" name="user" placeholder="Username" class="form-control" />
+                        <label for="inputPassword" class="sr-only">Password</label>
+                        <input type="password" name="pass" placeholder="Password" class="form-control" />
+                        <button type="submit" name="login" class="btn btn-lg btn-primary btn-block">LOG IN</button>
+                    </div>
+                    <div class="col-xs-12 col-md-3">
+                        <h4 class="form-signin-heading">Not registered yet?</h4><a href="signup.php" class="btn btn-lg btn-success btn-block">SIGN UP NOW</a>
+                    </div>
+                </div><!-- .container -->
+            </form>
+        </div><!-- .row -->
 
-        </div><!-- .container -->
         
     <?php } ?>
 

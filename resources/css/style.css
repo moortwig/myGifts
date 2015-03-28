@@ -9,6 +9,14 @@
   .nav-stacked li {
     display: block;
   }
+  .col-xs-12 {
+    margin: 0 auto;
+  }
+  .centered-content {
+    display: block;
+    margin: 0 auto;
+    max-width: 70%;
+  }
 }
 /* Medium units */
 /* TODO: Look up screen resolutions for tablets */
@@ -24,6 +32,12 @@
 	}*/
   .middle-column {
     outline: 1px solid red;
+  }
+  /* TODO this exists in small-units as well! Do something to optimise this pls */
+  .centered-content {
+    display: block;
+    margin: 0 auto;
+    max-width: 60%;
   }
 }
 html {
