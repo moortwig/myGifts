@@ -7,11 +7,11 @@ session_start();
 // this file (app.php) is then included in header.php
 
 // CLASSES
-require_once('class/Gift.php');
-require_once('class/Item.php');
-require_once('class/Recipient.php');
-require_once('class/Session.php');
-require_once('class/User.php');
+require_once('classes/Gift.php');
+require_once('classes/Item.php');
+require_once('classes/Recipient.php');
+require_once('classes/Session.php');
+require_once('classes/User.php');
 
 //////////////////////////////////////////////////
 // FORM ACTIONS /////////////////////////////////

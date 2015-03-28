@@ -19,21 +19,23 @@ require_once('header.php');
             <form class="form-horizontal" method="post" action="app.php" role="form">
                 <div class="container">
 
-                    <div class="col-md-4 form-group">               
+                    <div class="col-md-4 add-gift-column overflow-scroll">     
                         <h3>1: Choose recipient(s)</h3>
                         <label for="Recipient">Recipient:</label>
                         <?php
-                        // TODO even better would be to make an input text field and to filter the input text, as if with Angular
                         foreach ($recipients as $recipient => $r) { ?>
                             <ul class="list-unstyled">
                             <li><input type="checkbox" name="recipientId[]" value="<?php echo $r['id']; ?>">
                                 <?php echo $r['name']; ?>
                             </input></li>
                             </ul>
-                        <?php } ?><br />
+                        <?php } ?>
+                    <p class="help-block">Missing someone?</p>
+                    <a class="btn btn-sm btn-primary" href="addrecipient.php">Add someone!</a>
+                       
                     </div>   
 
-                    <div class="col-md-4 form-group">
+                    <div class="col-md-4 add-gift-column middle-column">
                         <h3>2: Choose item</h3>
                         <label for="Item">Item:</label>
                         <select name="itemId">
@@ -48,7 +50,7 @@ require_once('header.php');
                         <a class="btn btn-sm btn-primary" href="additem.php">Add new item</a>
                     </div>
 
-                    <div class="col-md-4 form-group">
+                    <div class="col-md-4 add-gift-column">
                         <h3>3: Write down the occasion</h3>
                         <label for="Occasion">Occasion:</label>
                         <input type="text" name="occasion" class="form-control" placeholder="Occasion" /><br />
