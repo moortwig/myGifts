@@ -7,14 +7,16 @@
 	</div>
 </footer>
 
-<!-- <script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
-<script src="http://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
-<script src="//code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
-<script src="js/main.js"></script> -->
+<!-- Jquery -->
 <script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
 <script src="http://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+
+<!-- JS vendor scripts -->
 <script src="resources/js/bootstrap.min.js"></script>
 <script src="resources/js/vendor/jquery.nanoscroller.min.js"></script>
+
+<!-- JS main file -->
+<script src="resources/js/main.js"></script>
 
 </body>
 </html>

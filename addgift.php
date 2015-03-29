@@ -19,9 +19,9 @@ require_once('header.php');
             <form class="form-horizontal" method="post" action="app.php" role="form">
                 <div class="container">
                     <div class="col-md-4 add-gift-column">
+                        <h3>1: Choose recipient(s)</h3>
                         <div id="add-gift-recipients" class="nano">
-                            <div class="nano-content">    
-                                <h3>1: Choose recipient(s)</h3>
+                            <div class="nano-content">
                                 <label for="Recipient">Recipient:</label>
                                 <?php
                                 foreach ($recipients as $recipient => $r) { ?>
