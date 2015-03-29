@@ -17,6 +17,9 @@ require_once('app.php');
     <link rel="stylesheet" type="text/css"  href="resources/css/vendor/bootstrap.min.css">
     <link rel="stylesheet" type="text/css"  href="resources/css/vendor/signin.css">
 
+    <!-- Nanoscroller CSS -->
+    <link rel="stylesheet" href="resources/css/vendor/nanoscroller.css">
+
     <!-- CSS -->
     <link rel="stylesheet" type="text/css"  href="resources/css/style.css">
 

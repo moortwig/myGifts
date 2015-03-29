@@ -115,10 +115,11 @@ hr {
 .add-gift-column {
   height: 400px;
 }
-.overflow-scroll {
-  overflow: scroll;
-  overflow-x: hidden;
+/*.overflow-scroll {
+	overflow: scroll;
+	overflow-x: hidden;
 }
+*/
 /*.col-md-4 {
 	outline: 1px solid red;
 }*/

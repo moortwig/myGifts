@@ -18,22 +18,24 @@ require_once('header.php');
         <div class="row">
             <form class="form-horizontal" method="post" action="app.php" role="form">
                 <div class="container">
-
-                    <div class="col-md-4 add-gift-column overflow-scroll">     
-                        <h3>1: Choose recipient(s)</h3>
-                        <label for="Recipient">Recipient:</label>
-                        <?php
-                        foreach ($recipients as $recipient => $r) { ?>
-                            <ul class="list-unstyled">
-                            <li><input type="checkbox" name="recipientId[]" value="<?php echo $r['id']; ?>">
-                                <?php echo $r['name']; ?>
-                            </input></li>
-                            </ul>
-                        <?php } ?>
-                    <p class="help-block">Missing someone?</p>
-                    <a class="btn btn-sm btn-primary" href="addrecipient.php">Add someone!</a>
-                       
-                    </div>   
+                    <div class="col-md-4 add-gift-column">
+                        <div id="add-gift-recipients" class="nano">
+                            <div class="nano-content">    
+                                <h3>1: Choose recipient(s)</h3>
+                                <label for="Recipient">Recipient:</label>
+                                <?php
+                                foreach ($recipients as $recipient => $r) { ?>
+                                    <ul class="list-unstyled">
+                                    <li><input type="checkbox" name="recipientId[]" value="<?php echo $r['id']; ?>">
+                                        <?php echo $r['name']; ?>
+                                    </input></li>
+                                    </ul>
+                                <?php } ?>
+                                <p class="help-block">Missing someone?</p>
+                                <a class="btn btn-sm btn-primary" href="addrecipient.php">Add someone!</a>
+                            </div><!-- .nano-content -->
+                        </div><!-- #add-gift-recipients -->
+                    </div><!-- .col-md-4 add-gift-column nano-->
 
                     <div class="col-md-4 add-gift-column middle-column">
                         <h3>2: Choose item</h3>
@@ -66,6 +68,7 @@ require_once('header.php');
                         <input name="userId" type="hidden" value="5" />
                         <button type="submit" class="btn btn-lg btn-success" name="addGift">I'm all done!</button>
                     </div><!-- .col-md-4 form-group -->
+
                 </div><!-- .container -->
             </form>
         </div><!-- .row -->
