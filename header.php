@@ -43,7 +43,7 @@ require_once('app.php');
             <div class="collapse navbar-collapse" id="navbar-coll">
                 <ul class="nav navbar-nav">
                     <li><a href="addrecipient.php" class="btn">Add recipient</a></li>
-                    <li><a href="additem.php" class="btn">Add item</a></li>
+                    <li><a href="additem2.php" class="btn">Add item</a></li>
                     <li><a href="addgift.php" class="btn">Add gift</a></li>
                 </ul>
                 <form class="navbar-form navbar-right" method="post" action="app.php" role="form">

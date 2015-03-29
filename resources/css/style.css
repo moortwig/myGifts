@@ -1,3 +1,5 @@
+/* Text */
+/* Links */
 /* Small units */
 /* TODO: Look up screen resolutions for mobile phones */
 @media only screen and (max-width: 750px) {
@@ -69,8 +71,7 @@ p,
 h1,
 h2,
 h3,
-label,
-a {
+label {
   color: #67655d;
 }
 hr {
@@ -86,15 +87,39 @@ hr {
 .navbar h2,
 .navbar h3,
 .navbar label,
-.navbar span,
-.navbar a {
+.navbar span {
   color: #aa9a66;
 }
 .navbar-default .navbar-brand {
   color: #aa9a66;
 }
+.navbar-default .navbar-brand:hover {
+  color: #ddd6c1;
+}
+.navbar-default .navbar-nav > li > a {
+  color: #aa9a66;
+}
+.navbar-default .navbar-nav > li > a:visited {
+  color: #aa9a66;
+}
+.navbar-default .navbar-nav > li > a:hover {
+  color: #ddd6c1;
+}
 .navbar-default .navbar-toggle {
   border-color: #aa9a66;
+}
+.navbar-default .navbar-text {
+  color: #aa9a66;
+}
+.navbar-default a {
+  color: #aa9a66;
+}
+.navbar-default a:visited {
+  color: #aa9a66;
+}
+.navbar-default a:hover {
+  color: #ddd6c1;
+  text-decoration: none;
 }
 .panel-body {
   background-color: #ffffff;

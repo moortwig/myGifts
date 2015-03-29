@@ -16,7 +16,7 @@ body {
 	margin-bottom: 60px;
 }
 
-p, h1, h2, h3, label, a {
+p, h1, h2, h3, label {
 	color: @text-color;
 }
  
@@ -29,18 +29,48 @@ hr {
 .navbar {
 	background-color: @nav-bg;
 
-	p, h1, h2, h3, label, span, a {
+	p, h1, h2, h3, label, span {
 		color: @nav-text-color;
 	}
 }
+
 .navbar-default {
 	.navbar-brand {
-	color: @nav-text-color;
+		color: @nav-text-color;
 	}
-}
-.navbar-default {
+
+	.navbar-brand:hover {
+		color: @nav-link-hover;
+	}
+
+	.navbar-nav > li > a {
+		color: @nav-link;
+	}
+	.navbar-nav > li > a:visited {
+		color: @nav-link-visited;
+	}
+	.navbar-nav > li > a:hover {
+		color: @nav-link-hover;
+	}
 	.navbar-toggle {
 		border-color: @nav-text-color;
+	}
+
+	.navbar-text {
+		color: @nav-text-color;
+	}
+
+	a {
+		color: @nav-link;
+	}
+
+	a:visited {
+		color: @nav-link-visited;
+	}
+
+	a:hover {
+		color: @nav-link-hover;
+		text-decoration: none;
 	}
 }
 
