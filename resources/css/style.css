@@ -1,4 +1,3 @@
-/*#F4F1EB;*/
 /* Small units */
 /* TODO: Look up screen resolutions for mobile phones */
 @media only screen and (max-width: 750px) {
@@ -116,18 +115,18 @@ hr {
   height: 400px;
 }
 .nano {
-  background: #bba;
+  /*background: #bba; */
   /*width: 300px; */
-  height: 400px;
+  height: 350px;
 }
 .nano .nano-content {
   padding: 10px;
 }
 .nano .nano-pane {
-  background-color: #888;
+  background-color: #ddd6c1;
 }
 .nano .nano-slider {
-  background: #111;
+  background-color: #aa9a66;
 }
 /*.overflow-scroll {
 	overflow: scroll;
