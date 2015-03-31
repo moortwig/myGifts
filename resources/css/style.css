@@ -32,7 +32,7 @@
 		}
 	}*/
   .middle-column {
-    outline: 1px solid red;
+    /*outline: 1px solid red;*/
   }
   /* TODO this exists in small-units as well! Do something to optimise this pls */
   .centered-content {
@@ -52,7 +52,7 @@
     display: block;
   }
   .align-columns {
-    outline: 1px solid red;
+    /*outline: 1px solid red;*/
     vertical-align: bottom;
     min-height: 200px;
   }
