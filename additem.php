@@ -9,6 +9,9 @@ require_once('header.php');
     if(isset($_SESSION['username'])) { ?>
         <div class="row">
             <div class="col-md-4 col-md-offset-2">
+                <p class="help-block">
+                    Add a new X and save it to your account, or save and continue to register a new gift!
+                </p>
                 <form class="form-horizontal" method="post" action="app.php" role="form">
                     <h2>Add item</h2>
                     <label for="name">Name:</label>
