@@ -12,12 +12,10 @@ require_once('header.php');
     <?php
     
     if(isset($_SESSION['username'])) {
-        // Display this section if a user is logged in ?>
-        <p>
-            Ennui Truffaut messenger bag umami, tousled sustainable brunch. Vegan +1 listicle ugh. Blue Bottle shabby chic cray Carles, tote bag fixie +1. Banh mi pug Pinterest lomo, tilde keytar meggings four dollar toast twee locavore plaid literally Vice Truffaut readymade. Whatever Etsy fashion axe asymmetrical cred, shabby chic lumbersexual disrupt kogi cray sartorial artisan YOLO readymade. Pour-over Truffaut you probably haven't heard of them, semiotics gentrify narwhal Godard cronut selvage. Vegan street art +1 hashtag drinking vinegar, wayfarers small batch shabby chic post-ironic swag.
-        </p>
+        // Display this section if a user is logged in 
+        include_once('logged-in.php');
 
-<?php } else {
+} else {
     // Display this section if user has not logged in ?>
     <div class="login-section">
         <div class="row">
