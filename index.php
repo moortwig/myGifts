@@ -50,14 +50,13 @@ require_once('header.php');
                 <!-- TODO JavaScript check that all fields are filled in: -->
                 <!-- TODO jQuery on key down "Enter" -> Submit -->
                 <button type="submit" class="btn btn-lg btn-primary btn-block" name="signup">SUBMIT</button>
-                <h4 class="form-signin-heading"><a href="index.php">Back to start</a></h4>
             </form>
         </div><!-- .container -->
     </div>
     
 <?php } ?>
 
-    </div><!-- .index-wrapper -->
+</div><!-- .index-wrapper -->
 
 
 <!-- FOOTER -->
