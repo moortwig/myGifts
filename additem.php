@@ -14,10 +14,10 @@ require_once('header.php');
                 </p>
                 <form class="form-horizontal" method="post" action="app.php" role="form">
                     <h2>Add item</h2>
-                    <label for="name">Name:</label>
+                    <label for="name" class="sr-only">Name:</label>
                     <input type="text" name="name" class="form-control" placeholder="Name" /><br />
-                    <label for="description">Description:</label><br />
-                    <textarea name="description" class="form-control"></textarea>
+                    <label for="description" class="sr-only">Description:</label><br />
+                    <textarea name="description" class="form-control" placeholder="Description"></textarea>
                     <!-- TODO Maybe a better way to pass on the session user ID? -->
                     <!-- YES! THERE IS!!! Besides, the row below isn't even working ...
                     Read THIS: http://www.clfsrpm.net/csrf/ -->
