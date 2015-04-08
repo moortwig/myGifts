@@ -52,7 +52,7 @@ require_once('header.php');
 
         		<div class="col-md-6">
         			<p class="bg-info">
-                    	Edit items here. Click "Cancel" if you change your mind, and want to go back to your profile!
+                    	Edit a item here. Click "Cancel" if you change your mind, and want to go back to your profile!
                 	</p>
         		</div><!-- .col-md-6 -->
 	        </div><!-- row -->
