@@ -7,20 +7,6 @@
 /* TODO: Add a min-width at 751px */
 /* Large units */
 /* TODO: Look up screen resolutions for tablets */
-@media only screen and (min-width: 992px) {
-  .middle-column {
-    border-left: 3px dashed silver;
-    border-right: 3px dashed silver;
-  }
-  .block-align {
-    display: block;
-  }
-  .align-columns {
-    /*outline: 1px solid red;*/
-    vertical-align: bottom;
-    min-height: 200px;
-  }
-}
 p,
 h1,
 h2,
@@ -50,6 +36,6 @@ hr {
 	overflow-x: hidden;
 }
 */
-/*.col-md-4 {
-	outline: 1px solid red;
-}*/
+div {
+  outline: 1px solid red;
+}
