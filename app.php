@@ -20,7 +20,7 @@ require_once('classes/User.php');
 if(isset($_POST['signup'])) {
 	$user = new User();
 	$user->newUser();
-	header('Refresh: 3; url=index.php');
+	header('Refresh: 2; url=index.php');
 	// TODO close the connection
 }
 
@@ -29,7 +29,7 @@ if(isset($_POST['signup'])) {
 if (isset($_POST['login'])) {
 	$session = new Session();
 	$session->startLoginSession();
-	header('Refresh: 3; url=index.php');
+	header('Refresh: 2; url=index.php');
 }
 
 // LOGOUT
@@ -37,7 +37,7 @@ if (isset($_POST['login'])) {
 if (isset($_POST['logout'])) {
 	session_destroy();
 	echo "You're now being logged out, and will shortly return to the start page.";
-	header('Refresh: 3; url=index.php');
+	header('Refresh: 2; url=index.php');
 }
 
 
@@ -47,7 +47,7 @@ if(isset($_POST['addRecipient'])) {
 	$recipient = new Recipient();
 	$recipient->newRecipient();
 	echo "The recipient has been saved!";
-	header('Refresh: 3; url=index.php');
+	header('Refresh: 2; url=index.php');
 	// TODO close the connection
 }
 
@@ -73,7 +73,16 @@ if(isset($_POST['addItem'])) {
 	$item = new Item();
 	$item->newItem();
 	echo "The item has been saved!";
-	header('Refresh: 3; url=index.php');
+	header('Refresh: 2; url=index.php');
+	// TODO close the connection
+}
+
+// ADD ITEM AND CONTINUE (to Add Gift)
+if(isset($_POST['addItemContinue'])) {
+	$item = new Item();
+	$item->newItem();
+	echo "The item has been saved!";
+	header('Refresh: 2; url=addGift.php');
 	// TODO close the connection
 }
 
@@ -90,7 +99,7 @@ if(isset($_POST['addGift'])) {
 	$gift = new Gift();
 	$gift->newGift();
 	echo "The gift has been saved!";
-	header('Refresh: 3; url=index.php');
+	header('Refresh: 2; url=index.php');
 	// TODO close the connection
 }
 
