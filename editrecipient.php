@@ -3,7 +3,7 @@
 require_once('header.php');
 
 ?>
-<div class="main container">
+<div class="wrapper edit-recipient-page">
     <?php
     // Display this section if a user is logged in
     // TODO EDIT FORM 
@@ -58,7 +58,7 @@ require_once('header.php');
         <h2>Hold!</h2>
         <p>Access to this content is forbidden. Log in, or sign up and you shall recieve access.</p>
     <?php } ?>
-</div> <!-- .main -->
+</div> <!-- .wrapper -->
 
 <!-- FOOTER -->
 <?php 
