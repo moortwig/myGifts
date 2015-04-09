@@ -1,4 +1,5 @@
 @import "colours.less";
+@import "typography.less";
 
 @import "small-units.less";
 @import "medium-units.less";
@@ -14,7 +15,7 @@ body {
 }
 
 /* TODO: 
-Fonts:
+Fonts icons:
 	Gift icon: ton-li-box-1
 	Item icon: ton-li-bag-1
 	Recipients: ton-li-people-7
@@ -22,10 +23,6 @@ Fonts:
 	Save: ton-li-check
 	Cancel: ton-li-cross
 	Add: ton-li-plus
-	
-
-
-
 */
 
 p, h1, h2, h3, label {
@@ -42,8 +39,8 @@ hr {
   background-position: bottom;
   background-repeat: no-repeat;
   background-attachment: fixed;
-  padding: 200px 0;
-  min-height: 650px;
+  padding-top: 200px;
+  min-height: 600px;
   /*height: auto;*/
   /*left: 0;
   width: 100%;*/
@@ -60,12 +57,12 @@ hr {
 
   .landing-text {
   	background-color: @landing-bg;
-  	padding-bottom: 200px;
+  	/*padding-bottom: 200px;*/
 
 
 	  .container {
 	  	/*outline: 1px solid black;*/
-	  	min-height: 200px;
+	  	min-height: 400px;
 	  	/*padding-top: 200px;*/
 	  }
   }
@@ -83,12 +80,12 @@ hr {
 
 
 .sign-up-section {
-  /*min-height: 300px;*/
-
+  min-height: 600px;
+  background-color: @landing-bg;
   .container {
   	outline: 1px solid blue;
   	/*height: 200px;*/
-  	padding-top: 200px;
+  	/*padding-top: 200px;*/
   }
 }
 

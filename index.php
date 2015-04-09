@@ -17,8 +17,8 @@ require_once('header.php');
         <div class="container">
             <h1 class="text-center"><span class="landing-headline">Lorem ipsum dolor sit amet, id mei impetus omnesque.</span></h1>
         </div><!-- .container -->
-            <div class="landing-text">
-        <div class="container">
+        <div class="landing-text">
+            <div class="container">
                 <p>
                     Keep track of items you've given away. <br />
                     Add your friends and family to your own registry. <br />
@@ -27,8 +27,8 @@ require_once('header.php');
                 <p>High Life paleo fixie mustache, skateboard trust fund leggings Kickstarter asymmetrical Pitchfork jean shorts single-origin coffee chambray mumblecore Brooklyn. Actually roof party polaroid PBR distillery Shoreditch DIY chambray Intelligentsia, stumptown leggings. DIY authentic pickled 90's quinoa. Kogi Blue Bottle Brooklyn yr, sustainable kale chips photo booth disrupt ethical pug ennui Kickstarter. Quinoa roof party four dollar toast put a bird on it. Health goth 3 wolf moon slow-carb readymade umami Odd Future. Pop-up swag fanny pack, Marfa photo booth fap ennui food truck.</p>
                 <h4 class="form-signin-heading">Not registered yet?</h4>
                 <a href="#sign-up" class="btn btn-lg btn-success">SIGN UP NOW</a>
-            </div><!-- .landing-text -->
-        </div><!-- .container -->
+            </div><!-- .container -->
+        </div><!-- .landing-text -->
     </div><!-- .landing-section -->
 
     <div id="sign-up" class="sign-up-section">
