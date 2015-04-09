@@ -1,13 +1,28 @@
-var myGifts = {
+var app = {
+
+	/*
+		Initialise JS
+	*/
 	init: function() {
+		console.log("init");
 		// functions here
+		app.nano();
+	},
+
+
+	/*
+		nanoScroller
+	*/
+	nano: function() {
+		console.log("nanoScroller");
+		$(".nano").nanoScroller();
 	}
 }
 
+/*
+	Initialise app
+*/
+app.init();
 
-$(document).ready(function() {
-	console.log("main js");
-	$(".nano").nanoScroller();
-	var height = $(window).innerHeight();
-	console.log(height);
-});
+
+// $(document).ready(function() {});
