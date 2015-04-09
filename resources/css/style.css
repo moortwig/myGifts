@@ -27,20 +27,32 @@ hr {
 .landing-section {
   background-image: url(../img/bg-landing.jpg);
   background-color: #dde9e4;
-  background-position: center;
+  background-position: bottom;
   background-repeat: no-repeat;
   background-attachment: fixed;
-  height: auto;
-  left: 0;
+  padding: 200px 0;
+  min-height: 650px;
+  /*height: auto;*/
+  /*left: 0;
+  width: 100%;*/
   /*position: fixed;*/
-  min-height: 300px;
-  top: 0;
-  width: 100%;
-  z-index: -999;
+  /*min-height: 600px;*/
+  /* top: 0;
+  z-index: -999;*/
 }
 .landing-section .container {
-  height: 200px;
-  /*padding: 50px;*/
+  outline: 1px solid black;
+  min-height: 200px;
+  /*padding-top: 200px;*/
+}
+.landing-section .landing-text {
+  background-color: #dde9e4;
+  padding-bottom: 200px;
+}
+.landing-section .landing-text .container {
+  /*outline: 1px solid black;*/
+  min-height: 200px;
+  /*padding-top: 200px;*/
 }
 .landing-section h1 {
   font-size: 2em;
@@ -48,6 +60,14 @@ hr {
 .landing-section .landing-headline {
   background-color: white;
   padding: 0.5em;
+}
+.sign-up-section {
+  /*min-height: 300px;*/
+}
+.sign-up-section .container {
+  outline: 1px solid blue;
+  /*height: 200px;*/
+  padding-top: 200px;
 }
 /* Nanoscroller */
 .nano {
@@ -69,6 +89,7 @@ hr {
 	overflow-x: hidden;
 }
 */
+/* Debugging */
 div {
   /*outline: 1px solid red;*/
 }
