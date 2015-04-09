@@ -51,6 +51,15 @@ if(isset($_POST['addRecipient'])) {
 	// TODO close the connection
 }
 
+// ADD ITEM AND CONTINUE (to Add Gift)
+if(isset($_POST['addRecipientContinue'])) {
+	$item = new Recipient();
+	$item->newRecipient();
+	echo "The item has been saved!";
+	header('Refresh: 2; url=addGift.php');
+	// TODO close the connection
+}
+
 // EDIT RECIPIENT 	
 if(isset($_POST['editRecipient'])) {
 	$recipient = new Recipient();
