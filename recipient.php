@@ -17,8 +17,6 @@ require_once('header.php');
 			if($recipient) {
 				$recipientName = $recipient['name'];
 				$recipientInformation = $recipient['information'];
-				// var_dump($recipientName);
-				// die('remove');
 
 				$gift = new Gift();
 
@@ -26,12 +24,13 @@ require_once('header.php');
 
 				<!-- STUFF HERE -->
 	        	<div class="row">
-	            	<div class="col-md-4 col-md-offset-2">
-					
+
+	            	<div class="col-md-4 col-md-offset-2">					
 						<h2>Profile For <?php echo $recipientName; ?></h2>
-						<?php echo "<a href='editrecipient.php?id=" . $recipientId . "'><div class='button'>Edit</div></a> "; ?>
 						<?php echo $recipientInformation;
 						 ?>
+						 <br />
+						<?php echo "<a href='editrecipient.php?id=" . $recipientId . "' class='btn btn-xs btn-success'>Edit</a> "; ?>
 					</div><!-- .col-md-4 col-md-offset-2 -->
 
 					<div class="col-md-6">
@@ -44,12 +43,12 @@ require_once('header.php');
 							foreach ($giftsArray as $singleGift => $single) {
 								echo $single['item_id']['name'] . ", ";
 								echo $single['item_id']['description'] . ", ";
-								echo $single['occasion'] . ", ";
-								echo $single['added'] . "<br />";
+								echo $single['occasion'] . "<br />";
+								// echo $single['added'] . "<br />";
 							}
 						} ?>
-
 		        	</div><!-- .col-md-6 -->
+
 		        </div><!-- .row -->
 		    <?php } else {
 		    	// if data is null, redirect to an error page   	
