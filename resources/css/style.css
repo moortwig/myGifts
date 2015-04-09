@@ -7,6 +7,13 @@
 /* TODO: Add a min-width at 751px */
 /* Large units */
 /* TODO: Look up screen resolutions for tablets */
+html {
+  min-height: 100%;
+  position: relative;
+}
+body {
+  /*background-color: @landing-bg;*/
+}
 p,
 h1,
 h2,
@@ -17,6 +24,25 @@ label {
 hr {
   border-color: #bbb6ac;
 }
+.landing-section {
+  background-image: url(../img/bg-landing.jpg);
+  background-color: #dde9e4;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  height: auto;
+  left: 0;
+  /*position: fixed;*/
+  min-height: 300px;
+  top: 0;
+  width: 100%;
+  z-index: -999;
+}
+.landing-section .landing-headline {
+  background-color: white;
+  padding: 0.5em;
+}
+/* Nanoscroller */
 .nano {
   /*background: #bba; */
   /*width: 300px; */
@@ -37,5 +63,5 @@ hr {
 }
 */
 div {
-  outline: 1px solid red;
+  /*outline: 1px solid red;*/
 }
