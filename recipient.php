@@ -13,41 +13,49 @@ require_once('header.php');
 
 			$recipientId = $_GET["id"]; // picks up the id from the URL
 			$recipient = $recipient->getRecipient($recipientId);
-			$recipientName = $recipient['name'];
-			$recipientInformation = $recipient['information'];
 
-			$gift = new Gift();
+			if($recipient) {
+				$recipientName = $recipient['name'];
+				$recipientInformation = $recipient['information'];
+				// var_dump($recipientName);
+				// die('remove');
 
-			$giftsArray = $gift->getAllGiftsAsMultiArray($recipientId, $userId); ?>
+				$gift = new Gift();
 
-			<!-- STUFF HERE -->
-			<div class="recipient">
-				<div class="gift-history">
-				
-					<h2>Profile For <?php echo $recipientName; ?></h2>
-					<?php echo "<a href='editrecipient.php?id=" . $recipientId . "'><div class='button'>Edit</div></a> "; ?>
-					<?php echo $recipientInformation;
-					 ?>
+				$giftsArray = $gift->getAllGiftsAsMultiArray($recipientId, $userId); ?>
 
-					<h3>Gift History</h3>
+				<!-- STUFF HERE -->
+	        	<div class="row">
+	            	<div class="col-md-4 col-md-offset-2">
+					
+						<h2>Profile For <?php echo $recipientName; ?></h2>
+						<?php echo "<a href='editrecipient.php?id=" . $recipientId . "'><div class='button'>Edit</div></a> "; ?>
+						<?php echo $recipientInformation;
+						 ?>
+					</div><!-- .col-md-4 col-md-offset-2 -->
 
-					<?php				
-					if (!$giftsArray) {
-						echo "There's no gift history to display yet!";
-					} else {
-						foreach ($giftsArray as $singleGift => $single) {
-							echo $single['item_id']['name'] . ", ";
-							echo $single['item_id']['description'] . ", ";
-							echo $single['occasion'] . ", ";
-							echo $single['added'] . "<br />";
-						}
-					} ?>
+					<div class="col-md-6">
+						<h3>Gift History</h3>
 
-	        	</div><!-- .gift-history -->
-	        </div><!-- .recipient -->
+						<?php				
+						if (!$giftsArray) {
+							echo "There's no gift history to display yet!";
+						} else {
+							foreach ($giftsArray as $singleGift => $single) {
+								echo $single['item_id']['name'] . ", ";
+								echo $single['item_id']['description'] . ", ";
+								echo $single['occasion'] . ", ";
+								echo $single['added'] . "<br />";
+							}
+						} ?>
 
-
-	    <?php } else { ?>
+		        	</div><!-- .col-md-6 -->
+		        </div><!-- .row -->
+		    <?php } else {
+		    	// if data is null, redirect to an error page   	
+        	header('location: 404.php');
+		    }
+	    } else { ?>
 	        <h2>Hold!</h2>
 	        <p>Access to this content is forbidden. Log in, or sign up and you shall recieve access.</p>
 	    <?php } ?>
