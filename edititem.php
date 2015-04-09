@@ -9,7 +9,6 @@ require_once('header.php');
     // Display this section if a user is logged in
     // TODO EDIT FORM 
     if(isset($_SESSION['username'])) { ?>
-    	<h2>Edit Item</h2> 
     	<?php
     	$item = new Item();
     	$itemId = $_GET["id"]; // picks up the id from the URL
@@ -21,6 +20,7 @@ require_once('header.php');
     	if ($name && $description !== NULL) { ?>
         	<div class="row">
             	<div class="col-md-4 col-md-offset-2">
+    				<h2>Edit Item</h2> 
 		            <!--    TODO adjust this for the new structure!  -->
 		            <form class="form-horizontal" method="post" action="app.php" role="form">
 		                <label for="name">Name:</label>
