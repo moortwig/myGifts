@@ -76,8 +76,9 @@ hr {
   padding: 0.5em;
 }
 .sign-up-section {
-  min-height: 600px;
+  min-height: 700px;
   background-color: #dde9e4;
+  padding-bottom: 200px;
 }
 .sign-up-section .container {
   outline: 1px solid blue;
