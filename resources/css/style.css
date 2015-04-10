@@ -45,12 +45,11 @@ hr {
   background-repeat: no-repeat;
   background-attachment: fixed;
   padding-top: 200px;
-  min-height: 600px;
+  /*min-height: 600px;*/
   /*height: auto;*/
   /*left: 0;
   width: 100%;*/
   /*position: fixed;*/
-  /*min-height: 600px;*/
   /* top: 0;
   z-index: -999;*/
 }
@@ -65,8 +64,8 @@ hr {
 }
 .landing-section .landing-text .container {
   width: 60%;
-  /*outline: 1px solid black;*/
-  min-height: 300px;
+  outline: 1px solid black;
+  /*min-height: 300px;*/
   padding-top: 1em;
   padding-bottom: 200px;
 }
@@ -78,19 +77,20 @@ hr {
   padding: 0.5em;
 }
 .landing-section .call {
-  padding-top: 70px;
+  /*padding-top: 70px;*/
 }
 .landing-section .btn-container {
   /*padding-top: 100px;*/
   width: 200px;
   margin: 0 auto;
 }
-.sign-up-section {
-  min-height: 700px;
+#sign-up .sign-up-section {
+  /*min-height: 700px;*/
   background-color: #dde9e4;
   padding-bottom: 200px;
+  padding-top: 200px;
 }
-.sign-up-section .container {
+#sign-up .sign-up-section .container {
   /*outline: 1px solid blue;*/
   /*height: 200px;*/
   /*padding-top: 200px;*/

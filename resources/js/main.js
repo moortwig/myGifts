@@ -7,7 +7,7 @@ var app = {
 		console.log('init');
 		// functions here
 		app.nano();
-		app.sectionHeight();
+		app.divHeight();
 	},
 
 
@@ -18,16 +18,16 @@ var app = {
 		console.log('nanoScroller');
 		$('.nano').nanoScroller();
 	},
+
+
 	/*
 		Set height at index page sections
 	*/
-	sectionHeight: function() {
-		// TODO:
-		// get the height value
-		// set that value to class .section-wrapper
+	divHeight: function() {
 		console.log('sectionHeight');
 		var height = $(window).height();
 		$('.section-wrapper').css('height', height);
+		// $('.landing-text').css('height', height*0.8);
 	}
 }
 

@@ -35,8 +35,8 @@ require_once('header.php');
         </div><!-- .landing-section -->
     </div><!-- .section-wrapper -->
 
-    <div class="section-wrapper">
-        <div id="sign-up" class="sign-up-section">
+    <div id="sign-up" class="section-wrapper">
+        <div  class="sign-up-section">
             <div class="container">
                 <form class="form-signin" method="post" action="app.php" role="form">
                     <h2 class="form-signin-heading">Sign up</h2>
