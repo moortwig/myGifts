@@ -31,7 +31,6 @@ require_once('header.php');
                     // echo "<div class='data-edit'>";
                         // echo "<a class='btn btn-default btn-xs' href='editrecipient.php?id=" . $r['id'] . "'>Edit</a> ";
                     // echo "</div>";
-                echo "<hr />";
                 echo "</div>"; ?>
             <?php } ?>
         <?php } else { ?>

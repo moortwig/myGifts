@@ -139,6 +139,14 @@ hr {
   position: relative;
   top: -4px;
 }
+.data-row {
+  padding: 5px;
+  border-bottom: 1px solid silver;
+  width: 70%;
+}
+/*
+	Add button
+*/
 .ton-li-plus {
   font-size: 0.7em;
   background-color: silver;
