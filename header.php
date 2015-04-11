@@ -54,8 +54,8 @@ require_once('app.php');
 
                 <?php if(isset($_SESSION['username'])) { ?>
                 <ul class="nav navbar-nav">
-                    <li><a href="addrecipient.php" class="btn enabled"><i class="ton-li-people-7"></i></a></li>
-                    <li><a href="additem.php" class="btn enabled"><i class="ton-li-bag-1"></i></a></li>
+                    <li><a href="recipients.php" class="btn enabled"><i class="ton-li-people-7"></i></a></li>
+                    <li><a href="items.php" class="btn enabled"><i class="ton-li-bag-1"></i></a></li>
                     <li><a href="addgift.php" class="btn enabled"><i class="ton-li-box-1"></i></a></li>
                 </ul>
 
