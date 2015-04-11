@@ -45,9 +45,9 @@ require_once('app.php');
         <div class="collapse navbar-collapse" id="navbar-coll">
             <div class="container">
                 <ul class="nav navbar-nav">
-                    <li><!-- <a href="addrecipient.php" class="btn">Add recipient</a> --></li>
-                    <li><!-- <a href="additem.php" class="btn">Add item</a> --></li>
-                    <li><!-- <a href="addgift.php" class="btn">Add gift</a> --></li>
+                    <li><a href="addrecipient.php" class="btn"><i class="ton-li-people-7"></i></a></li>
+                    <li><a href="additem.php" class="btn"><i class="ton-li-bag-1"></i></a></li>
+                    <li><a href="addgift.php" class="btn"><i class="ton-li-box-1"></i></a></li>
                 </ul>
 
                 <?php if(isset($_SESSION['username'])) { ?>

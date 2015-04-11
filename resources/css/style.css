@@ -36,6 +36,9 @@ h3,
 label {
   color: #67655d;
 }
+i {
+  font-size: 2em;
+}
 hr {
   border-color: #bbb6ac;
 }
