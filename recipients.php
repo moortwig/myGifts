@@ -9,7 +9,7 @@ require_once('header.php');
         // Display this section if a user is logged in
         if(isset($_SESSION['username'])) { ?>
                        
-            <h2 class="">Recipients<span class="label"><i class="ton-li-plus"></i></span></h2>
+            <h2 class="">Recipients<span class="label"><i class="ton-li-plus circle"></i></span></h2>
             <p class="help-block">All your stored recipients are displayed in this list. Click on a name to see further details, such as gift history.</p>
             <?php
             $recipient = new Recipient();
