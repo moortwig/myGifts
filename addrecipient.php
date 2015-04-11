@@ -53,19 +53,9 @@ require_once('header.php');
                                     foreach ($recipients as $key => $r) {
                                         $recipientId = $r['id'];
 
-                                        echo "<div class='data-row'>"; 
-                                            // echo "<div class='data-field'>";
-                                                echo "<a href='recipient.php?id=" . $r['id'] . "'>" . $r['name'] . "</a> ";
-                                                // echo $r['name'];
-                                            // echo "</div>";
-                                            /*echo "<div class='data-field'>";
-                                                echo $r['information'];
-                                            echo "</div>";*/
-                                            // echo "<div class='data-edit'>";
-                                                echo "<a href='editrecipient.php?id=" . $r['id'] . "'><span class='glyphicon glyphicon-pencil'></span></a> ";
-                                                // echo "<a class='btn btn-default btn-xs' href='editrecipient.php?id=" . $r['id'] . "'>Edit</a> ";
-                                            // echo "</div>";
-                                        echo "<hr />";
+                                        echo "<div class='data-row'>";
+                                            echo "<a href='recipient.php?id=" . $r['id'] . "'>" . $r['name'] . "</a> ";
+                                            echo "<a href='editrecipient.php?id=" . $r['id'] . "'><span class='glyphicon glyphicon-pencil'></span></a> ";
                                         echo "</div>"; ?>
                                     <?php } ?>
                                 </div><!-- .nano-content -->
