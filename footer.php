@@ -1,4 +1,4 @@
-<div class="yada-own">
+<div class="footer">
 	<!-- <div class="footer"> -->
 		<div class="container">
 			<ul>
