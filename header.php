@@ -29,7 +29,6 @@ require_once('app.php');
 </head>
 <body>
 
-<!-- Display navigation bar if a user is logged in -->
 <nav class="navbar navbar-fixed-top navbar-default">
     <div class="container-fluid">
         <div class="navbar-header">
@@ -44,13 +43,23 @@ require_once('app.php');
 
         <div class="collapse navbar-collapse" id="navbar-coll">
             <div class="container">
+                <!-- if not logged in, display disabled menu icons -->
+                <?php if(!isset($_SESSION['username'])) { ?>
+                <ul class="nav navbar-nav">
+                    <li class="btn" disabled="disabled"><i class="ton-li-people-7"></i></li>
+                    <li class="btn" disabled="disabled"><i class="ton-li-bag-1"></i></li>
+                    <li class="btn" disabled="disabled"><i class="ton-li-box-1"></i></li>
+                </ul>
+                <?php } ?>
+
+                <?php if(isset($_SESSION['username'])) { ?>
                 <ul class="nav navbar-nav">
                     <li><a href="addrecipient.php" class="btn"><i class="ton-li-people-7"></i></a></li>
                     <li><a href="additem.php" class="btn"><i class="ton-li-bag-1"></i></a></li>
                     <li><a href="addgift.php" class="btn"><i class="ton-li-box-1"></i></a></li>
                 </ul>
 
-                <?php if(isset($_SESSION['username'])) { ?>
+                
                     <form class="navbar-form navbar-right" method="post" action="app.php" role="form">
                         <span class="navbar-text">Logged in: <a href="profile.php"><?php echo $_SESSION['username']; ?></a></span>
                         <button type="submit" class="btn btn-danger" name="logout">Log out</button>

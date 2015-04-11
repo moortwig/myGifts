@@ -18,6 +18,7 @@ require_once('header.php');
             <div class="container">
                 <h1 class="text-center"><span class="landing-headline">Lorem ipsum dolor sit amet, id mei impetus omnesque.</span></h1>
             </div><!-- .container -->
+            
             <div class="landing-text">
                 <div class="container">
                     <p>

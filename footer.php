@@ -14,7 +14,7 @@
 <script src="http://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
 
 <!-- JS vendor scripts -->
-<!-- <script src="resources/js/bootstrap.min.js"></script> -->
+<script src="resources/js/bootstrap.min.js"></script>
 <script src="resources/js/vendor/jquery.nanoscroller.min.js"></script>
 
 <!-- JS main file -->
