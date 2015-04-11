@@ -12,6 +12,7 @@ html {
 
 body {
   /*background-color: @landing-bg;*/
+  padding: 0;
 }
 
 /* TODO: 
@@ -61,7 +62,7 @@ hr {
 
 	  .container {
 	  	width: 60%;
-	  	outline: 1px solid black;
+	  	/*outline: 1px solid black;*/
 	  	/*min-height: 300px;*/
 	  	padding-top: 1em;
 	  	/*padding-bottom: 100px;*/
@@ -89,22 +90,28 @@ hr {
 }
 
 #sign-up {
+	background-image: url(../img/confectionary.png);
+	background-attachment: fixed;
+  	padding-top: 200px;
+
 	.sign-up-section {
 		/*min-height: 700px;*/
-  		background-image: url(../img/confectionary.png);
-  		background-attachment: fixed;
-		background-color: @signup-bg;
-		padding-bottom: 200px;
-		padding-top: 200px;
+		background-color: @landing-bg;
+		/*padding-bottom: 200px;*/
+		/*padding-top: 200px;*/
 
 		.container {
-		background-color: @landing-bg;
-			/*outline: 1px solid blue;*/
-			/*height: 200px;*/
-			/*padding-top: 200px;*/
+		/*background-color: @landing-bg;*/
+		/*outline: 1px solid blue;*/
+		/*height: 200px;*/
 		}
 	}
 }
+
+/*#footer {
+	background-color: @landing-bg;
+	padding-top: 100px;
+}*/
 
 
 
