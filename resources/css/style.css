@@ -1,8 +1,9 @@
 /* Text */
 /* Links */
 @font-face {
-  font-family: 'Tonicons';
-  src: url('../fonts/Tonicons.eot');
+  font-family: 'Glyphicons Halflings';
+  src: url('../fonts/glyphicons-halflings-regular.eot');
+  src: url('../fonts/glyphicons-halflings-regular.eot?#iefix') format('embedded- opentype'), url('../fonts/glyphicons-halflings-regular.woff') format('woff'), url('../fonts/glyphicons-halflings-regular.ttf') format('truetype'), url('../fonts/glyphicons-halflings-regular.svg#glyphicons-halflingsregular') format('svg');
 }
 /* Small units */
 /* TODO: Look up screen resolutions for mobile phones */
@@ -124,6 +125,10 @@ hr {
 /*
 	Page: recipients.php;
 */
+.recipients {
+  padding-top: 100px;
+  background-color: #dde9e4;
+}
 /* Nanoscroller */
 .nano {
   /*background: #bba; */
