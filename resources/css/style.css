@@ -42,6 +42,9 @@ i {
 hr {
   border-color: #bbb6ac;
 }
+/*
+	Page: index.php;
+*/
 .landing-section {
   background-image: url(../img/bg-landing.jpg);
   background-color: #dde9e4;
@@ -89,6 +92,9 @@ hr {
   width: 200px;
   margin: 0 auto;
 }
+/*
+	Page: index.php;
+*/
 #sign-up {
   background-image: url(../img/confectionary.png);
   background-attachment: fixed;
@@ -105,13 +111,19 @@ hr {
   /*outline: 1px solid blue;*/
   /*height: 200px;*/
 }
-.welcome {
-  background-color: #337180;
-}
 /*#footer {
 	background-color: @landing-bg;
 	padding-top: 100px;
 }*/
+/*
+	Page: index.php;
+*/
+.welcome {
+  background-color: #337180;
+}
+/*
+	Page: recipients.php;
+*/
 /* Nanoscroller */
 .nano {
   /*background: #bba; */
