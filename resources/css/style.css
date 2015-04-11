@@ -139,6 +139,9 @@ hr {
   position: relative;
   top: -4px;
 }
+/*
+	General data presentation
+*/
 .data-row {
   padding: 5px;
   border-bottom: 1px solid silver;
