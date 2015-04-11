@@ -10,7 +10,7 @@ require_once('header.php');
         if(isset($_SESSION['username'])) { ?>
             <div class="row">
                 <div class="col-md-4 col-md-offset-2">
-                    <p class="bg-info">
+                    <p class="">
                         Add a new item and save it to your account. Or you could save and continue to register a new gift!
                     </p>
                     <form class="form-horizontal" method="post" action="app.php" role="form">
@@ -32,8 +32,8 @@ require_once('header.php');
 
                         <!-- TODO JavaScript check that all fields are filled in: -->
                         <!-- TODO jQuery on key down "Enter" -> Submit -->
-                        <button type="submit" class="btn btn-lg btn-success" name="addItem">Save</button>
-                        <button type="submit" class="btn btn-lg btn-success" name="addItemContinue">Save and continue</button>
+                        <button type="submit" class="btn btn-md btn-success" name="addItem"><i class="ton-li-check"></i>Save</button>
+                        <button type="submit" class="btn btn-md btn-success" name="addItemContinue"><span class="glyphicon glyphicon-share-alt"></span>Save and continue</button>
                     </form>
                     <br />
                 </div><!-- .col-md-4 col-md-offset-4 -->
