@@ -130,6 +130,7 @@ hr {
 */
 .recipients {
   padding-top: 100px;
+  padding-bottom: 100px;
   background-color: #dde9e4;
 }
 .recipients .container {
