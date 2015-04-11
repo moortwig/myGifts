@@ -52,7 +52,6 @@ require_once('header.php');
 
                                     foreach ($recipients as $key => $r) {
                                         $recipientId = $r['id'];
-
                                         echo "<div class='data-row'>";
                                             echo "<a href='recipient.php?id=" . $r['id'] . "'>" . $r['name'] . "</a> ";
                                             echo "<a href='editrecipient.php?id=" . $r['id'] . "'><span class='glyphicon glyphicon-pencil'></span></a> ";
