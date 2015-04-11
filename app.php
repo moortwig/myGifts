@@ -2,6 +2,8 @@
 session_start();
 // include everything the site needs to function
 
+// TODO get absolute path and assign to variable
+// TODO add die() after redirecting??? http://thedailywtf.com/articles/WellIntentioned-Destruction
 // $path = $_SERVER['DOCUMENT_ROOT'];
 
 // this file (app.php) is then included in header.php
@@ -55,8 +57,7 @@ if(isset($_POST['addRecipient'])) {
 if(isset($_POST['addRecipientContinue'])) {
 	$item = new Recipient();
 	$item->newRecipient();
-	echo "The item has been saved!";
-	header('Refresh: 2; url=addGift.php');
+	header('location: addGift.php');
 	// TODO close the connection
 }
 
