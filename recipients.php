@@ -21,7 +21,7 @@ require_once('header.php');
                                 
                 echo "<div class='data-row'>"; 
                     echo "<div class='data-field'>";
-                        echo "<a href='recipient.php?id=" . $r['id'] . "'>" . $r['name'] . "</a> ";
+                        echo "<a href='recipient.php?id=" . $r['id'] . "'>" . $r['name'] . "</a>";
                         echo "<a href='editrecipient.php?id=" . $r['id'] . "'><span class='glyphicon glyphicon-pencil'></span></a> ";
                         // echo $r['name'];
                     echo "</div>";

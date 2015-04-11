@@ -9,30 +9,26 @@ require_once('header.php');
         // Display this section if a user is logged in
         if(isset($_SESSION['username'])) { ?>
                        
-            <h2 class="">Items<span class="label"><a href="addrecipient.php"><i class="ton-li-plus circle"></i></a></span></h2>
+            <h2 class="">Items<span class="label"><a href="additem.php"><i class="ton-li-plus circle"></i></a></span></h2>
             <p class="help-block">All your items are displayed in this list.</p>
             <?php
-            $recipient = new Recipient();
-            $userId = 5; // dummy data TODO change this to the session user
-            $recipients = $recipient->getAllRecipients($userId);
-           
-            foreach ($recipients as $key => $r) {
-                $recipientId = $r['id'];
-                                
-                echo "<div class='data-row'>"; 
-                    echo "<div class='data-field'>";
-                        echo "<a href='recipient.php?id=" . $r['id'] . "'>" . $r['name'] . "</a> ";
-                        echo "<a href='editrecipient.php?id=" . $r['id'] . "'><span class='glyphicon glyphicon-pencil'></span></a> ";
-                        // echo $r['name'];
-                    echo "</div>";
-                    echo "<div class='data-field'>";
-                        echo $r['information'];
-                    echo "</div>";
-                    // echo "<div class='data-edit'>";
-                        // echo "<a class='btn btn-default btn-xs' href='editrecipient.php?id=" . $r['id'] . "'>Edit</a> ";
-                    // echo "</div>";
-                echo "</div>"; ?>
-            <?php } ?>
+                $item = new Item();
+                $userId = 5; // dummy data TODO change this to the session user
+                $items = $item->getAllItems($userId);
+               
+                foreach ($items as $key => $i) {
+                    echo "<div class='data-row'>"; 
+                        echo "<div class='data-field'>";
+                            echo $i['name'];
+                            echo "<a href='edititem.php?id=" . $i['id'] . "'><span class='glyphicon glyphicon-pencil'></span></a> "; 
+                        echo "</div>";
+                        echo "<div class='data-field'>";
+                            echo $i['description'];
+                        echo "</div>";
+                        // echo "<div class='data-edit'>";  
+                        // echo "</div>";
+                    echo "</div>"; ?>                
+                <?php } ?>            
         <?php } else { ?>
             <h2>Hold!</h2>
             <p>Access to this content is forbidden. Log in, or sign up and you shall recieve access.</p>

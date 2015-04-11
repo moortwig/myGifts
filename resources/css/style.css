@@ -148,6 +148,9 @@ hr {
   border-bottom: 1px solid silver;
   width: 70%;
 }
+.glyphicon {
+  margin-left: 5px;
+}
 /*
 	Add button
 */
