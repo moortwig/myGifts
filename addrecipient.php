@@ -33,8 +33,8 @@ require_once('header.php');
 
                         <!-- TODO JavaScript check that all fields are filled in: -->
                         <!-- TODO jQuery on key down "Enter" -> Submit -->
-                        <button type="submit" class="btn btn-lg btn-success" name="addRecipient"><i class="ton-li-check"></i>Submit</button>
-                        <button type="submit" class="btn btn-lg btn-success" name="addRecipientContinue"><span class="glyphicon glyphicon-share-alt"></span> Save and continue</button>
+                        <button type="submit" class="btn btn-md btn-success" name="addRecipient"><i class="ton-li-check"></i>Submit</button>
+                        <button type="submit" class="btn btn-md btn-success" name="addRecipientContinue"><span class="glyphicon glyphicon-share-alt"></span>Save and continue</button>
                     </form>
                     <br />
                 </div><!-- .col-md-4 col-md-offset-4 -->
