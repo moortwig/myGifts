@@ -105,6 +105,9 @@ hr {
   /*outline: 1px solid blue;*/
   /*height: 200px;*/
 }
+.welcome {
+  background-color: #337180;
+}
 /*#footer {
 	background-color: @landing-bg;
 	padding-top: 100px;
