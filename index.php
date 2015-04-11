@@ -10,15 +10,22 @@ require_once('header.php');
     
     if(isset($_SESSION['username'])) {
         // Display this section if a user is logged in 
-        include_once('logged-in.php');
-    } else {
-    // Display this section if user has not logged in ?>
+        // include_once('logged-in.php'); ?>
+        <div class="welcome">
+        <div class="jumbotron">
+            <h1>Hello, world!</h1>
+            <p>...</p>
+            <p>I'm totally logged in</p>
+        </div><!-- .jumbotron -->
+        </div><!-- .welcome -->
+    <?php } else {
+     // Display this section if user has not logged in ?>
     <div class="section-wrapper">
         <div class="landing-section">
             <div class="container">
                 <h1 class="text-center"><span class="landing-headline">Lorem ipsum dolor sit amet, id mei impetus omnesque.</span></h1>
             </div><!-- .container -->
-            
+
             <div class="landing-text">
                 <div class="container">
                     <p>
