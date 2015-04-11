@@ -34,8 +34,8 @@ require_once('header.php');
                                 <p class="help-block">Missing someone?</p>
                                 <a class="btn btn-sm btn-primary" href="addrecipient.php">Add someone!</a>
                             </div><!-- .nano-content -->
-                        </div><!-- #add-gift-recipients -->
-                    </div><!-- .col-md-4 add-gift-column nano-->
+                        </div><!-- #add-gift-recipients nano-->
+                    </div><!-- .col-md-4 add-gift-column -->
 
                     <div class="col-md-4 add-gift-column middle-column">
                         <h3>2: Choose item</h3>

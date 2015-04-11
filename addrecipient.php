@@ -41,30 +41,34 @@ require_once('header.php');
             <div class="col-md-6">
                 <div class="panel panel-default">
                     <div class="panel-body">
-                        <h2>Overview <small>So far you've added these people:</small></h2> 
-                        <?php
-                        $recipient = new Recipient();
-                        $userId = 5; // dummy data TODO change this to the session user
-                        $recipients = $recipient->getAllRecipients($userId);
-                       
-                        foreach ($recipients as $key => $r) {
-                            $recipientId = $r['id'];
-                                            
-                            echo "<div class='data-row'>"; 
-                                // echo "<div class='data-field'>";
-                                    echo "<a href='recipient.php?id=" . $r['id'] . "'>" . $r['name'] . "</a> ";
-                                    // echo $r['name'];
-                                // echo "</div>";
-                                /*echo "<div class='data-field'>";
-                                    echo $r['information'];
-                                echo "</div>";*/
-                                // echo "<div class='data-edit'>";
-                                    echo "<a href='editrecipient.php?id=" . $r['id'] . "'><span class='glyphicon glyphicon-pencil'></span></a> ";
-                                    // echo "<a class='btn btn-default btn-xs' href='editrecipient.php?id=" . $r['id'] . "'>Edit</a> ";
-                                // echo "</div>";
-                            echo "<hr />";
-                            echo "</div>"; ?>      
-                        <?php } ?>
+                        <h2>Overview <small>So far you've added these people:</small></h2>
+                        <div class="nano">
+                            <div class="nano-content">
+                                <?php
+                                $recipient = new Recipient();
+                                $userId = 5; // dummy data TODO change this to the session user
+                                $recipients = $recipient->getAllRecipients($userId);
+
+                                foreach ($recipients as $key => $r) {
+                                    $recipientId = $r['id'];
+
+                                    echo "<div class='data-row'>"; 
+                                        // echo "<div class='data-field'>";
+                                            echo "<a href='recipient.php?id=" . $r['id'] . "'>" . $r['name'] . "</a> ";
+                                            // echo $r['name'];
+                                        // echo "</div>";
+                                        /*echo "<div class='data-field'>";
+                                            echo $r['information'];
+                                        echo "</div>";*/
+                                        // echo "<div class='data-edit'>";
+                                            echo "<a href='editrecipient.php?id=" . $r['id'] . "'><span class='glyphicon glyphicon-pencil'></span></a> ";
+                                            // echo "<a class='btn btn-default btn-xs' href='editrecipient.php?id=" . $r['id'] . "'>Edit</a> ";
+                                        // echo "</div>";
+                                    echo "<hr />";
+                                    echo "</div>"; ?>
+                                <?php } ?>
+                            </div><!-- .nano-content -->
+                        </div><!-- .nano-->
                     </div><!-- .panel -->
                 </div><!-- .panel -->
             </div><!-- .col-md-4 -->
