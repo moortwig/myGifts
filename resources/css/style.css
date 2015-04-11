@@ -1,5 +1,6 @@
 /* Text */
 /* Links */
+/* Buttons */
 @font-face {
   font-family: 'Glyphicons Halflings';
   src: url('../fonts/glyphicons-halflings-regular.eot');
@@ -158,6 +159,7 @@ hr {
 }
 .glyphicon {
   margin-left: 5px;
+  margin-right: 3px;
 }
 /*
 	Add button
@@ -182,6 +184,13 @@ hr {
 .circle:hover {
   transition: all 1s ease 0s;
   background: #3071A9;
+}
+/*
+	Save button override
+ */
+.btn-success i {
+  font-size: 0.7em;
+  margin-right: 3px;
 }
 /* Nanoscroller */
 .nano {
