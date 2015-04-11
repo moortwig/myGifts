@@ -3,7 +3,7 @@
 require_once('header.php');
 
 ?>
-<div class="wrapper recipients">
+<div class="wrapper items-page">
     <div class="container">
         <?php
         // Display this section if a user is logged in
@@ -25,8 +25,6 @@ require_once('header.php');
                         echo "<div class='data-field'>";
                             echo $i['description'];
                         echo "</div>";
-                        // echo "<div class='data-edit'>";  
-                        // echo "</div>";
                     echo "</div>"; ?>
                 <?php } ?>
         <?php } else { ?>
