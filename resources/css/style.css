@@ -139,16 +139,16 @@ hr {
   position: relative;
   top: -4px;
 }
-.recipients .ton-li-plus {
+.ton-li-plus {
   font-size: 0.7em;
   background-color: silver;
   padding: 7px;
 }
-.recipients .ton-li-plus:hover {
+.ton-li-plus:hover {
   transition: all 1s ease 0s;
   color: white;
 }
-.recipients .circle {
+.circle {
   width: 100px;
   height: 100px;
   background: silver;
@@ -156,14 +156,9 @@ hr {
   -webkit-border-radius: 50px;
   border-radius: 50px;
 }
-.recipients .circle:hover {
+.circle:hover {
   transition: all 1s ease 0s;
   background: #3071A9;
-  /*background: blue;
-		/*-webkit-transition: blue 500ms ease-in 1s;
-		-moz-transition: blue 500ms ease-in 1s;
-		-o-transition: blue 500ms ease-in 1s;
-		transition: blue 500ms ease-in 1s;	*/
 }
 /* Nanoscroller */
 .nano {
