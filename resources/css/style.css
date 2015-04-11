@@ -30,6 +30,9 @@ Fonts icons:
 	Cancel: ton-li-cross
 	Add: ton-li-plus
 */
+a:hover {
+  text-decoration: none;
+}
 p,
 h1,
 h2,
@@ -128,6 +131,9 @@ hr {
 .recipients {
   padding-top: 100px;
   background-color: #dde9e4;
+}
+.recipients .container {
+  width: 70%;
 }
 /* Nanoscroller */
 .nano {

@@ -10,7 +10,7 @@ require_once('header.php');
         if(isset($_SESSION['username'])) { ?>
                        
             <h2 class="">Recipients<span class="label"><i class="ton-li-plus"></i></span></h2>
-            <p class="help-block">All your stored recipients are displayed in this list.</p>
+            <p class="help-block">All your stored recipients are displayed in this list. Click on a name to see further details, such as gift history.</p>
             <?php
             $recipient = new Recipient();
             $userId = 5; // dummy data TODO change this to the session user
@@ -20,15 +20,15 @@ require_once('header.php');
                 $recipientId = $r['id'];
                                 
                 echo "<div class='data-row'>"; 
-                    // echo "<div class='data-field'>";
+                    echo "<div class='data-field'>";
                         echo "<a href='recipient.php?id=" . $r['id'] . "'>" . $r['name'] . "</a> ";
-                        // echo $r['name'];
-                    // echo "</div>";
-                    /*echo "<div class='data-field'>";
-                        echo $r['information'];
-                    echo "</div>";*/
-                    // echo "<div class='data-edit'>";
                         echo "<a href='editrecipient.php?id=" . $r['id'] . "'><span class='glyphicon glyphicon-pencil'></span></a> ";
+                        // echo $r['name'];
+                    echo "</div>";
+                    echo "<div class='data-field'>";
+                        echo $r['information'];
+                    echo "</div>";
+                    // echo "<div class='data-edit'>";
                         // echo "<a class='btn btn-default btn-xs' href='editrecipient.php?id=" . $r['id'] . "'>Edit</a> ";
                     // echo "</div>";
                 echo "<hr />";
