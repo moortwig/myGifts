@@ -41,26 +41,27 @@ require_once('header.php');
                 <div class="col-md-6"> 
                     <div class="panel panel-default">
                         <div class="panel-body">
-                            <h2>Overview <small>So far you've added these items:</small></h2> 
-                            <?php
-                            $item = new Item();
-                            $userId = 5; // dummy data TODO change this to the session user
-                            $items = $item->getAllItems($userId);
-                           
-                            foreach ($items as $key => $i) {
-                                echo "<div class='data-row'>"; 
-                                    // echo "<div class='data-field'>";
-                                        echo $i['name'] . " - " . $i['description'] . " ";
-                                    // echo "</div>";
-                                    // echo "<div class='data-field'>";
-                                    //     echo $i['description'];
-                                    // echo "</div>";
-                                    // echo "<div class='data-edit'>";
-                                        echo "<a href='edititem.php?id=" . $i['id'] . "'><span class='glyphicon glyphicon-pencil'></span></a> ";   
-                                    // echo "</div>";
-                                    echo "<hr />";
-                                echo "</div>"; ?>                
-                            <?php } ?>            
+                            <h2>Overview <small>So far you've added these items:</small></h2>
+                            <div class="nano">
+                                <div class="nano-content"> 
+                                    <?php
+                                    $item = new Item();
+                                    $userId = 5; // dummy data TODO change this to the session user
+                                    $items = $item->getAllItems($userId);
+
+                                    foreach ($items as $key => $i) {
+                                        echo "<div class='data-row'>"; 
+                                            echo "<div class='data-field'>";
+                                                echo $i['name'];
+                                                echo "<a href='edititem.php?id=" . $i['id'] . "'><span class='glyphicon glyphicon-pencil'></span></a> ";
+                                            echo "</div>";
+                                            echo "<div class='data-field'>";
+                                                echo $i['description'];
+                                            echo "</div>";
+                                        echo "</div>"; ?>
+                                    <?php } ?>
+                                </div><!-- .nano-content -->
+                            </div><!-- .nano-->
                         </div><!-- .panel-body -->
                     </div><!-- .panel -->
                 </div><!-- .col-md-8 -->
