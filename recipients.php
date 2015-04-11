@@ -3,7 +3,7 @@
 require_once('header.php');
 
 ?>
-<div class="wrapper recipients">
+<div class="wrapper recipients-page">
     <div class="container">
         <?php
         // Display this section if a user is logged in

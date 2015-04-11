@@ -3,13 +3,13 @@
 require_once('header.php');
 
 ?>
-<div class="main container">
+<div class="wrapper add-recipient-page">
     <?php
     // Display this section if a user is logged in
     if(isset($_SESSION['username'])) { ?>
         <div class="row">
             <div class="col-md-4 col-md-offset-2">
-                <p class="bg-info">
+                <p class="">
                     Add a new X and save it to your account, or save and continue to register a new gift!
                 </p>
                 <form class="form-horizontal" method="post" action="app.php" role="form">
@@ -33,6 +33,7 @@ require_once('header.php');
                     <!-- TODO JavaScript check that all fields are filled in: -->
                     <!-- TODO jQuery on key down "Enter" -> Submit -->
                     <button type="submit" class="btn btn-lg btn-success" name="addRecipient">Submit</button>
+                    <button type="submit" class="btn btn-lg btn-success" name="addRecipientContinue">Save and continue</button>
                 </form>
                 <br />
             </div><!-- .col-md-4 col-md-offset-4 -->
@@ -71,7 +72,7 @@ require_once('header.php');
         <h2>Hold!</h2>
         <p>Access to this content is forbidden. Log in, or sign up and you shall recieve access.</p>
     <?php } ?>
-</div> <!-- .main -->
+</div> <!-- .wrapper -->
 
 <!-- FOOTER -->
 <?php 

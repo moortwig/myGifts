@@ -128,17 +128,25 @@ hr {
 /*
 	Page: recipients.php;
 */
-.recipients {
+.recipients-page {
   padding-top: 100px;
   padding-bottom: 100px;
   background-color: #dde9e4;
 }
-.recipients .container {
+.recipients-page .container {
   width: 70%;
 }
-.recipients .label {
+.recipients-page .label {
   position: relative;
   top: -4px;
+}
+.add-recipient-page {
+  padding-top: 100px;
+  padding-bottom: 100px;
+  background-color: #dde9e4;
+}
+.add-recipient-page .container {
+  width: 70%;
 }
 /*
 	General data presentation
