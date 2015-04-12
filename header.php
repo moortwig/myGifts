@@ -49,6 +49,7 @@ require_once('app.php');
                     <li class="btn" disabled="disabled"><i class="ton-li-people-7"></i></li>
                     <!-- <li class="btn" disabled="disabled"><i class="ton-li-bag-1"></i></li> -->
                     <li class="btn" disabled="disabled"><i class="ton-li-box-1"></i></li>
+                    <li class="btn" disabled="disabled"><i class="ton-li-speech-buble-4"></i></li>
                 </ul>
                 <?php } ?>
 
@@ -57,6 +58,7 @@ require_once('app.php');
                     <li><a href="recipients.php" class="btn enabled"><i class="ton-li-people-7"></i></a></li>
                     <!-- <li><a href="items.php" class="btn enabled"><i class="ton-li-bag-1"></i></a></li> -->
                     <li><a href="additem.php" class="btn enabled"><i class="ton-li-box-1"></i></a></li>
+                    <li><a href="about.php" class="btn enabled"><i class="ton-li-speech-buble-4"></i></a></li>
                 </ul>
 
                 
