@@ -9,6 +9,7 @@ require_once('header.php');
         // Display this section if a user is logged in
         if(isset($_SESSION['username'])) {
     		$userId = 5; // TODO change this to a safe get user id
+            // TODO Sessions for item and recipient
     		$item = new Item();
     		$items = $item->getAllItems($userId);
 
