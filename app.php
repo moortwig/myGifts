@@ -79,20 +79,20 @@ if(isset($_POST['deleteRecipient'])) {
 
 ///////////////////////////////////////////////////
 // ADD ITEM
-if(isset($_POST['addItem'])) {
+/*if(isset($_POST['addItem'])) {
 	$item = new Item();
 	$item->newItem();
 	// echo "The item has been saved!";
 	header('location: addgift.php');
 	// TODO close the connection
-}
+}*/
 
-// ADD ITEM AND CONTINUE (to Add Gift)
+// ADD ITEM AND CONTINUE (to Choose Recipient)
 if(isset($_POST['addItemContinue'])) {
 	$item = new Item();
 	$item->newItem();
-	echo "The item has been saved!";
-	header('Refresh: 2; url=addGift.php');
+	// echo "The item has been saved!";
+	header('location: chooserecipient.php');
 	// TODO close the connection
 }
 
