@@ -40,18 +40,22 @@ require_once('header.php');
 						if (!$giftsArray) {
 							echo "There's no gift history to display yet!";
 						} else { ?>
-							<dl>
-								<?php foreach ($giftsArray as $singleGift => $single) {
-									echo "<dt>";
-										echo $single['item_id']['name'] . " - ";
-									echo $single['occasion'];
-									echo "</dt>";
-									echo "<dd>";
-									echo $single['item_id']['description'];
-									echo "</dd>";
-									// echo $single['added'] . "<br />";
-								} ?>
-							</dl>
+							<div class="nano">
+								<div class="nano-content">
+									<dl>
+										<?php foreach ($giftsArray as $singleGift => $single) {
+											echo "<dt>";
+												echo $single['item_id']['name'] . " - ";
+											echo $single['occasion'];
+											echo "</dt>";
+											echo "<dd>";
+											echo $single['item_id']['description'];
+											echo "</dd>";
+											// echo $single['added'] . "<br />";
+										} ?>
+									</dl>
+								</div><!-- .nano-content -->
+							</div><!-- .nano -->
 						<?php } ?>
 		        	</div><!-- .col-md-6 -->
 
