@@ -17,23 +17,26 @@ require_once('header.php');
                 <p>This version is a beta, and not all features are unlocked yet. Expect there to be more, as the work progresses!</p>
                 <h2>Instructions</h2>
                 <dl>
-                    <dt>Add recipient</dt>
-                    <dd></dd>
-
-                    <dt>Add item</dt>
-                    <dd></dd>
 
                     <dt>Add gift</dt>
-                    <dd></dd>
+                    <dd>To add a gift, Click the gift box icon on the top bar menu. You'll then start off by creating a new item. Click "Continue" once you've filled in the form, to move on to choosing one or several recipient(s). If you can't find the right person in your list, you'll need to add them first. Please see below, how to add a recipient. Lastly, specify the occasion for the gift.</dd>
 
-                    <dt>Edit</dt>
-                    <dd></dd>
-
-                    <dt>Delete</dt>
-                    <dd></dd>
+                    <dt>View your stored recipients</dt>
+                    <dd>Click the people icon to view a list of recipients</dd>
 
                     <dt>Gift history</dt>
                     <dd>You'll find a list of items previously registered, when clicking recipients individually. Every item assigned as a gift on that person, shows up in the list.</dd>
+
+                    <dt>Add recipient</dt>
+                    <dd></dd>
+
+                    <dt>Edit</dt>
+                    <dd>You can edit certain data, such as recipients and items. Simply go to your recipient or item list, and click the pen icon next to the name. You can now edit or delete it.</dd>
+
+                    <dt>Delete</dt>
+                    <dd>You can delete recipients while you're in edit mode. See about for instructions on edit.</dd>
+
+
                 </dl>
                 <p></p>
             </div><!-- .container -->
