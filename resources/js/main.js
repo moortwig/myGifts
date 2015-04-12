@@ -8,7 +8,7 @@ var app = {
 		// functions here
 		app.nano();
 		app.divHeight();
-		app.stickyFooter();		
+		// app.stickyFooter();		
 	},
 
 
@@ -34,14 +34,14 @@ var app = {
 	/*
 		Set sticky footer
 	*/
-	stickyFooter: function() {
+	/*stickyFooter: function() {
 		console.log('stickyFooter');
 		var footerHeight = $('.footer').height(true);
 		var outerHeight = $(window).outerHeight(true);
 		// TODO get class name and use that for the $().css
 
 		$('.wrapper').css('height', outerHeight);
-	}
+	}*/
 }
 
 /*

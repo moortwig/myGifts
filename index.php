@@ -99,12 +99,12 @@ require_once('header.php');
     
 <?php } ?>
 
+</div><!-- .index-wrapper -->
 <!-- FOOTER -->
 <?php 
 
 require_once('footer.php');
 
 ?>
-</div><!-- .index-wrapper -->
 
 
