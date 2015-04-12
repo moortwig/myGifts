@@ -97,6 +97,7 @@ if(isset($_POST['deleteRecipient'])) {
 if(isset($_POST['addItemContinue'])) {
 	$item = new Item();
 	$item->newItem();
+	// $item->setSession()
 	// echo "The item has been saved!";
 	header('location: chooserecipient.php');
 	// TODO close the connection

@@ -1,6 +1,7 @@
 <?php
 require_once ('Database.php');
 require_once ('User.php');
+require_once ('Item.php');
 
 class Session {
 	// spiffy code here
@@ -29,6 +30,11 @@ class Session {
 		} else {
 			echo "Nope, you did something very wrong there. Please try again after you've been redirected back!";
 		}
+	}
+
+	public function startItemSession() {
+		$item = new Item();
+		
 	}
 }
 
