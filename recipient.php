@@ -39,14 +39,20 @@ require_once('header.php');
 						<?php				
 						if (!$giftsArray) {
 							echo "There's no gift history to display yet!";
-						} else {
-							foreach ($giftsArray as $singleGift => $single) {
-								echo $single['item_id']['name'] . ", ";
-								echo $single['item_id']['description'] . ", ";
-								echo $single['occasion'] . "<br />";
-								// echo $single['added'] . "<br />";
-							}
-						} ?>
+						} else { ?>
+							<dl>
+								<?php foreach ($giftsArray as $singleGift => $single) {
+									echo "<dt>";
+										echo $single['item_id']['name'] . " - ";
+									echo $single['occasion'];
+									echo "</dt>";
+									echo "<dd>";
+									echo $single['item_id']['description'];
+									echo "</dd>";
+									// echo $single['added'] . "<br />";
+								} ?>
+							</dl>
+						<?php } ?>
 		        	</div><!-- .col-md-6 -->
 
 		        </div><!-- .row -->
