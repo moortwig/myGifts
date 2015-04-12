@@ -32,7 +32,7 @@ require_once('header.php');
                         <dd>You'll find a list of items previously registered, when clicking recipients individually. Every item assigned as a gift on that person, shows up in the list.</dd>
 
                         <dt>Add recipient</dt>
-                        <dd></dd>
+                        <dd>Viewing your list of recipients, you can click the button with the plus sign to add a new person.</dd>
 
                         <dt>Edit</dt>
                         <dd>You can edit certain data, such as recipients and items. Simply go to your recipient or item list, and click the pen icon next to the name. You can now edit or delete it.</dd>
