@@ -61,7 +61,7 @@ require_once('app.php');
 
                 
                     <form class="navbar-form navbar-right" method="post" action="app.php" role="form">
-                        <span class="navbar-text">Logged in: <a href="profile.php"><?php echo $_SESSION['username']; ?></a></span>
+                        <span class="navbar-text">Logged in: <?php echo $_SESSION['username']; ?></span>
                         <button type="submit" class="btn btn-danger" name="logout">Log out</button>
                     </form>
                 <?php } else { ?>
