@@ -71,7 +71,7 @@ if(isset($_POST['storeRecipient'])) {
 if(isset($_POST['editRecipient'])) {
 	$recipient = new Recipient();
 	$recipient->editRecipient();
-	header('location: profile.php');
+	header('location: recipients.php');
 }
 
 // DELETE RECIPIENT 	
