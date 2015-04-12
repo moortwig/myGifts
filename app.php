@@ -82,8 +82,8 @@ if(isset($_POST['deleteRecipient'])) {
 if(isset($_POST['addItem'])) {
 	$item = new Item();
 	$item->newItem();
-	echo "The item has been saved!";
-	header('Refresh: 2; url=index.php');
+	// echo "The item has been saved!";
+	header('location: addgift.php');
 	// TODO close the connection
 }
 
