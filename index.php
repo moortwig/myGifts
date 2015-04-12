@@ -23,7 +23,7 @@ require_once('header.php');
                     <dl>
 
                         <dt>Add gift</dt>
-                        <dd>To add a gift, Click the gift box icon on the top bar menu. You'll then start off by creating a new item. Click "Continue" once you've filled in the form, to move on to choosing one or several recipient(s). If you can't find the right person in your list, you'll need to add them first. Please see below, how to add a recipient. Lastly, specify the occasion for the gift.</dd>
+                        <dd>To add a gift, click the gift box icon on the top bar menu. You'll then start off by creating a new item. Click "Continue", once you've filled in the form, to move on to choosing one or several recipient(s). If you can't find the right person in your list, you'll need to add them first. Please see below, how to add a recipient. Lastly, specify the occasion for the gift.</dd>
 
                         <dt>View your stored recipients</dt>
                         <dd>Click the people icon to view a list of recipients</dd>
