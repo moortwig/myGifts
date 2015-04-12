@@ -192,17 +192,26 @@ i {
 	Page: addgift.php;
 */
 .add-gift-page {
-  padding-top: 100px;
-  padding-bottom: 100px;
   background-color: #ffffff;
+  padding-bottom: 100px;
+  padding-top: 100px;
 }
 /*
 	Page: about.php;
 */
 .about-page {
+  background-color: #ffffff;
+  background-image: url(../img/bg-landing.jpg);
   padding-top: 100px;
   padding-bottom: 100px;
+  min-height: 100%;
+  position: relative;
+  /*top: 50px;*/
+}
+.about-page .container {
   background-color: #ffffff;
+  background-image: url(../img/1-1.png);
+  padding: 20px;
 }
 /*
 	General data presentation
@@ -249,7 +258,7 @@ i {
 }
 .footer {
   position: relative;
-  /*top: -80px;*/
+  /*top: -100px;*/
 }
 /* Nanoscroller */
 .nano {
