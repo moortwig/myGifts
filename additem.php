@@ -32,39 +32,14 @@ require_once('header.php');
 
                         <!-- TODO JavaScript check that all fields are filled in: -->
                         <!-- TODO jQuery on key down "Enter" -> Submit -->
-                        <button type="submit" class="btn btn-md btn-success" name="addItem"><i class="ton-li-check"></i>Save</button>
-                        <button type="submit" class="btn btn-md btn-success" name="addItemContinue"><span class="glyphicon glyphicon-share-alt"></span>Save and continue</button>
+                        <button type="submit" class="btn btn-md btn-success" name="addItemContinue"><span class="glyphicon glyphicon-share-alt"></span>Continue</button>
                     </form>
                     <br />
                 </div><!-- .col-md-4 col-md-offset-4 -->
 
                 <div class="col-md-6"> 
-                    <div class="panel panel-default">
-                        <div class="panel-body">
-                            <h2>Overview <small>So far you've added these items:</small></h2>
-                            <div class="nano">
-                                <div class="nano-content"> 
-                                    <?php
-                                    $item = new Item();
-                                    $userId = 5; // dummy data TODO change this to the session user
-                                    $items = $item->getAllItems($userId);
-
-                                    foreach ($items as $key => $i) {
-                                        echo "<div class='data-row'>"; 
-                                            echo "<div class='data-field'>";
-                                                echo $i['name'];
-                                                echo "<a href='edititem.php?id=" . $i['id'] . "'><span class='glyphicon glyphicon-pencil'></span></a> ";
-                                            echo "</div>";
-                                            echo "<div class='data-field'>";
-                                                echo $i['description'];
-                                            echo "</div>";
-                                        echo "</div>"; ?>
-                                    <?php } ?>
-                                </div><!-- .nano-content -->
-                            </div><!-- .nano-->
-                        </div><!-- .panel-body -->
-                    </div><!-- .panel -->
-                </div><!-- .col-md-8 -->
+                    
+                </div><!-- .col-md-6 -->
             </div><!-- .row -->
         <?php } else { ?>
             <h2>Hold!</h2>
