@@ -124,7 +124,12 @@ hr {
 	Page: index.php;
 */
 .welcome {
-  background-color: #337180;
+  background-color: #dde9e4;
+  padding-top: 100px;
+  padding-bottom: 100px;
+}
+.welcome dt {
+  margin-top: 1em;
 }
 /*
 	Page: recipients.php;

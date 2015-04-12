@@ -12,11 +12,31 @@ require_once('header.php');
         // Display this section if a user is logged in 
         // include_once('logged-in.php'); ?>
         <div class="welcome">
-        <div class="jumbotron">
-            <h1>Hello, world!</h1>
-            <p>...</p>
-            <p>I'm totally logged in</p>
-        </div><!-- .jumbotron -->
+            <div class="container">
+                <h2>News</h2>
+                <p>This version is a beta, and not all features are unlocked yet. Expect there to be more, as the work progresses!</p>
+                <h2>Instructions</h2>
+                <dl>
+                    <dt>Add recipient</dt>
+                    <dd></dd>
+
+                    <dt>Add item</dt>
+                    <dd></dd>
+
+                    <dt>Add gift</dt>
+                    <dd></dd>
+
+                    <dt>Edit</dt>
+                    <dd></dd>
+
+                    <dt>Delete</dt>
+                    <dd></dd>
+
+                    <dt>Gift history</dt>
+                    <dd>You'll find a list of items previously registered, when clicking recipients individually. Every item assigned as a gift on that person, shows up in the list.</dd>
+                </dl>
+                <p></p>
+            </div><!-- .container -->
         </div><!-- .welcome -->
     <?php } else {
      // Display this section if user has not logged in ?>
