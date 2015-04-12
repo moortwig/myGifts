@@ -16,6 +16,7 @@
 <!-- JS vendor scripts -->
 <script src="resources/js/bootstrap.min.js"></script>
 <script src="resources/js/vendor/jquery.nanoscroller.min.js"></script>
+<script src="resources/js/vendor/smooth-scroll.min.js"></script>
 
 <!-- JS main file -->
 <script src="resources/js/main.js"></script>

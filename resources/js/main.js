@@ -7,7 +7,7 @@ var app = {
 		console.log('init');
 		// functions here
 		app.nano();
-		app.divHeight();
+		app.divHeight();		
 	},
 
 
@@ -32,9 +32,9 @@ var app = {
 }
 
 /*
-	Initialise app
+	Initialise things
 */
 app.init();
-
+smoothScroll.init();
 
 // $(document).ready(function() {});
