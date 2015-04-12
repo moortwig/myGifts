@@ -59,6 +59,9 @@ i {
 .nano .nano-slider {
   background-color: #aa9a66;
 }
+.nav li:hover {
+  background-color: #aac9bc;
+}
 /*.wrapper {
 	position: relative;
 	bottom: 100px;
