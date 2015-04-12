@@ -49,7 +49,7 @@ require_once('app.php');
                     <li class="btn" disabled="disabled"><i class="ton-li-people-7"></i></li>
                     <!-- <li class="btn" disabled="disabled"><i class="ton-li-bag-1"></i></li> -->
                     <li class="btn" disabled="disabled"><i class="ton-li-box-1"></i></li>
-                    <li class="btn" disabled="disabled"><i class="ton-li-speech-buble-4"></i></li>
+                    <li><a href="about.php" class="btn enabled"><i class="ton-li-speech-buble-4"></i></a></li>
                 </ul>
                 <?php } ?>
 
