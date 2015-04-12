@@ -160,18 +160,21 @@ hr {
 /*
 	Page: items.php;
 */
-.items-page {
-  padding-top: 100px;
-  padding-bottom: 100px;
-  background-color: #dde9e4;
-}
-.items-page .container {
-  width: 70%;
-}
-.items-page .label {
-  position: relative;
-  top: -4px;
-}
+/*.items-page {
+	padding-top: 100px;
+	padding-bottom: 100px;
+	background-color: @landing-bg;
+
+	.container {
+		width: 70%;
+	}
+
+	.label {
+		position:relative;
+		top:-4px;
+	}
+
+}*/
 /*
 	Page: addrecipient.php;
 */
