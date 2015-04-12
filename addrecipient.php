@@ -10,7 +10,7 @@ require_once('header.php');
         if(isset($_SESSION['username'])) { ?>
             <div class="row">
                 <div class="col-md-4 col-md-offset-2">
-                    <p class="">
+                    <p>
                         Add a new recipient and save them to your account. Or you could save and continue to register a new gift!
                     </p>
                     <form class="form-horizontal" method="post" action="app.php" role="form">
@@ -40,27 +40,25 @@ require_once('header.php');
                 </div><!-- .col-md-4 col-md-offset-4 -->
 
                 <div class="col-md-6">
-                    <div class="panel panel-default">
-                        <div class="panel-body">
-                            <h2>Overview <small>So far you've added these people:</small></h2>
-                            <div class="nano">
-                                <div class="nano-content">
-                                    <?php
-                                    $recipient = new Recipient();
-                                    $userId = 5; // dummy data TODO change this to the session user
-                                    $recipients = $recipient->getAllRecipients($userId);
+                    <!-- <div class="container"> -->
+                        <h2>Overview <small>So far you've added these people:</small></h2>
+                        <div class="nano">
+                            <div class="nano-content">
+                                <?php
+                                $recipient = new Recipient();
+                                $userId = 5; // dummy data TODO change this to the session user
+                                $recipients = $recipient->getAllRecipients($userId);
 
-                                    foreach ($recipients as $key => $r) {
-                                        $recipientId = $r['id'];
-                                        echo "<div class='data-row'>";
-                                            echo "<a href='recipient.php?id=" . $r['id'] . "'>" . $r['name'] . "</a> ";
-                                            echo "<a href='editrecipient.php?id=" . $r['id'] . "'><span class='glyphicon glyphicon-pencil'></span></a> ";
-                                        echo "</div>"; ?>
-                                    <?php } ?>
-                                </div><!-- .nano-content -->
-                            </div><!-- .nano-->
-                        </div><!-- .panel -->
-                    </div><!-- .panel -->
+                                foreach ($recipients as $key => $r) {
+                                    $recipientId = $r['id'];
+                                    echo "<div class='data-row'>";
+                                        echo "<a href='recipient.php?id=" . $r['id'] . "'>" . $r['name'] . "</a> ";
+                                        echo "<a href='editrecipient.php?id=" . $r['id'] . "'><span class='glyphicon glyphicon-pencil'></span></a> ";
+                                    echo "</div>"; ?>
+                                <?php } ?>
+                            </div><!-- .nano-content -->
+                        </div><!-- .nano-->
+                    <!-- </div>.container -->
                 </div><!-- .col-md-4 -->
         <?php } else { ?>
             <h2>Hold!</h2>

@@ -143,6 +143,9 @@ i {
 		width: 70%;
 	}*/
 }
+.recipients-page .data-row {
+  width: 70%;
+}
 .recipients-page .label {
   position: relative;
   top: -4px;
