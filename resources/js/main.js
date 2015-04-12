@@ -26,20 +26,21 @@ var app = {
 	*/
 	divHeight: function() {
 		console.log('sectionHeight');
-		var landingHeight = $('.landing-section').height();
 		var windowHeight = $(window).height();
-		// var signupHeight = windowHeight - footerHeight;
-		// var footerHeight = $('#footer').height();
-		// console.log(signupHeight);
 
 		$('.section-wrapper').css('height', windowHeight);
-		// $('.section-wrapper').css('signupHeight', windowHeight - footerHeight);
-		// $('.landing-text').css('height', height*0.8);
 	},
 
+	/*
+		Set sticky footer
+	*/
 	stickyFooter: function() {
 		console.log('stickyFooter');
-		//
+		var footerHeight = $('.footer').height(true);
+		var outerHeight = $(window).outerHeight(true);
+		// TODO get class name and use that for the $().css
+
+		$('.wrapper').css('height', outerHeight);
 	}
 }
 
