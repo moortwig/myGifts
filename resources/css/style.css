@@ -18,7 +18,7 @@ html {
   position: relative;
 }
 body {
-  /*background-color: @landing-bg;*/
+  background-color: #ffffff;
   padding: 0;
 }
 /* TODO: 
@@ -43,9 +43,6 @@ label {
 }
 i {
   font-size: 2em;
-}
-hr {
-  border-color: #bbb6ac;
 }
 /*
 	Page: index.php;
@@ -241,7 +238,7 @@ hr {
 }
 .circle:hover {
   transition: all 1s ease 0s;
-  background: #3071A9;
+  background: #3071a9;
 }
 /*
 	Save button override
@@ -249,6 +246,10 @@ hr {
 .btn-success i {
   font-size: 0.7em;
   margin-right: 3px;
+}
+.footer {
+  position: relative;
+  /*top: -80px;*/
 }
 /* Nanoscroller */
 .nano {

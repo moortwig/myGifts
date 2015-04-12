@@ -11,7 +11,7 @@ html {
 }
 
 body {
-  /*background-color: @landing-bg;*/
+  background-color: @body-bg;
   padding: 0;
 }
 
@@ -36,10 +36,6 @@ p, h1, h2, h3, label {
 
 i {
 	font-size: 2em;
-}
- 
-hr {
-	border-color: @hr-border;
 }
 
 
@@ -288,7 +284,7 @@ hr {
 
 .circle:hover {
 	transition: all 1s ease 0s;
-	background: #3071A9;
+	background: @hover;
 }
 
 
@@ -300,6 +296,11 @@ hr {
 		font-size: 0.7em;
 		margin-right: 3px;
 	}
+}
+
+.footer {
+	position: relative;
+	/*top: -80px;*/
 }
 
 
