@@ -26,7 +26,7 @@ require_once('header.php');
 	        	<div class="row">
 
 	            	<div class="col-md-4 col-md-offset-2">					
-						<h2>Profile For <?php echo $recipientName; ?></h2>
+						<h2>Profile For: <?php echo $recipientName; ?></h2>
 						<?php echo $recipientInformation;
 						 ?>
 						 <br />

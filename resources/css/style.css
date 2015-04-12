@@ -147,6 +147,14 @@ hr {
   top: -4px;
 }
 /*
+	Page: recipient.php;
+*/
+.recipient-page {
+  padding-top: 100px;
+  padding-bottom: 100px;
+  background-color: #dde9e4;
+}
+/*
 	Page: items.php;
 */
 .items-page {
