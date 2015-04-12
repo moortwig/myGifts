@@ -173,6 +173,14 @@ hr {
   background-color: #dde9e4;
 }
 /*
+	Page: addgift.php;
+*/
+.add-gift-page {
+  padding-top: 100px;
+  padding-bottom: 100px;
+  background-color: #dde9e4;
+}
+/*
 	General data presentation
 */
 .data-row {
