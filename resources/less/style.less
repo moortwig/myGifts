@@ -38,6 +38,26 @@ i {
 	font-size: 2em;
 }
 
+
+/* Nanoscroller */
+.nano {
+	/*background: #bba; */
+	/*width: 300px; */
+	height: 350px;
+
+	.nano-content { 
+		padding: 10px;
+	}
+
+	.nano-pane {
+		background-color: @nano-pane;		
+	}
+
+	.nano-slider { 
+		background-color: @nano-slider; 
+	}
+}
+
 /*.wrapper {
 	position: relative;
 	bottom: 100px;
@@ -166,7 +186,6 @@ i {
 	}
 
 
-
 	.label {
 		position:relative;
 		top:-4px;
@@ -216,6 +235,10 @@ i {
 	padding-top: 100px;
 	padding-bottom: 100px;
 	background-color: @landing-bg;
+
+	.nano {
+		height: 600px;
+	}
 }
 
 
@@ -327,24 +350,6 @@ i {
 }
 
 
-/* Nanoscroller */
-.nano {
-	/*background: #bba; */
-	/*width: 300px; */
-	height: 350px;
-
-	.nano-content { 
-		padding: 10px;
-	}
-
-	.nano-pane {
-		background-color: @nano-pane;		
-	}
-
-	.nano-slider { 
-		background-color: @nano-slider; 
-	}
-}
 
 
 /*.overflow-scroll {
