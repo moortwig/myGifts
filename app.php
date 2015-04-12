@@ -54,12 +54,18 @@ if(isset($_POST['addRecipient'])) {
 }
 
 // ADD ITEM AND CONTINUE (to Add Gift)
-if(isset($_POST['addRecipientContinue'])) {
+if(isset($_POST['storeRecipient'])) {
+	// $recipient = new Recipient();
+	// $recipient->newRecipient();
+	header('location: addGift.php');
+	// TODO close the connection
+}
+/*if(isset($_POST['addRecipientContinue'])) {
 	$item = new Recipient();
 	$item->newRecipient();
 	header('location: addGift.php');
 	// TODO close the connection
-}
+}*/
 
 // EDIT RECIPIENT 	
 if(isset($_POST['editRecipient'])) {
