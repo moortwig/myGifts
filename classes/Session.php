@@ -32,9 +32,11 @@ class Session {
 		}
 	}
 
-	public function startItemSession() {
-		$item = new Item();
-		
+	public function startItemSession($result) {
+		// $item = new Item();
+		// $lastInsertId = $item->
+
+		$_SESSION['item'] = $result;		
 	}
 }
 

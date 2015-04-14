@@ -1,5 +1,6 @@
 <?php
 
+require_once ('Session.php');
 
 class Item {
 	// spiffy properties here
@@ -13,10 +14,21 @@ class Item {
 	//////////////////////////////////////////////////////
 	// ADD A NEW ITEM ///////////////////////////////////
 	public function newItem() {
+		// $session = new Session();
+
 		$name = $_POST['name'];
 		$description = $_POST['description'];
 		$userId = $_POST['userId']; // TODO belongs to dummy data field, remove after sorting out CSRF
 		// $userId = $_SESSION['userId'];
+
+		// saves to db and returns the id of this item
+		// $lastInsertId = $this->insertItem($name, $description, $userId);
+
+		// $_SESSION['item'];    $this->
+		// $itemSession = $session->startItemSession($lastInsertId);
+
+	// var_dump($itemSession);
+	// die('remove');
 
 		return $this->insertItem($name, $description, $userId);
 	}
@@ -40,12 +52,23 @@ class Item {
 
 	//////////////////////////////////////////////////////
 	// QUERY TO SAVE ITEM TO DB /////////////////////////
+	// AND GET LATEST ID ///////////////////////////////
 	private function insertItem($name, $description, $userId) {
 		$database = new Database();
+		$session = new Session();
 
-		$query = $database->connect()->prepare('INSERT INTO items (name, description, user_id) VALUES (?,?,?)');
+		$db = $database->connect();
+		$query = $db->prepare('INSERT INTO items (name, description, user_id) VALUES (?,?,?)');
+
+		// $db->beginTransaction();
 		$values = array($name, $description, $userId);
 		$query->execute($values);
+		$result = $db->lastInsertId(); // get item id for session
+		// $db->commit();
+
+		$session->startItemSession($result);
+
+		return $result;
 	}
 
 	//////////////////////////////////////////////////////
@@ -54,10 +77,9 @@ class Item {
 		$database = new Database();
 
 		$query = $database->connect()->query("SELECT * FROM items WHERE user_id = '$userId'");
-		// execute the query
-		$query->execute();
-		// fetch results
-		$results = $query->fetchAll();
+		
+		$query->execute(); // execute the query
+		$results = $query->fetchAll(); // fetch results
 
 		return $results;
 	}
@@ -68,10 +90,9 @@ class Item {
 		$database = new Database();
 
 		$query = $database->connect()->query("SELECT * FROM items WHERE id = '$userId'");
-		// execute the query
-		$query->execute();
-		// fetch results
-		$result = $query->fetch();
+		
+		$query->execute(); // execute the query
+		$result = $query->fetch(); // fetch results
 
 		return $result;
 	}

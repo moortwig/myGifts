@@ -97,8 +97,19 @@ if(isset($_POST['deleteRecipient'])) {
 if(isset($_POST['addItemContinue'])) {
 	$item = new Item();
 	$item->newItem();
+	
+
+	// $_SESSION['itemId'] = $item->newItem()->result;
+
 	// $item->setSession()
 	// echo "The item has been saved!";
+	// var_dump($item->newItem()->itemSession);
+	// die('remove');
+	// $itemId = $item->getLatestItem();
+	// var_dump($)
+
+	// $session = new Session();
+	// $session->startLoginSession();
 	header('location: chooserecipient.php');
 	// TODO close the connection
 }
