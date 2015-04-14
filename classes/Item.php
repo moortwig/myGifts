@@ -45,7 +45,6 @@ class Item {
 
 
 
-
 	//////////////////////////////////////////////////
 	// ----- QUERIES --------------------------------
 	////////////////////////////////////////////////
@@ -58,6 +57,7 @@ class Item {
 		$session = new Session();
 
 		$db = $database->connect();
+
 		$query = $db->prepare('INSERT INTO items (name, description, user_id) VALUES (?,?,?)');
 
 		// $db->beginTransaction();
@@ -75,8 +75,9 @@ class Item {
 	// QUERY TO GET ALL ITEMS FOR USER //////////////////
 	public function getAllItems($userId) {
 		$database = new Database();
+		$db = $database->connect();
 
-		$query = $database->connect()->query("SELECT * FROM items WHERE user_id = '$userId'");
+		$query = $db->query("SELECT * FROM items WHERE user_id = '$userId'");
 		
 		$query->execute(); // execute the query
 		$results = $query->fetchAll(); // fetch results
@@ -88,8 +89,9 @@ class Item {
 	// QUERY TO GET ONE ITEM FOR USER ///////////////////
 	public function getItem($userId) {
 		$database = new Database();
+		$db = $database->connect();		
 
-		$query = $database->connect()->query("SELECT * FROM items WHERE id = '$userId'");
+		$query = $db->query("SELECT * FROM items WHERE id = '$userId'");
 		
 		$query->execute(); // execute the query
 		$result = $query->fetch(); // fetch results
@@ -101,8 +103,9 @@ class Item {
 	// QUERY TO EDIT RECIPIENT TO DB ////////////////////
 	private function updateItem($name, $description, $itemId) {
 		$database = new Database();
+		$db = $database->connect();
 
-		$query = $database->connect()->prepare('UPDATE items SET name = ?,  description = ? WHERE id = ?');
+		$query = $db->prepare('UPDATE items SET name = ?,  description = ? WHERE id = ?');
 		$values = array($name, $description, $itemId);
 		$query->execute($values);
 	}
