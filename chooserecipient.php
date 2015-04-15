@@ -19,14 +19,16 @@ require_once('header.php');
                         <?php /* if(isset($_SESSION['item'])) { */
                             // echo $_SESSION['item'];
                             $item = new Item();
-                            $itemName = $_GET['name']; // picks up the name from the URL
+                            $itemName = $_GET['itemName']; // picks up the name from the URL
+                            var_dump($itemName);
+                            die('remove');
                             $description = $_GET['description']; // picks up the description from the URL
 
-                            $name = $item->getItem($itemId)['name'];
-                            $description = $item->getItem($itemId)['description']; ?>
+                            // $name = $item->getItem($itemId)['name'];
+                            // $description = $item->getItem($itemId)['description']; ?>
 
                             <em>You added: 
-                                <? echo $name . " - " . $description; ?>
+                                <? echo $itemName . " - " . $description; ?>
                             </em>
                         <?php /* } */ ?>
                     </div>

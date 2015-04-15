@@ -95,7 +95,7 @@ if(isset($_POST['deleteRecipient'])) {
 
 // ADD ITEM TEMP AND CONTINUE (to Choose Recipient)
 if(isset($_POST['addItemContinue'])) {
-	$item = $_POST['name'];
+	$itemName = $_POST['itemName'];
 	$description = $_POST['description'];
 
 	// $item = new Item();
@@ -105,7 +105,7 @@ if(isset($_POST['addItemContinue'])) {
 	// die('remove');
 
 	// chooserecipient.php?item=" . $recipientId
-	header('location: chooserecipient.php?item=' . $itemName . '&' . 'description=' . $description);
+	header('location: chooserecipient.php?itemName=' . $itemName . '&' . 'description=' . $description);
 }
 
 // EDIT ITEM 	
