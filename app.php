@@ -105,7 +105,7 @@ if(isset($_POST['addItemContinue'])) {
 	// die('remove');
 
 	// chooserecipient.php?item=" . $recipientId
-	header('location: chooserecipient?item=' . $item . '&' . 'description=' . $description . '.php');
+	header('location: chooserecipient.php?item=' . $itemName . '&' . 'description=' . $description);
 }
 
 // EDIT ITEM 	

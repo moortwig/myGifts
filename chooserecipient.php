@@ -19,7 +19,8 @@ require_once('header.php');
                         <?php /* if(isset($_SESSION['item'])) { */
                             // echo $_SESSION['item'];
                             $item = new Item();
-                            $itemId = $_GET['id']; // picks up the id from the URL
+                            $itemName = $_GET['name']; // picks up the name from the URL
+                            $description = $_GET['description']; // picks up the description from the URL
 
                             $name = $item->getItem($itemId)['name'];
                             $description = $item->getItem($itemId)['description']; ?>
