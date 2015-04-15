@@ -93,25 +93,19 @@ if(isset($_POST['deleteRecipient'])) {
 	// TODO close the connection
 }*/
 
-// ADD ITEM AND CONTINUE (to Choose Recipient)
+// ADD ITEM TEMP AND CONTINUE (to Choose Recipient)
 if(isset($_POST['addItemContinue'])) {
-	$item = new Item();
-	$item->newItem();
-	
+	$item = $_POST['name'];
+	$description = $_POST['description'];
 
-	// $_SESSION['itemId'] = $item->newItem()->result;
+	// $item = new Item();
+	// $item->tempItem();
 
-	// $item->setSession()
-	// echo "The item has been saved!";
-	// var_dump($item->newItem()->itemSession);
+	// var_dump($item->tempItem()['name']);
 	// die('remove');
-	// $itemId = $item->getLatestItem();
-	// var_dump($)
 
-	// $session = new Session();
-	// $session->startLoginSession();
-	header('location: chooserecipient.php');
-	// TODO close the connection
+	// chooserecipient.php?item=" . $recipientId
+	header('location: chooserecipient?item=' . $item . '&' . 'description=' . $description . '.php');
 }
 
 // EDIT ITEM 	

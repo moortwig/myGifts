@@ -12,6 +12,18 @@ class Item {
 
 	// some methods here
 	//////////////////////////////////////////////////////
+	// TEMP STORE ITEM //////////////////////////////////
+	// public function tempItem() {
+	// 	$name = $_POST['name'];
+	// 	$description = $_POST['description'];
+	// 	// $userId = $_POST['userId']; // TODO belongs to dummy data field, remove after sorting out CSRF
+	// 	// $userId = $_SESSION['userId'];
+
+	// 	return array($name, $description/*, $userId*/);
+	// }
+
+
+	//////////////////////////////////////////////////////
 	// ADD A NEW ITEM ///////////////////////////////////
 	public function newItem() {
 		// $session = new Session();

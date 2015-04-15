@@ -16,15 +16,18 @@ require_once('header.php');
             <div class="row">
                 <div class="col-xs-offset-2 col-md-offset-3 col-xs-8 col-md-4 col-xs-offset-2 col-md-offset-5">
                     <div class="item">
-                        <?php if(isset($_SESSION['item'])) {
+                        <?php /* if(isset($_SESSION['item'])) { */
                             // echo $_SESSION['item'];
                             $item = new Item();
-                            $itemId = $_SESSION['item']; // picks up the id from the URL
+                            $itemId = $_GET['id']; // picks up the id from the URL
 
                             $name = $item->getItem($itemId)['name'];
-                            $description = $item->getItem($itemId)['description'];
-                            echo $name . " - " . $description;
-                        } ?>
+                            $description = $item->getItem($itemId)['description']; ?>
+
+                            <em>You added: 
+                                <? echo $name . " - " . $description; ?>
+                            </em>
+                        <?php /* } */ ?>
                     </div>
                     <!-- <div class="container"> -->
                     <form class="form-horizontal" method="post" action="app.php" role="form">
