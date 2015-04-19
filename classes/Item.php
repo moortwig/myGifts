@@ -28,7 +28,7 @@ class Item {
 	public function newItem() {
 		// $session = new Session();
 
-		$name = $_POST['name'];
+		$name = $_POST['itemName'];
 		$description = $_POST['description'];
 		$userId = $_POST['userId']; // TODO belongs to dummy data field, remove after sorting out CSRF
 		// $userId = $_SESSION['userId'];
@@ -66,7 +66,7 @@ class Item {
 	// AND GET LATEST ID ///////////////////////////////
 	private function insertItem($name, $description, $userId) {
 		$database = new Database();
-		$session = new Session();
+		$gift = new Gift();
 
 		$db = $database->connect();
 
@@ -75,13 +75,19 @@ class Item {
 		// $db->beginTransaction();
 		$values = array($name, $description, $userId);
 		$query->execute($values);
-		$result = $db->lastInsertId(); // get item id for session
+		$itemId = $db->lastInsertId(); // get item id for session
 		// $db->commit();
+		$gift->newGift($itemId);
 
-		$session->startItemSession($result);
+		// $session->startItemSession($result);
 
-		return $result;
+		return $itemId;
 	}
+
+	// public function testLatestId($result) {
+	// 	$id = $result;
+	// 	return $result;
+	// }
 
 	//////////////////////////////////////////////////////
 	// QUERY TO GET ALL ITEMS FOR USER //////////////////

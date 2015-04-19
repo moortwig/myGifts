@@ -12,18 +12,15 @@ class Gift {
 
 	//////////////////////////////////////////////////
 	// ADD A NEW GIFT ///////////////////////////////
-	public function newGift() {
-		// there can be several recipientId, so I need to insert into the database as many rows as there are recipientId.
-		// foreach recipientId, insert into gifts ... Should do it.
-		// $recipient = new Recipient();
-
-		$itemId = $_POST['itemId'];
+	// referred to from Item->insertItem()
+	public function newGift($itemId) {
 		$userId = $_POST['userId']; // TODO belongs to dummy data field, remove after sorting out CSRF
-		// $userId = $_SESSION['userId'];		
-		$recipientIdArray = $_POST['recipientId'];
+		$recipients = $_POST['recipients'];
 		$occasion = $_POST['occasion'];
 
-		return $this->insertGift($userId, $itemId, $recipientIdArray, $occasion);
+		$recipientIdArray = json_decode($recipients);
+
+		$this->insertGift($userId, $itemId, $recipientIdArray, $occasion);
 	}
 
 
@@ -66,11 +63,6 @@ class Gift {
 		}
 	}
 
-	//////////////////////////////////////////////////
-	// GET GIFTS ////////////////////////////////////
-	// get giftReceived() {
-
-	// }
 
 
 	//////////////////////////////////////////////////
@@ -81,8 +73,11 @@ class Gift {
 	// QUERY SAVE GIFT TO DB ////////////////////////
 	private function insertGift($userId, $itemId, $recipientIdArray, $occasion) {
 		$database = new Database();
-		
-		foreach ($recipientIdArray as $recipientId) {		
+
+		$db = $database->connect();
+
+		foreach ($recipientIdArray as $recipientId) {
+			$recipientId = intval($recipientId);	
 			$query = $database->connect()->prepare('INSERT INTO gifts (user_id, item_id, recipient_id, occasion) VALUES (?,?,?,?)');
 			$values = array($userId, $itemId, $recipientId, $occasion);
 			$query->execute($values);

@@ -67,12 +67,53 @@ if(isset($_POST['storeRecipient'])) {
 	// TODO close the connection
 }*/
 
+// CHOOSE RECIPIENT
+if(isset($_POST['chooseRecipient'])) {
+	$recipientIdArray = $_POST['recipientId'];
+	$itemName = $_POST['itemName'];
+	$description = $_POST['description'];
+
+	// foreach ($recipientIdArray as $key => $recipientId) {
+	// 	$rId = strval($recipientId);
+
+	// 	$strArray[] = $rId;
+	// }
+
+	// $serialised = serialize($recipientIdArray);
+	$recipientIds = json_encode($recipientIdArray, JSON_FORCE_OBJECT);
+	// var_dump($recipientIdArray);
+	// var_dump($recipientIdArray);
+	// die('choose rec remove');
+	// var_dump($strArray);
+	// echo $recipientIdArray;
+	// var_dump($recipientIds);
+	// die('remove');
+
+	// $item = new Item();
+	// $item->tempItem();
+
+	// var_dump($item->tempItem()['name']);
+	// die('remove');
+
+	// chooserecipient.php?item=" . $recipientId
+	$url = /*urlencode(*/'addgift.php?recipients=' . $recipientIds . '&' . 'itemName=' . $itemName . '&' . 'description=' . $description/*)*/;
+	// var_dump($url);
+	// die('remove');
+
+	// header('location: chooserecipient.php?itemName=' . $itemName . '&' . 'description=' . $description);
+
+	header('location:' . $url);
+	// header('location: addgift.php?recipients=' . array_values($recipientIdArray));
+}
+
+
 // EDIT RECIPIENT 	
 if(isset($_POST['editRecipient'])) {
 	$recipient = new Recipient();
 	$recipient->editRecipient();
 	header('location: recipients.php');
 }
+
 
 // DELETE RECIPIENT 	
 if(isset($_POST['deleteRecipient'])) {
@@ -93,18 +134,11 @@ if(isset($_POST['deleteRecipient'])) {
 	// TODO close the connection
 }*/
 
-// ADD ITEM TEMP AND CONTINUE (to Choose Recipient)
+// ADD ITEM TEMP (then go to Choose Recipient)
 if(isset($_POST['addItemContinue'])) {
 	$itemName = $_POST['itemName'];
 	$description = $_POST['description'];
 
-	// $item = new Item();
-	// $item->tempItem();
-
-	// var_dump($item->tempItem()['name']);
-	// die('remove');
-
-	// chooserecipient.php?item=" . $recipientId
 	header('location: chooserecipient.php?itemName=' . $itemName . '&' . 'description=' . $description);
 }
 
@@ -118,8 +152,13 @@ if(isset($_POST['editItem'])) {
 ///////////////////////////////////////////////////
 // ADD GIFT
 if(isset($_POST['addGift'])) {
-	$gift = new Gift();
-	$gift->newGift();
+	$item = new Item();
+	$item->newItem();
+
+	// $gift = new Gift();
+	// $gift->newGift($itemId);
+
+
 	echo "The gift has been saved!";
 	header('Refresh: 2; url=index.php');
 	// TODO close the connection

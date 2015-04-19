@@ -18,17 +18,17 @@ require_once('header.php');
                     <div class="item">
                         <?php /* if(isset($_SESSION['item'])) { */
                             // echo $_SESSION['item'];
-                            $item = new Item();
+                            // $item = new Item();
                             $itemName = $_GET['itemName']; // picks up the name from the URL
-                            var_dump($itemName);
-                            die('remove');
+                            // var_dump($itemName); // GER SAMTLIGA ORD
+                            // die('remove');
                             $description = $_GET['description']; // picks up the description from the URL
 
                             // $name = $item->getItem($itemId)['name'];
                             // $description = $item->getItem($itemId)['description']; ?>
 
                             <em>You added: 
-                                <? echo $itemName . " - " . $description; ?>
+                            <?php echo htmlspecialchars($itemName) . " - " . htmlspecialchars($description); ?>
                             </em>
                         <?php /* } */ ?>
                     </div>
@@ -41,16 +41,21 @@ require_once('header.php');
                                 <?php
                                 foreach ($recipients as $recipient => $r) { ?>
                                     <ul class="list-unstyled">
-                                    <li><input type="checkbox" name="recipientId[]" value="<?php echo $r['id']; ?>">
+                                    <li><input type="checkbox" name="recipientId[]" value="<?php echo htmlspecialchars($r['id']); ?>">
                                         <?php echo $r['name']; ?>
                                     </input></li>
                                     </ul>
                                 <?php } ?>
+
                                 <!-- <p class="help-block">Missing someone?</p>
                                 <a class="btn btn-sm btn-primary" href="addrecipient.php">Add someone!</a> -->
+                                <input name="itemName" type="hidden" value="<?php echo $itemName; ?>" />
+                                <input name="description" type="hidden" value="<?php echo $description; ?>" />
                             </div><!-- .nano-content -->
                         </div><!-- #add-gift-recipients nano -->
-                        <button type="submit" class="btn btn-md btn-success" name="storeRecipient"><span class="glyphicon glyphicon-share-alt"></span>Continue</button>
+
+                        <button type="submit" class="btn btn-md btn-success" name="chooseRecipient"><span class="glyphicon glyphicon-share-alt"></span>Continue</button>
+                        <!-- <button type="submit" class="btn btn-md btn-success" name="storeRecipient"><span class="glyphicon glyphicon-share-alt"></span>Continue</button> -->
                     </form>
                     <!-- </div> -->
                 </div><!-- .col-md-4 col-md-offset-4 -->
