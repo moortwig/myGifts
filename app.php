@@ -120,7 +120,7 @@ if(isset($_POST['deleteRecipient'])) {
 	// TODO test this
 	$recipient = new Recipient();
 	$recipient->deleteRecipient($recipientId);
-	header('location: profile.php');
+	header('location: recipients.php');
 }
 
 
@@ -143,11 +143,11 @@ if(isset($_POST['addItemContinue'])) {
 }
 
 // EDIT ITEM 	
-if(isset($_POST['editItem'])) {
+/*if(isset($_POST['editItem'])) {
 	$item = new Item();
 	$item->editItem();
 	header('location: profile.php');
-}
+}*/
 
 ///////////////////////////////////////////////////
 // ADD GIFT
