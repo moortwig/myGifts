@@ -14,7 +14,7 @@ require_once('header.php');
                         <h2>Step 1: Add item</h2>
 
                         <label for="itemName" class="sr-only">Name:</label>
-                        <input type="text" name="itemName" class="form-control" placeholder="Name" /><br />
+                        <input type="text" name="itemName" class="form-control" placeholder="Name" required/><br />
                         <label for="description" class="sr-only">Description:</label><br />
                         <textarea name="description" class="form-control" placeholder="Description"></textarea>
                         <!-- TODO Maybe a better way to pass on the session user ID? -->
