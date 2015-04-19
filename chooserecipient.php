@@ -41,7 +41,7 @@ require_once('header.php');
                                 <?php
                                 foreach ($recipients as $recipient => $r) { ?>
                                     <ul class="list-unstyled">
-                                    <li><input type="checkbox" name="recipientId[]" value="<?php echo htmlspecialchars($r['id']); ?>">
+                                    <li><input type="checkbox" name="recipientId[]" value="<?php echo htmlspecialchars($r['id']); ?>" />
                                         <?php echo $r['name']; ?>
                                     </input></li>
                                     </ul>
@@ -49,8 +49,8 @@ require_once('header.php');
 
                                 <!-- <p class="help-block">Missing someone?</p>
                                 <a class="btn btn-sm btn-primary" href="addrecipient.php">Add someone!</a> -->
-                                <input name="itemName" type="hidden" value="<?php echo $itemName; ?>" />
-                                <input name="description" type="hidden" value="<?php echo $description; ?>" />
+                                <input name="itemName" type="hidden" value="<?php echo $itemName; ?>" required />
+                                <input name="description" type="hidden" value="<?php echo $description; ?>" required />
                             </div><!-- .nano-content -->
                         </div><!-- #add-gift-recipients nano -->
 

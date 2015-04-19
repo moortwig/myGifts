@@ -22,7 +22,7 @@ require_once('header.php');
                         Read THIS: http://www.clfsrpm.net/csrf/ -->
                         <!-- <input name="userId" type="hidden" value=<?php /*echo "'". $_SESSION['userId'] . "'" */?> /> -->
                         <!-- TODO remove this field with dummy data -->
-                        <input name="userId" type="hidden" value="5" />
+                        <input name="userId" type="hidden" value="5" required />
                         <br />
                         <!-- buttons: -->
                         <!-- TODO jQuery on click clear form

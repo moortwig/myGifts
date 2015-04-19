@@ -16,7 +16,7 @@ require_once('header.php');
                     <form class="form-horizontal" method="post" action="app.php" role="form">
                         <h2>Add recipient</h2>
                         <label for="inputName" class="sr-only">Name:</label>
-                        <input type="text" name="name" class="form-control" placeholder="Name" /><br />
+                        <input type="text" name="name" class="form-control" placeholder="Name" required /><br />
                         <label for="inputInformation" class="sr-only">Information:</label><br />
                         <textarea name="information" class="form-control" placeholder="Information"></textarea>
                         <!-- TODO Maybe a better way to pass on the session user ID? -->
