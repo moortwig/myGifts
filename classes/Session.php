@@ -4,26 +4,19 @@ require_once ('User.php');
 require_once ('Item.php');
 
 class Session {
-	// spiffy code here
-	public function getSession($session) {
-	// getter som används för att kolla om session finns
-	// ... eller ngt sådant ...
-		// return $this->session;	// $session
-	}
 
 	public function startLoginSession() {
-		// startar en session och kan användas för att skapa en inloggning t ex
 		$user = new User();
 
 		$username = $_POST['user'];	// field name user
 		$password = $_POST['pass'];	// field name pass
 
 		// query to check user and pass
-		$check = $user->checkUserForLogin($username, $password);
+		$checkUser = $user->checkUserForLogin($username, $password);
 		// query to get the user ID 
 		$userId = $user->getUserId($username);
 
-		if ($check === true) {			
+		if ($checkUser === true) {
 			$_SESSION['username'] = $username;
 			$_SESSION['userId'] = $userId;
 			echo "Perfect match! You've been logged in! Please wait ...";
@@ -32,12 +25,6 @@ class Session {
 		}
 	}
 
-	/*public function startItemSession($result) {
-		// $item = new Item();
-		// $lastInsertId = $item->
-
-		$_SESSION['item'] = $result;		
-	}*/
 }
 
 
