@@ -33,15 +33,6 @@ class User {
 		}		
 	}
 
-	//////////////////////////////////////////////////////
-	// QUERY SAVE USER TO DB ////////////////////////////
-	private function insertUser($username, $password, $email) {
-		$database = new Database();
-
-		$query = $database->connect()->prepare('INSERT INTO users (username, password, email) VALUES (?,?,?)');
-		$values = array($username, $password, $email);
-		$query->execute($values);
-	}
 
 	//////////////////////////////////////////////////////
 	// PICKS UP FORM DATA ///////////////////////////////
@@ -49,6 +40,11 @@ class User {
 		$username = $_POST['username'];
 		$password = $_POST['password'];
 		$email = $_POST['email'];
+
+		$cryptedPassword = crypt($password);
+		$hashedPassword = password_hash($cryptedPassword, PASSWORD_DEFAULT);
+		// var_dump($hashedPassword);
+		// die('remove from User');
 
 		$check = $this->checkUsernameExists($username);
 
@@ -58,9 +54,21 @@ class User {
 			echo "Welcome, " . $username . "! You have successfully signed up, and will shortly be redirected to the start page.";
 			// session works, but it would be nice if we could do it differently, I suppose We do have a session class >.< ...
 			$_SESSION['username'] = $username;
-			return $this->insertUser($username, $password, $email);
+			return $this->insertUser($username, $hashedPassword, $email);
 		}		
 	}
+
+
+	//////////////////////////////////////////////////////
+	// QUERY SAVE USER TO DB ////////////////////////////
+	private function insertUser($username, $hashedPassword, $email) {
+		$database = new Database();
+
+		$query = $database->connect()->prepare('INSERT INTO users (username, password, email) VALUES (?,?,?)');
+		$values = array($username, $hashedPassword, $email);
+		$query->execute($values);
+	}
+
 
 	//////////////////////////////////////////////////////
 	public function getUser($user) {
