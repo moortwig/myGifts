@@ -13,6 +13,7 @@ class Session {
 
 		// query to check user and pass
 		$checkUser = $user->checkUserForLogin($username, $password);
+
 		// query to get the user ID 
 		$userId = $user->getUserId($username);
 

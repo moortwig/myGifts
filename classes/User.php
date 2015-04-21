@@ -30,7 +30,7 @@ class User {
 		} else {
 			// else return false
 			return true;
-		}		
+		}
 	}
 
 
@@ -43,8 +43,6 @@ class User {
 
 		$cryptedPassword = crypt($password);
 		$hashedPassword = password_hash($cryptedPassword, PASSWORD_DEFAULT);
-		// var_dump($hashedPassword);
-		// die('remove from User');
 
 		$check = $this->checkUsernameExists($username);
 
@@ -52,10 +50,10 @@ class User {
 			echo "The username already exists! You will be redirected shortly.";
 		} else {
 			echo "Welcome, " . $username . "! You have successfully signed up, and will shortly be redirected to the start page.";
-			// session works, but it would be nice if we could do it differently, I suppose We do have a session class >.< ...
+
 			$_SESSION['username'] = $username;
 			return $this->insertUser($username, $hashedPassword, $email);
-		}		
+		}
 	}
 
 
@@ -69,12 +67,8 @@ class User {
 		$query->execute($values);
 	}
 
-
 	//////////////////////////////////////////////////////
-	public function getUser($user) {
-		// hämtar ALLT från databasen, inkl password(?) om en användare
-	}
-
+	// QUERY USER ID FROM DB ////////////////////////////
 	public function getUserId($username) {
 		$database = new Database();
 
@@ -84,84 +78,34 @@ class User {
 
 	}
 
+	//////////////////////////////////////////////////////
+	// QUERY USER TO LOGIN //////////////////////////////
 	public function checkUserForLogin($username, $password) {		
 		$database = new Database();
 
-		$query = $database->connect()->query("SELECT * FROM users WHERE username = '$username' AND password = '$password'");
-		// execute the query
-		$query->execute();
-		// fetch results
-		$results = $query->fetchAll();
-		// count the number of rows fetched, so we can use it in the if statement
-		$count = count($results);
+		$query = $database->connect()->query("SELECT * FROM users WHERE username = '$username'");
 
-		if ($count !== 1) {
-			return false;
+		$query->execute(); // execute the query
+		
+		$result = $query->fetchAll(); // fetch result
+
+		// check password:
+		$hashedPassword = $result[0]['password'];
+
+		if ($password == password_verify($password, $hashedPassword)) {
+			$count = count($result);
+			
+			if ($count !== 1) {
+				return false;
+			} else {
+				// else return false
+				return true;
+			}
 		} else {
-			// else return false
-			return true;
-		}	
+			return false;
+		}		
 	}
-
-	//////////////////////////////////////////////////////
-	public function editUser($user) {
-		// redigerar den inloggade användarens uppgifter
-	}
-
-
-	//////////////////////////////////////////////////
-	// GETTERS //////////////////////////////////////
-	// these methods will help me get data!
-	/*public function getId() {
-		return $this->id;	// $id
-	}
-
-	public function getUsername() {
-		return $this->username;	// $username
-	}
-
-	public function getPassword() {
-		return $this->password;	// $password
-	}
-
-	public function getEmail() {
-		return $this->email;	// $email
-	}
-
-	public function getJoined() {
-		return $this->joined;	// $joined
-	}*/
-
-
-	//////////////////////////////////////////////////
-	// SETTERS //////////////////////////////////////
-	// these methods will help me set data!
-	/*public function setId($id) {
-		$this->id = $id;
-		return $this->id;
-	}
-
-	public function setUsername($username) {
-		$this->username = $username;
-		return $this->username;
-	}
-
-	public function setPassword($password) {
-		$this->password = $password;
-		return $this->password;
-	}
-
-	public function setEmail($email) {
-		$this->email = $email;
-		return $this->email;
-	}
-
-	public function setJoined($joined) {
-		$this->joined = $joined;
-		return $this->joined;
-	}*/
-
-
+	
 }
 
 ?>
