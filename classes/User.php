@@ -41,18 +41,22 @@ class User {
 		$password = $_POST['password'];
 		$email = $_POST['email'];
 
+		// Encrypt password:
 		$cryptedPassword = crypt($password);
 		$hashedPassword = password_hash($cryptedPassword, PASSWORD_DEFAULT);
 
-		$check = $this->checkUsernameExists($username);
+
+		$check = $this->checkUsernameExists($username); // returns true or false
 
 		if ($check === true) {
 			echo "The username already exists! You will be redirected shortly.";
 		} else {
+			$this->insertUser($username, $hashedPassword, $email);
+			
 			echo "Welcome, " . $username . "! You have successfully signed up, and will shortly be redirected to the start page.";
 
-			$_SESSION['username'] = $username;
-			return $this->insertUser($username, $hashedPassword, $email);
+			$_SESSION['username'] = $username; // logs in user after signing up
+			// return 
 		}
 	}
 
@@ -105,7 +109,7 @@ class User {
 			return false;
 		}		
 	}
-	
+
 }
 
 ?>
