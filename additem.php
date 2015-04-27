@@ -20,9 +20,14 @@ require_once('header.php');
                         <!-- TODO Maybe a better way to pass on the session user ID? -->
                         <!-- YES! THERE IS!!! Besides, the row below isn't even working ...
                         Read THIS: http://www.clfsrpm.net/csrf/ -->
-                        <!-- <input name="userId" type="hidden" value=<?php /*echo "'". $_SESSION['userId'] . "'" */?> /> -->
+                        <?php 
+                            // $session = new Session();
+                            // $sessionUser = $session->startSession();
+                            // echo $sessionUser;
+                         ?>
+                        <input name="userId" type="hidden" value=<?php echo "'". $_SESSION['userId'] . "'" ?> />
                         <!-- TODO remove this field with dummy data -->
-                        <input name="userId" type="hidden" value="5" required />
+                        <!-- <input name="userId" type="hidden" value="5" required /> -->
                         <br />
                         <!-- buttons: -->
                         <!-- TODO jQuery on click clear form

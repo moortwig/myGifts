@@ -8,7 +8,8 @@ require_once('header.php');
         <?php
         // Display this section if a user is logged in
         if(isset($_SESSION['username'])) {
-            $userId = 5; // TODO change this to a safe get user id
+            $userId = $_SESSION['userId'];
+            // $userId = 5; // TODO change this to a safe get user id
 
             $recipient = new Recipient();
             $recipients = $recipient->getAllRecipients($userId);
@@ -19,6 +20,7 @@ require_once('header.php');
                         <?php /* if(isset($_SESSION['item'])) { */
                             // echo $_SESSION['item'];
                             // $item = new Item();
+
                             $itemName = $_GET['itemName']; // picks up the name from the URL
                             // var_dump($itemName); // GER SAMTLIGA ORD
                             // die('remove');
@@ -37,6 +39,14 @@ require_once('header.php');
                         <h3>Step 2: Choose recipient(s)</h3>
                         <div id="add-gift-recipients" class="nano">
                             <div class="nano-content">
+                                <?php
+
+                        if ($recipients == NULL) {
+                            echo "<span class='error'>" . nl2br("You haven't added any recipients yet!\n Please click below to add them. \n" . "</span>");
+                            // echo "";
+                            echo "<a href='addrecipient.php' class='btn btn-info'>Add recipient</a>";
+                        } else {
+                        ?>
                                 <label for="Recipient">Recipient:</label>
                                 <?php
                                 foreach ($recipients as $recipient => $r) { ?>
@@ -55,6 +65,7 @@ require_once('header.php');
                         </div><!-- #add-gift-recipients nano -->
 
                         <button type="submit" class="btn btn-md btn-success" name="chooseRecipient"><span class="glyphicon glyphicon-share-alt"></span>Continue</button>
+                        <?php } ?>
                         <!-- <button type="submit" class="btn btn-md btn-success" name="storeRecipient"><span class="glyphicon glyphicon-share-alt"></span>Continue</button> -->
                     </form>
                     <!-- </div> -->

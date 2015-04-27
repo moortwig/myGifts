@@ -1,3 +1,2 @@
-sass-cache/
-config/
-class/Database.php
+classes/Database.php
+classes/config

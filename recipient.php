@@ -8,7 +8,8 @@ require_once('header.php');
 	    <?php
 	    // Display this section if a user is logged in
 	    if(isset($_SESSION['username'])) { 
-	    	$userId = 5; // DUMMY DATA, CHANGE THIS ...
+	    	$userId = $_SESSION['userId'];
+	    	// $userId = 5; // DUMMY DATA, CHANGE THIS ...
 			$recipient = new Recipient();
 
 			$recipientId = $_GET["id"]; // picks up the id from the URL

@@ -10,19 +10,6 @@ class Item {
 	public $userId;
 
 
-	// some methods here
-	//////////////////////////////////////////////////////
-	// TEMP STORE ITEM //////////////////////////////////
-	// public function tempItem() {
-	// 	$name = $_POST['name'];
-	// 	$description = $_POST['description'];
-	// 	// $userId = $_POST['userId']; // TODO belongs to dummy data field, remove after sorting out CSRF
-	// 	// $userId = $_SESSION['userId'];
-
-	// 	return array($name, $description/*, $userId*/);
-	// }
-
-
 	//////////////////////////////////////////////////////
 	// ADD A NEW ITEM ///////////////////////////////////
 	public function newItem() {
@@ -33,14 +20,6 @@ class Item {
 		$userId = $_POST['userId']; // TODO belongs to dummy data field, remove after sorting out CSRF
 		// $userId = $_SESSION['userId'];
 
-		// saves to db and returns the id of this item
-		// $lastInsertId = $this->insertItem($name, $description, $userId);
-
-		// $_SESSION['item'];    $this->
-		// $itemSession = $session->startItemSession($lastInsertId);
-
-	// var_dump($itemSession);
-	// die('remove');
 
 		return $this->insertItem($name, $description, $userId);
 	}

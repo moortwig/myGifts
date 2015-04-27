@@ -22,9 +22,9 @@ require_once('header.php');
                         <!-- TODO Maybe a better way to pass on the session user ID? -->
                         <!-- YES! THERE IS!!! Besides, the row below isn't even working ...
                         Read THIS: http://www.clfsrpm.net/csrf/ -->
-                        <!-- <input name="userId" type="hidden" value=<?php /*echo "'". $_SESSION['userId'] . "'" */?> /> -->
+                        <input name="userId" type="hidden" value=<?php echo "'". $_SESSION['userId'] . "'" ?> />
                         <!-- TODO remove this field with dummy data -->
-                        <input name="userId" type="hidden" value="5" />
+                        <!-- <input name="userId" type="hidden" value="5" /> -->
 
                         <br />
                         <!-- buttons: -->
@@ -34,7 +34,7 @@ require_once('header.php');
                         <!-- TODO JavaScript check that all fields are filled in: -->
                         <!-- TODO jQuery on key down "Enter" -> Submit -->
                         <button type="submit" class="btn btn-md btn-success" name="addRecipient"><i class="ton-li-check"></i>Submit</button>
-                        <button type="submit" class="btn btn-md btn-success" name="addRecipientContinue"><span class="glyphicon glyphicon-share-alt"></span>Save and continue</button>
+                        <!-- <button type="submit" class="btn btn-md btn-success" name="addRecipientContinue"><span class="glyphicon glyphicon-share-alt"></span>Save and continue</button> -->
                     </form>
                     <br />
                 </div><!-- .col-md-4 col-md-offset-4 -->
@@ -46,7 +46,7 @@ require_once('header.php');
                             <div class="nano-content">
                                 <?php
                                 $recipient = new Recipient();
-                                $userId = 5; // dummy data TODO change this to the session user
+                                $userId = $_SESSION['userId']; // dummy data TODO change this to the session user
                                 $recipients = $recipient->getAllRecipients($userId);
 
                                 foreach ($recipients as $key => $r) {

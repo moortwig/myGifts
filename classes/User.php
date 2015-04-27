@@ -42,8 +42,7 @@ class User {
 		$email = $_POST['email'];
 
 		// Encrypt password:
-		$cryptedPassword = crypt($password);
-		$hashedPassword = password_hash($cryptedPassword, PASSWORD_DEFAULT);
+		$hashedPassword = password_hash($password, PASSWORD_DEFAULT);
 
 
 		$check = $this->checkUsernameExists($username); // returns true or false
@@ -51,12 +50,10 @@ class User {
 		if ($check === true) {
 			echo "The username already exists! You will be redirected shortly.";
 		} else {
-			$this->insertUser($username, $hashedPassword, $email);
-			
 			echo "Welcome, " . $username . "! You have successfully signed up, and will shortly be redirected to the start page.";
 
 			$_SESSION['username'] = $username; // logs in user after signing up
-			// return 
+			return $this->insertUser($username, $hashedPassword, $email);
 		}
 	}
 
@@ -79,6 +76,11 @@ class User {
 		$query = $database->connect()->query("SELECT id FROM users WHERE username = '$username'");
 		// execute the query
 		$query->execute();
+		$result = $query->fetchObject(); // fetch result
+
+		// var_dump($result);
+		// die('getUserId');
+		return $result;
 
 	}
 
@@ -92,6 +94,7 @@ class User {
 		$query->execute(); // execute the query
 		
 		$result = $query->fetchAll(); // fetch result
+
 
 		// check password:
 		$hashedPassword = $result[0]['password'];

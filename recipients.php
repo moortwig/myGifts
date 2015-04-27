@@ -13,7 +13,7 @@ require_once('header.php');
             <p class="help-block">All your stored recipients are displayed in this list. Click on a name to see further details, such as gift history.</p>
             <?php
             $recipient = new Recipient();
-            $userId = 5; // dummy data TODO change this to the session user
+            $userId = $_SESSION['userId']; // dummy data TODO change this to the session user
             $recipients = $recipient->getAllRecipients($userId);
            
             foreach ($recipients as $key => $r) {

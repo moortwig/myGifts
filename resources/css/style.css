@@ -13,6 +13,11 @@
 /* TODO: Add a min-width at 751px */
 /* Large units */
 /* TODO: Look up screen resolutions for tablets */
+@media only screen and (min-width: 992px) {
+  div {
+    /*transform:  rotate(30deg);*/
+  }
+}
 html {
   min-height: 100%;
   position: relative;
@@ -59,8 +64,35 @@ i {
 .nano .nano-slider {
   background-color: #aa9a66;
 }
+.nav {
+  position: relative;
+  z-index: 1;
+  /*stack order*/
+}
 .nav li:hover {
   background-color: #aac9bc;
+}
+.nav .skew:before {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  overflow: visible;
+  width: 100%;
+  height: 250px;
+  background: #e7e7e7;
+  z-index: -1;
+  -webkit-transform: skewY(-2deg);
+  -moz-transform: skewY(-2deg);
+  -ms-transform: skewY(-2deg);
+  -o-transform: skewY(-2deg);
+  transform: skewY(-2deg);
+}
+.nav .skew .navbar-header {
+  /*max-width: 850px;
+			padding: 0 20px;*/
+  margin-left: auto;
+  margin-right: auto;
 }
 /*.wrapper {
 	position: relative;

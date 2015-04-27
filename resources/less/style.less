@@ -59,9 +59,35 @@ i {
 }
 
 .nav {
-
+	position: relative;
+	z-index: 1;  /*stack order*/ 
 	li:hover {
 		background-color: @nav-link-hover;
+	}
+	.skew:before {
+		content: '';
+		position: absolute;
+		left: 0;
+		bottom: 0;
+		overflow: visible;
+		width: 100%;
+		height: 250px;
+		background: #e7e7e7;
+		z-index: -1;
+		-webkit-transform: skewY(-2deg);
+		-moz-transform: skewY(-2deg);
+		-ms-transform: skewY(-2deg);
+		-o-transform: skewY(-2deg);
+		transform: skewY(-2deg);
+	}
+	.skew {
+		.navbar-header {
+			/*max-width: 850px;
+			padding: 0 20px;*/
+			margin-left: auto;
+			margin-right: auto;
+		}
+
 	}
 }
 

@@ -8,7 +8,8 @@ require_once('header.php');
         <?php
         // Display this section if a user is logged in
         if(isset($_SESSION['username'])) {
-    		$userId = 5; // TODO change this to a safe get user id
+            $userId = $_SESSION['userId'];
+    		// $userId = 5; // TODO change this to a safe get user id
             // TODO Sessions for item and recipient
     		$item = new Item();
     		// $items = $item->getAllItems($userId);
@@ -51,9 +52,9 @@ require_once('header.php');
                         <!-- TODO Maybe a better way to pass on the session user ID? -->
                         <!-- YES! THERE IS!!! Besides, the row below isn't even working ...
                         Read THIS: http://www.clfsrpm.net/csrf/ -->
-                        <!-- <input name="userId" type="hidden" value=<?php /*echo "'". $_SESSION['userId'] . "'" */?> /> -->
+                        <input name="userId" type="hidden" value=<?php echo "'". $_SESSION['userId'] . "'" ?> />
                         <!-- TODO remove this field with dummy data -->
-                        <input name="userId" type="hidden" value="5" required />
+                        <!-- <input name="userId" type="hidden" value="5" required /> -->
                         <input name="itemName" type="hidden" value="<?php echo $itemName ?>" required />
                         <input name="description" type="hidden" value="<?php echo $description ?>" required />
                         <input name="recipients" type="hidden" value="<?php echo htmlspecialchars($recipients) ?>" required />

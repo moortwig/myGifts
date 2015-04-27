@@ -57,7 +57,8 @@ if(isset($_POST['addRecipient'])) {
 if(isset($_POST['storeRecipient'])) {
 	// $recipient = new Recipient();
 	// $recipient->newRecipient();
-	header('location: addGift.php');
+	// header('location: addGift.php');
+	header('Refresh: 1; url=addGift.php');
 	// TODO close the connection
 }
 /*if(isset($_POST['addRecipientContinue'])) {

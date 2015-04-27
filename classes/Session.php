@@ -15,7 +15,7 @@ class Session {
 		$checkUser = $user->checkUserForLogin($username, $password);
 
 		// query to get the user ID 
-		$userId = $user->getUserId($username);
+		$userId = $user->getUserId($username)->id;
 
 		if ($checkUser === true) {
 			$_SESSION['username'] = $username;
