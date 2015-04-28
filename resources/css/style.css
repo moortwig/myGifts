@@ -26,16 +26,6 @@ body {
   background-color: #ffffff;
   padding: 0;
 }
-/* TODO: 
-Fonts icons:
-	Gift icon: ton-li-box-1
-	Item icon: ton-li-bag-1
-	Recipients: ton-li-people-7
-	Sign up: ton-li-new-mail
-	Save: ton-li-check
-	Cancel: ton-li-cross
-	Add: ton-li-plus
-*/
 a:hover {
   text-decoration: none;
 }
@@ -48,6 +38,10 @@ label {
 }
 i {
   font-size: 2em;
+}
+.btn {
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
 }
 /* Nanoscroller */
 .nano {
@@ -68,31 +62,34 @@ i {
   position: relative;
   z-index: 1;
   /*stack order*/
+  /*
+	.skew:before {
+		content: '';
+		position: absolute;
+		left: 0;
+		bottom: 0;
+		overflow: visible;
+		width: 100%;
+		height: 250px;
+		background: #e7e7e7;
+		z-index: -1;
+		-webkit-transform: skewY(-2deg);
+		-moz-transform: skewY(-2deg);
+		-ms-transform: skewY(-2deg);
+		-o-transform: skewY(-2deg);
+		transform: skewY(-2deg);
+	}
+	.skew {
+		.navbar-header {*/
+  /*max-width: 850px;
+			padding: 0 20px;*/
+  /*	margin-left: auto;
+			margin-right: auto;
+		}
+	}*/
 }
 .nav li:hover {
   background-color: #aac9bc;
-}
-.nav .skew:before {
-  content: '';
-  position: absolute;
-  left: 0;
-  bottom: 0;
-  overflow: visible;
-  width: 100%;
-  height: 250px;
-  background: #e7e7e7;
-  z-index: -1;
-  -webkit-transform: skewY(-2deg);
-  -moz-transform: skewY(-2deg);
-  -ms-transform: skewY(-2deg);
-  -o-transform: skewY(-2deg);
-  transform: skewY(-2deg);
-}
-.nav .skew .navbar-header {
-  /*max-width: 850px;
-			padding: 0 20px;*/
-  margin-left: auto;
-  margin-right: auto;
 }
 /*.wrapper {
 	position: relative;
@@ -141,12 +138,16 @@ i {
   padding: 0.5em;
 }
 .landing-section .call {
-  /*padding-top: 70px;*/
+  padding-top: 50px;
 }
 .landing-section .btn-container {
   /*padding-top: 100px;*/
   width: 200px;
   margin: 0 auto;
+}
+.landing-section .btn-container i {
+  font-size: 1em;
+  margin-right: 10px;
 }
 /*
 	Page: index.php;
@@ -173,6 +174,7 @@ i {
 }*/
 /*
 	Page: index.php;
+	Status: logged in;
 */
 .welcome {
   background-color: #ffffff;
@@ -321,6 +323,7 @@ i {
   bottom: 0;
   width: 100%;
   height: 60px;
+  text-align: center;
 }
 /*.overflow-scroll {
 	overflow: scroll;

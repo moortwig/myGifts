@@ -16,7 +16,7 @@ require_once('header.php');
     <div class="section-wrapper">
         <div class="landing-section">
             <div class="container">
-                <h1 class="text-center"><span class="landing-headline">Your gift reminder right there, in your pocket.</span></h1>
+                <h1 class="text-center"><span class="landing-headline">Your gift reminder in the pocket.</span></h1>
             </div><!-- .container -->
 
             <div class="landing-text">
@@ -26,10 +26,10 @@ require_once('header.php');
                         Add your friends and family to your own registry. <br />
                         Free to use!<br />
                     </p>
-                    <p>High Life paleo fixie mustache, skateboard trust fund leggings Kickstarter asymmetrical Pitchfork jean shorts single-origin coffee chambray mumblecore Brooklyn. Actually roof party polaroid PBR distillery Shoreditch DIY chambray Intelligentsia, stumptown leggings. DIY authentic pickled 90's quinoa. Kogi Blue Bottle Brooklyn yr, sustainable kale chips photo booth disrupt ethical pug ennui Kickstarter. Quinoa roof party four dollar toast put a bird on it. Health goth 3 wolf moon slow-carb readymade umami Odd Future. Pop-up swag fanny pack, Marfa photo booth fap ennui food truck.</p>
+                    <!-- <p>High Life paleo fixie mustache, skateboard trust fund leggings Kickstarter asymmetrical Pitchfork jean shorts single-origin coffee chambray mumblecore Brooklyn. Actually roof party polaroid PBR distillery Shoreditch DIY chambray Intelligentsia, stumptown leggings. DIY authentic pickled 90's quinoa. Kogi Blue Bottle Brooklyn yr, sustainable kale chips photo booth disrupt ethical pug ennui Kickstarter. Quinoa roof party four dollar toast put a bird on it. Health goth 3 wolf moon slow-carb readymade umami Odd Future. Pop-up swag fanny pack, Marfa photo booth fap ennui food truck.</p> -->
                     <h3 class="text-center call">Not registered yet?</h3>
                     <div class="btn-container">
-                        <a href="#sign-up" data-scroll class="btn btn-lg btn-success btn-block">SIGN UP NOW</a>
+                        <a href="#sign-up" data-scroll class="btn btn-lg btn-success btn-block"><i class="ton-li-new-mail"></i>SIGN UP NOW</a>
                     </div><!-- .btn-container -->
                 </div><!-- .container -->
             </div><!-- .landing-text -->

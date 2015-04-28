@@ -52,7 +52,6 @@ class User {
 		} else {
 			echo "Welcome, " . $username . "! You have successfully signed up, and will shortly be redirected to the start page.";
 
-			$_SESSION['username'] = $username; // logs in user after signing up
 			return $this->insertUser($username, $hashedPassword, $email);
 		}
 	}
@@ -63,9 +62,18 @@ class User {
 	private function insertUser($username, $hashedPassword, $email) {
 		$database = new Database();
 
-		$query = $database->connect()->prepare('INSERT INTO users (username, password, email) VALUES (?,?,?)');
+		$db = $database->connect();
+
+		$query = $db->prepare('INSERT INTO users (username, password, email) VALUES (?,?,?)');
 		$values = array($username, $hashedPassword, $email);
 		$query->execute($values);
+
+		$userId = $db->lastInsertId(); // get user id for session
+
+
+		$_SESSION['username'] = $username; // logs in user after signing up
+		$_SESSION['userId'] = $userId; // logs in user after signing up
+		// return $itemId;
 	}
 
 	//////////////////////////////////////////////////////

@@ -29,6 +29,7 @@ require_once('app.php');
 </head>
 <body>
 
+
 <nav class="navbar navbar-fixed-top navbar-default">
     <div class="skew">
         <div class="container-fluid">
@@ -55,10 +56,22 @@ require_once('app.php');
                     <?php } ?>
 
                     <?php if(isset($_SESSION['username'])) { ?>
+                    <?php
+
+                    $recipient = new Recipient();
+                    $userId = $_SESSION['userId'];
+                    $recipients = $recipient->getAllRecipients($userId);
+
+                    ?>
                     <ul class="nav navbar-nav">
                         <li><a href="recipients.php" class="btn enabled"><i class="ton-li-people-7"></i></a></li>
                         <!-- <li><a href="items.php" class="btn enabled"><i class="ton-li-bag-1"></i></a></li> -->
-                        <li><a href="additem.php" class="btn enabled"><i class="ton-li-box-1"></i></a></li>
+                        <!-- TODO disable additem if there are no recipients on the user!!! -->
+                        <?php if (!$recipients) {?>
+                            <li><a href="additem.php" class="btn disabled"><i class="ton-li-box-1"></i></a></li>
+                        <?php } else { ?>
+                            <li><a href="additem.php" class="btn enabled"><i class="ton-li-box-1"></i></a></li>
+                        <?php } ?>
                         <li><a href="about.php" class="btn enabled"><i class="ton-li-speech-buble-4"></i></a></li>
                     </ul>
 
