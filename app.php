@@ -49,7 +49,7 @@ if(isset($_POST['addRecipient'])) {
 	$recipient = new Recipient();
 	$recipient->newRecipient();
 	echo "The recipient has been saved!";
-	header('Refresh: 2; url=index.php');
+	header('location: recipients.php');
 	// TODO close the connection
 }
 
@@ -58,7 +58,7 @@ if(isset($_POST['storeRecipient'])) {
 	// $recipient = new Recipient();
 	// $recipient->newRecipient();
 	// header('location: addGift.php');
-	header('Refresh: 1; url=addGift.php');
+	header('location: addGift.php');
 	// TODO close the connection
 }
 /*if(isset($_POST['addRecipientContinue'])) {
@@ -161,7 +161,7 @@ if(isset($_POST['addGift'])) {
 
 
 	echo "The gift has been saved!";
-	header('Refresh: 2; url=index.php');
+	header('Refresh: 2; url=recipients.php');
 	// TODO close the connection
 }
 
