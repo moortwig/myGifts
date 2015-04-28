@@ -1,11 +1,12 @@
 <div id="footer" class="footer">
 	<!-- <div class="footer"> -->
-		<!-- <div class="container"> -->
-			<ul>
+		<div class="container">
+			<ul class="list-inline">
 				<li><a href="mailto:#">info@mygifts.com</a></li>
-				<li><a href="https://github.com/moortwig/myGifts">myGifts on GitHub</a></li>			
+				<li>|</li>
+				<li><a href="https://github.com/moortwig/myGifts">myGifts on GitHub</a></li>
 			</ul>
-		<!-- </div> -->
+		</div>
 	<!-- </div> -->
 </div>
 
