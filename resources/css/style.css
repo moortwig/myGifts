@@ -256,7 +256,7 @@
 }
 /* Medium units and up */
 /* Overwrite small stylesheet */
-@media only screen and (min-width: 721px) and (max-width: 1023px) {
+@media only screen and (min-width: 731px) and (max-width: 1033px) {
   div {
     outline: 1px solid silver;
   }
@@ -267,7 +267,7 @@
 }
 /* Large units only */
 /* Overwrite medium stylesheet */
-@media only screen and (min-width: 1024px) {
+@media only screen and (min-width: 1034px) {
   div {
     outline: 1px solid blue;
   }
