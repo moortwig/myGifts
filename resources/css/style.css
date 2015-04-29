@@ -6,9 +6,9 @@
   src: url('../fonts/glyphicons-halflings-regular.eot');
   src: url('../fonts/glyphicons-halflings-regular.eot?#iefix') format('embedded- opentype'), url('../fonts/glyphicons-halflings-regular.woff') format('woff'), url('../fonts/glyphicons-halflings-regular.ttf') format('truetype'), url('../fonts/glyphicons-halflings-regular.svg#glyphicons-halflingsregular') format('svg');
 }
-/* Small units */
-/* TODO: Look up screen resolutions for mobile phones */
-@media only screen and (max-width: 750px) {
+/* Small units and up */
+/* All stylesheets start here.  */
+@media only screen {
   html {
     min-height: 100%;
     position: relative;
@@ -74,8 +74,7 @@
     padding: 5em;
   }
   .landing-section .landing-headline {
-    background-color: white;
-    padding: 0.1em;
+    display: none;
   }
   .landing-section .landing-headline-container {
     outline: 1px solid red;
@@ -256,19 +255,14 @@
 }
 /* Medium units */
 /* TODO: Look up screen resolutions for tablets */
-/* TODO: Add a min-width at 751px */
-@media only screen and (min-width: 751px) and (max-width: 991px) {
+@media only screen and (min-width: 721px) and (max-width: 1023px) {
   .landing-section .landing-headline {
+    background-color: white;
     padding: 0.5em;
   }
 }
 /* Large units */
 /* TODO: Look up screen resolutions for tablets */
-@media only screen and (min-width: 992px) {
-  div {
-    /*transform:  rotate(30deg);*/
-  }
-}
 /* Debugging */
 div {
   /*outline: 1px solid red;*/
