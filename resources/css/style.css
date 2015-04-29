@@ -253,16 +253,16 @@
     text-align: center;
   }
 }
-/* Medium units */
-/* TODO: Look up screen resolutions for tablets */
+/* Medium units and up */
+/* Overwrite small stylesheet */
 @media only screen and (min-width: 721px) and (max-width: 1023px) {
   .landing-section .landing-headline {
     background-color: white;
     padding: 0.5em;
   }
 }
-/* Large units */
-/* TODO: Look up screen resolutions for tablets */
+/* Large units only */
+/* Overwrite medium stylesheet */
 /* Debugging */
 div {
   /*outline: 1px solid red;*/
