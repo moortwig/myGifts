@@ -51,23 +51,26 @@
 		}
 	}
 
-	.nav {
-		position: relative;
-		z-index: 1;  /*stack order*/ 
-		
-		li:hover {
-			background-color: @nav-link-hover;
+	.navbar {
+		.nav { /* ul element */
+			position: relative;
+			z-index: 1;  /*stack order*/ 
+			
+			li:hover {
+				background-color: @nav-link-hover;
+			}
 		}
 
-	}
 
+		.btn {
+			display: block;
+			margin: auto;
+		}
+	}
 
 	/*
 		Page: index.php;
 	*/
-	
-
-
 	.landing-section {
 		background-image: url(../img/bg-landing.jpg);
 		background-color: @landing-bg;
@@ -138,9 +141,7 @@
 			/*padding-top: 200px;*/
 
 			.container {
-			/*background-color: @landing-bg;*/
-			/*outline: 1px solid blue;*/
-			/*height: 200px;*/
+			padding: 5em;
 			}
 		}
 	}

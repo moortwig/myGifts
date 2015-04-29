@@ -1,12 +1,71 @@
 /* Medium units and up */
 /* Overwrite small stylesheet */
-@tablet:    ~"only screen and (min-width: 731px) and (max-width: 1033px)";
+@tablet:    ~"only screen and (min-width: 768px)";
 
 @media @tablet {
 	div {
 		outline: 1px solid silver;
 	}
 	
+	/*
+		Navigation
+	*/
+	.navbar {
+		.navbar-form {
+			.form-control {
+				width: 150px;
+			}
+		}
+
+
+		.nav {
+			li {
+				padding: 10px;
+			}
+
+			/*.li-text {
+				letter-spacing: 0px;
+				position: absolute;
+				left: 20px;
+				top: 45px;
+			}*/
+
+			.li-text-rec {
+				letter-spacing: 0px;
+				position: absolute;
+				left: 13px;
+				top: 50px;
+			}
+
+			.li-text-gift {
+				letter-spacing: 0px;
+				position: absolute;
+				top: 50px;
+				left: 20px;
+			}
+
+			.li-text-about {
+				letter-spacing: 0px;
+				position: absolute;
+				left: 25px;
+				top: 50px;
+			}
+
+		}
+
+		.btn {
+			float: right;
+			margin-left: 5px;
+		}
+	}
+
+	
+
+
+
+	/*
+		Page: index.php
+	*/
 	.landing-section {
 		.landing-headline {
 			background-color: white;

@@ -48,10 +48,10 @@ require_once('app.php');
                     <!-- if not logged in, display disabled menu icons -->
                     <?php if(!isset($_SESSION['username'])) { ?>
                     <ul class="nav navbar-nav">
-                        <li><a href="#" class="btn disabled"><i class="ton-li-people-7"></i></a></li>
+                        <li><span class="li-text-rec">Recipients</span><a href="#" class="btn disabled"><i class="ton-li-people-7"></i></a></li>
                         <!-- <li><i class="ton-li-bag-1"></i></li> -->
-                        <li><a href="#" class="btn disabled"><i class="ton-li-box-1"></i></a></li>
-                        <li><a href="about.php" class="btn enabled"><i class="ton-li-speech-buble-4"></i></a></li>
+                        <li><span class="li-text-gift">Add gift</span><a href="#" class="btn disabled"><i class="ton-li-box-1"></i></a></li>
+                        <li><span class="li-text-about">About</span><a href="about.php" class="btn enabled"><i class="ton-li-speech-buble-4"></i></a></li>
                     </ul>
                     <?php } ?>
 
@@ -64,15 +64,14 @@ require_once('app.php');
 
                     ?>
                     <ul class="nav navbar-nav">
-                        <li><a href="recipients.php" class="btn enabled"><i class="ton-li-people-7"></i></a></li>
-                        <!-- <li><a href="items.php" class="btn enabled"><i class="ton-li-bag-1"></i></a></li> -->
-                        <!-- TODO disable additem if there are no recipients on the user!!! -->
+                        <li><a href="recipients.php" class="btn enabled"><i class="ton-li-people-7"></i><span class="li-text">Recipients</span></a></li>
                         <?php if (!$recipients) {?>
-                            <li><a href="additem.php" class="btn disabled"><i class="ton-li-box-1"></i></a></li>
+                            <!-- Disable button if there are no recipients -->
+                            <li><a href="additem.php" class="btn disabled"><i class="ton-li-box-1"></i><span class="li-text">Add gift</span></a></li>
                         <?php } else { ?>
-                            <li><a href="additem.php" class="btn enabled"><i class="ton-li-box-1"></i></a></li>
+                            <li><a href="additem.php" class="btn enabled"><i class="ton-li-box-1"></i><span class="li-text">Add gift</span></a></li>
                         <?php } ?>
-                        <li><a href="about.php" class="btn enabled"><i class="ton-li-speech-buble-4"></i></a></li>
+                        <li><a href="about.php" class="btn enabled"><i class="ton-li-speech-buble-4"></i><span class="li-text">About</span></a></li>
                     </ul>
 
                     
