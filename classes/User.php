@@ -16,6 +16,7 @@ class User {
 	private function checkUsernameExists($username) {
 		$database = new Database();
 
+
 		$query = $database->connect()->query("SELECT * FROM users WHERE username = '$username'");
 		// execute the query
 		$query->execute();
