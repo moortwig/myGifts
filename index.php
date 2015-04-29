@@ -15,7 +15,7 @@ require_once('header.php');
      // Display this section if user has not logged in ?>
     <div class="section-wrapper">
         <div class="landing-section">
-            <div class="container">
+            <div class="landing-headline-container">
                 <h1 class="text-center"><span class="landing-headline">Your gift reminder in the pocket.</span></h1>
             </div><!-- .container -->
 
