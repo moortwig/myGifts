@@ -59,6 +59,9 @@
   .navbar .nav li:hover {
     background-color: #aac9bc;
   }
+  .navbar .nav span {
+    display: none;
+  }
   .navbar .btn {
     display: block;
     margin: auto;
@@ -83,7 +86,7 @@
     display: none;
   }
   .landing-section .landing-headline-container {
-    outline: 1px solid red;
+    /*outline: 1px solid red;*/
     width: 90%;
     margin: auto;
     padding: 15em;
@@ -261,7 +264,7 @@
 /* Overwrite small stylesheet */
 @media only screen and (min-width: 768px) {
   div {
-    outline: 1px solid silver;
+    /*outline: 1px solid silver;*/
   }
   /*
 		Navigation
@@ -314,7 +317,7 @@
 /* Overwrite medium stylesheet */
 @media only screen and (min-width: 1034px) {
   div {
-    outline: 1px solid blue;
+    /*outline: 1px solid blue;*/
   }
 }
 /* Debugging */

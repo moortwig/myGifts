@@ -64,14 +64,14 @@ require_once('app.php');
 
                     ?>
                     <ul class="nav navbar-nav">
-                        <li><a href="recipients.php" class="btn enabled"><i class="ton-li-people-7"></i><span class="li-text">Recipients</span></a></li>
+                        <li><span class="li-text-rec">Recipients</span><a href="recipients.php" class="btn enabled"><i class="ton-li-people-7"></i></a></li>
                         <?php if (!$recipients) {?>
                             <!-- Disable button if there are no recipients -->
-                            <li><a href="additem.php" class="btn disabled"><i class="ton-li-box-1"></i><span class="li-text">Add gift</span></a></li>
+                            <li><span class="li-text-gift">Add gift</span><a href="additem.php" class="btn disabled"><i class="ton-li-box-1"></i></a></li>
                         <?php } else { ?>
-                            <li><a href="additem.php" class="btn enabled"><i class="ton-li-box-1"></i><span class="li-text">Add gift</span></a></li>
+                            <li><span class="li-text-gift">Add gift</span><a href="additem.php" class="btn enabled"><i class="ton-li-box-1"></i></a></li>
                         <?php } ?>
-                        <li><a href="about.php" class="btn enabled"><i class="ton-li-speech-buble-4"></i><span class="li-text">About</span></a></li>
+                        <li><span class="li-text-about">About</span><a href="about.php" class="btn enabled"><i class="ton-li-speech-buble-4"></i></a></li>
                     </ul>
 
                     
