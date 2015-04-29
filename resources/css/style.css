@@ -6,6 +6,7 @@
   src: url('../fonts/glyphicons-halflings-regular.eot');
   src: url('../fonts/glyphicons-halflings-regular.eot?#iefix') format('embedded- opentype'), url('../fonts/glyphicons-halflings-regular.woff') format('woff'), url('../fonts/glyphicons-halflings-regular.ttf') format('truetype'), url('../fonts/glyphicons-halflings-regular.svg#glyphicons-halflingsregular') format('svg');
 }
+/* Styling starts at small units and move up in screen resolutions */
 /* Small units and up */
 /* All stylesheets start here.  */
 @media only screen {
@@ -256,6 +257,9 @@
 /* Medium units and up */
 /* Overwrite small stylesheet */
 @media only screen and (min-width: 721px) and (max-width: 1023px) {
+  div {
+    outline: 1px solid silver;
+  }
   .landing-section .landing-headline {
     background-color: white;
     padding: 0.5em;
@@ -263,6 +267,11 @@
 }
 /* Large units only */
 /* Overwrite medium stylesheet */
+@media only screen and (min-width: 1024px) {
+  div {
+    outline: 1px solid blue;
+  }
+}
 /* Debugging */
 div {
   /*outline: 1px solid red;*/
