@@ -35,6 +35,6 @@ var app = {
 	Initialise things
 */
 app.init();
-smoothScroll.init();
+// smoothScroll.init();
 
 // $(document).ready(function() {});

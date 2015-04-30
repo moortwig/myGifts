@@ -31,13 +31,10 @@ i {
   background-attachment: fixed;
 }
 .landing-section .landing-headline-container {
-  /*outline: 1px solid red;
-		width: 90%;
-		margin: auto;*/
+  outline: 1px solid red;
+  width: 90%;
+  margin: auto;
   padding: 5em;
-}
-.landing-section .landing-headline {
-  display: none;
 }
 .landing-section .landing-headline-container {
   /*outline: 1px solid red;*/
@@ -66,20 +63,6 @@ i {
   font-size: 1em;
   margin-right: 10px;
 }
-#sign-up {
-  /*background-image: url(../img/confectionary.png);*/
-  /*background-attachment: fixed;*/
-  padding-top: 200px;
-}
-#sign-up .sign-up-section {
-  /*min-height: 700px;*/
-  background-color: #ffffff;
-  /*padding-bottom: 200px;*/
-  /*padding-top: 200px;*/
-}
-#sign-up .sign-up-section .container {
-  padding: 5em;
-}
 .welcome {
   background-color: #ffffff;
   padding-top: 100px;
@@ -87,6 +70,23 @@ i {
 }
 .welcome dt {
   margin-top: 1em;
+}
+/*
+	Page: sign-up;
+*/
+.sign-up-page {
+  /*background-image: url(../img/confectionary.png);*/
+  /*background-attachment: fixed;*/
+  padding-top: 200px;
+}
+.sign-up-page .sign-up-section {
+  /*min-height: 700px;*/
+  background-color: #ffffff;
+  /*padding-bottom: 200px;*/
+  /*padding-top: 200px;*/
+}
+.sign-up-page .sign-up-section .container {
+  padding: 5em;
 }
 /*
 	Page: recipients.php;
@@ -169,6 +169,9 @@ i {
 			}*/
   }
   .navbar .nav span {
+    display: none;
+  }
+  .landing-headline {
     display: none;
   }
 }
