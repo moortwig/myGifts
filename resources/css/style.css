@@ -16,6 +16,9 @@ h3,
 label {
   color: #67655d;
 }
+p {
+  font-size: 1em;
+}
 i {
   font-size: 2em;
 }
@@ -23,43 +26,41 @@ i {
 /*
 	Page: index.php;
 */
-.landing-section {
+.index-page {
   background-image: url(../img/bg-landing.jpg);
-  background-color: #ffffff;
+  /*background-color: @landing-bg;*/
   background-position: bottom;
   background-repeat: no-repeat;
   background-attachment: fixed;
 }
-.landing-section .landing-headline-container {
+.index-page .landing-headline-container {
   outline: 1px solid red;
   width: 90%;
   margin: auto;
-  padding: 5em;
+  min-height: 100%;
+  /*
+		padding-top: 5em;
+		padding-bottom: 5em;*/
 }
-.landing-section .landing-headline-container {
-  /*outline: 1px solid red;*/
-  width: 90%;
-  margin: auto;
-  padding: 15em;
+.index-page .landing-text {
+  /*background-color: @landing-bg;*/
+  list-style-type: none;
 }
-.landing-section .landing-text {
-  background-color: #ffffff;
-}
-.landing-section .landing-text .container {
+.index-page .landing-text .container {
   width: 60%;
   padding-top: 1em;
 }
-.landing-section h1 {
+.index-page h1 {
   font-size: 2em;
 }
-.landing-section .call {
+.index-page .call {
   padding-top: 50px;
 }
-.landing-section .btn-container {
+.index-page .btn-container {
   width: 200px;
   margin: 0 auto;
 }
-.landing-section .btn-container i {
+.index-page .btn-container i {
   font-size: 1em;
   margin-right: 10px;
 }
@@ -233,6 +234,10 @@ i {
     /*outline: 1px solid blue;*/
   }
 }
+/* Debugging */
+div {
+  outline: 1px solid blue;
+}
 html {
   min-height: 100%;
   position: relative;
@@ -314,13 +319,10 @@ body {
   margin-right: 3px;
 }
 .footer {
+  background-color: #ffffff;
   position: absolute;
   bottom: 0;
   width: 100%;
   height: 60px;
   text-align: center;
-}
-/* Debugging */
-div {
-  /*outline: 1px solid red;*/
 }

@@ -13,28 +13,30 @@ require_once('header.php');
         include_once('logged-in.php'); ?>
     <?php } else {
      // Display this section if user has not logged in ?>
-    <div class="section-wrapper">
-        <div class="landing-section">
-            <div class="landing-headline-container">
-                <h1 class="text-center"><span class="landing-headline">Your gift reminder in the pocket.</span></h1>
-            </div><!-- .container -->
+    <!-- <div class="section-wrapper"> -->
+        <!-- <div class="landing-section"> -->
+        <div class="landing-headline-container">
+            <div class="row">
+                <div class="col-xs-12 col-lg-8">
+                    <h1 class="text-center"><span class="landing-headline">Your gift reminder in the pocket.</span></h1>
+                    <ul class="landing-text">
+                        <li>Keep track of items you've given away.</li>
+                        <li>Add your friends and family to your own registry.</li>
+                        <li>Free to use!</li>
+                    </ul>
+                </div><!-- .col-md-4 -->
 
-            <div class="landing-text">
-                <div class="container">
-                    <p>
-                        Keep track of items you've given away. <br />
-                        Add your friends and family to your own registry. <br />
-                        Free to use!<br />
-                    </p>
-                    <!-- <p>High Life paleo fixie mustache, skateboard trust fund leggings Kickstarter asymmetrical Pitchfork jean shorts single-origin coffee chambray mumblecore Brooklyn. Actually roof party polaroid PBR distillery Shoreditch DIY chambray Intelligentsia, stumptown leggings. DIY authentic pickled 90's quinoa. Kogi Blue Bottle Brooklyn yr, sustainable kale chips photo booth disrupt ethical pug ennui Kickstarter. Quinoa roof party four dollar toast put a bird on it. Health goth 3 wolf moon slow-carb readymade umami Odd Future. Pop-up swag fanny pack, Marfa photo booth fap ennui food truck.</p> -->
+                <div class="col-xs-12 col-lg-4">
                     <h3 class="text-center call">Not registered yet?</h3>
-                    <div class="btn-container">
-                        <a href="signup.php" class="btn btn-lg btn-success btn-block"><i class="ton-li-new-mail"></i>SIGN UP NOW</a>
-                    </div><!-- .btn-container -->
-                </div><!-- .container -->
-            </div><!-- .landing-text -->
-        </div><!-- .landing-section -->
-    </div><!-- .section-wrapper -->
+                        <div class="btn-container">
+                            <a href="signup.php" class="btn btn-lg btn-success btn-block"><i class="ton-li-new-mail"></i>SIGN UP NOW</a>
+                        </div><!-- .btn-container -->
+                </div><!-- .col-md-4 -->
+            </div><!-- .row -->
+        </div><!-- .landing-headline-container -->
+
+        <!-- </div> --><!-- .landing-section -->
+    <!-- </div>.section-wrapper -->
 
     
     
