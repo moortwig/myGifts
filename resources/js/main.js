@@ -7,7 +7,7 @@ var app = {
 		console.log('init');
 		// functions here
 		app.nano();
-		app.divHeight();		
+		// app.divHeight();		
 	},
 
 
@@ -23,12 +23,12 @@ var app = {
 	/*
 		Set height at index page sections
 	*/
-	divHeight: function() {
+	/*divHeight: function() {
 		console.log('sectionHeight');
 		var windowHeight = $(window).height();
 
 		$('.section-wrapper').css('height', windowHeight);
-	}
+	}*/
 }
 
 /*
