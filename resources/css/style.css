@@ -6,262 +6,173 @@
   src: url('../fonts/glyphicons-halflings-regular.eot');
   src: url('../fonts/glyphicons-halflings-regular.eot?#iefix') format('embedded- opentype'), url('../fonts/glyphicons-halflings-regular.woff') format('woff'), url('../fonts/glyphicons-halflings-regular.ttf') format('truetype'), url('../fonts/glyphicons-halflings-regular.svg#glyphicons-halflingsregular') format('svg');
 }
+a:hover {
+  text-decoration: none;
+}
+p,
+h1,
+h2,
+h3,
+label {
+  color: #67655d;
+}
+i {
+  font-size: 2em;
+}
+/* Pages */
+/*
+	Page: index.php;
+*/
+.landing-section {
+  background-image: url(../img/bg-landing.jpg);
+  background-color: #ffffff;
+  background-position: bottom;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+.landing-section .landing-headline-container {
+  /*outline: 1px solid red;
+		width: 90%;
+		margin: auto;*/
+  padding: 5em;
+}
+.landing-section .landing-headline {
+  display: none;
+}
+.landing-section .landing-headline-container {
+  /*outline: 1px solid red;*/
+  width: 90%;
+  margin: auto;
+  padding: 15em;
+}
+.landing-section .landing-text {
+  background-color: #ffffff;
+}
+.landing-section .landing-text .container {
+  width: 60%;
+  padding-top: 1em;
+}
+.landing-section h1 {
+  font-size: 2em;
+}
+.landing-section .call {
+  padding-top: 50px;
+}
+.landing-section .btn-container {
+  width: 200px;
+  margin: 0 auto;
+}
+.landing-section .btn-container i {
+  font-size: 1em;
+  margin-right: 10px;
+}
+#sign-up {
+  /*background-image: url(../img/confectionary.png);*/
+  /*background-attachment: fixed;*/
+  padding-top: 200px;
+}
+#sign-up .sign-up-section {
+  /*min-height: 700px;*/
+  background-color: #ffffff;
+  /*padding-bottom: 200px;*/
+  /*padding-top: 200px;*/
+}
+#sign-up .sign-up-section .container {
+  padding: 5em;
+}
+.welcome {
+  background-color: #ffffff;
+  padding-top: 100px;
+  padding-bottom: 100px;
+}
+.welcome dt {
+  margin-top: 1em;
+}
+/*
+	Page: recipients.php;
+*/
+.recipients-page {
+  padding-top: 100px;
+  padding-bottom: 100px;
+  background-color: #ffffff;
+}
+.recipients-page .data-row {
+  width: 70%;
+}
+.recipients-page .label {
+  position: relative;
+  top: -4px;
+}
+/*
+	Page: recipient.php;
+*/
+.recipient-page {
+  padding-top: 100px;
+  padding-bottom: 100px;
+  background-color: #ffffff;
+}
+.recipient-page dt {
+  margin-top: 1em;
+}
+/*
+	Page: addrecipient.php;
+*/
+.add-recipient-page {
+  padding-top: 100px;
+  padding-bottom: 100px;
+  background-color: #ffffff;
+}
+.add-recipient-page .nano {
+  height: 600px;
+}
+/*
+	Page: additem.php;
+*/
+.add-item-page {
+  padding-top: 100px;
+  padding-bottom: 100px;
+  background-color: #ffffff;
+}
+/*
+	Page: addgift.php;
+*/
+.add-gift-page {
+  background-color: #ffffff;
+  padding-bottom: 100px;
+  padding-top: 100px;
+}
+/*
+	Page: about.php;
+*/
+.about-page {
+  background-color: #ffffff;
+  background-image: url(../img/bg-landing.jpg);
+  padding-top: 100px;
+  padding-bottom: 100px;
+  position: relative;
+}
+.about-page .container {
+  background-color: #ffffff;
+  background-image: url(../img/1-1.png);
+  padding: 20px;
+}
 /* Styling starts at small units and move up in screen resolutions */
 /* Small units and up */
-/* All stylesheets start here.  */
-@media only screen {
-  html {
-    min-height: 100%;
-    position: relative;
-  }
-  body {
-    background-color: #ffffff;
-    padding: 0;
-  }
-  a:hover {
-    text-decoration: none;
-  }
-  p,
-  h1,
-  h2,
-  h3,
-  label {
-    color: #67655d;
-  }
-  i {
-    font-size: 2em;
-  }
-  .btn {
-    letter-spacing: 0.5px;
-    text-transform: uppercase;
-  }
-  /* Nanoscroller */
-  .nano {
-    /*background: #bba; */
-    /*width: 300px; */
-    height: 350px;
-  }
-  .nano .nano-content {
-    padding: 10px;
-  }
-  .nano .nano-pane {
-    background-color: #ddd6c1;
-  }
-  .nano .nano-slider {
-    background-color: #aa9a66;
-  }
+@media only screen and (max-width: 767px) {
   .navbar .nav {
     /* ul element */
-    position: relative;
-    z-index: 1;
+    /*position: relative;*/
+    /*z-index: 1;*/
     /*stack order*/
-  }
-  .navbar .nav li:hover {
-    background-color: #aac9bc;
+    /*li:hover {
+				background-color: @nav-link-hover;
+			}*/
   }
   .navbar .nav span {
     display: none;
   }
-  .navbar .btn {
-    display: block;
-    margin: auto;
-  }
-  /*
-		Page: index.php;
-	*/
-  .landing-section {
-    background-image: url(../img/bg-landing.jpg);
-    background-color: #ffffff;
-    background-position: bottom;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-  }
-  .landing-section .landing-headline-container {
-    /*outline: 1px solid red;
-			width: 90%;
-			margin: auto;*/
-    padding: 5em;
-  }
-  .landing-section .landing-headline {
-    display: none;
-  }
-  .landing-section .landing-headline-container {
-    /*outline: 1px solid red;*/
-    width: 90%;
-    margin: auto;
-    padding: 15em;
-  }
-  .landing-section .landing-text {
-    background-color: #ffffff;
-  }
-  .landing-section .landing-text .container {
-    width: 60%;
-    padding-top: 1em;
-  }
-  .landing-section h1 {
-    font-size: 2em;
-  }
-  .landing-section .call {
-    padding-top: 50px;
-  }
-  .landing-section .btn-container {
-    width: 200px;
-    margin: 0 auto;
-  }
-  .landing-section .btn-container i {
-    font-size: 1em;
-    margin-right: 10px;
-  }
-  /*
-		Page: index.php;
-	*/
-  #sign-up {
-    /*background-image: url(../img/confectionary.png);*/
-    /*background-attachment: fixed;*/
-    padding-top: 200px;
-  }
-  #sign-up .sign-up-section {
-    /*min-height: 700px;*/
-    background-color: #ffffff;
-    /*padding-bottom: 200px;*/
-    /*padding-top: 200px;*/
-  }
-  #sign-up .sign-up-section .container {
-    padding: 5em;
-  }
-  /*
-		Page: index.php;
-		Status: logged in;
-	*/
-  .welcome {
-    background-color: #ffffff;
-    padding-top: 100px;
-    padding-bottom: 100px;
-  }
-  .welcome dt {
-    margin-top: 1em;
-  }
-  /*
-		Page: recipients.php;
-	*/
-  .recipients-page {
-    padding-top: 100px;
-    padding-bottom: 100px;
-    background-color: #ffffff;
-  }
-  .recipients-page .data-row {
-    width: 70%;
-  }
-  .recipients-page .label {
-    position: relative;
-    top: -4px;
-  }
-  /*
-		Page: recipient.php;
-	*/
-  .recipient-page {
-    padding-top: 100px;
-    padding-bottom: 100px;
-    background-color: #ffffff;
-  }
-  .recipient-page dt {
-    margin-top: 1em;
-  }
-  /*
-		Page: addrecipient.php;
-	*/
-  .add-recipient-page {
-    padding-top: 100px;
-    padding-bottom: 100px;
-    background-color: #ffffff;
-  }
-  .add-recipient-page .nano {
-    height: 600px;
-  }
-  /*
-		Page: additem.php;
-	*/
-  .add-item-page {
-    padding-top: 100px;
-    padding-bottom: 100px;
-    background-color: #ffffff;
-  }
-  /*
-		Page: addgift.php;
-	*/
-  .add-gift-page {
-    background-color: #ffffff;
-    padding-bottom: 100px;
-    padding-top: 100px;
-  }
-  /*
-		Page: about.php;
-	*/
-  .about-page {
-    background-color: #ffffff;
-    background-image: url(../img/bg-landing.jpg);
-    padding-top: 100px;
-    padding-bottom: 100px;
-    position: relative;
-  }
-  .about-page .container {
-    background-color: #ffffff;
-    background-image: url(../img/1-1.png);
-    padding: 20px;
-  }
-  /*
-		General data presentation
-	*/
-  .data-row {
-    padding: 5px;
-    border-bottom: 1px solid silver;
-    width: 70%;
-  }
-  .glyphicon {
-    margin-left: 5px;
-    margin-right: 3px;
-  }
-  /*
-		Add button
-	*/
-  .ton-li-plus {
-    font-size: 0.7em;
-    background-color: silver;
-    padding: 7px;
-  }
-  .ton-li-plus:hover {
-    transition: all 1s ease 0s;
-    color: white;
-  }
-  .circle {
-    width: 100px;
-    height: 100px;
-    background: silver;
-    -moz-border-radius: 50px;
-    -webkit-border-radius: 50px;
-    border-radius: 50px;
-  }
-  .circle:hover {
-    transition: all 1s ease 0s;
-    background: #3071a9;
-  }
-  /*
-		Save button override
-	 */
-  .btn-success i {
-    font-size: 0.7em;
-    margin-right: 3px;
-  }
-  .footer {
-    position: absolute;
-    bottom: 0;
-    width: 100%;
-    height: 60px;
-    text-align: center;
-  }
 }
 /* Medium units and up */
-/* Overwrite small stylesheet */
 @media only screen and (min-width: 768px) {
   div {
     /*outline: 1px solid silver;*/
@@ -314,11 +225,97 @@
   }
 }
 /* Large units only */
-/* Overwrite medium stylesheet */
 @media only screen and (min-width: 1034px) {
   div {
     /*outline: 1px solid blue;*/
   }
+}
+html {
+  min-height: 100%;
+  position: relative;
+}
+body {
+  background-color: #ffffff;
+  padding: 0;
+}
+.btn {
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+}
+/* Nanoscroller */
+.nano {
+  /*background: #bba; */
+  /*width: 300px; */
+  height: 350px;
+}
+.nano .nano-content {
+  padding: 10px;
+}
+.nano .nano-pane {
+  background-color: #ddd6c1;
+}
+.nano .nano-slider {
+  background-color: #aa9a66;
+}
+.navbar .nav {
+  /* ul element */
+  position: relative;
+  z-index: 1;
+  /*stack order*/
+}
+.navbar .nav li:hover {
+  background-color: #aac9bc;
+}
+.navbar .btn {
+  display: block;
+  margin: auto;
+}
+.data-row {
+  padding: 5px;
+  border-bottom: 1px solid silver;
+  width: 70%;
+}
+.glyphicon {
+  margin-left: 5px;
+  margin-right: 3px;
+}
+/*
+	Add button
+*/
+.ton-li-plus {
+  font-size: 0.7em;
+  background-color: silver;
+  padding: 7px;
+}
+.ton-li-plus:hover {
+  transition: all 1s ease 0s;
+  color: white;
+}
+.circle {
+  width: 100px;
+  height: 100px;
+  background: silver;
+  -moz-border-radius: 50px;
+  -webkit-border-radius: 50px;
+  border-radius: 50px;
+}
+.circle:hover {
+  transition: all 1s ease 0s;
+  background: #3071a9;
+}
+/*
+	Save button override
+ */
+.btn-success i {
+  font-size: 0.7em;
+  margin-right: 3px;
+}
+.footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 60px;
+  text-align: center;
 }
 /* Debugging */
 div {
