@@ -32,40 +32,52 @@ i {
   background-position: bottom;
   background-repeat: no-repeat;
   background-attachment: fixed;
+  background-color: white;
+  color: #fafaed;
+  /*.landing-headline-container {*/
+  /*outline: 1px solid red;*/
+  /*margin: auto;*/
+  /*padding-top: 15em;*/
+  /*padding-bottom: 5em;*/
+  /*}*/
 }
-.index-page .landing-headline-container {
-  outline: 1px solid red;
-  width: 90%;
-  margin: auto;
-  min-height: 100%;
-  /*
-		padding-top: 5em;
-		padding-bottom: 5em;*/
+.index-page h1,
+.index-page h3 {
+  color: #fafaed;
 }
-.index-page .landing-text {
-  /*background-color: @landing-bg;*/
+.index-page .row {
+  background-color: rgba(98, 119, 109, 0.5);
+  padding: 2em;
+  /*min-height: 100%;*/
+}
+.index-page .header-container ul {
+  /*display: block;*/
+  /*float: right;*/
+  margin-top: 2em;
+  /*margin-left: 2em;*/
+  /*text-align: left;*/
+  font-size: 1.3em;
   list-style-type: none;
 }
-.index-page .landing-text .container {
-  width: 60%;
-  padding-top: 1em;
+.index-page .header-container .landing-headline {
+  /*padding: 5px;
+			margin-top: 5px;*/
+  /*font-size: 1.9em;*/
 }
-.index-page h1 {
-  font-size: 2em;
+.index-page .sign-up-call {
+  text-align: center;
+  /*color: white;*/
 }
-.index-page .call {
-  padding-top: 50px;
-}
-.index-page .btn-container {
-  width: 200px;
+.index-page .sign-up-call .btn-container {
+  max-width: 200px;
   margin: 0 auto;
 }
-.index-page .btn-container i {
+.index-page .sign-up-call .btn-container i {
   font-size: 1em;
   margin-right: 10px;
 }
 .welcome {
-  background-color: #ffffff;
+  background-color: rgba(98, 119, 109, 0.5);
   padding-top: 100px;
   padding-bottom: 100px;
 }
@@ -82,7 +94,7 @@ i {
 }
 .sign-up-page .sign-up-section {
   /*min-height: 700px;*/
-  background-color: #ffffff;
+  background-color: rgba(98, 119, 109, 0.5);
   /*padding-bottom: 200px;*/
   /*padding-top: 200px;*/
 }
@@ -95,7 +107,7 @@ i {
 .recipients-page {
   padding-top: 100px;
   padding-bottom: 100px;
-  background-color: #ffffff;
+  background-color: rgba(98, 119, 109, 0.5);
 }
 .recipients-page .data-row {
   width: 70%;
@@ -110,7 +122,7 @@ i {
 .recipient-page {
   padding-top: 100px;
   padding-bottom: 100px;
-  background-color: #ffffff;
+  background-color: rgba(98, 119, 109, 0.5);
 }
 .recipient-page dt {
   margin-top: 1em;
@@ -121,7 +133,7 @@ i {
 .add-recipient-page {
   padding-top: 100px;
   padding-bottom: 100px;
-  background-color: #ffffff;
+  background-color: rgba(98, 119, 109, 0.5);
 }
 .add-recipient-page .nano {
   height: 600px;
@@ -132,13 +144,13 @@ i {
 .add-item-page {
   padding-top: 100px;
   padding-bottom: 100px;
-  background-color: #ffffff;
+  background-color: rgba(98, 119, 109, 0.5);
 }
 /*
 	Page: addgift.php;
 */
 .add-gift-page {
-  background-color: #ffffff;
+  background-color: rgba(98, 119, 109, 0.5);
   padding-bottom: 100px;
   padding-top: 100px;
 }
@@ -146,14 +158,14 @@ i {
 	Page: about.php;
 */
 .about-page {
-  background-color: #ffffff;
+  background-color: rgba(98, 119, 109, 0.5);
   background-image: url(../img/bg-landing.jpg);
   padding-top: 100px;
   padding-bottom: 100px;
   position: relative;
 }
 .about-page .container {
-  background-color: #ffffff;
+  background-color: rgba(98, 119, 109, 0.5);
   background-image: url(../img/1-1.png);
   padding: 20px;
 }
@@ -170,10 +182,25 @@ i {
 			}*/
   }
   .navbar .nav span {
-    display: none;
+    /*display: none;*/
   }
-  .landing-headline {
-    display: none;
+  /*
+		Page: index.php
+	*/
+  .index-page .row {
+    background-color: rgba(98, 119, 109, 0.5);
+    /*padding: 2em;*/
+    /*min-height: 100%;*/
+  }
+  .index-page .header-container {
+    /*outline: 1px solid red;*/
+    /*width: 50px;*/
+  }
+  .index-page .header-container .landing-headline {
+    /*background-color: white;*/
+    /*padding: 5px;
+				margin-top: 5px;*/
+    font-size: 1.5em;
   }
 }
 /* Medium units and up */
@@ -223,9 +250,25 @@ i {
   /*
 		Page: index.php
 	*/
-  .landing-section .landing-headline {
-    background-color: white;
-    padding: 0.5em;
+  .index-page .row {
+    /*background-color: @landing-bg;*/
+    /*padding: 2em;*/
+    /*min-height: 100%;*/
+  }
+  .index-page .header-container {
+    /*outline: 1px solid red;*/
+    /*width: 50px;*/
+    text-align: center;
+  }
+  .index-page .header-container ul {
+    text-align: left;
+    font-size: 1.3em;
+  }
+  .index-page .header-container .landing-headline {
+    /*background-color: white;*/
+    /*padding: 5px;
+				margin-top: 5px;*/
+    font-size: 1.7em;
   }
 }
 /* Large units only */
@@ -233,10 +276,42 @@ i {
   div {
     /*outline: 1px solid blue;*/
   }
+  /*
+		Page: index.php
+	*/
+  .index-page .row {
+    /*background-color: @landing-bg;*/
+    /*padding: 2em;*/
+    /*min-height: 100%;*/
+  }
+  .index-page .header-container {
+    /*outline: 1px solid red;*/
+    /*width: 50px;*/
+    text-align: right;
+  }
+  .index-page .header-container ul {
+    display: block;
+    float: right;
+    margin-top: 2em;
+    /*margin-left: 2em;*/
+    /*text-align: left;*/
+    font-size: 1.3em;
+    list-style-type: none;
+  }
+  .index-page .header-container .landing-headline {
+    /*color: white;*/
+    /*padding: 5px;
+				margin-top: 5px;*/
+    font-size: 1.8em;
+  }
+  .index-page .sign-up-call {
+    /*text-align: center;*/
+    padding-top: 5em;
+  }
 }
 /* Debugging */
 div {
-  outline: 1px solid blue;
+  /*outline: 1px solid blue;*/
 }
 html {
   min-height: 100%;
@@ -249,6 +324,14 @@ body {
 .btn {
   letter-spacing: 0.5px;
   text-transform: uppercase;
+}
+.vertical-center {
+  position: absolute;
+  top: 30%;
+  left: 10%;
+  width: 80%;
+  /*height: 10em;*/
+  /*margin-top: -5em*/
 }
 /* Nanoscroller */
 .nano {
