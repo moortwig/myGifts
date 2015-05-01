@@ -17,8 +17,8 @@ require_once('header.php');
 			</p>
 			</div><!-- .center -->
 		</div><!-- .container -->
-	</div><!-- .about-text -->
-</div><!-- .wrapper -->
+	</div><!-- .about-section -->
+</div><!-- .about-page -->
 
 
 
