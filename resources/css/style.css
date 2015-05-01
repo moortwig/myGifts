@@ -1,6 +1,6 @@
-/* TODO change this, it's boring */
 /* Text */
 /* Links */
+/* rgb(250,250,237); */
 /* Buttons */
 @font-face {
   font-family: 'Glyphicons Halflings';
@@ -25,10 +25,10 @@ i {
 }
 /* LINKS */
 a {
-  color: #5d6765;
+  color: #aa9a66;
 }
 a:hover {
-  color: #fafaed;
+  color: #554d33;
   text-decoration: none;
 }
 /* Pages */
@@ -157,7 +157,7 @@ a:hover {
   /*padding: 5em;*/
 }
 /*
-	Page: recipients.php;
+	RECIPIENTS PAGE;
 */
 .recipients-page {
   background-image: url(../img/confectionary.png);
@@ -200,7 +200,7 @@ a:hover {
 	}*/
 }
 .recipients-page .recipients-section {
-  background-color: rgba(250, 250, 237, 0.5);
+  background-color: rgba(170, 154, 102, 0.2);
   min-height: 100%;
   min-width: 100%;
   height: auto;
@@ -210,7 +210,7 @@ a:hover {
   color: #aa9a66;
 }
 .recipients-page a:hover {
-  color: #aac9bc;
+  color: #554d33;
 }
 .recipients-page .container {
   padding-top: 7em;
@@ -230,7 +230,7 @@ a:hover {
   color: white;
 }
 /*
-	Page: recipient.php;
+	SINGLE RECIPIENT PAGE;
 */
 .recipient-page {
   background-image: url(../img/confectionary.png);
@@ -242,10 +242,9 @@ a:hover {
   top: 0;
   width: 100%;
   z-index: -999;
-  /*.btn */
 }
 .recipient-page .recipient-section {
-  background-color: rgba(250, 250, 237, 0.5);
+  background-color: rgba(170, 154, 102, 0.2);
   min-height: 100%;
   min-width: 100%;
   height: auto;
@@ -255,6 +254,9 @@ a:hover {
   padding-top: 7em;
 }
 .recipient-page dt {
+  margin-top: 1em;
+}
+.recipient-page .btn {
   margin-top: 1em;
 }
 /*
@@ -323,17 +325,8 @@ a:hover {
   /*
 		HEADER
 	*/
-  .navbar .nav {
-    /* ul element */
-    /*position: relative;*/
-    /*z-index: 1;*/
-    /*stack order*/
-    /*li:hover {
-				background-color: @nav-link-hover;
-			}*/
-  }
-  .navbar .nav span {
-    /*display: none;*/
+  .navbar .navbar-brand {
+    margin-top: 0.5em;
   }
   /*
 		INDEX PAGE
@@ -431,6 +424,9 @@ a:hover {
   /*
 		HEADER
 	*/
+  .navbar .navbar-brand {
+    margin-top: 1em;
+  }
   .navbar .navbar-form .form-control {
     width: 150px;
   }
@@ -574,6 +570,9 @@ a:hover {
     /*height: 10em;*/
     /*margin-top: -5em*/
   }
+  .navbar .navbar-brand {
+    margin-top: 1em;
+  }
   /*
 		INDEX
 	*/
@@ -663,14 +662,22 @@ body {
 .nano .nano-slider {
   background-color: #aa9a66;
 }
+.navbar .navbar-brand {
+  color: #aa9a66;
+  letter-spacing: 0.5px;
+}
 .navbar .nav {
   /* ul element */
   position: relative;
   z-index: 1;
   /*stack order*/
 }
+.navbar .nav li,
+.navbar .nav i {
+  color: #aa9a66;
+}
 .navbar .nav li:hover {
-  background-color: #aac9bc;
+  background-color: rgba(170, 201, 188, 0.5);
 }
 .navbar .btn {
   display: block;

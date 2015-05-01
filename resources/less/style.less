@@ -61,9 +61,18 @@ body {
 
 
 .navbar {
+	.navbar-brand {
+		color: @nav-text-color;
+		letter-spacing: 0.5px;
+	}
+
 	.nav { /* ul element */
 		position: relative;
-		z-index: 1;  /*stack order*/ 
+		z-index: 1;  /*stack order*/
+
+		li, i {
+			color: @nav-text-color;
+		}
 		
 		li:hover {
 			background-color: @nav-link-hover;

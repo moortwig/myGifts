@@ -26,39 +26,42 @@ require_once('header.php');
 
 					<!-- STUFF HERE -->
 		        	<div class="row">
-
-		            	<div class="col-md-4 col-md-offset-2">					
-							<h2>Profile For: <?php echo $recipientName; ?></h2>
-							<?php echo $recipientInformation;
-							 ?>
-							 <br />
-							<?php echo "<a href='editrecipient.php?id=" . $recipientId . "' class='btn btn-xs btn-success'>Edit</a> "; ?>
+		            	<div class="col-xs-12 col-sm-6">
+			        		<div class="container">					
+								<h2>Profile For: <?php echo $recipientName; ?></h2>
+								<?php echo $recipientInformation;
+								 ?>
+								 <br />
+								<?php echo "<a href='editrecipient.php?id=" . $recipientId . "' class='btn btn-success'><span class='glyphicon glyphicon-pencil'></span>Edit</a> "; ?>
+							</div><!-- .container -->
 						</div><!-- .col-md-4 col-md-offset-2 -->
 
-						<div class="col-md-6">
-							<h3>Gift History</h3>
+						<div class="col-xs-12 col-sm-6">
+							<div class="container">	
+								<h3>Gift History</h3>
 
-							<?php				
-							if (!$giftsArray) {
-								echo "There's no gift history to display yet!";
-							} else { ?>
-								<div class="nano">
-									<div class="nano-content">
-										<dl>
-											<?php foreach ($giftsArray as $singleGift => $single) {
-												echo "<dt>";
-													echo $single['item_id']['name'] . " - ";
-												echo $single['occasion'];
-												echo "</dt>";
-												echo "<dd>";
-												echo $single['item_id']['description'];
-												echo "</dd>";
-												// echo $single['added'] . "<br />";
-											} ?>
-										</dl>
-									</div><!-- .nano-content -->
-								</div><!-- .nano -->
-							<?php } ?>
+								<?php				
+								if (!$giftsArray) {
+									echo "There's no gift history to display yet!";
+								} else { ?>
+									<div class="nano">
+										<div class="nano-content">
+											<dl>
+												<?php foreach ($giftsArray as $singleGift => $single) {
+													echo "<dt>";
+														echo $single['item_id']['name'] . " - ";
+													echo $single['occasion'];
+													echo "</dt>";
+													echo "<dd>";
+													echo $single['item_id']['description'];
+													echo "</dd>";
+													// echo $single['added'] . "<br />";
+												} ?>
+											</dl>
+										</div><!-- .nano-content -->
+									</div><!-- .nano -->
+								<?php } ?>
+							</div><!-- .container -->
 			        	</div><!-- .col-md-6 -->
 
 			        </div><!-- .row -->

@@ -22,11 +22,11 @@ require_once('header.php');
                                     
                     echo "<div class='data-row'>"; 
                         echo "<div class='data-field'>";
-                            echo "<a href='recipient.php?id=" . $r['id'] . "'>" . $r['name'] . "</a>";
-                            echo "<a href='editrecipient.php?id=" . $r['id'] . "'><span class='glyphicon glyphicon-pencil'></span></a> ";
+                            echo "<a href='recipient.php?id=" . $r['id'] . "'>" . "<h4>" . $r['name'] . "</a>";
+                            echo "<a href='editrecipient.php?id=" . $r['id'] . "'><span class='glyphicon glyphicon-pencil'></span></a> " . "</h4>";
                         echo "</div>";
                         echo "<div class='data-field'>";
-                            echo $r['information'];
+                            echo "<p>" . $r['information'] . "</p>";
                         echo "</div>";
                     echo "</div>"; ?>
                 <?php } ?>
