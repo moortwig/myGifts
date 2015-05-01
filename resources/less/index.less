@@ -27,7 +27,7 @@
 		/*padding-bottom: 5em;*/
 	/*}*/
 
-	h1, h3 {
+	h1, h2, h3, p {
 		color: @landing-text;
 	}
 
@@ -75,10 +75,32 @@
 
 
 
-.welcome {
-	background-color: @landing-bg;
-	padding-top: 100px;
-	padding-bottom: 100px;
+.welcome-page {
+	background-image: url(../img/confectionary.png);
+	background-repeat: repeat;
+	background-attachment: fixed;
+	background-position: top;
+	height: auto;
+	left: 0;
+	min-height: 100%;
+	min-width: 100%;
+	position: fixed;
+	top: 0;
+	width: 100%;
+	z-index: -999;
+
+	.container {
+		margin-top: 6em;
+	}
+
+	.welcome {
+		background-color: @landing-bg;
+		min-height: 100%;
+		min-width: 100%;
+		height: auto;
+		position: fixed;
+	}
+
 
 	dt {
 		margin-top: 1em;

@@ -51,7 +51,9 @@ i {
   /*}*/
 }
 .index-page h1,
-.index-page h3 {
+.index-page h2,
+.index-page h3,
+.index-page p {
   color: #fafaed;
 }
 .index-page .row {
@@ -85,12 +87,31 @@ i {
   font-size: 1em;
   margin-right: 10px;
 }
-.welcome {
-  background-color: rgba(98, 119, 109, 0.5);
-  padding-top: 100px;
-  padding-bottom: 100px;
+.welcome-page {
+  background-image: url(../img/confectionary.png);
+  background-repeat: repeat;
+  background-attachment: fixed;
+  background-position: top;
+  height: auto;
+  left: 0;
+  min-height: 100%;
+  min-width: 100%;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: -999;
 }
-.welcome dt {
+.welcome-page .container {
+  margin-top: 6em;
+}
+.welcome-page .welcome {
+  background-color: rgba(98, 119, 109, 0.5);
+  min-height: 100%;
+  min-width: 100%;
+  height: auto;
+  position: fixed;
+}
+.welcome-page dt {
   margin-top: 1em;
 }
 /*
@@ -231,6 +252,33 @@ i {
     /*text-align: left;*/
     font-size: 1.1em;
   }
+  .welcome-page {
+    /*background-image: url(../img/confectionary.png);
+		background-repeat: repeat;
+		background-attachment: fixed;
+		background-position: top;
+		height: auto;
+		left: 0;
+		min-height: 100%;
+		min-width: 100%;
+		position: fixed;
+		top: 0;
+		width: 100%;
+		z-index: -999;*/
+    /*dt {
+			margin-top: 1em;
+		}*/
+  }
+  .welcome-page .container {
+    margin-top: 4em;
+  }
+  .welcome-page .welcome {
+    /*background-color: @landing-bg;
+			min-height: 100%;
+			min-width: 100%;
+			height: auto;
+			position: fixed;*/
+  }
 }
 /* Medium units and up */
 @media only screen and (min-width: 768px) {
@@ -314,6 +362,36 @@ i {
     font-size: 1.1em;
     text-align: left;
     font-size: 1.3em;
+  }
+  .welcome-page {
+    /*background-image: url(../img/confectionary.png);
+		background-repeat: repeat;
+		background-attachment: fixed;
+		background-position: top;
+		height: auto;
+		left: 0;
+		min-height: 100%;
+		min-width: 100%;
+		position: fixed;
+		top: 0;
+		width: 100%;
+		z-index: -999;*/
+    /*.welcome {
+			background-color: @landing-bg;
+			min-height: 100%;
+			min-width: 100%;
+			height: auto;
+			position: fixed;
+
+		}
+
+
+		dt {
+			margin-top: 1em;
+		}*/
+  }
+  .welcome-page .container {
+    margin-top: 6em;
   }
 }
 /* Large units only */
