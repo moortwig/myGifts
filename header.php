@@ -73,10 +73,9 @@ require_once('app.php');
                         <?php } ?>
                         <li><span class="li-text-about">About</span><a href="about.php" class="btn enabled"><i class="ton-li-speech-buble-4"></i></a></li>
                     </ul>
-
-                    
+                   
                         <form class="navbar-form navbar-right" method="post" action="app.php" role="form">
-                            <span class="navbar-text">Logged in: <?php echo $_SESSION['username']; ?></span>
+                            <span class="navbar-text"><!-- Logged in: --> <?php /* echo $_SESSION['username']; */ ?></span>
                             <button type="submit" class="btn btn-sm btn-danger" name="logout">Log out</button>
                         </form>
                     <?php } else { ?>

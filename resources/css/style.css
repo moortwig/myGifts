@@ -493,6 +493,61 @@ a:hover {
   .navbar .navbar-brand {
     margin-top: 0.5em;
   }
+  .navbar .nav {
+    text-align: center;
+    /*.li-text-rec {
+				letter-spacing: 0px;
+				position: absolute;
+				top: 15px;
+				right: 50%;
+			}*/
+    /*.ton-li-people-7:after {
+				content: "Recipients";
+			}
+
+			.ton-li-box-1:after {
+				content: "Add gift";
+			}
+
+			.ton-li-speech-buble-4:after {
+				content: "About";
+			}*/
+    /*.li-text-gift {
+				letter-spacing: 0px;
+				position: absolute;
+				top: 15px;
+				right: 20px;
+			}*/
+    /*.li-text-about {
+				letter-spacing: 0px;
+				position: absolute;
+				top: 15px;
+				right: 15px;
+			}*/
+  }
+  .navbar .nav li {
+    font-size: 1em;
+    height: 1em;
+    padding: 1em;
+  }
+  .navbar .nav .ton-li-people-7 {
+    display: none;
+  }
+  .navbar .nav .ton-li-box-1 {
+    display: none;
+  }
+  .navbar .nav .ton-li-speech-buble-4 {
+    display: none;
+  }
+  .navbar .navbar-right {
+    float: right;
+  }
+  .navbar .navbar-right .btn {
+    margin-left: 5px;
+  }
+  .navbar .navbar-form {
+    border: none;
+  }
   /*
 		INDEX PAGE
 	*/
@@ -671,10 +726,20 @@ a:hover {
 		HEADER
 	*/
   .navbar {
-    height: 70px;
+    min-height: 70px;
   }
   .navbar .navbar-brand {
     margin-top: 1em;
+  }
+  .navbar .navbar-text {
+    color: #aa9a66;
+  }
+  .navbar .navbar-right input {
+    margin-top: 9px;
+  }
+  .navbar .navbar-right span {
+    font-size: 1.3em;
+    margin-top: 15px;
   }
   .navbar .navbar-form .form-control {
     width: 150px;
@@ -715,6 +780,11 @@ a:hover {
   .navbar .btn {
     float: right;
     margin-left: 5px;
+    margin-top: 1px;
+    padding: 6px;
+  }
+  .navbar .btn-danger {
+    margin-top: 10px;
   }
   /*
 		INDEX
@@ -851,23 +921,6 @@ a:hover {
     /*height: 10em;*/
     /*margin-top: -5em*/
   }
-  .navbar .navbar-brand {
-    margin-top: 1em;
-  }
-  .navbar .navbar-text {
-    color: #aa9a66;
-  }
-  .navbar .navbar-right input {
-    margin-top: 9px;
-  }
-  .navbar .navbar-right span {
-    font-size: 1.3em;
-    margin-top: 15px;
-  }
-  .navbar .navbar-right .btn {
-    margin-top: 10px;
-    margin-left: 5px;
-  }
   /*
 		INDEX
 	*/
@@ -974,6 +1027,12 @@ body {
   background-color: #aa9a66;
 }
 /* Navigation */
+.navbar {
+  /*.btn {
+		display: block;
+		margin: auto;
+	}*/
+}
 .navbar .navbar-brand {
   color: #aa9a66;
   letter-spacing: 0.5px;
@@ -982,18 +1041,14 @@ body {
   /* ul element */
   position: relative;
   z-index: 1;
-  /*stack order*/
 }
-.navbar .nav li,
-.navbar .nav i {
+.navbar .nav stack order li,
+.navbar .nav i,
+.navbar .nav span {
   color: #aa9a66;
 }
 .navbar .nav li:hover {
   background-color: rgba(170, 201, 188, 0.5);
-}
-.navbar .btn {
-  display: block;
-  margin: auto;
 }
 .glyphicon {
   margin-left: 5px;

@@ -13,10 +13,25 @@
 		HEADER
 	*/
 	.navbar {
-		height: 70px;
+		min-height: 70px;
 
 		.navbar-brand {
 			margin-top: 1em;
+		}
+
+		.navbar-text {
+			color: @nav-text-color;
+		}
+
+		.navbar-right {
+			input {
+				margin-top: 9px;
+			}
+
+			span {
+				font-size: 1.3em;
+				margin-top: 15px;
+			}			
 		}
 
 		.navbar-form {
@@ -69,6 +84,12 @@
 		.btn {
 			float: right;
 			margin-left: 5px;
+			margin-top: 1px;
+			padding: 6px;
+		}
+
+		.btn-danger {
+			margin-top: 10px;
 		}
 	}
 
