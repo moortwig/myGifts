@@ -5,7 +5,7 @@ require_once('header.php');
 ?>
 
 <!-- MAIN BODY -->
-<div class="wrapper index-page">
+<div class="wrapper index-page welcome-page">
     <?php
     
     if(isset($_SESSION['username'])) {
