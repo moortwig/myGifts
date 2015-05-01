@@ -5,16 +5,13 @@ require_once('header.php');
 ?>
 
 <!-- MAIN BODY -->
-<div class="wrapper index-page welcome-page">
-    <?php
-    
-    if(isset($_SESSION['username'])) {
-        // Include this template if a user is logged in 
-        include_once('logged-in.php'); ?>
-    <?php } else {
+<?php
+if(isset($_SESSION['username'])) {
+    // Include this template if a user is logged in 
+    include_once('logged-in.php'); ?>
+<?php } else {
      // Display this section if user has not logged in ?>
-    <!-- <div class="section-wrapper"> -->
-        <!-- <div class="landing-section"> -->
+    <div class="index-page">
         <div class="vertical-center landing-small">
             <div class="row">
                 <div class="col-xs-12 col-md-8">
@@ -40,15 +37,9 @@ require_once('header.php');
                 </div><!-- .row -->
             </div><!-- .container -->
         </div><!-- .vertical-center -->
-
-        <!-- </div> --><!-- .landing-section -->
-    <!-- </div>.section-wrapper -->
-
-    
-    
+    </div><!-- .index-page -->
 <?php } ?>
 
-</div><!-- .index-wrapper -->
 <!-- FOOTER -->
 <?php 
 
