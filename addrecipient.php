@@ -15,7 +15,7 @@ require_once('header.php');
                             <div class="panel-heading"><span class="glyphicon glyphicon-info-sign"></span></div>
                             <div class="panel-body">Add a new recipient and save them to your account. Or you could save and continue to register a new gift!</div>
                         </div> --><!-- .instructions -->
-                        <form class="form-horizontal" method="post" action="app.php" role="form">
+                        <form class="form-horizontal add-recipient-form" method="post" action="app.php" role="form">
                             <h2>Add recipient</h2>
                             <label for="inputName" class="sr-only">Name:</label>
                             <input type="text" name="name" class="form-control" placeholder="Name" required /><br />

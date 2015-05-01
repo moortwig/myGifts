@@ -37,6 +37,8 @@
 	}
 
 	.data-row {
+		padding: 5px;
+		border-bottom: 1px solid silver;
 		width: 70%;
 	}
 
@@ -150,10 +152,30 @@
 			margin-bottom: 5px;
 		}
 
+		.add-recipient-form {
+			/*width: 300px;*/
+			/*margin: auto;*/
+
+			textarea {
+				height: 100px;
+			}
+
+			.btn-success {
+				float: right;
+				span {
+					font-size: 0.7em;
+					margin-right: 5px;
+					color: white;
+				}
+			}
+		}
+
 		span {
 			font-style: italic;
 			color: @subtext;
 		}
+
+
 	}
 
 
@@ -173,7 +195,17 @@
 	}*/
 
 	.nano {
-		max-height: 500px;
+		margin-top: 5px;
+		max-height: 400px;
+		max-width: 300px;
+		background-color: @nano-bg;
+	}
+
+
+	.data-row {
+		padding: 5px;
+		border-bottom: 1px solid silver;
+		width: 100%;
 	}
 
 	.btn-success {
@@ -183,3 +215,51 @@
 		}
 	}
 }
+
+
+
+
+
+
+
+/*
+	CHOOSE RECIPIENTS PAGE;
+*/
+.choose-recipient-page {
+	background-image: url(../img/confectionary.png);
+	height: auto;
+	left: 0;
+	min-height: 100%;
+	min-width: 100%;
+	position: fixed;
+	top: 0;
+	width: 100%;
+	z-index: -999;
+
+	.choose-recipient-section {
+		background-color: @recipient-bg;
+		min-height: 100%;
+		min-width: 100%;
+		height: auto;
+		position: fixed;
+	}
+
+	.container {
+		padding-top: 7em;
+	}
+	
+	dt {
+		margin-top: 1em;
+	}
+
+
+	.nano {
+		max-height: 400px;
+		width: auto;
+	}
+
+	.btn {
+		margin-top: 1em;
+	}
+}
+
