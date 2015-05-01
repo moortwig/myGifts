@@ -10,13 +10,9 @@ require_once('header.php');
             // Display this section if a user is logged in
             if(isset($_SESSION['username'])) {
                 $userId = $_SESSION['userId'];
-        		// $userId = 5; // TODO change this to a safe get user id
-                // TODO Sessions for item and recipient
+                
         		$item = new Item();
-        		// $items = $item->getAllItems($userId);
-
         		$recipient = new Recipient();
-        		// $recipients = $recipient->getAllRecipients($userId);
         		?>
                 <div class="add-gift-form">
                     <div>
