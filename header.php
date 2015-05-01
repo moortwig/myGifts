@@ -77,7 +77,7 @@ require_once('app.php');
                     
                         <form class="navbar-form navbar-right" method="post" action="app.php" role="form">
                             <span class="navbar-text">Logged in: <?php echo $_SESSION['username']; ?></span>
-                            <button type="submit" class="btn btn-danger" name="logout">Log out</button>
+                            <button type="submit" class="btn btn-sm btn-danger" name="logout">Log out</button>
                         </form>
                     <?php } else { ?>
                         <form class="navbar-form navbar-right" method="post" action="app.php" role="form">
@@ -85,7 +85,7 @@ require_once('app.php');
                             <input type="text" name="user" placeholder="Username" class="form-control" />
                             <label for="inputPassword" class="sr-only">Password</label>
                             <input type="password" name="pass" placeholder="Password" class="form-control" />
-                            <button type="submit" name="login" class="btn btn-s btn-primary">LOG IN</button>
+                            <button type="submit" name="login" class="btn btn-sm btn-primary">Log in</button>
                         </form>
                     <?php } ?>
                 </div>

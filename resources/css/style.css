@@ -670,6 +670,9 @@ a:hover {
   /*
 		HEADER
 	*/
+  .navbar {
+    height: 70px;
+  }
   .navbar .navbar-brand {
     margin-top: 1em;
   }
@@ -685,25 +688,29 @@ a:hover {
 			}*/
   }
   .navbar .nav li {
-    padding: 10px;
+    /*padding-left: 10px;
+				padding-right: 10px;*/
+    height: 70px;
+    width: 80px;
+    padding: 5px;
   }
   .navbar .nav .li-text-rec {
     letter-spacing: 0px;
     position: absolute;
     left: 13px;
-    top: 50px;
+    top: 45px;
   }
   .navbar .nav .li-text-gift {
     letter-spacing: 0px;
     position: absolute;
-    top: 50px;
+    top: 45px;
     left: 20px;
   }
   .navbar .nav .li-text-about {
     letter-spacing: 0px;
     position: absolute;
     left: 25px;
-    top: 50px;
+    top: 45px;
   }
   .navbar .btn {
     float: right;
@@ -846,6 +853,20 @@ a:hover {
   }
   .navbar .navbar-brand {
     margin-top: 1em;
+  }
+  .navbar .navbar-text {
+    color: #aa9a66;
+  }
+  .navbar .navbar-right input {
+    margin-top: 9px;
+  }
+  .navbar .navbar-right span {
+    font-size: 1.3em;
+    margin-top: 15px;
+  }
+  .navbar .navbar-right .btn {
+    margin-top: 10px;
+    margin-left: 5px;
   }
   /*
 		INDEX
