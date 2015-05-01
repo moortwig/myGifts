@@ -18,22 +18,12 @@ require_once('header.php');
                 <div class="row">
                     <div class="col-xs-offset-2 col-md-offset-3 col-xs-8 col-md-4 col-xs-offset-2 col-md-offset-5">
                         <div class="item">
-                            <?php /* if(isset($_SESSION['item'])) { */
-                                // echo $_SESSION['item'];
-                                // $item = new Item();
+                            <?php $itemName = $_GET['itemName']; // picks up the name from the URL
+                            $description = $_GET['description']; // picks up the description from the URL ?>
 
-                                $itemName = $_GET['itemName']; // picks up the name from the URL
-                                // var_dump($itemName); // GER SAMTLIGA ORD
-                                // die('remove');
-                                $description = $_GET['description']; // picks up the description from the URL
-
-                                // $name = $item->getItem($itemId)['name'];
-                                // $description = $item->getItem($itemId)['description']; ?>
-
-                                <em>You added: 
-                                <?php echo htmlspecialchars($itemName) . " - " . htmlspecialchars($description); ?>
-                                </em>
-                            <?php /* } */ ?>
+                            <em>You added: 
+                            <?php echo htmlspecialchars($itemName) . " - " . htmlspecialchars($description); ?>
+                            </em>
                         </div>
                         <!-- <div class="container"> -->
                         <form class="form-horizontal" method="post" action="app.php" role="form">
