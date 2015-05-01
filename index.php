@@ -17,7 +17,7 @@ require_once('header.php');
         <!-- <div class="landing-section"> -->
         <div class="vertical-center landing-small">
             <div class="row">
-                <div class="col-xs-12 col-lg-8">
+                <div class="col-xs-12 col-md-8">
                     <div class="header-container">
                         <h1 class=""><span class="landing-headline">Your gift reminder in the pocket.</span></h1>
                         <ul class="landing-text">
@@ -28,7 +28,7 @@ require_once('header.php');
                     </div><!-- .header-container -->
                 </div><!-- .col-md-4 -->
 
-                    <div class="col-xs-12 col-lg-4">
+                    <div class="col-xs-12 col-md-4">
                         <div class="sign-up-call">
                             <h3>Not registered yet?</h3>
                             <div class="btn-container">

@@ -1,6 +1,6 @@
 /* Large units only */
 
-@desktop:    ~"only screen and (min-width: 1034px)";
+@desktop:    ~"only screen and (min-width: 992px)";
 
 @media @desktop {
 	div {
@@ -17,7 +17,7 @@
 			/*min-height: 100%;*/
 		}
 
-		
+
 		.vertical-center {
 			position: absolute;
 			top: 30%;
@@ -32,20 +32,23 @@
 			/*width: 50px;*/
 			text-align: right;
 
-			ul {
-				display: block;
-				float: right;
-				margin-top: 2em;
-				/*margin-left: 2em;*/
-				/*text-align: left;*/
-				font-size: 1.3em;
-				list-style-type: none;
-			}
 			.landing-headline {
+				/*margin-left: -1em;*/
+				margin-bottom: -0.7em;
 				/*color: white;*/
 				/*padding: 5px;
 				margin-top: 5px;*/
 				font-size: 1.8em;
+			}
+
+			ul {
+				display: block;
+				float: right;
+				margin-top: 1em;
+				/*text-align: left;*/
+				font-size: 1.3em;
+				list-style-type: none;
+				padding-bottom: 1em;
 			}
 		}
 

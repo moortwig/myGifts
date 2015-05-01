@@ -289,6 +289,7 @@ i {
     top: 30%;
     left: 10%;
     width: 80%;
+    bottom: 0%;
     /*height: 10em;*/
     /*margin-top: -5em*/
   }
@@ -297,19 +298,26 @@ i {
     /*width: 50px;*/
     text-align: center;
   }
-  .index-page .header-container ul {
-    text-align: left;
-    font-size: 1.3em;
-  }
   .index-page .header-container .landing-headline {
     /*background-color: white;*/
     /*padding: 5px;
 				margin-top: 5px;*/
     font-size: 1.7em;
   }
+  .index-page .header-container ul {
+    margin-top: 1em;
+    margin-bottom: -0.7em;
+    margin-top: 2em;
+    margin-left: 2em;
+    /*text-align: left;*/
+    list-style-type: none;
+    font-size: 1.1em;
+    text-align: left;
+    font-size: 1.3em;
+  }
 }
 /* Large units only */
-@media only screen and (min-width: 1034px) {
+@media only screen and (min-width: 992px) {
   div {
     /*outline: 1px solid blue;*/
   }
@@ -334,20 +342,22 @@ i {
     /*width: 50px;*/
     text-align: right;
   }
-  .index-page .header-container ul {
-    display: block;
-    float: right;
-    margin-top: 2em;
-    /*margin-left: 2em;*/
-    /*text-align: left;*/
-    font-size: 1.3em;
-    list-style-type: none;
-  }
   .index-page .header-container .landing-headline {
+    /*margin-left: -1em;*/
+    margin-bottom: -0.7em;
     /*color: white;*/
     /*padding: 5px;
 				margin-top: 5px;*/
     font-size: 1.8em;
+  }
+  .index-page .header-container ul {
+    display: block;
+    float: right;
+    margin-top: 1em;
+    /*text-align: left;*/
+    font-size: 1.3em;
+    list-style-type: none;
+    padding-bottom: 1em;
   }
   .index-page .sign-up-call {
     /*text-align: center;*/
