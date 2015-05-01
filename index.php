@@ -15,7 +15,7 @@ require_once('header.php');
      // Display this section if user has not logged in ?>
     <!-- <div class="section-wrapper"> -->
         <!-- <div class="landing-section"> -->
-        <div class="vertical-center">
+        <div class="vertical-center landing-small">
             <div class="row">
                 <div class="col-xs-12 col-lg-8">
                     <div class="header-container">

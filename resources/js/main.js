@@ -7,7 +7,7 @@ var app = {
 		console.log('init');
 		// functions here
 		app.nano();
-		app.divHeight();		
+		// app.divHeight();		
 	},
 
 
