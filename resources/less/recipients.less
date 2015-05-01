@@ -24,6 +24,18 @@
 		position: fixed;
 	}
 
+	a {
+		color: @nav-link;
+	}
+
+	a:hover {
+		color: @nav-link-hover;
+	}
+
+	.container {
+		padding-top: 7em;
+	}
+
 	.data-row {
 		width: 70%;
 	}
@@ -37,11 +49,11 @@
 	}
 
 	.ton-li-plus:hover {
-		transition: all 1s ease 0s;
+		transition: all 1s ease;
 		color: white;
 	}
-
-/*	.circle {
+	/*	
+	.circle {
 		width: 100px;
 		height: 100px;
 		background: silver;
@@ -75,13 +87,35 @@
 	Page: recipient.php;
 */
 .recipient-page {
-	padding-top: 100px;
-	padding-bottom: 100px;
-	background-color: @landing-bg;
+	background-image: url(../img/confectionary.png);
+	height: auto;
+	left: 0;
+	min-height: 100%;
+	min-width: 100%;
+	position: fixed;
+	top: 0;
+	width: 100%;
+	z-index: -999;
+
+	.recipient-section {
+		background-color: @recipient-bg;
+		min-height: 100%;
+		min-width: 100%;
+		height: auto;
+		position: fixed;
+	}
+
+	.container {
+		padding-top: 7em;
+	}
 	
 	dt {
 		margin-top: 1em;
 	}
+
+	/*.btn */
+
+
 }
 
 
