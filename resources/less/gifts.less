@@ -1,9 +1,45 @@
-
 /*
-	Page: addgift.php;
+	ADD GIFT PAGE;
 */
 .add-gift-page {
-	background-color: @landing-bg;
-	padding-bottom: 100px;
-	padding-top: 100px;
+	background-image: url(../img/confectionary.png);
+	height: auto;
+	left: 0;
+	min-height: 100%;
+	min-width: 100%;
+	position: fixed;
+	top: 0;
+	width: 100%;
+	z-index: -999;
+
+	.add-gift-section {
+		background-color: @gift-bg;
+		min-height: 100%;
+		min-width: 100%;
+		height: auto;
+		position: fixed;
+
+		.container {
+			/*padding-top: 7em;*/
+		}
+		
+		.add-gift-form {
+			width: 300px;
+			margin: auto;
+
+			textarea {
+				height: 100px;
+			}
+
+			.btn-success {
+				float: right;
+				span {
+					font-size: 0.7em;
+					margin-right: 5px;
+					color: white;
+				}
+			}
+		}
+
+	}
 }

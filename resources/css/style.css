@@ -413,12 +413,43 @@ a:hover {
   color: white;
 }
 /*
-	Page: addgift.php;
+	ADD GIFT PAGE;
 */
 .add-gift-page {
-  background-color: rgba(98, 119, 109, 0.5);
-  padding-bottom: 100px;
-  padding-top: 100px;
+  background-image: url(../img/confectionary.png);
+  height: auto;
+  left: 0;
+  min-height: 100%;
+  min-width: 100%;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: -999;
+}
+.add-gift-page .add-gift-section {
+  background-color: rgba(170, 154, 102, 0.2);
+  min-height: 100%;
+  min-width: 100%;
+  height: auto;
+  position: fixed;
+}
+.add-gift-page .add-gift-section .container {
+  /*padding-top: 7em;*/
+}
+.add-gift-page .add-gift-section .add-gift-form {
+  width: 300px;
+  margin: auto;
+}
+.add-gift-page .add-gift-section .add-gift-form textarea {
+  height: 100px;
+}
+.add-gift-page .add-gift-section .add-gift-form .btn-success {
+  float: right;
+}
+.add-gift-page .add-gift-section .add-gift-form .btn-success span {
+  font-size: 0.7em;
+  margin-right: 5px;
+  color: white;
 }
 /*
 	Page: about.php;
@@ -591,24 +622,45 @@ a:hover {
     height: 100px;
   }
   /*
-		CHOOSE RECIPIENTS PAGE;
+		ADD GIFT PAGE;
 	*/
-  .choose-recipient-page .choose-container {
-    padding-top: 7em;
+  .add-gift-page .add-gift-section .container {
+    padding-top: 5em;
+  }
+  .add-gift-page .add-gift-section .add-gift-form {
     width: 300px;
     margin: auto;
   }
-  .choose-recipient-page dt {
-    margin-top: 1em;
+  .add-gift-page .add-gift-section .add-gift-form textarea {
+    height: 100px;
   }
-  .choose-recipient-page .nano {
-    max-height: 300px;
-    max-width: 300px;
-  }
-  .choose-recipient-page .btn {
-    margin-top: 1em;
-    float: right;
-  }
+  /*
+		CHOOSE RECIPIENTS PAGE;
+	*/
+  /*.choose-recipient-page {
+
+		.choose-container {
+			padding-top: 7em;
+			width: 300px;
+			margin: auto;
+		}
+		
+		dt {
+			margin-top: 1em;
+		}
+
+
+
+		.nano {
+			max-height: 300px;
+			max-width: 300px;
+		}
+
+		.btn {
+			margin-top: 1em;
+			float: right;
+		}
+	}*/
 }
 /* Medium units and up */
 @media only screen and (min-width: 768px) {
@@ -769,6 +821,12 @@ a:hover {
   .add-item-page .add-item-section .container {
     padding-top: 8em;
   }
+  /*
+		ADD GIFT PAGE;
+	*/
+  .add-gift-page .add-gift-section .container {
+    padding-top: 8em;
+  }
 }
 /* Large units only */
 @media only screen and (min-width: 992px) {
@@ -849,6 +907,12 @@ a:hover {
 		ADD ITEM PAGE;
 	*/
   .add-item-page .add-item-section .container {
+    padding-top: 8em;
+  }
+  /*
+		ADD GIFT PAGE;
+	*/
+  .add-gift-page .add-gift-section .container {
     padding-top: 8em;
   }
 }
