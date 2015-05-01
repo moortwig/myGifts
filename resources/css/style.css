@@ -135,12 +135,14 @@ i {
 }
 .sign-up-page .sign-up-section {
   /*min-height: 700px;*/
-  /*background-color: @landing-bg;*/
-  /*padding-bottom: 200px;*/
-  /*padding-top: 200px;*/
+  background-color: rgba(250, 250, 237, 0.5);
+  min-height: 100%;
+  min-width: 100%;
+  height: auto;
+  position: fixed;
 }
 .sign-up-page .sign-up-section .container {
-  padding: 5em;
+  /*padding: 5em;*/
 }
 /*
 	Page: recipients.php;
@@ -213,6 +215,9 @@ i {
 /* Styling starts at small units and move up in screen resolutions */
 /* Small units and up */
 @media only screen and (max-width: 767px) {
+  /*
+		HEADER
+	*/
   .navbar .nav {
     /* ul element */
     /*position: relative;*/
@@ -226,7 +231,7 @@ i {
     /*display: none;*/
   }
   /*
-		Page: index.php
+		INDEX PAGE
 	*/
   .index-page {
     background-position: center;
@@ -290,6 +295,36 @@ i {
 			height: auto;
 			position: fixed;*/
   }
+  /*
+		SIGN UP PAGE
+	*/
+  .sign-up-page {
+    background-image: url(../img/bg-signup.jpg);
+    /*background-color: @landing-bg;*/
+    /*background-position: bottom;*/
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: bottom;
+    height: auto;
+    left: 0;
+    min-height: 100%;
+    min-width: 100%;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: -999;
+  }
+  .sign-up-page .sign-up-section {
+    /*min-height: 700px;*/
+    background-color: rgba(250, 250, 237, 0.5);
+    min-height: 100%;
+    min-width: 100%;
+    height: auto;
+    position: fixed;
+  }
+  .sign-up-page .sign-up-section .container {
+    /*padding: 5em;*/
+  }
 }
 /* Medium units and up */
 @media only screen and (min-width: 768px) {
@@ -297,7 +332,7 @@ i {
     /*outline: 1px solid silver;*/
   }
   /*
-		Navigation
+		HEADER
 	*/
   .navbar .navbar-form .form-control {
     width: 150px;
@@ -336,7 +371,7 @@ i {
     margin-left: 5px;
   }
   /*
-		Page: index.php
+		INDEX
 	*/
   .index-page .row {
     /*background-color: @landing-bg;*/
@@ -374,6 +409,9 @@ i {
     text-align: left;
     font-size: 1.3em;
   }
+  /*
+		INDEX (AS LOGGED IN)
+	*/
   .welcome-page {
     /*background-image: url(../img/confectionary.png);
 		background-repeat: repeat;
@@ -411,20 +449,23 @@ i {
     /*outline: 1px solid blue;*/
   }
   /*
-		Page: index.php
+		COMMON
 	*/
-  .index-page .row {
-    /*background-color: @landing-bg;*/
-    /*padding: 2em;*/
-    /*min-height: 100%;*/
-  }
-  .index-page .vertical-center {
+  .vertical-center {
     position: absolute;
     top: 30%;
     left: 10%;
     width: 80%;
     /*height: 10em;*/
     /*margin-top: -5em*/
+  }
+  /*
+		INDEX
+	*/
+  .index-page .row {
+    /*background-color: @landing-bg;*/
+    /*padding: 2em;*/
+    /*min-height: 100%;*/
   }
   .index-page .header-container {
     /*outline: 1px solid red;*/

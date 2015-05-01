@@ -3,6 +3,10 @@
 @phone:    ~"only screen and (max-width: 767px)";
 
 @media @phone {
+
+	/*
+		HEADER
+	*/
 	.navbar {
 		.nav { /* ul element */
 			/*position: relative;*/
@@ -19,7 +23,7 @@
 	}
 
 	/*
-		Page: index.php
+		INDEX PAGE
 	*/
 	.index-page {
 		background-position: center;
@@ -95,5 +99,38 @@
 			margin-top: 1em;
 		}*/
 	}
+
+	/*
+		SIGN UP PAGE
+	*/
+	.sign-up-page {
+	background-image: url(../img/bg-signup.jpg);
+	/*background-color: @landing-bg;*/
+	/*background-position: bottom;*/
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	background-position: bottom;
+	height: auto;
+	left: 0;
+	min-height: 100%;
+	min-width: 100%;
+	position: fixed;
+	top: 0;
+	width: 100%;
+	z-index: -999;
+
+	.sign-up-section {
+		/*min-height: 700px;*/
+		background-color: @signup-bg;
+		min-height: 100%;
+		min-width: 100%;
+		height: auto;
+		position: fixed;
+
+		.container {
+		/*padding: 5em;*/
+		}
+	}
+}
 
 }
