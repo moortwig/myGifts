@@ -4,9 +4,6 @@
   src: url('../fonts/glyphicons-halflings-regular.eot?#iefix') format('embedded- opentype'), url('../fonts/glyphicons-halflings-regular.woff') format('woff'), url('../fonts/glyphicons-halflings-regular.ttf') format('truetype'), url('../fonts/glyphicons-halflings-regular.svg#glyphicons-halflingsregular') format('svg');
 }
 
-a:hover {
-	text-decoration: none;
-}
 
 p, h1, h2, h3, label {
 	color: @text-color;
@@ -16,6 +13,19 @@ p {
 	font-size: 1em;
 }
 
+
+/* TONICONS */
 i {
 	font-size: 2em;
+}
+
+
+/* LINKS */
+a {
+	color: @link;
+}
+
+a:hover {
+	color: @link-hover;
+	text-decoration: none;
 }

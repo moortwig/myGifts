@@ -3,15 +3,38 @@
 	Page: about.php;
 */
 .about-page {
-	background-color: @landing-bg;
-	background-image: url(../img/bg-landing.jpg);
-	padding-top: 100px;
-	padding-bottom: 100px;
-  	position: relative;
-  
-	.container {
-		background-color: @landing-bg;
-		background-image: url(../img/1-1.png);
-		padding: 20px;
+	background-image: url(../img/bg-about.jpg);
+	/*background-color: @landing-bg;*/
+	/*background-position: bottom;*/
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	background-position: bottom;
+	height: auto;
+	left: 0;
+	min-height: 100%;
+	min-width: 100%;
+	position: fixed;
+	top: 0;
+	width: 100%;
+	z-index: -999;
+
+	.about-section {
+		/*min-height: 700px;*/
+		background-color: @signup-bg;
+		min-height: 100%;
+		min-width: 100%;
+		height: auto;
+		position: fixed;
+
+		.container {
+			/*padding: 5em;*/
+		}
+
 	}
+
+	p {
+		margin-top: 1.5em;
+	}
+
+
 }

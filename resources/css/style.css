@@ -6,9 +6,6 @@
   src: url('../fonts/glyphicons-halflings-regular.eot');
   src: url('../fonts/glyphicons-halflings-regular.eot?#iefix') format('embedded- opentype'), url('../fonts/glyphicons-halflings-regular.woff') format('woff'), url('../fonts/glyphicons-halflings-regular.ttf') format('truetype'), url('../fonts/glyphicons-halflings-regular.svg#glyphicons-halflingsregular') format('svg');
 }
-a:hover {
-  text-decoration: none;
-}
 p,
 h1,
 h2,
@@ -19,8 +16,17 @@ label {
 p {
   font-size: 1em;
 }
+/* TONICONS */
 i {
   font-size: 2em;
+}
+/* LINKS */
+a {
+  color: #5d6765;
+}
+a:hover {
+  color: #fafaed;
+  text-decoration: none;
 }
 /* Pages */
 /*
@@ -201,16 +207,34 @@ i {
 	Page: about.php;
 */
 .about-page {
-  background-color: rgba(98, 119, 109, 0.5);
-  background-image: url(../img/bg-landing.jpg);
-  padding-top: 100px;
-  padding-bottom: 100px;
-  position: relative;
+  background-image: url(../img/bg-about.jpg);
+  /*background-color: @landing-bg;*/
+  /*background-position: bottom;*/
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: bottom;
+  height: auto;
+  left: 0;
+  min-height: 100%;
+  min-width: 100%;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: -999;
 }
-.about-page .container {
-  background-color: rgba(98, 119, 109, 0.5);
-  background-image: url(../img/1-1.png);
-  padding: 20px;
+.about-page .about-section {
+  /*min-height: 700px;*/
+  background-color: rgba(250, 250, 237, 0.5);
+  min-height: 100%;
+  min-width: 100%;
+  height: auto;
+  position: fixed;
+}
+.about-page .about-section .container {
+  /*padding: 5em;*/
+}
+.about-page p {
+  margin-top: 1.5em;
 }
 /* Styling starts at small units and move up in screen resolutions */
 /* Small units and up */
@@ -306,6 +330,16 @@ i {
   }
   .sign-up-page .sign-up-section .container {
     padding-top: 5.5em;
+  }
+  /*
+		ABOUT PAGE
+	*/
+  .about-page {
+    background-position: bottom;
+  }
+  .about-page .about-section .container {
+    padding-top: 2.7em;
+    width: 100%;
   }
 }
 /* Medium units and up */
@@ -433,6 +467,15 @@ i {
   .sign-up-page .sign-up-section .container {
     padding-top: 5em;
   }
+  /*
+		ABOUT PAGE
+	*/
+  .about-page {
+    background-position: bottom;
+  }
+  .about-page .about-section .container {
+    padding-top: 7em;
+  }
 }
 /* Large units only */
 @media only screen and (min-width: 992px) {
@@ -492,6 +535,19 @@ i {
   }
   .sign-up-page .sign-up-section .container {
     padding-top: 0em;
+  }
+  /*
+		ABOUT PAGE
+	*/
+  .about-page {
+    background-position: bottom;
+  }
+  .about-page .about-section .container {
+    padding-top: 0em;
+  }
+  .about-page .about-section .center {
+    width: 60%;
+    margin: auto;
   }
 }
 /* Debugging */
