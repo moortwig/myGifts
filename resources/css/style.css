@@ -920,6 +920,7 @@ a:hover {
 div {
   /*outline: 1px solid blue;*/
 }
+/* Basic stuff */
 html {
   min-height: 100%;
   position: relative;
@@ -951,6 +952,7 @@ body {
 .nano .nano-slider {
   background-color: #aa9a66;
 }
+/* Navigation */
 .navbar .navbar-brand {
   color: #aa9a66;
   letter-spacing: 0.5px;
@@ -972,24 +974,10 @@ body {
   display: block;
   margin: auto;
 }
-/*.data-row {
-	padding: 5px;
-	border-bottom: 1px solid silver;
-	width: 70%;
-}*/
 .glyphicon {
   margin-left: 5px;
   margin-right: 3px;
 }
-/*
-	Save button override
- */
-/*.btn-success {
-	i {
-		font-size: 0.7em;
-		margin-right: 3px;
-	}
-}*/
 .footer {
   background-color: #ffffff;
   position: absolute;
