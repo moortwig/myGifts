@@ -357,18 +357,21 @@ a:hover {
   height: auto;
   position: fixed;
 }
-.choose-recipient-page .container {
+.choose-recipient-page .choose-container {
   padding-top: 7em;
+  width: 300px;
+  margin: auto;
 }
 .choose-recipient-page dt {
   margin-top: 1em;
 }
 .choose-recipient-page .nano {
-  max-height: 400px;
-  width: auto;
+  max-height: 300px;
+  max-width: 300px;
 }
 .choose-recipient-page .btn {
   margin-top: 1em;
+  float: right;
 }
 /*
 	ADD ITEM PAGE;
@@ -586,6 +589,25 @@ a:hover {
   }
   .add-item-page .add-item-section .add-item-form textarea {
     height: 100px;
+  }
+  /*
+		CHOOSE RECIPIENTS PAGE;
+	*/
+  .choose-recipient-page .choose-container {
+    padding-top: 7em;
+    width: 300px;
+    margin: auto;
+  }
+  .choose-recipient-page dt {
+    margin-top: 1em;
+  }
+  .choose-recipient-page .nano {
+    max-height: 300px;
+    max-width: 300px;
+  }
+  .choose-recipient-page .btn {
+    margin-top: 1em;
+    float: right;
   }
 }
 /* Medium units and up */
