@@ -26,18 +26,18 @@ require_once('header.php');
 
 					<!-- STUFF HERE -->
 		        	<div class="row">
-		            	<div class="col-xs-12 col-sm-6">
-			        		<div class="container">					
+		            	<div class="col-xs-12 col-sm-5 col-sm-offset-1">
+			        		<div class="recipient-container">					
 								<h2>Profile For: <?php echo $recipientName; ?></h2>
 								<?php echo $recipientInformation;
 								 ?>
 								 <br />
 								<?php echo "<a href='editrecipient.php?id=" . $recipientId . "' class='btn btn-success'><span class='glyphicon glyphicon-pencil'></span>Edit</a> "; ?>
-							</div><!-- .container -->
+							</div><!-- .recipient-container -->
 						</div><!-- .col-md-4 col-md-offset-2 -->
 
 						<div class="col-xs-12 col-sm-6">
-							<div class="container">	
+							<div class="recipient-container">	
 								<h3>Gift History</h3>
 
 								<?php				
@@ -61,7 +61,7 @@ require_once('header.php');
 										</div><!-- .nano-content -->
 									</div><!-- .nano -->
 								<?php } ?>
-							</div><!-- .container -->
+							</div><!-- .recipient-container -->
 			        	</div><!-- .col-md-6 -->
 
 			        </div><!-- .row -->
