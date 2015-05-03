@@ -85,7 +85,7 @@ a:hover {
   padding: 2em;
   /*min-height: 100%;*/
 }
-.index-page .header-container ul {
+.index-page .headline-container ul {
   /*display: block;*/
   /*float: right;*/
   margin-top: 2em;
@@ -94,7 +94,7 @@ a:hover {
   font-size: 1.3em;
   list-style-type: none;
 }
-.index-page .header-container .landing-headline {
+.index-page .headline-container .landing-headline {
   /*padding: 5px;
 			margin-top: 5px;*/
   /*font-size: 1.9em;*/
@@ -131,7 +131,7 @@ a:hover {
 .welcome-page .container {
   margin-top: 6em;
 }
-.welcome-page .welcome {
+.welcome-page .welcome-section {
   background-color: rgba(170, 154, 102, 0.2);
   min-height: 100%;
   min-width: 100%;
@@ -676,17 +676,17 @@ a:hover {
     /*padding: 2em;*/
     /*min-height: 100%;*/
   }
-  .index-page .header-container {
+  .index-page .headline-container {
     /*outline: 1px solid red;*/
     /*width: 50px;*/
   }
-  .index-page .header-container .landing-headline {
+  .index-page .headline-container .landing-headline {
     /*background-color: white;*/
     /*padding: 5px;*/
     /*margin-top: 5px;*/
     font-size: 1em;
   }
-  .index-page .header-container ul {
+  .index-page .headline-container ul {
     /*display: block;*/
     /*float: right;*/
     margin-top: 1em;
@@ -698,32 +698,8 @@ a:hover {
   /*
 		INDEX (AS LOGGED IN)
 	*/
-  .welcome-page {
-    /*background-image: url(../img/confectionary.png);
-		background-repeat: repeat;
-		background-attachment: fixed;
-		background-position: top;
-		height: auto;
-		left: 0;
-		min-height: 100%;
-		min-width: 100%;
-		position: fixed;
-		top: 0;
-		width: 100%;
-		z-index: -999;*/
-    /*dt {
-			margin-top: 1em;
-		}*/
-  }
-  .welcome-page .container {
+  .welcome-page .welcome-section .container {
     margin-top: 4em;
-  }
-  .welcome-page .welcome {
-    /*background-color: @landing-bg;
-			min-height: 100%;
-			min-width: 100%;
-			height: auto;
-			position: fixed;*/
   }
   /*
 		SIGN UP PAGE
@@ -919,18 +895,18 @@ a:hover {
     /*height: 10em;*/
     /*margin-top: -5em*/
   }
-  .index-page .header-container {
+  .index-page .headline-container {
     /*outline: 1px solid red;*/
     /*width: 50px;*/
     text-align: center;
   }
-  .index-page .header-container .landing-headline {
+  .index-page .headline-container .landing-headline {
     /*background-color: white;*/
     /*padding: 5px;
 				margin-top: 5px;*/
     font-size: 1.7em;
   }
-  .index-page .header-container ul {
+  .index-page .headline-container ul {
     margin-top: 1em;
     margin-bottom: -0.7em;
     margin-top: 2em;
@@ -944,34 +920,7 @@ a:hover {
   /*
 		INDEX (AS LOGGED IN)
 	*/
-  .welcome-page {
-    /*background-image: url(../img/confectionary.png);
-		background-repeat: repeat;
-		background-attachment: fixed;
-		background-position: top;
-		height: auto;
-		left: 0;
-		min-height: 100%;
-		min-width: 100%;
-		position: fixed;
-		top: 0;
-		width: 100%;
-		z-index: -999;*/
-    /*.welcome {
-			background-color: @landing-bg;
-			min-height: 100%;
-			min-width: 100%;
-			height: auto;
-			position: fixed;
-
-		}
-
-
-		dt {
-			margin-top: 1em;
-		}*/
-  }
-  .welcome-page .container {
+  .welcome-page .welcome-section .container {
     margin-top: 6em;
   }
   /*
@@ -1054,12 +1003,12 @@ a:hover {
     /*padding: 2em;*/
     /*min-height: 100%;*/
   }
-  .index-page .header-container {
+  .index-page .headline-container {
     /*outline: 1px solid red;*/
     /*width: 50px;*/
     text-align: right;
   }
-  .index-page .header-container .landing-headline {
+  .index-page .headline-container .landing-headline {
     /*margin-left: -1em;*/
     margin-bottom: -0.7em;
     /*color: white;*/
@@ -1067,7 +1016,7 @@ a:hover {
 				margin-top: 5px;*/
     font-size: 1.8em;
   }
-  .index-page .header-container ul {
+  .index-page .headline-container ul {
     display: block;
     float: right;
     margin-top: 1em;

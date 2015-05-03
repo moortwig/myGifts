@@ -1,5 +1,5 @@
 <div class="welcome-page">
-    <div class="welcome">
+    <div class="welcome-section">
         <div class="container">
             <div class="news-section">
                 <h2>News</h2>

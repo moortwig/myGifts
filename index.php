@@ -15,7 +15,7 @@ if(isset($_SESSION['username'])) {
         <div class="vertical-center landing-small">
             <div class="row">
                 <div class="col-xs-12 col-md-8">
-                    <div class="header-container">
+                    <div class="headline-container">
                         <h1 class=""><span class="landing-headline">Your gift reminder in the pocket.</span></h1>
                         <ul class="landing-text">
                             <li>Keep track of items you've given away.</li>
