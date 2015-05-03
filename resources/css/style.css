@@ -123,7 +123,7 @@ a:hover {
   left: 0;
   min-height: 100%;
   min-width: 100%;
-  position: relative;
+  position: absolute;
   top: 0;
   width: 100%;
   z-index: -999;
@@ -133,11 +133,11 @@ a:hover {
 }
 .welcome-page .welcome {
   background-color: rgba(170, 154, 102, 0.2);
-  /*min-height: 100%;
-		min-width: 100%;
-		height: auto;*/
+  min-height: 100%;
+  min-width: 100%;
+  height: auto;
   /*top: 0;*/
-  position: relative;
+  position: absolute;
 }
 .welcome-page dt {
   margin-top: 1em;
@@ -460,13 +460,6 @@ a:hover {
 .choose-recipient-page .nano {
   max-height: 300px;
   max-width: 300px;
-  /*.nano-pane {
-			background: #888; 
-		}
-
-		.nano-slider {
-			background: #111;
-		}*/
 }
 .choose-recipient-page .btn {
   margin-top: 1em;
