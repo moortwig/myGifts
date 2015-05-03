@@ -192,30 +192,31 @@ a:hover {
   z-index: -999;
   /*background-color: @overlay-bg;*/
   /*	
-	.circle {
-		width: 100px;
-		height: 100px;
-		background: silver;
-		-moz-border-radius: 50px;
-		-webkit-border-radius: 50px;
-		border-radius: 50px;
-	}
-	.circle:hover {
-		transition: all 1s ease 0s;
-		background: @hover;
-	}
-	.square {
-		width: 100px;
-		height: 100px;
-		background: silver;
-		-moz-border-radius: 5px;
-		-webkit-border-radius: 5px;
-		border-radius: 5px;
-	}
-	.square:hover {
-		transition: all 1s ease 0s;
-		background: @hover;
-	}*/
+		.circle {
+			width: 100px;
+			height: 100px;
+			background: silver;
+			-moz-border-radius: 50px;
+			-webkit-border-radius: 50px;
+			border-radius: 50px;
+		}
+		.circle:hover {
+			transition: all 1s ease 0s;
+			background: @hover;
+		}
+		.square {
+			width: 100px;
+			height: 100px;
+			background: silver;
+			-moz-border-radius: 5px;
+			-webkit-border-radius: 5px;
+			border-radius: 5px;
+		}
+		.square:hover {
+			transition: all 1s ease 0s;
+			background: @hover;
+		}
+	*/
 }
 .recipients-page .recipients-section {
   background-color: rgba(170, 154, 102, 0.2);
@@ -236,7 +237,6 @@ a:hover {
 .recipients-page .data-row {
   padding: 5px;
   border-bottom: 1px solid silver;
-  width: 70%;
 }
 .recipients-page .ton-li-plus {
   font-size: 1em;
@@ -248,6 +248,15 @@ a:hover {
 .recipients-page .ton-li-plus:hover {
   transition: all 1s ease;
   color: white;
+}
+.recipients-page .nano {
+  /*background-color: none;*/
+  /*max-height: 700px;*/
+  max-width: 100%;
+  border-bottom: none;
+}
+.recipients-page .has-scrollbar {
+  background-color: transparent;
 }
 /*
 	SINGLE RECIPIENT PAGE;
@@ -700,6 +709,42 @@ a:hover {
     width: 100%;
   }
   /*
+		RECIPIENTS PAGE
+	*/
+  .recipients-page .container {
+    padding-top: 5em;
+  }
+  .recipients-page h2 {
+    font-size: 1.5em;
+  }
+  .recipients-page h4 {
+    font-size: 1.1em;
+    margin: 2px;
+  }
+  .recipients-page p {
+    margin: 2px;
+  }
+  .recipients-page .data-row {
+    padding: 3px;
+    width: 100%;
+  }
+  .recipients-page .ton-li-plus {
+    font-size: 1em;
+    /*background-color: silver;*/
+    padding: 7px;
+    /*position:relative;*/
+    /*top: -3px;*/
+  }
+  .recipients-page .glyphicon {
+    float: right;
+    /*margin-left: 30px;
+			margin-right: 3px;*/
+  }
+  .recipients-page .nano {
+    max-height: 350px;
+    max-width: 100%;
+  }
+  /*
 		SINGLE RECIPIENT PAGE
 	*/
   .recipient-page .recipient-container {
@@ -927,6 +972,34 @@ a:hover {
     padding-top: 7em;
   }
   /*
+		RECIPIENTS PAGE
+	*/
+  .recipients-page h2 {
+    /*font-size: 1.6em;*/
+  }
+  .recipients-page h4 {
+    /*font-size: 1.2em;*/
+  }
+  .recipients-page .data-row {
+    width: 100%;
+  }
+  .recipients-page .ton-li-plus {
+    font-size: 1em;
+    /*background-color: silver;*/
+    padding: 7px;
+    /*position:relative;*/
+    /*top: -3px;*/
+  }
+  .recipients-page .glyphicon {
+    float: right;
+    /*margin-left: 30px;
+			margin-right: 3px;*/
+  }
+  .recipients-page .nano {
+    max-height: 350px;
+    max-width: 100%;
+  }
+  /*
 		ADD RECIPIENT PAGE;
 	*/
   .add-recipient-page .add-recipient-section .container {
@@ -1035,6 +1108,16 @@ a:hover {
   .about-page .about-section .center {
     width: 60%;
     margin: auto;
+  }
+  /*
+		RECIPIENTS PAGE
+	*/
+  .recipients-page .data-row {
+    width: 70%;
+  }
+  .recipients-page .nano {
+    max-height: 600px;
+    /*max-width: 100%;*/
   }
   /*
 		ADD ITEM PAGE;
