@@ -825,7 +825,7 @@ a:hover {
     float: right;
   }
   /*
-	ERROR 404 PAGE;
+		ERROR 404 PAGE;
 	*/
   .not-found {
     padding-top: 7em;
@@ -833,18 +833,9 @@ a:hover {
   .not-found .container {
     width: 90%;
   }
-  .footer {
-    background-image: url(../img/confectionary.png);
-    background-color: rgba(255, 255, 255, 0.5);
-    position: fixed;
-    bottom: 0;
-    width: 100%;
-    padding: 1em;
-    text-align: center;
-  }
-  .footer ul {
-    display: list-item;
-  }
+  /*
+		FOOTER;
+	*/
   .footer .hide-small {
     display: none;
   }
