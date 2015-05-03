@@ -50,20 +50,20 @@ require_once('app.php');
                 <ul class="nav navbar-nav">
                     <!-- if not logged in, display disabled menu icons -->
                     <li>
-                        <span class="li-text-rec">Recipients</span>
                         <a href="#" class="btn disabled">
+                            <span class="li-text-rec">Recipients</span>
                             <i class="ton-li-people-7"></i>
                         </a>
                     </li>
                     <li>
-                    <span class="li-text-gift">Add gift</span>
                         <a href="#" class="btn disabled">
+                            <span class="li-text-gift">Add gift</span>
                             <i class="ton-li-box-1"></i>
                         </a>
                     </li>
                     <li>
-                        <span class="li-text-about">About</span>
                         <a href="about.php" class="btn enabled">
+                            <span class="li-text-about">About</span>
                             <i class="ton-li-speech-buble-4"></i>
                         </a>
                     </li>

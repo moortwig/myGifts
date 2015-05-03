@@ -635,18 +635,19 @@ a:hover {
 			}*/
   }
   .navbar .nav li {
-    font-size: 1em;
-    height: 1em;
-    padding: 1em;
+    /*font-size: 1em;
+				height: 1em;
+				padding: 1em;
+				margin-top: -5px;*/
   }
   .navbar .nav .ton-li-people-7 {
-    display: none;
+    font-size: 1em;
   }
   .navbar .nav .ton-li-box-1 {
-    display: none;
+    font-size: 1em;
   }
   .navbar .nav .ton-li-speech-buble-4 {
-    display: none;
+    font-size: 1em;
   }
   .navbar .navbar-right {
     float: right;
@@ -848,26 +849,32 @@ a:hover {
     /*padding-left: 10px;
 				padding-right: 10px;*/
     height: 70px;
-    width: 80px;
-    padding: 5px;
+    width: 90px;
+    padding: 10px;
+  }
+  .navbar .nav i {
+    letter-spacing: 0px;
+    position: relative;
+    top: 0px;
+    left: -10px;
   }
   .navbar .nav .li-text-rec {
     letter-spacing: 0px;
-    position: absolute;
-    left: 13px;
-    top: 45px;
+    position: relative;
+    top: 17px;
+    left: 47px;
   }
   .navbar .nav .li-text-gift {
     letter-spacing: 0px;
-    position: absolute;
-    top: 45px;
-    left: 20px;
+    position: relative;
+    top: 17px;
+    left: 40px;
   }
   .navbar .nav .li-text-about {
     letter-spacing: 0px;
-    position: absolute;
-    left: 25px;
-    top: 45px;
+    position: relative;
+    top: 17px;
+    left: 32px;
   }
   .navbar .btn {
     float: right;
