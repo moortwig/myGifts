@@ -23,14 +23,23 @@ div {
 
 /* Basic stuff */
 html {
-	min-height: 100%;
 	position: relative;
+	min-height: 100%;
+
 }
 
 body {
+	/*background-image: url(../img/bg-landing.jpg);*/
 	background-color: @body-bg;
+
+	/*background-image: url(../img/bg-signup.jpg);*/
+	/*background-image: url(../img/confectionary.png);*/
+	/*background-repeat: no-repeat;
+	background-attachment: fixed;
+	background-position: bottom;*/
+	/*min-height:100%;*/
 	padding: 0;
-  	margin-bottom: 60px;
+  	/*margin-bottom: 40px;*/
 }
 
 .btn {
@@ -38,6 +47,17 @@ body {
 	text-transform: uppercase;
 }
 
+/*.overlay {
+	background-color: @overlay-bg;
+}*/
+
+.wrapper {
+	position: fixed;
+	/*background-color: red;*/
+	min-height: 1080px;
+	min-width: 100%;
+	/*height: auto;*/
+}
 
 
 /* Nanoscroller */
@@ -54,7 +74,8 @@ body {
 	}
 
 	.nano-pane {
-		background-color: @nano-pane;		
+		background-color: @nano-pane;
+
 	}
 
 	.nano-slider { 
@@ -66,6 +87,7 @@ body {
 
 /* Navigation */
 .navbar {
+	border: 0px;
 	.navbar-brand {
 		color: @nav-text-color;
 		letter-spacing: 0.5px;
@@ -99,12 +121,15 @@ body {
 
 
 .footer {
-	background-color: @body-bg;
-	position: absolute;
+	/*background-image: url(../img/confectionary.png);*/
+	background-color: @footer-bg;
+	position: fixed;
 	bottom: 0;
 	width: 100%;
-	height: 60px;
+	height: 40px;
+	/*padding: 1em;*/
 	text-align: center;
+	/*z-index: 1030;*/
 }
 
 

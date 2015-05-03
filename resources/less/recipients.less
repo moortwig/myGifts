@@ -14,10 +14,10 @@
 	top: 0;
 	width: 100%;
 	z-index: -999;
-	/*background-color: @recipient-bg;*/
+	/*background-color: @overlay-bg;*/
 
 	.recipients-section {
-		background-color: @recipient-bg;
+		background-color: @overlay-bg;
 		min-height: 100%;
 		min-width: 100%;
 		height: auto;
@@ -100,7 +100,7 @@
 	z-index: -999;
 
 	.recipient-section {
-		background-color: @recipient-bg;
+		background-color: @overlay-bg;
 		min-height: 100%;
 		min-width: 100%;
 		height: auto;
@@ -138,7 +138,7 @@
 	z-index: -999;
 
 	.add-recipient-section {
-		background-color: @recipient-bg;
+		background-color: @overlay-bg;
 		min-height: 100%;
 		min-width: 100%;
 		height: auto;
@@ -153,6 +153,100 @@
 		}
 
 		.add-recipient-form {
+			/*width: 300px;*/
+			/*margin: auto;*/
+
+			textarea {
+				height: 100px;
+			}
+
+			.btn-success {
+				float: right;
+				span {
+					font-size: 0.7em;
+					margin-right: 5px;
+					color: white;
+				}
+			}
+		}
+
+		span {
+			font-style: italic;
+			color: @subtext;
+		}
+
+
+	}
+
+
+	/*.instructions {
+		background-color: @instructions-bg;
+		font-size: 1.1em;
+		padding: 0.5em;
+
+		.panel-heading {
+			border-bottom: 1px solid @instructions;
+
+			span {
+				font-size: 2em;
+				color: @instructions;
+			}
+		}
+	}*/
+
+	.nano {
+		margin-top: 5px;
+		max-height: 400px;
+		max-width: 300px;
+	}
+
+
+	.data-row {
+		padding: 5px;
+		border-bottom: 1px solid silver;
+		width: 100%;
+	}
+
+	.btn-success {
+		i {
+			font-size: 0.7em;
+			margin-right: 3px;
+		}
+	}
+}
+
+
+
+/*
+	EDIT RECIPIENT PAGE;
+*/
+.edit-recipient-page {
+	background-image: url(../img/confectionary.png);
+	height: auto;
+	left: 0;
+	min-height: 100%;
+	min-width: 100%;
+	position: fixed;
+	top: 0;
+	width: 100%;
+	z-index: -999;
+
+	.edit-recipient-section {
+		background-color: @overlay-bg;
+		min-height: 100%;
+		min-width: 100%;
+		height: auto;
+		position: fixed;
+
+		.container {
+			padding-top: 7em;
+		}
+
+		h2 {
+			margin-bottom: 5px;
+		}
+
+		.edit-recipient-form {
 			/*width: 300px;*/
 			/*margin: auto;*/
 
@@ -236,7 +330,7 @@
 	z-index: -999;
 
 	.choose-recipient-section {
-		background-color: @recipient-bg;
+		background-color: @overlay-bg;
 		min-height: 100%;
 		min-width: 100%;
 		height: auto;
@@ -246,6 +340,7 @@
 	.choose-container {
 		padding-top: 7em;
 		width: 300px;
+		height: 500px;
 		margin: auto;
 	}
 	
@@ -255,9 +350,17 @@
 
 
 	.nano {
-		max-height: 300px;
-		max-width: 300px;
-	}
+		height: 300px;
+		width: 300px;
+
+		/*.nano-pane {
+			background: #888; 
+		}
+
+		.nano-slider {
+			background: #111;
+		}*/
+}
 
 	.btn {
 		margin-top: 1em;

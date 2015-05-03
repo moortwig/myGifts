@@ -27,8 +27,17 @@ var app = {
 		console.log('sectionHeight');
 		var windowHeight = $(window).height();
 
-		$('.index-page').css('height', windowHeight);
+		$('.sign-up-page').css('height', windowHeight);
 	}
+
+	// bgImage: function() {
+	// 	console.log('sets background image');
+	// 	// TODO:
+	// 	// hämta närmaste child
+	// 	// gör en switch case
+	// 	// om child har class "x"
+	// 	// sätt in bakgrundsbild till body element
+	// }
 }
 
 /*

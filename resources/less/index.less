@@ -4,7 +4,7 @@
 .index-page {
 	background-image: url(../img/bg-landing.jpg);
 	/*background-color: @landing-bg;*/
-	/*background-position: bottom;*/
+	background-position: bottom;
 	background-repeat: no-repeat;
 	background-attachment: fixed;
 	background-position: top;
@@ -12,19 +12,30 @@
 	left: 0;
 	min-height: 100%;
 	min-width: 100%;
-	position: fixed;
+	position: fix;
 	top: 0;
 	width: 100%;
 	z-index: -999;
 	/*background-color: white;*/
+	/*position: relative;*/
 
 	color: @landing-text;
+	
 
 	/*.landing-headline-container {*/
 		/*outline: 1px solid red;*/
 		/*margin: auto;*/
 		/*padding-top: 15em;*/
 		/*padding-bottom: 5em;*/
+	/*}*/
+
+	/*.vertical-center {
+		position: absolute;
+		top: 30%;
+		left: 10%;
+		width: 80%;
+		/*height: 10em;*/
+		/*margin-top: -5em*/
 	/*}*/
 
 	h1, h2, h3, p {
@@ -79,14 +90,14 @@
 */
 .welcome-page {
 	background-image: url(../img/confectionary.png);
-	background-repeat: repeat;
+	/*background-repeat: repeat;
 	background-attachment: fixed;
-	background-position: top;
+	background-position: top;*/
 	height: auto;
 	left: 0;
 	min-height: 100%;
 	min-width: 100%;
-	position: fixed;
+	position: relative;
 	top: 0;
 	width: 100%;
 	z-index: -999;
@@ -96,11 +107,12 @@
 	}
 
 	.welcome {
-		background-color: @welcome-bg;
-		min-height: 100%;
+		background-color: @overlay-bg;
+		/*min-height: 100%;
 		min-width: 100%;
-		height: auto;
-		position: fixed;
+		height: auto;*/
+		/*top: 0;*/
+		position: relative;
 	}
 
 

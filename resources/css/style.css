@@ -1,3 +1,8 @@
+/*@signup-bg:			rgba(170,154,102,0.2);
+@welcome-bg:			rgba(170,154,102,0.2);
+@recipient-bg:			rgba(170,154,102,0.2);
+@item-bg:				rgba(170,154,102,0.2);
+@gift-bg:				rgba(170,154,102,0.2);*/
 /* Nano-scroller */
 /* Text */
 /* Links */
@@ -39,7 +44,7 @@ a:hover {
 .index-page {
   background-image: url(../img/bg-landing.jpg);
   /*background-color: @landing-bg;*/
-  /*background-position: bottom;*/
+  background-position: bottom;
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-position: top;
@@ -47,17 +52,26 @@ a:hover {
   left: 0;
   min-height: 100%;
   min-width: 100%;
-  position: fixed;
+  position: fix;
   top: 0;
   width: 100%;
   z-index: -999;
   /*background-color: white;*/
+  /*position: relative;*/
   color: #fafaed;
   /*.landing-headline-container {*/
   /*outline: 1px solid red;*/
   /*margin: auto;*/
   /*padding-top: 15em;*/
   /*padding-bottom: 5em;*/
+  /*}*/
+  /*.vertical-center {
+		position: absolute;
+		top: 30%;
+		left: 10%;
+		width: 80%;
+		/*height: 10em;*/
+  /*margin-top: -5em*/
   /*}*/
 }
 .index-page h1,
@@ -102,14 +116,14 @@ a:hover {
 */
 .welcome-page {
   background-image: url(../img/confectionary.png);
-  background-repeat: repeat;
-  background-attachment: fixed;
-  background-position: top;
+  /*background-repeat: repeat;
+	background-attachment: fixed;
+	background-position: top;*/
   height: auto;
   left: 0;
   min-height: 100%;
   min-width: 100%;
-  position: fixed;
+  position: relative;
   top: 0;
   width: 100%;
   z-index: -999;
@@ -118,11 +132,12 @@ a:hover {
   margin-top: 6em;
 }
 .welcome-page .welcome {
-  background-color: rgba(250, 250, 237, 0.5);
-  min-height: 100%;
-  min-width: 100%;
-  height: auto;
-  position: fixed;
+  background-color: rgba(170, 154, 102, 0.2);
+  /*min-height: 100%;
+		min-width: 100%;
+		height: auto;*/
+  /*top: 0;*/
+  position: relative;
 }
 .welcome-page dt {
   margin-top: 1em;
@@ -132,8 +147,9 @@ a:hover {
 */
 .sign-up-page {
   background-image: url(../img/bg-signup.jpg);
+  /*width: 100%;*/
+  /*height: 800px;*/
   /*background-color: @landing-bg;*/
-  /*background-position: bottom;*/
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-position: bottom;
@@ -141,20 +157,21 @@ a:hover {
   left: 0;
   min-height: 100%;
   min-width: 100%;
-  position: fixed;
+  position: absolute;
   top: 0;
   width: 100%;
   z-index: -999;
 }
 .sign-up-page .sign-up-section {
   /*min-height: 700px;*/
-  background-color: rgba(250, 250, 237, 0.5);
+  background-color: rgba(170, 154, 102, 0.2);
   min-height: 100%;
   min-width: 100%;
   height: auto;
-  position: fixed;
+  position: absolute;
 }
 .sign-up-page .sign-up-section .container {
+  /*background-color: @overlay-bg;*/
   /*padding: 5em;*/
 }
 /*
@@ -173,7 +190,7 @@ a:hover {
   top: 0;
   width: 100%;
   z-index: -999;
-  /*background-color: @recipient-bg;*/
+  /*background-color: @overlay-bg;*/
   /*	
 	.circle {
 		width: 100px;
@@ -337,6 +354,80 @@ a:hover {
   margin-right: 3px;
 }
 /*
+	EDIT RECIPIENT PAGE;
+*/
+.edit-recipient-page {
+  background-image: url(../img/confectionary.png);
+  height: auto;
+  left: 0;
+  min-height: 100%;
+  min-width: 100%;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: -999;
+  /*.instructions {
+		background-color: @instructions-bg;
+		font-size: 1.1em;
+		padding: 0.5em;
+
+		.panel-heading {
+			border-bottom: 1px solid @instructions;
+
+			span {
+				font-size: 2em;
+				color: @instructions;
+			}
+		}
+	}*/
+}
+.edit-recipient-page .edit-recipient-section {
+  background-color: rgba(170, 154, 102, 0.2);
+  min-height: 100%;
+  min-width: 100%;
+  height: auto;
+  position: fixed;
+}
+.edit-recipient-page .edit-recipient-section .container {
+  padding-top: 7em;
+}
+.edit-recipient-page .edit-recipient-section h2 {
+  margin-bottom: 5px;
+}
+.edit-recipient-page .edit-recipient-section .edit-recipient-form {
+  /*width: 300px;*/
+  /*margin: auto;*/
+}
+.edit-recipient-page .edit-recipient-section .edit-recipient-form textarea {
+  height: 100px;
+}
+.edit-recipient-page .edit-recipient-section .edit-recipient-form .btn-success {
+  float: right;
+}
+.edit-recipient-page .edit-recipient-section .edit-recipient-form .btn-success span {
+  font-size: 0.7em;
+  margin-right: 5px;
+  color: white;
+}
+.edit-recipient-page .edit-recipient-section span {
+  font-style: italic;
+  color: rgba(0, 0, 0, 0.5);
+}
+.edit-recipient-page .nano {
+  margin-top: 5px;
+  max-height: 400px;
+  max-width: 300px;
+}
+.edit-recipient-page .data-row {
+  padding: 5px;
+  border-bottom: 1px solid silver;
+  width: 100%;
+}
+.edit-recipient-page .btn-success i {
+  font-size: 0.7em;
+  margin-right: 3px;
+}
+/*
 	CHOOSE RECIPIENTS PAGE;
 */
 .choose-recipient-page {
@@ -360,14 +451,22 @@ a:hover {
 .choose-recipient-page .choose-container {
   padding-top: 7em;
   width: 300px;
+  height: 500px;
   margin: auto;
 }
 .choose-recipient-page dt {
   margin-top: 1em;
 }
 .choose-recipient-page .nano {
-  max-height: 300px;
-  max-width: 300px;
+  height: 300px;
+  width: 300px;
+  /*.nano-pane {
+			background: #888; 
+		}
+
+		.nano-slider {
+			background: #111;
+		}*/
 }
 .choose-recipient-page .btn {
   margin-top: 1em;
@@ -472,7 +571,7 @@ a:hover {
 }
 .about-page .about-section {
   /*min-height: 700px;*/
-  background-color: rgba(250, 250, 237, 0.5);
+  background-color: rgba(170, 154, 102, 0.2);
   min-height: 100%;
   min-width: 100%;
   height: auto;
@@ -996,17 +1095,34 @@ div {
 }
 /* Basic stuff */
 html {
-  min-height: 100%;
   position: relative;
+  min-height: 100%;
 }
 body {
+  /*background-image: url(../img/bg-landing.jpg);*/
   background-color: #ffffff;
+  /*background-image: url(../img/bg-signup.jpg);*/
+  /*background-image: url(../img/confectionary.png);*/
+  /*background-repeat: no-repeat;
+	background-attachment: fixed;
+	background-position: bottom;*/
+  /*min-height:100%;*/
   padding: 0;
-  margin-bottom: 60px;
+  /*margin-bottom: 40px;*/
 }
 .btn {
   letter-spacing: 0.5px;
   text-transform: uppercase;
+}
+/*.overlay {
+	background-color: @overlay-bg;
+}*/
+.wrapper {
+  position: fixed;
+  /*background-color: red;*/
+  min-height: 1080px;
+  min-width: 100%;
+  /*height: auto;*/
 }
 /* Nanoscroller */
 .nano {
@@ -1028,6 +1144,7 @@ body {
 }
 /* Navigation */
 .navbar {
+  border: 0px;
   /*.btn {
 		display: block;
 		margin: auto;
@@ -1055,10 +1172,13 @@ body {
   margin-right: 3px;
 }
 .footer {
-  background-color: #ffffff;
-  position: absolute;
+  /*background-image: url(../img/confectionary.png);*/
+  background-color: rgba(255, 255, 255, 0.5);
+  position: fixed;
   bottom: 0;
   width: 100%;
-  height: 60px;
+  height: 40px;
+  /*padding: 1em;*/
   text-align: center;
+  /*z-index: 1030;*/
 }

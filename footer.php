@@ -1,14 +1,14 @@
-<div id="footer" class="footer">
-	<!-- <div class="footer"> -->
-		<div class="container">
-			<ul class="list-inline">
-				<li><a href="mailto:#">info@mygifts.com</a></li>
-				<li>|</li>
-				<li><a href="https://github.com/moortwig/myGifts">myGifts on GitHub</a></li>
-			</ul>
-		</div>
-	<!-- </div> -->
+<footer class="footer">
+	<div class="container">
+		<ul class="list-inline">
+			<li><a href="mailto:#">info@mygifts.com</a></li>
+			<li>|</li>
+			<li><a href="https://github.com/moortwig/myGifts">myGifts on GitHub</a></li>
+		</ul>
+	</div>
 </div>
+
+</div><!-- .wrapper -->
 
 <!-- Jquery -->
 <script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
