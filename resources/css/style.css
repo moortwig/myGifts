@@ -615,16 +615,13 @@ a:hover {
     font-size: 1.5em;
   }
   .navbar .navbar-form {
-    outline: 1px solid red;
+    /*outline: 1px solid red;*/
     border: none;
     margin: auto;
-    /*width: 90%;*/
-    width: 300px;
+    width: 80%;
+    /*width: 300px;*/
   }
   .navbar .navbar-right {
-    /*float: right;*/
-    /*width: 300px;*/
-    /*margin: auto;*/
     padding-bottom: 3em;
   }
   .navbar .navbar-right input {
@@ -635,8 +632,9 @@ a:hover {
     float: right;
   }
   .navbar .navbar-right .btn-danger {
-    display: block;
-    margin: auto;
+    float: right;
+    /*display: block;*/
+    /*margin: auto;*/
   }
   /*
 		INDEX PAGE
