@@ -614,22 +614,29 @@ a:hover {
   .navbar .nav .ton-li-speech-buble-4 {
     font-size: 1.5em;
   }
+  .navbar .navbar-form {
+    outline: 1px solid red;
+    border: none;
+    margin: auto;
+    /*width: 90%;*/
+    width: 300px;
+  }
   .navbar .navbar-right {
     /*float: right;*/
-    width: 300px;
-    margin: auto;
+    /*width: 300px;*/
+    /*margin: auto;*/
     padding-bottom: 3em;
   }
   .navbar .navbar-right input {
     margin-bottom: 5px;
   }
-  .navbar .navbar-right .btn {
+  .navbar .navbar-right .btn-primary {
     margin-left: 5px;
     float: right;
   }
-  .navbar .navbar-form {
-    border: none;
-    /*margin: auto;*/
+  .navbar .navbar-right .btn-danger {
+    display: block;
+    margin: auto;
   }
   /*
 		INDEX PAGE
