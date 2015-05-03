@@ -583,6 +583,23 @@ a:hover {
 .about-page p {
   margin-top: 1.5em;
 }
+/*
+	ERROR 404 PAGE;
+*/
+.not-found .container {
+  background-image: url(../img/confectionary.png);
+  outline: 7px solid rgba(170, 154, 102, 0.2);
+  max-width: 300px;
+  max-height: 300px;
+  padding: 1em;
+  text-align: center;
+}
+.not-found .container h1 {
+  color: #ff4040;
+}
+.not-found .container p {
+  font-size: 1.5em;
+}
 /* Styling starts at small units and move up in screen resolutions */
 /* Small units and up */
 @media only screen and (max-width: 767px) {
@@ -807,6 +824,30 @@ a:hover {
     margin-top: 1em;
     float: right;
   }
+  /*
+	ERROR 404 PAGE;
+	*/
+  .not-found {
+    padding-top: 7em;
+  }
+  .not-found .container {
+    width: 90%;
+  }
+  .footer {
+    background-image: url(../img/confectionary.png);
+    background-color: rgba(255, 255, 255, 0.5);
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    padding: 1em;
+    text-align: center;
+  }
+  .footer ul {
+    display: list-item;
+  }
+  .footer .hide-small {
+    display: none;
+  }
 }
 /* Medium units and up */
 @media only screen and (min-width: 768px) {
@@ -994,6 +1035,15 @@ a:hover {
 	*/
   .add-gift-page .add-gift-section .container {
     padding-top: 8em;
+  }
+  /*
+	ERROR 404 PAGE;
+	*/
+  .not-found {
+    padding-top: 8em;
+  }
+  .not-found .container {
+    /*width: 90%;*/
   }
 }
 /* Large units only */
