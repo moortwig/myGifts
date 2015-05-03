@@ -615,13 +615,21 @@ a:hover {
     font-size: 1.5em;
   }
   .navbar .navbar-right {
-    float: right;
+    /*float: right;*/
+    width: 300px;
+    margin: auto;
+    padding-bottom: 3em;
+  }
+  .navbar .navbar-right input {
+    margin-bottom: 5px;
   }
   .navbar .navbar-right .btn {
     margin-left: 5px;
+    float: right;
   }
   .navbar .navbar-form {
     border: none;
+    /*margin: auto;*/
   }
   /*
 		INDEX PAGE
