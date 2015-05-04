@@ -670,7 +670,7 @@ a:hover {
   }
   .index-page .landing-small {
     position: absolute;
-    top: 10%;
+    top: 20%;
     left: 0%;
     width: 100%;
     bottom: 10%;
@@ -678,7 +678,7 @@ a:hover {
   }
   .index-page .row {
     background-color: rgba(98, 119, 109, 0.5);
-    /*padding: 2em;*/
+    /*padding-top: 2em;*/
     /*min-height: 100%;*/
   }
   .index-page .headline-container {
