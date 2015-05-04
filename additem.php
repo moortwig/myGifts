@@ -3,8 +3,8 @@
 require_once('header.php');
 
 ?>
-<div class="add-item-page">
-    <div class="add-item-section">
+<div class="full-screen add-item-page">
+    <div class="overlay add-item-section">
         <div class="container">
             <?php
             // Display this section if a user is logged in

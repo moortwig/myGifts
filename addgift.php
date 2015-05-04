@@ -3,8 +3,8 @@
 require_once('header.php');
 
 ?>
-<div class="add-gift-page">
-    <div class="add-gift-section">
+<div class="full-screen add-gift-page">
+    <div class="overlay add-gift-section">
         <div class="container">
             <?php
             // Display this section if a user is logged in

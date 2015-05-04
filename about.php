@@ -4,10 +4,10 @@ require_once('header.php');
 
 ?>
 
-<div class="about-page">
-	<div class="about-section">
-		<div id="about" class="nano">
-            <div class="nano-content">
+<div class="full-screen-img about-page">
+	<div class="overlay about-section">
+		<!-- <div id="about" class="nano">
+            <div class="nano-content"> -->
 				<div class="vertical-center container">
 					<div class="centered-container">
 					<h1>About this project</h1>
@@ -21,8 +21,8 @@ require_once('header.php');
 				</div><!-- .container -->
 
             </div><!-- .nano-content -->
-        </div><!-- #about nano -->
-	</div><!-- .about-section -->
+        <!-- </div> --><!-- #about nano -->
+	<!-- </div> --><!-- .about-section -->
 </div><!-- .about-page -->
 
 
