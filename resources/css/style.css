@@ -333,8 +333,7 @@ a:hover {
   margin-bottom: 5px;
 }
 .add-recipient-page .add-recipient-section .add-recipient-form {
-  /*width: 300px;*/
-  /*margin: auto;*/
+  width: 300px;
 }
 .add-recipient-page .add-recipient-section .add-recipient-form textarea {
   height: 100px;
@@ -786,6 +785,13 @@ a:hover {
   .add-recipient-page .add-recipient-section .container {
     padding-top: 3.5em;
   }
+  .add-recipient-page .add-recipient-form {
+    margin: auto;
+  }
+  .add-recipient-page .overview-container {
+    width: 300px;
+    margin: auto;
+  }
   .add-recipient-page h2 {
     font-size: 1.7em;
   }
@@ -1035,6 +1041,13 @@ a:hover {
   }
   .add-recipient-page h2 {
     font-size: 2em;
+  }
+  .add-recipient-page .add-recipient-form {
+    margin: auto;
+  }
+  .add-recipient-page .overview-container {
+    width: 300px;
+    margin: auto;
   }
   .add-recipient-page .nano {
     /*max-height: 500px;*/
