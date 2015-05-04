@@ -134,6 +134,7 @@ a:hover {
 }
 .welcome-page .container {
   margin-top: 6em;
+  padding-bottom: 3em;
 }
 .welcome-page .welcome-section {
   /*background-color: @overlay-bg;
@@ -184,7 +185,6 @@ a:hover {
 */
 .recipients-page {
   background-image: url(../img/confectionary.png);
-  /*padding-bottom: 60px;*/
   /*background-repeat: repeat;*/
   /*background-attachment: fixed;*/
   /*background-position: top;*/
@@ -225,6 +225,7 @@ a:hover {
 	*/
 }
 .recipients-page .recipients-section {
+  padding-bottom: 100px;
   /*background-color: @overlay-bg;
 		min-height: 100%;
 		min-width: 100%;
@@ -271,6 +272,7 @@ a:hover {
 	z-index: -999;*/
 }
 .recipient-page .recipient-section {
+  padding-bottom: 100px;
   /*background-color: @overlay-bg;
 		min-height: 100%;
 		min-width: 100%;
@@ -1187,7 +1189,7 @@ div {
 /* Basic stuff */
 html {
   height: 100%;
-  /*position: relative;*/
+  position: relative;
 }
 body {
   background-color: #ffffff;
