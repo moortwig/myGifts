@@ -46,6 +46,7 @@ a:hover {
 */
 .index-page {
   background-image: url(../img/bg-landing.jpg);
+  /*padding-bottom: 2em;*/
   /*background-color: @landing-bg;*/
   /*background-position: bottom;
 	background-repeat: no-repeat;
@@ -183,6 +184,7 @@ a:hover {
 */
 .recipients-page {
   background-image: url(../img/confectionary.png);
+  /*padding-bottom: 60px;*/
   /*background-repeat: repeat;*/
   /*background-attachment: fixed;*/
   /*background-position: top;*/
@@ -237,6 +239,7 @@ a:hover {
 }
 .recipients-page .container {
   padding-top: 7em;
+  padding-bottom: 1em;
 }
 .recipients-page .data-row {
   padding: 5px;
@@ -757,6 +760,7 @@ a:hover {
   }
   .recipients-page .glyphicon {
     float: right;
+    font-size: 1.5em;
     /*margin-left: 30px;
 			margin-right: 3px;*/
   }
@@ -1169,14 +1173,17 @@ html {
 body {
   background-color: #ffffff;
   height: 100%;
-  /*padding: 0;*/
+  padding: 0;
+  /*margin-bottom: -60px;*/
+  /*margin-top: -60px;*/
+  /*z-index: -999;*/
   /*background-image: url(../img/bg-signup.jpg);*/
   /*background-image: url(../img/confectionary.png);*/
   /*background-repeat: no-repeat;
 	background-attachment: fixed;
 	background-position: bottom;*/
   /*min-height:100%;*/
-  margin-bottom: 40px;
+  /*margin-bottom: 40px;*/
 }
 .btn {
   letter-spacing: 0.5px;
@@ -1191,7 +1198,10 @@ body {
   /*min-*/
   width: 100%;
   /*height: auto;*/
+  /*padding-top: 100px;*/
+  /*padding-bottom: 60px; /* Adjust this to match footer height */
 }
+/* full screen background image, scales and stretches */
 .full-screen-img {
   background-position: center center;
   background-attachment: fixed;
@@ -1200,19 +1210,23 @@ body {
   height: 100%;
   width: 100%;
 }
+/* simple fullscreen */
 .full-screen {
-  /*background-position: center center;*/
-  /*background-attachment: fixed;*/
-  /*background-size: cover;*/
   display: table;
   height: 100%;
   width: 100%;
+  /*padding-bottom: 60px;*/
+  /*margin-bottom: 60px;*/
+  /* Adjust this to match footer height */
 }
+/* Full screen overlay */
 .overlay {
   background-color: rgba(170, 154, 102, 0.2);
   display: table;
   width: 100%;
-  min-height: 100%;
+  height: 100%;
+  /*margin-top: 30px;*/
+  /*padding-bottom: 60px;*/
 }
 /* Nanoscroller */
 .nano {
@@ -1234,6 +1248,7 @@ body {
 }
 /* Navigation */
 .navbar {
+  /*height: 60px;*/
   border: 0px;
   /*.btn {
 		display: block;
@@ -1261,13 +1276,17 @@ body {
   margin-left: 5px;
   margin-right: 3px;
 }
+footer {
+  height: 40px;
+  /* Needs to be set when used with full-screen */
+}
 .footer {
   background-image: url(../img/confectionary.png);
   background-color: rgba(255, 255, 255, 0.5);
   position: fixed;
   bottom: 0;
   width: 100%;
-  /*height: 40px;*/
+  /*height: 80px;*/
   padding: 1em;
   text-align: center;
   /*z-index: 1030;*/
