@@ -253,15 +253,6 @@ a:hover {
   transition: all 1s ease;
   color: white;
 }
-.recipients-page .nano {
-  /*background-color: none;*/
-  /*max-height: 700px;*/
-  max-width: 100%;
-  border-bottom: none;
-}
-.recipients-page .has-scrollbar {
-  background-color: transparent;
-}
 /*
 	SINGLE RECIPIENT PAGE;
 */
@@ -737,10 +728,6 @@ a:hover {
   .about-page p {
     font-size: 1.1em;
   }
-  .about-page .nano {
-    max-height: 350px;
-    max-width: 100%;
-  }
   /*
 		RECIPIENTS PAGE
 	*/
@@ -772,10 +759,6 @@ a:hover {
     float: right;
     /*margin-left: 30px;
 			margin-right: 3px;*/
-  }
-  .recipients-page .nano {
-    max-height: 350px;
-    max-width: 100%;
   }
   /*
 		SINGLE RECIPIENT PAGE
@@ -1011,10 +994,6 @@ a:hover {
   .about-page .about-section .container {
     padding-top: 7em;
   }
-  .about-page .nano {
-    max-height: 550px;
-    max-width: 100%;
-  }
   /*
 		RECIPIENTS PAGE
 	*/
@@ -1038,10 +1017,6 @@ a:hover {
     float: right;
     /*margin-left: 30px;
 			margin-right: 3px;*/
-  }
-  .recipients-page .nano {
-    max-height: 350px;
-    max-width: 100%;
   }
   /*
 		ADD RECIPIENT PAGE;
