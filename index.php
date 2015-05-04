@@ -11,7 +11,7 @@ if(isset($_SESSION['username'])) {
     include_once('logged-in.php'); ?>
 <?php } else {
      // Display this section if user has not logged in ?>
-    <div class="index-page">
+    <div class="full-screen-img index-page">
         <div class="vertical-center landing-small">
             <div class="row">
                 <div class="col-xs-12 col-md-8">

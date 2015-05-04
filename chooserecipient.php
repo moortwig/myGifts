@@ -3,8 +3,8 @@
 require_once('header.php');
 
 ?>
-<div class="choose-recipient-page">
-    <div class="choose-recipient-section">
+<div class="full-screen choose-recipient-page">
+    <div class="overlay choose-recipient-section">
         <div class="choose-container">
             <?php
             // Display this section if a user is logged in

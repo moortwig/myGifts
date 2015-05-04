@@ -3,10 +3,10 @@
 require_once('header.php');
 
 ?>
-<div class="recipients-page">
-    <div class="recipients-section"> 
-        <div id="recipients" class="nano">
-            <div class="nano-content">
+<div class="full-screen recipients-page">
+    <div class="overlay recipients-section"> 
+        <!-- <div id="recipients" class="nano">
+            <div class="nano-content"> -->
                 <div class="container">
                     <?php
                     // Display this section if a user is logged in
@@ -37,8 +37,8 @@ require_once('header.php');
                         <p>Access to this content is forbidden. Log in, or sign up and you shall recieve access.</p>
                     <?php } ?>
                 </div><!-- .container -->
-            </div><!-- .nano-content -->
-        </div><!-- #recipients nano -->
+            <!-- </div> --><!-- .nano-content -->
+        <!-- </div> --><!-- #recipients nano -->
     </div><!-- .recipients-section -->
 </div> <!-- .recipients-page -->
 

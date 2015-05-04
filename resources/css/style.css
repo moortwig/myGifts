@@ -47,18 +47,18 @@ a:hover {
 .index-page {
   background-image: url(../img/bg-landing.jpg);
   /*background-color: @landing-bg;*/
-  background-position: bottom;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  background-position: top;
-  height: auto;
-  left: 0;
-  min-height: 100%;
-  min-width: 100%;
-  position: absolute;
-  top: 0;
-  width: 100%;
-  z-index: -999;
+  /*background-position: bottom;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	background-position: top;
+	height: auto;
+	left: 0;
+	min-height: 100%;
+	min-width: 100%;
+	position: absolute;
+	top: 0;
+	width: 100%;
+	z-index: -999;*/
   /*background-color: white;*/
   /*position: relative;*/
   color: #fafaed;
@@ -122,25 +122,25 @@ a:hover {
   /*background-repeat: repeat;
 	background-attachment: fixed;
 	background-position: top;*/
-  height: auto;
-  left: 0;
-  min-height: 100%;
-  min-width: 100%;
-  position: absolute;
-  top: 0;
-  width: 100%;
-  z-index: -999;
+  /*height: auto;
+	left: 0;
+	min-height: 100%;
+	min-width: 100%;
+	position: absolute;
+	top: 0;
+	width: 100%;
+	z-index: -999;*/
 }
 .welcome-page .container {
   margin-top: 6em;
 }
 .welcome-page .welcome-section {
-  background-color: rgba(170, 154, 102, 0.2);
-  min-height: 100%;
-  min-width: 100%;
-  height: auto;
+  /*background-color: @overlay-bg;
+		min-height: 100%;
+		min-width: 100%;
+		height: auto;*/
   /*top: 0;*/
-  position: absolute;
+  /*position: absolute;*/
 }
 .welcome-page dt {
   margin-top: 1em;
@@ -153,25 +153,26 @@ a:hover {
   /*width: 100%;*/
   /*height: 800px;*/
   /*background-color: @landing-bg;*/
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  background-position: bottom;
-  height: auto;
-  left: 0;
-  min-height: 100%;
-  min-width: 100%;
-  position: absolute;
-  top: 0;
-  width: 100%;
-  z-index: -999;
+  /*background-position: bottom;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	background-position: bottom;
+	height: auto;
+	left: 0;
+	min-height: 100%;
+	min-width: 100%;
+	position: absolute;
+	top: 0;
+	width: 100%;
+	z-index: -999;*/
 }
 .sign-up-page .sign-up-section {
   /*min-height: 700px;*/
-  background-color: rgba(170, 154, 102, 0.2);
-  min-height: 100%;
-  min-width: 100%;
-  height: auto;
-  position: absolute;
+  /*background-color: @overlay-bg;
+		min-height: 100%;
+		min-width: 100%;
+		height: auto;
+		position: absolute;*/
 }
 .sign-up-page .sign-up-section .container {
   /*background-color: @overlay-bg;*/
@@ -185,14 +186,14 @@ a:hover {
   /*background-repeat: repeat;*/
   /*background-attachment: fixed;*/
   /*background-position: top;*/
-  height: auto;
-  left: 0;
-  min-height: 100%;
-  min-width: 100%;
-  position: fixed;
-  top: 0;
-  width: 100%;
-  z-index: -999;
+  /*height: auto;
+	left: 0;
+	min-height: 100%;
+	min-width: 100%;
+	position: fixed;
+	top: 0;
+	width: 100%;
+	z-index: -999;*/
   /*background-color: @overlay-bg;*/
   /*	
 		.circle {
@@ -222,11 +223,11 @@ a:hover {
 	*/
 }
 .recipients-page .recipients-section {
-  background-color: rgba(170, 154, 102, 0.2);
-  min-height: 100%;
-  min-width: 100%;
-  height: auto;
-  position: fixed;
+  /*background-color: @overlay-bg;
+		min-height: 100%;
+		min-width: 100%;
+		height: auto;
+		position: fixed;*/
 }
 .recipients-page a {
   color: #aa9a66;
@@ -266,21 +267,21 @@ a:hover {
 */
 .recipient-page {
   background-image: url(../img/confectionary.png);
-  height: auto;
-  left: 0;
-  min-height: 100%;
-  min-width: 100%;
-  position: absolute;
-  top: 0;
-  width: 100%;
-  z-index: -999;
+  /*height: auto;
+	left: 0;
+	min-height: 100%;
+	min-width: 100%;
+	position: absolute;
+	top: 0;
+	width: 100%;
+	z-index: -999;*/
 }
 .recipient-page .recipient-section {
-  background-color: rgba(170, 154, 102, 0.2);
-  min-height: 100%;
-  min-width: 100%;
-  height: auto;
-  position: absolute;
+  /*background-color: @overlay-bg;
+		min-height: 100%;
+		min-width: 100%;
+		height: auto;
+		position: absolute;*/
 }
 .recipient-page .recipient-container {
   padding-top: 7em;
@@ -296,14 +297,14 @@ a:hover {
 */
 .add-recipient-page {
   background-image: url(../img/confectionary.png);
-  height: auto;
-  left: 0;
-  min-height: 100%;
-  min-width: 100%;
-  position: fixed;
-  top: 0;
-  width: 100%;
-  z-index: -999;
+  /*height: auto;
+	left: 0;
+	min-height: 100%;
+	min-width: 100%;
+	position: fixed;
+	top: 0;
+	width: 100%;
+	z-index: -999;*/
   /*.instructions {
 		background-color: @instructions-bg;
 		font-size: 1.1em;
@@ -320,11 +321,11 @@ a:hover {
 	}*/
 }
 .add-recipient-page .add-recipient-section {
-  background-color: rgba(170, 154, 102, 0.2);
-  min-height: 100%;
-  min-width: 100%;
-  height: auto;
-  position: fixed;
+  /*background-color: @overlay-bg;
+		min-height: 100%;
+		min-width: 100%;
+		height: auto;
+		position: fixed;*/
 }
 .add-recipient-page .add-recipient-section .container {
   padding-top: 7em;
@@ -369,14 +370,14 @@ a:hover {
 */
 .edit-recipient-page {
   background-image: url(../img/confectionary.png);
-  height: auto;
-  left: 0;
-  min-height: 100%;
-  min-width: 100%;
-  position: fixed;
-  top: 0;
-  width: 100%;
-  z-index: -999;
+  /*height: auto;
+	left: 0;
+	min-height: 100%;
+	min-width: 100%;
+	position: fixed;
+	top: 0;
+	width: 100%;
+	z-index: -999;*/
   /*.instructions {
 		background-color: @instructions-bg;
 		font-size: 1.1em;
@@ -393,11 +394,11 @@ a:hover {
 	}*/
 }
 .edit-recipient-page .edit-recipient-section {
-  background-color: rgba(170, 154, 102, 0.2);
-  min-height: 100%;
-  min-width: 100%;
-  height: auto;
-  position: fixed;
+  /*background-color: @overlay-bg;
+		min-height: 100%;
+		min-width: 100%;
+		height: auto;
+		position: fixed;*/
 }
 .edit-recipient-page .edit-recipient-section .container {
   padding-top: 7em;
@@ -443,21 +444,21 @@ a:hover {
 */
 .choose-recipient-page {
   background-image: url(../img/confectionary.png);
-  height: auto;
-  left: 0;
-  min-height: 100%;
-  min-width: 100%;
-  position: fixed;
-  top: 0;
-  width: 100%;
-  z-index: -999;
+  /*height: auto;
+	left: 0;
+	min-height: 100%;
+	min-width: 100%;
+	position: fixed;
+	top: 0;
+	width: 100%;
+	z-index: -999;*/
 }
 .choose-recipient-page .choose-recipient-section {
-  background-color: rgba(170, 154, 102, 0.2);
-  min-height: 100%;
-  min-width: 100%;
-  height: auto;
-  position: fixed;
+  /*background-color: @overlay-bg;*/
+  /*min-height: 100%;
+		min-width: 100%;
+		height: auto;
+		position: fixed;*/
 }
 .choose-recipient-page .choose-container {
   padding-top: 7em;
@@ -520,21 +521,21 @@ a:hover {
 */
 .add-gift-page {
   background-image: url(../img/confectionary.png);
-  height: auto;
-  left: 0;
-  min-height: 100%;
-  min-width: 100%;
-  position: fixed;
-  top: 0;
-  width: 100%;
-  z-index: -999;
+  /*height: auto;
+	left: 0;
+	min-height: 100%;
+	min-width: 100%;
+	position: fixed;
+	top: 0;
+	width: 100%;
+	z-index: -999;*/
 }
 .add-gift-page .add-gift-section {
-  background-color: rgba(170, 154, 102, 0.2);
-  min-height: 100%;
-  min-width: 100%;
-  height: auto;
-  position: fixed;
+  /*background-color: @overlay-bg;*/
+  /*min-height: 100%;
+		min-width: 100%;
+		height: auto;
+		position: fixed;*/
 }
 .add-gift-page .add-gift-section .container {
   /*padding-top: 7em;*/
@@ -1201,14 +1202,14 @@ html {
 body {
   background-color: #ffffff;
   height: 100%;
-  padding: 0;
+  /*padding: 0;*/
   /*background-image: url(../img/bg-signup.jpg);*/
   /*background-image: url(../img/confectionary.png);*/
   /*background-repeat: no-repeat;
 	background-attachment: fixed;
 	background-position: bottom;*/
   /*min-height:100%;*/
-  /*margin-bottom: 40px;*/
+  margin-bottom: 40px;
 }
 .btn {
   letter-spacing: 0.5px;

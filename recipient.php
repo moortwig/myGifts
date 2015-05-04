@@ -3,8 +3,8 @@
 require_once('header.php');
 
 ?>
-<div class="recipient-page">
-	<div class="recipient-section">
+<div class="full-screen recipient-page">
+	<div class="overlay recipient-section">
 		<div class="container">
 		    <?php
 		    // Display this section if a user is logged in

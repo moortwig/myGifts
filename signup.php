@@ -4,8 +4,8 @@ require_once('header.php');
 
 ?>
 
-<div class="sign-up-page">
-    <div class="sign-up-section">
+<div class="full-screen-img sign-up-page">
+    <div class="overlay sign-up-section">
         <div class="vertical-center container">
             <form class="form-signin" method="post" action="app.php" role="form">
                 <h2 class="form-signin-heading">Sign up</h2>
