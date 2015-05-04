@@ -1189,11 +1189,13 @@ div {
 /* Basic stuff */
 html {
   height: 100%;
-  position: relative;
+  /* Required for full screens */
+  /*position: relative;*/
 }
 body {
   background-color: #ffffff;
   height: 100%;
+  /* Required for full screens */
   padding: 0;
   /*margin-bottom: -60px;*/
   /*margin-top: -60px;*/
@@ -1210,6 +1212,7 @@ body {
   letter-spacing: 0.5px;
   text-transform: uppercase;
 }
+/* Required for full screens */
 .wrapper {
   /*position: fixed;*/
   /*background-color: red;*/
