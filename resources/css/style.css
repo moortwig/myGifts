@@ -1138,19 +1138,11 @@ a:hover {
     width: 50%;
     margin: auto;
   }
-  .about-page .nano {
-    height: 500px;
-    max-width: 100%;
-  }
   /*
 		RECIPIENTS PAGE
 	*/
   .recipients-page .data-row {
     width: 70%;
-  }
-  .recipients-page .nano {
-    max-height: 600px;
-    /*max-width: 100%;*/
   }
   /*
 		ADD ITEM PAGE;
