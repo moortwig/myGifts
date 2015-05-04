@@ -38,7 +38,7 @@ require_once('header.php');
                     <?php } ?>
                 </div><!-- .container -->
             </div><!-- .nano-content -->
-        </div><!-- #add-gift-recipients nano -->
+        </div><!-- #recipients nano -->
     </div><!-- .recipients-section -->
 </div> <!-- .recipients-page -->
 

@@ -593,6 +593,15 @@ a:hover {
 .about-page a:hover {
   color: #554d33;
 }
+.about-page .nano {
+  /*background-color: none;*/
+  /*max-height: 700px;*/
+  max-width: 100%;
+  border-bottom: none;
+}
+.about-page .has-scrollbar {
+  background-color: transparent;
+}
 /*
 	ERROR 404 PAGE;
 */
@@ -718,6 +727,10 @@ a:hover {
   }
   .about-page p {
     font-size: 1.1em;
+  }
+  .about-page .nano {
+    max-height: 350px;
+    max-width: 100%;
   }
   /*
 		RECIPIENTS PAGE
@@ -982,6 +995,10 @@ a:hover {
   .about-page .about-section .container {
     padding-top: 7em;
   }
+  .about-page .nano {
+    max-height: 550px;
+    max-width: 100%;
+  }
   /*
 		RECIPIENTS PAGE
 	*/
@@ -1117,11 +1134,15 @@ a:hover {
     padding-top: 0em;
   }
   .about-page .centered-container {
-    outline: 1px solid red;
+    /*outline: 1px solid red;*/
     /*background-color: @overlay-bg;*/
     padding: 2em;
     width: 50%;
     margin: auto;
+  }
+  .about-page .nano {
+    height: 500px;
+    max-width: 100%;
   }
   /*
 		RECIPIENTS PAGE
