@@ -834,29 +834,17 @@ a:hover {
   /*
 		INDEX
 	*/
-  .index-page .row {
-    /*background-color: @landing-bg;*/
-    /*padding: 2em;*/
-    /*min-height: 100%;*/
-  }
   .index-page .vertical-center {
     position: absolute;
     top: 30%;
     left: 10%;
     width: 80%;
     bottom: 0%;
-    /*height: 10em;*/
-    /*margin-top: -5em*/
   }
   .index-page .headline-container {
-    /*outline: 1px solid red;*/
-    /*width: 50px;*/
     text-align: center;
   }
   .index-page .headline-container .landing-headline {
-    /*background-color: white;*/
-    /*padding: 5px;
-				margin-top: 5px;*/
     font-size: 1.7em;
   }
   .index-page .headline-container ul {
@@ -864,7 +852,6 @@ a:hover {
     margin-bottom: -0.7em;
     margin-top: 2em;
     margin-left: 2em;
-    /*text-align: left;*/
     list-style-type: none;
     font-size: 1.1em;
     text-align: left;
@@ -897,29 +884,18 @@ a:hover {
   /*
 		RECIPIENTS PAGE
 	*/
-  .recipients-page h2 {
-    /*font-size: 1.6em;*/
-  }
-  .recipients-page h4 {
-    /*font-size: 1.2em;*/
-  }
   .recipients-page .data-row {
     width: 100%;
   }
   .recipients-page .ton-li-plus {
     font-size: 1em;
-    /*background-color: silver;*/
     padding: 7px;
-    /*position:relative;*/
-    /*top: -3px;*/
   }
   .recipients-page .glyphicon {
     float: right;
-    /*margin-left: 30px;
-			margin-right: 3px;*/
   }
   /*
-	SINGLE RECIPIENT PAGE;
+		SINGLE RECIPIENT PAGE;
 	*/
   .recipient-page .nano {
     width: 100%;
@@ -927,9 +903,6 @@ a:hover {
   /*
 		ADD RECIPIENT PAGE;
 	*/
-  .add-recipient-page .add-recipient-section .container {
-    /*padding-top: 7em;*/
-  }
   .add-recipient-page h2 {
     font-size: 2em;
   }
@@ -939,13 +912,6 @@ a:hover {
   .add-recipient-page .overview-container {
     width: 300px;
     margin: auto;
-  }
-  .add-recipient-page .nano {
-    /*max-height: 500px;*/
-  }
-  .add-recipient-page .btn-success i {
-    /*font-size: 0.7em;
-				margin-right: 3px;*/
   }
   /*
 		ADD ITEM PAGE;
@@ -964,9 +930,6 @@ a:hover {
 	*/
   .not-found {
     padding-top: 8em;
-  }
-  .not-found .container {
-    /*width: 90%;*/
   }
 }
 /* Large units only */
