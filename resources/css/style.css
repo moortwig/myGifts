@@ -636,6 +636,9 @@ a:hover {
 /* Styling starts at small units and move up in screen resolutions */
 /* Small units and up */
 @media only screen and (max-width: 767px) {
+  p {
+    font-size: 1.1em;
+  }
   /*
 		HEADER
 	*/
@@ -738,9 +741,6 @@ a:hover {
   .about-page .about-section .container {
     padding-top: 5em;
     width: 100%;
-  }
-  .about-page p {
-    font-size: 1.1em;
   }
   /*
 		RECIPIENTS PAGE
