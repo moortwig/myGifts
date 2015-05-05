@@ -10,7 +10,7 @@
 @import "about.less";
 @import "error.less";
 
-/* Styling starts at small units and move up in screen resolutions */
+/* Media queries */
 @import "small-units.less";
 @import "medium-units.less";
 @import "large-units.less";
@@ -25,25 +25,12 @@ div {
 /* Basic stuff */
 html {
 	height: 100%; /* Required for full screens */
-
-	/*position: relative;*/
 }
 
 body {
 	background-color: @body-bg;
 	height: 100%; /* Required for full screens */
 	padding: 0;
-	/*margin-bottom: -60px;*/
-	/*margin-top: -60px;*/
-	/*z-index: -999;*/
-
-	/*background-image: url(../img/bg-signup.jpg);*/
-	/*background-image: url(../img/confectionary.png);*/
-	/*background-repeat: no-repeat;
-	background-attachment: fixed;
-	background-position: bottom;*/
-	/*min-height:100%;*/
-  	/*margin-bottom: 40px;*/
 }
 
 .btn {
@@ -53,15 +40,8 @@ body {
 
 /* Required for full screens */
 .wrapper {
-	/*position: fixed;*/
-	/*background-color: red;*/
-	/*min-height: 1080px;*/
-	/*min-*/height: 100%;
-	/*min-*/width: 100%;
-	/*height: auto;*/
-
-	/*padding-top: 100px;*/
-	/*padding-bottom: 60px; /* Adjust this to match footer height */ 
+	height: 100%;
+	width: 100%;
 }
 
 /* full screen background image, scales and stretches */
@@ -79,8 +59,6 @@ body {
 	display: table;
 	height: 100%;
 	width: 100%;
-	/*padding-bottom: 60px;*/
-	/*margin-bottom: 60px;*/ /* Adjust this to match footer height */ 
 }
 
 /* Full screen overlay */
@@ -89,18 +67,10 @@ body {
 	display: table;
 	width: 100%;
 	height: 100%;
-	/*margin-top: 30px;*/
-	/*padding-bottom: 60px;*/
 }
 
 /* Nanoscroller */
 .nano {
-	/*outline: 1px solid red;*/
-	/*background: #bba; */
-	/*width: 300px; */
-	/*height: 100px;*/
-
-
 	border-bottom: 1px solid @nano-border;
 	background-color: @nano-bg;
 
@@ -122,8 +92,8 @@ body {
 
 /* Navigation */
 .navbar {
-	/*height: 60px;*/
 	border: 0px;
+
 	.navbar-brand {
 		color: @nav-text;
 		letter-spacing: 0.5px;
@@ -142,11 +112,6 @@ body {
 		}
 
 	}
-
-	/*.btn {
-		display: block;
-		margin: auto;
-	}*/
 }
 
 .glyphicon {
@@ -166,10 +131,8 @@ footer {
 	position: fixed;
 	bottom: 0;
 	width: 100%;
-	/*height: 80px;*/
 	padding: 1em;
 	text-align: center;
-	/*z-index: 1030;*/
 }
 
 
