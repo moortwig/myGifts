@@ -40,20 +40,10 @@ require_once('header.php');
                         
                         <label for="Occasion" class="sr-only">Occasion:</label>
                         <input type="text" name="occasion" class="form-control" placeholder="Occasion" required /><br />
-                        <!-- buttons: -->
-                        <!-- TODO JavaScript check that all fields are filled in: -->
-                        <!-- TODO jQuery on key down "Enter" -> Submit -->
-
-                        <!-- TODO Maybe a better way to pass on the session user ID? -->
-                        <!-- YES! THERE IS!!! Besides, the row below isn't even working ...
-                        Read THIS: http://www.clfsrpm.net/csrf/ -->
                         <input name="userId" type="hidden" value=<?php echo "'". $_SESSION['userId'] . "'" ?> />
-                        <!-- TODO remove this field with dummy data -->
-                        <!-- <input name="userId" type="hidden" value="5" required /> -->
                         <input name="itemName" type="hidden" value="<?php echo $itemName ?>" required />
                         <input name="description" type="hidden" value="<?php echo $description ?>" required />
                         <input name="recipients" type="hidden" value="<?php echo htmlspecialchars($recipients) ?>" required />
-
 
                         <button type="submit" class="btn btn-md btn-success" name="addGift">I'm all done!</button>
 
