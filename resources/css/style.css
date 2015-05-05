@@ -363,6 +363,9 @@ a:hover {
 /* Styling starts at small units and move up in screen resolutions */
 /* Small units and up */
 @media only screen and (max-width: 767px) {
+  /*
+		GENERAL STUFF
+	*/
   p {
     font-size: 1.1em;
   }
@@ -385,11 +388,9 @@ a:hover {
     font-size: 1.5em;
   }
   .navbar .navbar-form {
-    /*outline: 1px solid red;*/
     border: none;
     margin: auto;
     width: 80%;
-    /*width: 300px;*/
   }
   .navbar .navbar-right {
     padding-bottom: 3em;
@@ -403,8 +404,6 @@ a:hover {
   }
   .navbar .navbar-right .btn-danger {
     float: right;
-    /*display: block;*/
-    /*margin: auto;*/
   }
   /*
 		INDEX PAGE
@@ -418,30 +417,17 @@ a:hover {
     left: 0%;
     width: 100%;
     bottom: 10%;
-    /*margin-top: 1em;*/
   }
   .index-page .row {
     background-color: rgba(98, 119, 109, 0.5);
-    /*padding-top: 2em;*/
-    /*min-height: 100%;*/
-  }
-  .index-page .headline-container {
-    /*outline: 1px solid red;*/
-    /*width: 50px;*/
   }
   .index-page .headline-container .landing-headline {
-    /*background-color: white;*/
-    /*padding: 5px;*/
-    /*margin-top: 5px;*/
     font-size: 1em;
   }
   .index-page .headline-container ul {
-    /*display: block;*/
-    /*float: right;*/
     margin-top: 1em;
     margin-left: -3em;
     margin-bottom: -0.7em;
-    /*text-align: left;*/
     font-size: 1.1em;
   }
   /*
@@ -491,32 +477,18 @@ a:hover {
   }
   .recipients-page .ton-li-plus {
     font-size: 1em;
-    /*background-color: silver;*/
     padding: 7px;
-    /*position:relative;*/
-    /*top: -3px;*/
   }
   .recipients-page .glyphicon {
     float: right;
     font-size: 1.5em;
-    /*margin-left: 30px;
-			margin-right: 3px;*/
   }
   /*
 		SINGLE RECIPIENT PAGE
 	*/
-  .recipient-page .recipient-container {
-    /*padding-top: 2em;*/
-  }
   .recipient-page .nano {
     width: 100%;
     height: 300px;
-  }
-  .recipient-page dt {
-    /*margin-top: 1em;*/
-  }
-  .recipient-page .btn {
-    /*margin-top: 1em;*/
   }
   /*
 		ADD RECIPIENT PAGE;
@@ -533,13 +505,6 @@ a:hover {
   }
   .add-recipient-page h2 {
     font-size: 1.7em;
-  }
-  .add-recipient-page .nano {
-    /*max-height: 500px;*/
-  }
-  .add-recipient-page .btn-success i {
-    /*font-size: 0.7em;
-				margin-right: 3px;*/
   }
   /*
 		ADD ITEM PAGE;
