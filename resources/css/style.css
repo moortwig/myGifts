@@ -246,6 +246,9 @@ a:hover {
   padding: 5px;
   border-bottom: 1px solid silver;
 }
+.recipients-page .data-row span {
+  font-size: 1em;
+}
 .recipients-page .ton-li-plus {
   font-size: 1em;
   /*background-color: silver;*/
