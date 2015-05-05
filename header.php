@@ -20,6 +20,9 @@ require_once('app.php');
     <!-- TONICONS -->
     <link rel="stylesheet" type="text/css"  href="resources/css/vendor/tonicons.css">
 
+    <!-- FONTS -->
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+
     <!-- Nanoscroller CSS -->
     <link rel="stylesheet" href="resources/css/vendor/nanoscroller.css">
 
