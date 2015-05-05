@@ -8,13 +8,13 @@ require_once('header.php');
 		<div class="container">
 		    <?php
 		    // Display this section if a user is logged in
-		    // TODO EDIT FORM 
 		    if(isset($_SESSION['username'])) { ?>
 				<?php
 
 				$recipient = new Recipient();
 				$recipientId = $_GET["id"]; // picks up the id from the URL
 
+				// get recipient name and information
 				$name = $recipient->getRecipient($recipientId)['name'];
 				$information = $recipient->getRecipient($recipientId)['information'];
 

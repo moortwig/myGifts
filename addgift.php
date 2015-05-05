@@ -27,9 +27,8 @@ require_once('header.php');
 
                             echo $itemName . ' to ';
                             foreach ($recipientArray as $key => $recipientId) {
+                                // get recipient name. getRecipient() is an array, so we need to reach for the array key
                                 $recipientName = $recipient->getRecipient($recipientId)['name'];
-                                var_dump(getRecipient($recipientId));
-                                die('remove');
                                 echo $recipientName;
                                 echo ', ';
                             } ?>
