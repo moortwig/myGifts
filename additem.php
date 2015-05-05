@@ -17,21 +17,10 @@ require_once('header.php');
                         <input type="text" name="itemName" class="form-control" placeholder="Item" required/><br />
                         <label for="description" class="sr-only">Description:</label><br />
                         <textarea name="description" class="form-control" placeholder="Description"></textarea>
-                        <!-- TODO Maybe a better way to pass on the session user ID? -->
-                        <!-- YES! THERE IS!!! Besides, the row below isn't even working ...
-                        Read THIS: http://www.clfsrpm.net/csrf/ -->
-                      
                         <input name="userId" type="hidden" value=<?php echo "'". $_SESSION['userId'] . "'" ?> />
-                        <!-- TODO remove this field with dummy data -->
-                        <!-- <input name="userId" type="hidden" value="5" required /> -->
-                        <br />
-                        <!-- buttons: -->
-                        <!-- TODO jQuery on click clear form
-                        <input type="submit" class="button" name="clear" value="CLEAR" /> -->
 
-                        <!-- TODO JavaScript check that all fields are filled in: -->
-                        <!-- TODO jQuery on key down "Enter" -> Submit -->
-                        <?php /*echo "<a href='chooserecipient.php?item=" . $recipientId . "' class='btn btn-xs btn-success'>Edit</a> ";*/ ?>
+                        <br />
+                    
                         <button type="submit" class="btn btn-md btn-success" name="addItemContinue"><span class="glyphicon glyphicon-share-alt"></span>Continue</button>
                     </form>
                 </div><!-- .add-item-form -->
