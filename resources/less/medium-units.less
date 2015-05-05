@@ -3,11 +3,6 @@
 @tablet:    ~"only screen and (min-width: 768px)";
 
 @media @tablet {
-	div {
-		/*outline: 1px solid silver;*/
-	}
-	
-
 
 	/*
 		HEADER
@@ -38,18 +33,29 @@
 			.form-control {
 				width: 150px;
 			}
+
+
+			.btn {
+				float: right;
+				margin-left: 5px;
+				margin-top: 9px;
+				padding: 6px;
+			}
+
+			.btn-danger {
+				margin-top: 10px;
+			}
 		}
 
 
 		.nav {
 			li {
-				/*padding-left: 10px;
-				padding-right: 10px;*/
 				height: 70px;
 				width: 90px;
 				padding: 10px;
 			}
 
+			/* Menu icons positioning */
 			i {
 				letter-spacing: 0px;
 				position: relative;
@@ -57,14 +63,7 @@
 				left: -10px;
 			}
 
-			/*.li-text {
-				letter-spacing: 0px;
-				position: absolute;
-				left: 20px;
-				top: 45px;
-			}*/
-
-
+			/* Menu icon text positioning */
 			.li-text-rec {
 				letter-spacing: 0px;
 				position: relative;
@@ -85,19 +84,15 @@
 				top: 17px;
 				left: 32px;
 			}
-
 		}
 
 		.btn {
 			float: right;
 			margin-left: 5px;
-			margin-top: 1px;
+			margin-top: 3px;
 			padding: 6px;
 		}
 
-		.btn-danger {
-			margin-top: 10px;
-		}
 	}
 
 

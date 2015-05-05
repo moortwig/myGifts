@@ -761,9 +761,6 @@ a:hover {
 }
 /* Medium units and up */
 @media only screen and (min-width: 768px) {
-  div {
-    /*outline: 1px solid silver;*/
-  }
   /*
 		HEADER
 	*/
@@ -786,17 +783,20 @@ a:hover {
   .navbar .navbar-form .form-control {
     width: 150px;
   }
+  .navbar .navbar-form .btn {
+    float: right;
+    margin-left: 5px;
+    margin-top: 9px;
+    padding: 6px;
+  }
+  .navbar .navbar-form .btn-danger {
+    margin-top: 10px;
+  }
   .navbar .nav {
-    /*.li-text {
-				letter-spacing: 0px;
-				position: absolute;
-				left: 20px;
-				top: 45px;
-			}*/
+    /* Menu icons positioning */
+    /* Menu icon text positioning */
   }
   .navbar .nav li {
-    /*padding-left: 10px;
-				padding-right: 10px;*/
     height: 70px;
     width: 90px;
     padding: 10px;
@@ -828,11 +828,8 @@ a:hover {
   .navbar .btn {
     float: right;
     margin-left: 5px;
-    margin-top: 1px;
+    margin-top: 3px;
     padding: 6px;
-  }
-  .navbar .btn-danger {
-    margin-top: 10px;
   }
   /*
 		INDEX
