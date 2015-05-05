@@ -974,9 +974,6 @@ a:hover {
 }
 /* Large units only */
 @media only screen and (min-width: 992px) {
-  div {
-    /*outline: 1px solid blue;*/
-  }
   /*
 		COMMON
 	*/
@@ -985,41 +982,26 @@ a:hover {
     top: 30%;
     left: 10%;
     width: 80%;
-    /*height: 10em;*/
-    /*margin-top: -5em*/
   }
   /*
 		INDEX
 	*/
-  .index-page .row {
-    /*background-color: @landing-bg;*/
-    /*padding: 2em;*/
-    /*min-height: 100%;*/
-  }
   .index-page .headline-container {
-    /*outline: 1px solid red;*/
-    /*width: 50px;*/
     text-align: right;
   }
   .index-page .headline-container .landing-headline {
-    /*margin-left: -1em;*/
     margin-bottom: -0.7em;
-    /*color: white;*/
-    /*padding: 5px;
-				margin-top: 5px;*/
     font-size: 1.8em;
   }
   .index-page .headline-container ul {
     display: block;
     float: right;
     margin-top: 1em;
-    /*text-align: left;*/
     font-size: 1.3em;
     list-style-type: none;
     padding-bottom: 1em;
   }
   .index-page .sign-up-call {
-    /*text-align: center;*/
     padding-top: 5em;
   }
   /*
@@ -1041,8 +1023,6 @@ a:hover {
     padding-top: 0em;
   }
   .about-page .centered-container {
-    /*outline: 1px solid red;*/
-    /*background-color: @overlay-bg;*/
     padding: 2em;
     width: 50%;
     margin: auto;
@@ -1054,7 +1034,7 @@ a:hover {
     width: 70%;
   }
   /*
-	SINGLE RECIPIENT PAGE;
+		SINGLE RECIPIENT PAGE;
 	*/
   .recipient-page .nano {
     width: 60%;
