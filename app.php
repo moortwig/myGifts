@@ -1,11 +1,6 @@
 <?php
 session_start();
 // include everything the site needs to function
-
-// TODO get absolute path and assign to variable
-// TODO add die() after redirecting??? http://thedailywtf.com/articles/WellIntentioned-Destruction
-// $path = $_SERVER['DOCUMENT_ROOT'];
-
 // this file (app.php) is then included in header.php
 
 // CLASSES
@@ -22,8 +17,7 @@ require_once('classes/User.php');
 if(isset($_POST['signup'])) {
 	$user = new User();
 	$user->newUser();
-	header('Refresh: 2; url=index.php');
-	// TODO close the connection
+	header('location: index.php');
 }
 
 // LOGIN
@@ -31,7 +25,7 @@ if(isset($_POST['signup'])) {
 if (isset($_POST['login'])) {
 	$session = new Session();
 	$session->startLoginSession();
-	header('Refresh: 2; url=index.php');
+	header('location: index.php');
 }
 
 // LOGOUT
@@ -39,7 +33,7 @@ if (isset($_POST['login'])) {
 if (isset($_POST['logout'])) {
 	session_destroy();
 	echo "You're now being logged out, and will shortly return to the start page.";
-	header('Refresh: 2; url=index.php');
+	header('location: index.php');
 }
 
 
@@ -50,23 +44,13 @@ if(isset($_POST['addRecipient'])) {
 	$recipient->newRecipient();
 	echo "The recipient has been saved!";
 	header('location: recipients.php');
-	// TODO close the connection
 }
 
 // ADD ITEM AND CONTINUE (to Add Gift)
 if(isset($_POST['storeRecipient'])) {
-	// $recipient = new Recipient();
-	// $recipient->newRecipient();
-	// header('location: addGift.php');
 	header('location: addGift.php');
-	// TODO close the connection
 }
-/*if(isset($_POST['addRecipientContinue'])) {
-	$item = new Recipient();
-	$item->newRecipient();
-	header('location: addGift.php');
-	// TODO close the connection
-}*/
+
 
 // CHOOSE RECIPIENT
 if(isset($_POST['chooseRecipient'])) {
@@ -74,37 +58,12 @@ if(isset($_POST['chooseRecipient'])) {
 	$itemName = $_POST['itemName'];
 	$description = $_POST['description'];
 
-	// foreach ($recipientIdArray as $key => $recipientId) {
-	// 	$rId = strval($recipientId);
-
-	// 	$strArray[] = $rId;
-	// }
-
-	// $serialised = serialize($recipientIdArray);
+	// encode array for safer transfer
 	$recipientIds = json_encode($recipientIdArray, JSON_FORCE_OBJECT);
-	// var_dump($recipientIdArray);
-	// var_dump($recipientIdArray);
-	// die('choose rec remove');
-	// var_dump($strArray);
-	// echo $recipientIdArray;
-	// var_dump($recipientIds);
-	// die('remove');
 
-	// $item = new Item();
-	// $item->tempItem();
-
-	// var_dump($item->tempItem()['name']);
-	// die('remove');
-
-	// chooserecipient.php?item=" . $recipientId
-	$url = /*urlencode(*/'addgift.php?recipients=' . $recipientIds . '&' . 'itemName=' . $itemName . '&' . 'description=' . $description/*)*/;
-	// var_dump($url);
-	// die('remove');
-
-	// header('location: chooserecipient.php?itemName=' . $itemName . '&' . 'description=' . $description);
-
+	// assemble the url
+	$url = 'addgift.php?recipients=' . $recipientIds . '&' . 'itemName=' . $itemName . '&' . 'description=' . $description;
 	header('location:' . $url);
-	// header('location: addgift.php?recipients=' . array_values($recipientIdArray));
 }
 
 
@@ -118,7 +77,6 @@ if(isset($_POST['editRecipient'])) {
 
 // DELETE RECIPIENT 	
 if(isset($_POST['deleteRecipient'])) {
-	// TODO test this
 	$recipient = new Recipient();
 	$recipient->deleteRecipient($recipientId);
 	header('location: recipients.php');
@@ -126,49 +84,20 @@ if(isset($_POST['deleteRecipient'])) {
 
 
 ///////////////////////////////////////////////////
-// ADD ITEM
-/*if(isset($_POST['addItem'])) {
-	$item = new Item();
-	$item->newItem();
-	// echo "The item has been saved!";
-	header('location: addgift.php');
-	// TODO close the connection
-}*/
-
 // ADD ITEM TEMP (then go to Choose Recipient)
 if(isset($_POST['addItemContinue'])) {
 	$itemName = $_POST['itemName'];
 	$description = $_POST['description'];
-
 	header('location: chooserecipient.php?itemName=' . $itemName . '&' . 'description=' . $description);
 }
 
-// EDIT ITEM 	
-/*if(isset($_POST['editItem'])) {
-	$item = new Item();
-	$item->editItem();
-	header('location: profile.php');
-}*/
 
 ///////////////////////////////////////////////////
 // ADD GIFT
 if(isset($_POST['addGift'])) {
 	$item = new Item();
 	$item->newItem();
-
-	// $gift = new Gift();
-	// $gift->newGift($itemId);
-
-
-	echo "The gift has been saved!";
-	header('Refresh: 2; url=recipients.php');
-	// TODO close the connection
+	header('location: recipients.php');
 }
-
-
-
-
-
-
 
 ?>
