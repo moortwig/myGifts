@@ -5,11 +5,10 @@ var app = {
 	*/
 	init: function() {
 		console.log('init');
-		// functions here
-		app.nano();
-		// app.divHeight();		
-	},
 
+		// function(s) here
+		app.nano();	
+	},
 
 	/*
 		nanoScroller
@@ -19,31 +18,9 @@ var app = {
 		$('.nano').nanoScroller();
 	},
 
-
-	/*
-		Set height at index page sections
-	*/
-	divHeight: function() {
-		console.log('sectionHeight');
-		var windowHeight = $(window).height();
-
-		$('.sign-up-page').css('height', windowHeight);
-	}
-
-	// bgImage: function() {
-	// 	console.log('sets background image');
-	// 	// TODO:
-	// 	// hämta närmaste child
-	// 	// gör en switch case
-	// 	// om child har class "x"
-	// 	// sätt in bakgrundsbild till body element
-	// }
 }
 
 /*
-	Initialise things
+	Initialise it!
 */
 app.init();
-// smoothScroll.init();
-
-// $(document).ready(function() {});
