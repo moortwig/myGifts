@@ -10,7 +10,6 @@ require_once('header.php');
 		    // Display this section if a user is logged in
 		    if(isset($_SESSION['username'])) { 
 		    	$userId = $_SESSION['userId'];
-		    	// $userId = 5; // DUMMY DATA, CHANGE THIS ...
 				$recipient = new Recipient();
 
 				$recipientId = $_GET["id"]; // picks up the id from the URL
@@ -34,7 +33,7 @@ require_once('header.php');
 								 <br />
 								<?php echo "<a href='editrecipient.php?id=" . $recipientId . "' class='btn btn-success'><span class='glyphicon glyphicon-pencil'></span>Edit</a> "; ?>
 							</div><!-- .recipient-container -->
-						</div><!-- .col-md-4 col-md-offset-2 -->
+						</div><!-- .col-xs-12 col-sm-5 col-sm-offset-1 -->
 
 						<div class="col-xs-12 col-sm-6">
 							<div class="recipient-container">	
@@ -50,19 +49,18 @@ require_once('header.php');
 												<?php foreach ($giftsArray as $singleGift => $single) {
 													echo "<dt>";
 														echo $single['item_id']['name'] . " - ";
-													echo $single['occasion'];
+														echo $single['occasion'];
 													echo "</dt>";
 													echo "<dd>";
-													echo $single['item_id']['description'];
+														echo $single['item_id']['description'];
 													echo "</dd>";
-													// echo $single['added'] . "<br />";
 												} ?>
 											</dl>
 										</div><!-- .nano-content -->
 									</div><!-- .nano -->
 								<?php } ?>
 							</div><!-- .recipient-container -->
-			        	</div><!-- .col-md-6 -->
+			        	</div><!-- .col-xs-12 col-sm-6 -->
 
 			        </div><!-- .row -->
 			    <?php } else {

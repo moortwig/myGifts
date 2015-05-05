@@ -24,11 +24,11 @@ require_once('header.php');
                
                 foreach ($recipients as $key => $r) {
                     $recipientId = $r['id'];
+                    // get number of gifts
                     $gifts = count($gift->getAllGifts($recipientId));
                                     
                     echo "<div class='data-row'>"; 
                         echo "<div class='data-field'>";
-                            // print_r(count($gifts));
                             echo "<a href='recipient.php?id=" . $r['id'] . "'>" . "<h4>" . $r['name'] . "</a>";
                             echo "<small><em> - " . $gifts . " gifts</em></small>";
                             echo "<a href='editrecipient.php?id=" . $r['id'] . "'><span class='glyphicon glyphicon-pencil'></span></a> " . "</h4>";

@@ -78,6 +78,8 @@ require_once('app.php');
 
                 $recipient = new Recipient();
                 $userId = $_SESSION['userId'];
+                
+                // get recipients so we can see if there are any on this user
                 $recipients = $recipient->getAllRecipients($userId);
 
                 ?>
