@@ -17,6 +17,7 @@ require_once('header.php');
                 <div class="add-gift-form">
                     <div>
                         <em>
+                            <!-- Feedback on what data is in this transfer -->
                             You added: 
                             <?php
                             $recipients = $_GET['recipients'];
@@ -27,11 +28,11 @@ require_once('header.php');
                             echo $itemName . ' to ';
                             foreach ($recipientArray as $key => $recipientId) {
                                 $recipientName = $recipient->getRecipient($recipientId)['name'];
-
+                                var_dump(getRecipient($recipientId));
+                                die('remove');
                                 echo $recipientName;
                                 echo ', ';
-                            }
-                            ?>
+                            } ?>
                         </em>
                     </div>
 

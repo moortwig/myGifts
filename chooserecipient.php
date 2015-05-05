@@ -20,8 +20,10 @@ require_once('header.php');
                     <?php $itemName = $_GET['itemName']; // picks up the name from the URL
                     $description = $_GET['description']; // picks up the description from the URL ?>
 
-                    <em>You added: 
-                    <?php echo htmlspecialchars($itemName) . " - " . htmlspecialchars($description); ?>
+                    <em>
+                        <!-- Feedback on what data is in this transfer -->
+                        You added: 
+                        <?php echo htmlspecialchars($itemName) . " - " . htmlspecialchars($description); ?>
                     </em>
                 </div>
                 <form class="form-horizontal" method="post" action="app.php" role="form">
