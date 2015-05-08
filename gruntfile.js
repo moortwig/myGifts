@@ -20,23 +20,34 @@ module.exports = function(grunt) {
 					paths: ["resources/css"]
 				},
 				files: {
-					"resources/css/style.css": "resources/less/style.less"
+					"resources/css/style-dev.css": "resources/less/style.less"
 				}
 			},
+			/*compress: {
+				options: {
+					paths: ['resources/css'],
+					compress: true
+				},
+				files: {
+					'resources/css/style.css': ['resources/less/style.less']
+				}
+			},*/
 			production: {
 				options: {
 					paths: ["resources/css"],
+					compress: true,
 					/*plugins: [
 						new (require('less-plugin-autoprefix'))({browsers: ["last 2 versions"]}),
 						new (require('less-plugin-clean-css'))(cleanCssOptions)
 					],*/
-				modifyVars: {
-					imgPath: '"resources/img"',
-					bgColor: 'red'
-				}
-			},
-			files: {
-				"resources/css/style.css": "resources/less/style.less"
+					modifyVars: {
+						imgPath: '"resources/img"',
+						bgColor: 'red'
+					}
+				},
+			
+				files: {
+					"resources/css/style.css": "resources/less/style.less"
 				}
 			}
 		}
