@@ -1,0 +1,920 @@
+/* Basic colours */
+/* Background colours */
+/* Nano-scroller */
+/* Text */
+/* Links */
+/* Buttons */
+@font-face {
+  font-family: 'Glyphicons Halflings';
+  src: url('../fonts/glyphicons-halflings-regular.eot');
+  src: url('../fonts/glyphicons-halflings-regular.eot?#iefix') format('embedded- opentype'), url('../fonts/glyphicons-halflings-regular.woff') format('woff'), url('../fonts/glyphicons-halflings-regular.ttf') format('truetype'), url('../fonts/glyphicons-halflings-regular.svg#glyphicons-halflingsregular') format('svg');
+}
+p,
+h1,
+h2,
+h3,
+h4,
+label,
+dt,
+dd {
+  font-family: 'Open Sans', sans-serif;
+  color: #67655d;
+}
+p {
+  font-size: 1em;
+}
+/* TONICONS */
+i {
+  font-size: 2em;
+}
+/* LINKS */
+a {
+  color: #aa9a66;
+}
+a:hover {
+  color: #554d33;
+  text-decoration: none;
+  transition: all 0.5s ease;
+}
+/* Pages */
+/*
+	Page: index.php;
+*/
+.index-page {
+  background-image: url(../img/bg-landing.jpg);
+  color: #fafaed;
+}
+.index-page h1,
+.index-page h2,
+.index-page h3,
+.index-page p {
+  color: #fafaed;
+}
+.index-page .row {
+  background-color: rgba(98, 119, 109, 0.5);
+  padding: 2em;
+}
+.index-page .headline-container ul {
+  margin-top: 2em;
+  font-size: 1.3em;
+  list-style-type: none;
+}
+.index-page .sign-up-call {
+  text-align: center;
+}
+.index-page .sign-up-call .btn-container {
+  max-width: 200px;
+  margin: 0 auto;
+}
+.index-page .sign-up-call .btn-container i {
+  font-size: 1em;
+  margin-right: 10px;
+}
+/*
+	INDEX (AS LOGGED IN)
+*/
+.welcome-page {
+  background-image: url(../img/confectionary.png);
+}
+.welcome-page .container {
+  margin-top: 6em;
+  padding-bottom: 3em;
+}
+.welcome-page dt {
+  margin-top: 1em;
+}
+/*
+	Page: sign-up;
+*/
+.sign-up-page {
+  background-image: url(../img/bg-signup.jpg);
+}
+/*
+	RECIPIENTS PAGE;
+*/
+.recipients-page {
+  background-image: url(../img/confectionary.png);
+}
+.recipients-page .recipients-section {
+  padding-bottom: 100px;
+}
+.recipients-page a {
+  color: #aa9a66;
+}
+.recipients-page a:hover {
+  color: #554d33;
+}
+.recipients-page .container {
+  padding-top: 7em;
+  padding-bottom: 1em;
+}
+.recipients-page .data-row {
+  padding: 5px;
+  border-bottom: 1px solid silver;
+}
+.recipients-page .data-row span {
+  font-size: 1em;
+}
+.recipients-page .ton-li-plus {
+  font-size: 1em;
+  padding: 7px;
+}
+.recipients-page .ton-li-plus:hover {
+  transition: all 1s ease;
+  color: white;
+}
+/*
+	SINGLE RECIPIENT PAGE;
+*/
+.recipient-page {
+  background-image: url(../img/confectionary.png);
+}
+.recipient-page .recipient-section {
+  padding-bottom: 100px;
+}
+.recipient-page .recipient-container {
+  padding-top: 7em;
+}
+.recipient-page .nano {
+  height: 450px;
+}
+.recipient-page dt {
+  margin-top: 1em;
+}
+.recipient-page .btn {
+  margin-top: 1em;
+}
+/*
+	ADD RECIPIENT PAGE;
+*/
+.add-recipient-page {
+  background-image: url(../img/confectionary.png);
+}
+.add-recipient-page .add-recipient-section {
+  padding-bottom: 100px;
+}
+.add-recipient-page .add-recipient-section .container {
+  padding-top: 7em;
+}
+.add-recipient-page .add-recipient-section h2 {
+  margin-bottom: 5px;
+}
+.add-recipient-page .add-recipient-section .add-recipient-form {
+  width: 300px;
+}
+.add-recipient-page .add-recipient-section .add-recipient-form textarea {
+  height: 100px;
+}
+.add-recipient-page .add-recipient-section .add-recipient-form .btn-success {
+  float: right;
+}
+.add-recipient-page .add-recipient-section .add-recipient-form .btn-success span {
+  font-size: 0.7em;
+  margin-right: 5px;
+  color: white;
+}
+.add-recipient-page .add-recipient-section span {
+  font-style: italic;
+  color: rgba(0, 0, 0, 0.5);
+}
+.add-recipient-page .nano {
+  margin-top: 5px;
+  max-height: 400px;
+  max-width: 300px;
+}
+.add-recipient-page .data-row {
+  padding: 5px;
+  border-bottom: 1px solid silver;
+  width: 100%;
+}
+.add-recipient-page .btn-success i {
+  font-size: 0.7em;
+  margin-right: 3px;
+}
+/*
+	EDIT RECIPIENT PAGE;
+*/
+.edit-recipient-page {
+  background-image: url(../img/confectionary.png);
+}
+.edit-recipient-page .edit-recipient-section .container {
+  padding-top: 7em;
+}
+.edit-recipient-page .edit-recipient-section h2 {
+  margin-bottom: 5px;
+}
+.edit-recipient-page .edit-recipient-section .edit-recipient-form {
+  width: 300px;
+  margin: auto;
+}
+.edit-recipient-page .edit-recipient-section .edit-recipient-form textarea {
+  height: 100px;
+}
+.edit-recipient-page .edit-recipient-section .edit-recipient-form .btn-success {
+  float: right;
+}
+.edit-recipient-page .edit-recipient-section .edit-recipient-form .btn-success span {
+  font-size: 0.7em;
+  margin-right: 5px;
+  color: white;
+}
+.edit-recipient-page .edit-recipient-section span {
+  font-style: italic;
+  color: rgba(0, 0, 0, 0.5);
+}
+.edit-recipient-page .nano {
+  margin-top: 5px;
+  max-height: 400px;
+  max-width: 300px;
+}
+.edit-recipient-page .data-row {
+  padding: 5px;
+  border-bottom: 1px solid silver;
+  width: 100%;
+}
+.edit-recipient-page .btn-success i {
+  font-size: 0.7em;
+  margin-right: 3px;
+}
+/*
+	CHOOSE RECIPIENTS PAGE;
+*/
+.choose-recipient-page {
+  background-image: url(../img/confectionary.png);
+}
+.choose-recipient-page .choose-container {
+  padding-top: 7em;
+  width: 300px;
+  height: 500px;
+  margin: auto;
+}
+.choose-recipient-page dt {
+  margin-top: 1em;
+}
+.choose-recipient-page .nano {
+  max-height: 300px;
+  max-width: 300px;
+}
+.choose-recipient-page .btn {
+  margin-top: 1em;
+  float: right;
+}
+/*
+	ADD ITEM PAGE;
+*/
+.add-item-page {
+  background-image: url(../img/confectionary.png);
+  /*height: auto;
+	left: 0;
+	min-height: 100%;
+	min-width: 100%;
+	position: absolute;
+	top: 0;
+	width: 100%;
+	z-index: -999;*/
+}
+.add-item-page .add-item-section {
+  background-color: rgba(170, 154, 102, 0.2);
+  /*min-height: 100%;
+		min-width: 100%;
+		height: auto;
+		position: absolute;*/
+}
+.add-item-page .add-item-section .container {
+  /*padding-top: 7em;*/
+}
+.add-item-page .add-item-section .add-item-form {
+  width: 300px;
+  margin: auto;
+}
+.add-item-page .add-item-section .add-item-form textarea {
+  height: 100px;
+}
+.add-item-page .add-item-section .add-item-form .btn-success {
+  float: right;
+}
+.add-item-page .add-item-section .add-item-form .btn-success span {
+  font-size: 0.7em;
+  margin-right: 5px;
+  color: white;
+}
+/*
+	ADD GIFT PAGE;
+*/
+.add-gift-page {
+  background-image: url(../img/confectionary.png);
+}
+.add-gift-page .add-gift-section .add-gift-form {
+  width: 300px;
+  margin: auto;
+}
+.add-gift-page .add-gift-section .add-gift-form textarea {
+  height: 100px;
+}
+.add-gift-page .add-gift-section .add-gift-form .btn-success {
+  float: right;
+}
+.add-gift-page .add-gift-section .add-gift-form .btn-success span {
+  font-size: 0.7em;
+  margin-right: 5px;
+  color: white;
+}
+/*
+	Page: about.php;
+*/
+.about-page {
+  background-image: url(../img/bg-about.jpg);
+}
+.about-page .about-section {
+  background-color: rgba(170, 154, 102, 0.5);
+}
+.about-page h1,
+.about-page p,
+.about-page a {
+  color: #190000;
+}
+.about-page a:hover {
+  color: #554d33;
+}
+.about-page .nano {
+  max-width: 100%;
+  border-bottom: none;
+}
+.about-page .has-scrollbar {
+  background-color: transparent;
+}
+/*
+	ERROR 404 PAGE;
+*/
+.not-found .container {
+  background-image: url(../img/confectionary.png);
+  outline: 7px solid rgba(170, 154, 102, 0.2);
+  max-width: 300px;
+  max-height: 300px;
+  padding: 1em;
+  text-align: center;
+}
+.not-found .container h1 {
+  color: #ff4040;
+}
+.not-found .container p {
+  font-size: 1.5em;
+}
+/* Media queries */
+/* Small units and up */
+@media only screen and (max-width: 767px) {
+  /*
+		GENERAL STUFF
+	*/
+  p {
+    font-size: 1.1em;
+  }
+  /*
+		HEADER
+	*/
+  .navbar .navbar-brand {
+    margin-top: 0.5em;
+  }
+  .navbar .nav {
+    text-align: center;
+  }
+  .navbar .nav .ton-li-people-7 {
+    font-size: 1.5em;
+  }
+  .navbar .nav .ton-li-box-1 {
+    font-size: 1.5em;
+  }
+  .navbar .nav .ton-li-speech-buble-4 {
+    font-size: 1.5em;
+  }
+  .navbar .navbar-form {
+    border: none;
+    margin: auto;
+    width: 80%;
+  }
+  .navbar .navbar-right {
+    padding-bottom: 3em;
+  }
+  .navbar .navbar-right input {
+    margin-bottom: 5px;
+  }
+  .navbar .navbar-right .btn-primary {
+    margin-left: 5px;
+    float: right;
+  }
+  .navbar .navbar-right .btn-danger {
+    float: right;
+  }
+  /*
+		INDEX PAGE
+	*/
+  .index-page {
+    background-position: center;
+  }
+  .index-page .landing-small {
+    position: absolute;
+    top: 20%;
+    left: 0%;
+    width: 100%;
+    bottom: 10%;
+  }
+  .index-page .row {
+    background-color: rgba(98, 119, 109, 0.5);
+  }
+  .index-page .headline-container .landing-headline {
+    font-size: 1em;
+  }
+  .index-page .headline-container ul {
+    margin-top: 1em;
+    margin-left: -3em;
+    margin-bottom: -0.7em;
+    font-size: 1.1em;
+  }
+  /*
+		INDEX (AS LOGGED IN)
+	*/
+  .welcome-page .welcome-section .container {
+    margin-top: 4em;
+  }
+  /*
+		SIGN UP PAGE
+	*/
+  .sign-up-page {
+    background-position: center;
+  }
+  .sign-up-page .sign-up-section .container {
+    padding-top: 5.5em;
+  }
+  /*
+		ABOUT PAGE
+	*/
+  .about-page {
+    background-position: bottom;
+  }
+  .about-page .about-section .container {
+    padding-top: 5em;
+    width: 100%;
+  }
+  /*
+		RECIPIENTS PAGE
+	*/
+  .recipients-page .container {
+    padding-top: 5em;
+  }
+  .recipients-page h2 {
+    font-size: 1.5em;
+  }
+  .recipients-page h4 {
+    font-size: 1.1em;
+    margin: 2px;
+  }
+  .recipients-page p {
+    margin: 2px;
+  }
+  .recipients-page .data-row {
+    padding: 3px;
+    width: 100%;
+  }
+  .recipients-page .ton-li-plus {
+    font-size: 1em;
+    padding: 7px;
+  }
+  .recipients-page .glyphicon {
+    float: right;
+    font-size: 1.5em;
+  }
+  /*
+		SINGLE RECIPIENT PAGE
+	*/
+  .recipient-page .nano {
+    width: 100%;
+    height: 300px;
+  }
+  /*
+		ADD RECIPIENT PAGE;
+	*/
+  .add-recipient-page .add-recipient-section .container {
+    padding-top: 3.5em;
+  }
+  .add-recipient-page .add-recipient-form {
+    margin: auto;
+  }
+  .add-recipient-page .overview-container {
+    width: 300px;
+    margin: auto;
+  }
+  .add-recipient-page h2 {
+    font-size: 1.7em;
+  }
+  /*
+		ADD ITEM PAGE;
+	*/
+  .add-item-page .add-item-section .container {
+    padding-top: 5em;
+  }
+  .add-item-page .add-item-section .add-item-form {
+    width: 300px;
+    margin: auto;
+  }
+  .add-item-page .add-item-section .add-item-form textarea {
+    height: 100px;
+  }
+  /*
+		ADD GIFT PAGE;
+	*/
+  .add-gift-page .add-gift-section .container {
+    padding-top: 5em;
+  }
+  .add-gift-page .add-gift-section .add-gift-form {
+    width: 300px;
+    margin: auto;
+  }
+  .add-gift-page .add-gift-section .add-gift-form textarea {
+    height: 100px;
+  }
+  /*
+		CHOOSE RECIPIENTS PAGE;
+	*/
+  .choose-recipient-page .choose-container {
+    padding-top: 7em;
+    width: 300px;
+    margin: auto;
+  }
+  .choose-recipient-page dt {
+    margin-top: 1em;
+  }
+  .choose-recipient-page .nano {
+    max-height: 200px;
+    max-width: 300px;
+  }
+  .choose-recipient-page .btn {
+    margin-top: 1em;
+    float: right;
+  }
+  /*
+		ERROR 404 PAGE;
+	*/
+  .not-found {
+    padding-top: 7em;
+  }
+  .not-found .container {
+    width: 90%;
+  }
+  /*
+		FOOTER;
+	*/
+  .footer .hide-small {
+    display: none;
+  }
+}
+/* Medium units and up */
+@media only screen and (min-width: 768px) {
+  /*
+		HEADER
+	*/
+  .navbar {
+    min-height: 70px;
+  }
+  .navbar .navbar-brand {
+    margin-top: 1em;
+  }
+  .navbar .navbar-text {
+    color: #aa9a66;
+  }
+  .navbar .navbar-right input {
+    margin-top: 9px;
+  }
+  .navbar .navbar-right span {
+    font-size: 1.3em;
+    margin-top: 15px;
+  }
+  .navbar .navbar-form .form-control {
+    width: 150px;
+  }
+  .navbar .navbar-form .btn {
+    float: right;
+    margin-left: 5px;
+    margin-top: 9px;
+    padding: 6px;
+  }
+  .navbar .navbar-form .btn-danger {
+    margin-top: 10px;
+  }
+  .navbar .nav {
+    /* Menu icons positioning */
+    /* Menu icon text positioning */
+  }
+  .navbar .nav li {
+    height: 70px;
+    width: 90px;
+    padding: 10px;
+  }
+  .navbar .nav i {
+    letter-spacing: 0px;
+    position: relative;
+    top: 0px;
+    left: -10px;
+  }
+  .navbar .nav .li-text-rec {
+    letter-spacing: 0px;
+    position: relative;
+    top: 17px;
+    left: 47px;
+  }
+  .navbar .nav .li-text-gift {
+    letter-spacing: 0px;
+    position: relative;
+    top: 17px;
+    left: 40px;
+  }
+  .navbar .nav .li-text-about {
+    letter-spacing: 0px;
+    position: relative;
+    top: 17px;
+    left: 32px;
+  }
+  .navbar .btn {
+    float: right;
+    margin-left: 5px;
+    margin-top: 3px;
+    padding: 6px;
+  }
+  /*
+		INDEX
+	*/
+  .index-page .vertical-center {
+    position: absolute;
+    top: 30%;
+    left: 10%;
+    width: 80%;
+    bottom: 0%;
+  }
+  .index-page .headline-container {
+    text-align: center;
+  }
+  .index-page .headline-container .landing-headline {
+    font-size: 1.7em;
+  }
+  .index-page .headline-container ul {
+    margin-top: 1em;
+    margin-bottom: -0.7em;
+    margin-top: 2em;
+    margin-left: 2em;
+    list-style-type: none;
+    font-size: 1.1em;
+    text-align: left;
+    font-size: 1.3em;
+  }
+  /*
+		INDEX (AS LOGGED IN)
+	*/
+  .welcome-page .welcome-section .container {
+    margin-top: 6em;
+  }
+  /*
+		SIGN UP PAGE
+	*/
+  .sign-up-page {
+    background-position: center;
+  }
+  .sign-up-page .sign-up-section .container {
+    padding-top: 5em;
+  }
+  /*
+		ABOUT PAGE
+	*/
+  .about-page {
+    background-position: bottom;
+  }
+  .about-page .about-section .container {
+    padding-top: 7em;
+  }
+  /*
+		RECIPIENTS PAGE
+	*/
+  .recipients-page .data-row {
+    width: 100%;
+  }
+  .recipients-page .ton-li-plus {
+    font-size: 1em;
+    padding: 7px;
+  }
+  .recipients-page .glyphicon {
+    float: right;
+  }
+  /*
+		SINGLE RECIPIENT PAGE;
+	*/
+  .recipient-page .nano {
+    width: 100%;
+  }
+  /*
+		ADD RECIPIENT PAGE;
+	*/
+  .add-recipient-page h2 {
+    font-size: 2em;
+  }
+  .add-recipient-page .add-recipient-form {
+    margin: auto;
+  }
+  .add-recipient-page .overview-container {
+    width: 300px;
+    margin: auto;
+  }
+  /*
+		ADD ITEM PAGE;
+	*/
+  .add-item-page .add-item-section .container {
+    padding-top: 8em;
+  }
+  /*
+		ADD GIFT PAGE;
+	*/
+  .add-gift-page .add-gift-section .container {
+    padding-top: 8em;
+  }
+  /*
+	ERROR 404 PAGE;
+	*/
+  .not-found {
+    padding-top: 8em;
+  }
+}
+/* Large units only */
+@media only screen and (min-width: 992px) {
+  /*
+		COMMON
+	*/
+  .vertical-center {
+    position: absolute;
+    top: 30%;
+    left: 10%;
+    width: 80%;
+  }
+  /*
+		INDEX
+	*/
+  .index-page .headline-container {
+    text-align: right;
+  }
+  .index-page .headline-container .landing-headline {
+    margin-bottom: -0.7em;
+    font-size: 1.8em;
+  }
+  .index-page .headline-container ul {
+    display: block;
+    float: right;
+    margin-top: 1em;
+    font-size: 1.3em;
+    list-style-type: none;
+    padding-bottom: 1em;
+  }
+  .index-page .sign-up-call {
+    padding-top: 5em;
+  }
+  /*
+		SIGN UP PAGE
+	*/
+  .sign-up-page {
+    background-position: center;
+  }
+  .sign-up-page .sign-up-section .container {
+    padding-top: 0em;
+  }
+  /*
+		ABOUT PAGE
+	*/
+  .about-page {
+    background-position: bottom;
+  }
+  .about-page .about-section .container {
+    padding-top: 0em;
+  }
+  .about-page .centered-container {
+    padding: 2em;
+    width: 50%;
+    margin: auto;
+  }
+  /*
+		RECIPIENTS PAGE
+	*/
+  .recipients-page .data-row {
+    width: 70%;
+  }
+  /*
+		SINGLE RECIPIENT PAGE;
+	*/
+  .recipient-page .nano {
+    width: 60%;
+  }
+  /*
+		ADD ITEM PAGE;
+	*/
+  .add-item-page .add-item-section .container {
+    padding-top: 8em;
+  }
+  /*
+		ADD GIFT PAGE;
+	*/
+  .add-gift-page .add-gift-section .container {
+    padding-top: 8em;
+  }
+}
+/* Debugging */
+div {
+  /*outline: 1px solid blue;*/
+}
+/* Basic stuff */
+html {
+  height: 100%;
+  /* Required for full screens */
+}
+body {
+  background-color: #ffffff;
+  height: 100%;
+  /* Required for full screens */
+  padding: 0;
+}
+.btn {
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+}
+/* Required for full screens */
+.wrapper {
+  height: 100%;
+  width: 100%;
+}
+/* full screen background image, scales and stretches */
+.full-screen-img {
+  background-position: center center;
+  background-attachment: fixed;
+  background-size: cover;
+  display: table;
+  height: 100%;
+  width: 100%;
+}
+/* simple fullscreen */
+.full-screen {
+  display: table;
+  height: 100%;
+  width: 100%;
+}
+/* Full screen overlay */
+.overlay {
+  background-color: rgba(170, 154, 102, 0.2);
+  display: table;
+  width: 100%;
+  height: 100%;
+}
+/* Nanoscroller */
+.nano {
+  border-bottom: 1px solid #bbb6ac;
+  background-color: rgba(255, 255, 255, 0.2);
+}
+.nano .nano-content {
+  padding: 10px;
+}
+.nano .nano-pane {
+  background-color: #ddd6c1;
+}
+.nano .nano-slider {
+  background-color: #aa9a66;
+}
+/* Navigation */
+.navbar {
+  border: 0px;
+}
+.navbar .navbar-brand {
+  color: #aa9a66;
+  letter-spacing: 0.5px;
+}
+.navbar .nav {
+  /* ul element */
+  position: relative;
+  z-index: 1;
+}
+.navbar .nav stack order li,
+.navbar .nav i,
+.navbar .nav span {
+  color: #aa9a66;
+}
+.navbar .nav li:hover {
+  background-color: rgba(170, 201, 188, 0.5);
+}
+.glyphicon {
+  margin-left: 5px;
+  margin-right: 3px;
+}
+footer {
+  height: 40px;
+  /* Needs to be set when used with full-screen */
+}
+.footer {
+  background-image: url(../img/confectionary.png);
+  background-color: rgba(255, 255, 255, 0.5);
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  padding: 1em;
+  text-align: center;
+}

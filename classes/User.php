@@ -74,7 +74,6 @@ class User {
 
 		$_SESSION['username'] = $username; // logs in user after signing up
 		$_SESSION['userId'] = $userId; // logs in user after signing up
-		// return $itemId;
 	}
 
 	//////////////////////////////////////////////////////
@@ -87,8 +86,6 @@ class User {
 		$query->execute();
 		$result = $query->fetchObject(); // fetch result
 
-		// var_dump($result);
-		// die('getUserId');
 		return $result;
 
 	}
@@ -108,13 +105,13 @@ class User {
 		// check password:
 		$hashedPassword = $result[0]['password'];
 
+		// verify password compares the inserted password with the hashed password in the database
 		if ($password == password_verify($password, $hashedPassword)) {
 			$count = count($result);
 			
 			if ($count !== 1) {
 				return false;
 			} else {
-				// else return false
 				return true;
 			}
 		} else {
