@@ -2,34 +2,42 @@
 
 
 class Recipient {
-	// spiffy code here
+	
 	public $id;
 	public $name;
 	public $information;
 	public $userId;
 
+	
+	//////////////////////////////////////////////////////
+	// ADD A NEW RECIPIENT //////////////////////////////
+	public function newRecipient() {
+	// sparar recipient till databas
+		$name = $_POST['name'];
+		$information = $_POST['information'];
+		$userId = $_POST['userId'];
+		
+		return $this->insertRecipient($name, $information, $userId);
+	}
+
+
 
 	//////////////////////////////////////////////////////
-	// QUERY TO COMPARE USERNAMES ///////////////////////
-/*	public function checkNameExists($name) {
-		$database = new Database();
+	// EDIT RECIPIENT FOR USER //////////////////////////
+	public function editRecipient() {
+		$recipientId = $_POST['recipientId'];
+		$name = $_POST['name'];
+		$information = $_POST['information'];
 
-		$query = $database->connect()->query("SELECT * FROM recipients WHERE name = '$name'");
-		// execute the query
-		$query->execute();
-		// fetch results
-		$results = $query->fetchAll();
-		// count the number of rows fetched, so we can use it in the if statement
-		$count = count($results);
+		return $this->updateRecipient($name, $information, $recipientId);	
+	}
 
-		// if rows === 1, return true
-		if ($count !== 1) {
-			return false;
-		} else {
-			// else return false
-			return true;
-		}		
-	}*/
+
+
+
+	//////////////////////////////////////////////////
+	// ----- QUERIES --------------------------------
+	////////////////////////////////////////////////
 
 	//////////////////////////////////////////////////////
 	// QUERY TO SAVE RECIPIENT TO DB ////////////////////
@@ -41,6 +49,7 @@ class Recipient {
 		$query->execute($values);
 	}
 
+
 	//////////////////////////////////////////////////////
 	// QUERY TO EDIT RECIPIENT TO DB ////////////////////
 	private function updateRecipient($name, $information, $recipientId) {
@@ -51,26 +60,6 @@ class Recipient {
 		$query->execute($values);
 	}
 
-	
-	//////////////////////////////////////////////////////
-	// ADD A NEW RECIPIENT //////////////////////////////
-	public function newRecipient() {
-	// sparar recipient till databas
-		$name = $_POST['name'];
-		$information = $_POST['information'];
-		$userId = $_POST['userId']; // TODO belongs to dummy data field, remove after sorting out CSRF
-		// $userId = $_SESSION['userId'];
-		
-		/*$check = $this->checkNameExists($name);
-
-		if ($check === true) {
-			echo "This recipient already exists! Did you mean to add someone else? You will be redirected shortly.";
-		} else {
-			return $this->insertRecipient($name, $information, $userId);
-		}*/
-		return $this->insertRecipient($name, $information, $userId);
-	}
-
 
 	//////////////////////////////////////////////////////
 	// QUERY TO GET ONE RECIPIENT FOR USER //////////////
@@ -78,24 +67,10 @@ class Recipient {
 		$database = new Database();
 
 		$query = $database->connect()->query("SELECT * FROM recipients WHERE id = '$recipientId'");
-		// execute the query
-		$query->execute();
-		// fetch results
-		$result = $query->fetch();
+		$query->execute(); // execute the query
+		$result = $query->fetch(); // fetch result
 
 		return $result;
-	}
-
-
-	//////////////////////////////////////////////////////
-	// EDIT RECIPIENT FOR USER //////////////////////////
-	public function editRecipient() {
-		// redigera info om mottagaren
-		$recipientId = $_POST['recipientId'];
-		$name = $_POST['name'];
-		$information = $_POST['information'];
-
-		return $this->updateRecipient($name, $information, $recipientId);	
 	}
 
 
@@ -116,18 +91,11 @@ class Recipient {
 		$database = new Database();
 
 		$query = $database->connect()->query("SELECT * FROM recipients WHERE user_id = '$userId'");
-		// execute the query
-		$query->execute();
-		// fetch results
-		$results = $query->fetchAll();
+		$query->execute(); // execute the query
+		$results = $query->fetchAll(); // fetch results
 
 		return $results;
 	}
-
-
-
-	//////////////////////////////////////////////////
-	// LIST RECIPIENT'S GIFT HISTORY ////////////////
 }
 
 

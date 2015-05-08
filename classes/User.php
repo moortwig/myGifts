@@ -11,29 +11,6 @@ class User {
 	public $joined;
 
 
-	//////////////////////////////////////////////////////
-	// QUERY TO COMPARE USERNAMES ///////////////////////
-	private function checkUsernameExists($username) {
-		$database = new Database();
-
-
-		$query = $database->connect()->query("SELECT * FROM users WHERE username = '$username'");
-		// execute the query
-		$query->execute();
-		// fetch results
-		$results = $query->fetchAll();
-		// count the number of rows fetched, so we can use it in the if statement
-		$count = count($results);
-
-		// if rows === 1, return true
-		if ($count !== 1) {
-			return false;
-		} else {
-			// else return false
-			return true;
-		}
-	}
-
 
 	//////////////////////////////////////////////////////
 	// PICKS UP FORM DATA ///////////////////////////////
@@ -42,10 +19,7 @@ class User {
 		$password = $_POST['password'];
 		$email = $_POST['email'];
 
-		// Encrypt password:
-		$hashedPassword = password_hash($password, PASSWORD_DEFAULT);
-
-
+		$hashedPassword = password_hash($password, PASSWORD_DEFAULT); // Encrypt password:
 		$check = $this->checkUsernameExists($username); // returns true or false
 
 		if ($check === true) {
@@ -58,23 +32,46 @@ class User {
 	}
 
 
+	//////////////////////////////////////////////////
+	// ----- QUERIES --------------------------------
+	////////////////////////////////////////////////
+
+	//////////////////////////////////////////////////////
+	// QUERY TO COMPARE USERNAMES ///////////////////////
+	private function checkUsernameExists($username) {
+		$database = new Database();
+
+		$query = $database->connect()->query("SELECT * FROM users WHERE username = '$username'");
+		$query->execute(); // execute the query
+		$results = $query->fetchAll(); // fetch results
+		// count the number of rows fetched, so we can use it in the if statement
+		$count = count($results);
+
+		// if there's one row, return true
+		if ($count !== 1) {
+			return false;
+		} else {
+			return true;
+		}
+	}
+
+
 	//////////////////////////////////////////////////////
 	// QUERY SAVE USER TO DB ////////////////////////////
 	private function insertUser($username, $hashedPassword, $email) {
 		$database = new Database();
 
 		$db = $database->connect();
-
 		$query = $db->prepare('INSERT INTO users (username, password, email) VALUES (?,?,?)');
 		$values = array($username, $hashedPassword, $email);
 		$query->execute($values);
 
 		$userId = $db->lastInsertId(); // get user id for session
 
-
 		$_SESSION['username'] = $username; // logs in user after signing up
 		$_SESSION['userId'] = $userId; // logs in user after signing up
 	}
+
 
 	//////////////////////////////////////////////////////
 	// QUERY USER ID FROM DB ////////////////////////////
@@ -82,13 +79,14 @@ class User {
 		$database = new Database();
 
 		$query = $database->connect()->query("SELECT id FROM users WHERE username = '$username'");
-		// execute the query
-		$query->execute();
-		$result = $query->fetchObject(); // fetch result
+		
+		$query->execute(); // execute the query
+		$result = $query->fetchObject(); // fetch result as an object
 
 		return $result;
 
 	}
+
 
 	//////////////////////////////////////////////////////
 	// QUERY USER TO LOGIN //////////////////////////////
@@ -96,11 +94,8 @@ class User {
 		$database = new Database();
 
 		$query = $database->connect()->query("SELECT * FROM users WHERE username = '$username'");
-
 		$query->execute(); // execute the query
-		
 		$result = $query->fetchAll(); // fetch result
-
 
 		// check password:
 		$hashedPassword = $result[0]['password'];

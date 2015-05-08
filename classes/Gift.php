@@ -2,8 +2,9 @@
 
 require_once('Item.php');
 
+
 class Gift {
-	// spiffy code here
+	
 	public $id;
 	public $itemId;
 	public $recipientId;
@@ -14,7 +15,7 @@ class Gift {
 	// ADD A NEW GIFT ///////////////////////////////
 	// referred to from Item->insertItem()
 	public function newGift($itemId) {
-		$userId = $_POST['userId']; // TODO belongs to dummy data field, remove after sorting out CSRF
+		$userId = $_POST['userId'];
 		$recipients = $_POST['recipients'];
 		$occasion = $_POST['occasion'];
 
@@ -23,13 +24,7 @@ class Gift {
 		$this->insertGift($userId, $itemId, $recipientIdArray, $occasion);
 	}
 
-
-	public function editGift($gift) {
-		// redigerar en gåva i databasen
-	}
-
 	public function getAllGifts($recipientId) {
-		// hämtar alla gåvor från databasen som hör till en specifik mottagare
 		$result = $this->queryGiftsOnRecipient($recipientId);
 
 		return $result;
@@ -64,7 +59,6 @@ class Gift {
 	}
 
 
-
 	//////////////////////////////////////////////////
 	// ----- QUERIES --------------------------------
 	////////////////////////////////////////////////
@@ -86,18 +80,14 @@ class Gift {
 
 	//////////////////////////////////////////////////
 	// QUERY GIFTS ON RECIPIENT /////////////////////
-	// TODO 
-	// query gifts
-	// join recipients.id on gifts.recipient_id
-	// join items.id on gifts.item_id
 	public function queryGiftsOnRecipient($recipientId) {
 		$database = new Database();
 
 		$query = $database->connect()->query("SELECT * FROM gifts WHERE recipient_id = '$recipientId'");
-		// execute the query
-		$query->execute();
-		// fetch results
-		$result = $query->fetchAll();
+		
+		$query->execute(); // execute the query
+		
+		$result = $query->fetchAll(); // fetch results
 
 		return $result;
 	}

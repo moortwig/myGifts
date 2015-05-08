@@ -3,7 +3,7 @@
 require_once ('Session.php');
 
 class Item {
-	// spiffy properties here
+	
 	public $id;
 	public $name;
 	public $description;
@@ -13,12 +13,10 @@ class Item {
 	//////////////////////////////////////////////////////
 	// ADD A NEW ITEM ///////////////////////////////////
 	public function newItem() {
-		// $session = new Session();
 
 		$name = $_POST['itemName'];
 		$description = $_POST['description'];
-		$userId = $_POST['userId']; // TODO belongs to dummy data field, remove after sorting out CSRF
-		// $userId = $_SESSION['userId'];
+		$userId = $_POST['userId']; 
 
 
 		return $this->insertItem($name, $description, $userId);
@@ -48,32 +46,23 @@ class Item {
 		$gift = new Gift();
 
 		$db = $database->connect();
-
 		$query = $db->prepare('INSERT INTO items (name, description, user_id) VALUES (?,?,?)');
 
-		// $db->beginTransaction();
 		$values = array($name, $description, $userId);
 		$query->execute($values);
-		$itemId = $db->lastInsertId(); // get item id for session
-		// $db->commit();
+		$itemId = $db->lastInsertId(); // get item id
 		$gift->newGift($itemId);
-
-		// $session->startItemSession($result);
 
 		return $itemId;
 	}
 
-	// public function testLatestId($result) {
-	// 	$id = $result;
-	// 	return $result;
-	// }
 
 	//////////////////////////////////////////////////////
 	// QUERY TO GET ALL ITEMS FOR USER //////////////////
 	public function getAllItems($userId) {
 		$database = new Database();
-		$db = $database->connect();
 
+		$db = $database->connect();
 		$query = $db->query("SELECT * FROM items WHERE user_id = '$userId'");
 		
 		$query->execute(); // execute the query
@@ -86,8 +75,8 @@ class Item {
 	// QUERY TO GET ONE ITEM FOR USER ///////////////////
 	public function getItem($userId) {
 		$database = new Database();
-		$db = $database->connect();		
 
+		$db = $database->connect();
 		$query = $db->query("SELECT * FROM items WHERE id = '$userId'");
 		
 		$query->execute(); // execute the query
@@ -100,8 +89,8 @@ class Item {
 	// QUERY TO EDIT RECIPIENT TO DB ////////////////////
 	private function updateItem($name, $description, $itemId) {
 		$database = new Database();
-		$db = $database->connect();
 
+		$db = $database->connect();
 		$query = $db->prepare('UPDATE items SET name = ?,  description = ? WHERE id = ?');
 		$values = array($name, $description, $itemId);
 		$query->execute($values);
