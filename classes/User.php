@@ -3,7 +3,7 @@ require_once ('Database.php');
 require_once ('Session.php');
 
 class User {
-	// properties 
+	// class properties 
 	public $id;
 	public $username;
 	public $password;

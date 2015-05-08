@@ -20,9 +20,6 @@ class Session {
 		if ($checkUser === true) {
 			$_SESSION['username'] = $username;
 			$_SESSION['userId'] = $userId;
-			echo "Perfect match! You've been logged in! Please wait ...";
-		} else {
-			echo "Nope, you did something very wrong there. Please try again after you've been redirected back!";
 		}
 	}
 
